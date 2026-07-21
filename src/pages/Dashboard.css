@@ -18,6 +18,13 @@
   box-shadow: var(--tile-shadow);
 }
 
+.dashboard__eyebrow {
+  margin: 0 0 0.35rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
 .dashboard__intro h1 {
   margin: 0 0 0.5rem;
   font-size: clamp(1.8rem, 4vw, 2.6rem);
@@ -40,8 +47,47 @@
 
 .dashboard__footer {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.85rem;
   padding-top: 0.5rem;
+}
+
+.dashboard__secondary-link,
+.dashboard__reset {
+  appearance: none;
+  border: none;
+  background: none;
+  padding: 0.35rem 0.5rem;
+  font: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.dashboard__secondary-link {
+  color: var(--accent-strong);
+}
+
+.dashboard__secondary-link:hover {
+  color: var(--accent);
+}
+
+.dashboard__reset {
+  color: var(--text-muted);
+}
+
+.dashboard__reset:hover {
+  color: var(--accent-strong);
+}
+
+.dashboard__secondary-link:focus-visible,
+.dashboard__reset:focus-visible {
+  outline: 3px solid var(--accent-soft);
+  outline-offset: 3px;
+  border-radius: 0.25rem;
 }
 
 @media (min-width: 768px) {

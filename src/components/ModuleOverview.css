@@ -1,0 +1,124 @@
+.module-overview {
+  width: min(760px, 100%);
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+}
+
+.module-overview__intro {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  padding: 1.75rem;
+  border-radius: 1.75rem;
+  background: var(--surface);
+  border: 1px solid var(--tile-border);
+  box-shadow: var(--tile-shadow);
+}
+
+.module-overview__intro p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+
+.module-overview__lessons h2 {
+  margin: 0 0 1rem;
+  font-size: 1.25rem;
+  color: var(--text-strong);
+}
+
+.module-overview__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.module-overview__lesson {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.15rem 1.25rem;
+  border-radius: 1.25rem;
+  border: 1px solid var(--tile-border);
+  background: var(--surface);
+  box-shadow: var(--tile-shadow);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.module-overview__lesson:hover {
+  transform: translateY(-1px);
+  border-color: var(--accent-soft);
+  box-shadow: var(--tile-shadow-hover);
+}
+
+.module-overview__lesson:focus-visible {
+  outline: 3px solid var(--accent-soft);
+  outline-offset: 3px;
+}
+
+.module-overview__lesson--done {
+  background: linear-gradient(180deg, #f4f9f1, #eaf3e6);
+  border-color: rgba(79, 122, 85, 0.25);
+}
+
+.module-overview__lesson--done .module-overview__lesson-index {
+  background: var(--accent);
+  color: #fff;
+}
+
+.module-overview__lesson-index {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 0.75rem;
+  background: var(--icon-bg);
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.module-overview__lesson-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  min-width: 0;
+}
+
+.module-overview__lesson-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-strong);
+}
+
+.module-overview__lesson-summary {
+  font-size: 0.95rem;
+  line-height: 1.45;
+  color: var(--text-muted);
+}
+
+.module-overview__empty {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  border-radius: 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--tile-border);
+  color: var(--text-muted);
+}
+
+@media (min-width: 768px) {
+  .module-overview {
+    padding: 2.75rem 2rem 4rem;
+  }
+
+  .module-overview__intro {
+    padding: 2rem;
+  }
+}

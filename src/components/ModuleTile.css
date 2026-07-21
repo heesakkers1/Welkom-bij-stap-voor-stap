@@ -7,13 +7,15 @@
   min-height: 220px;
   padding: 1.5rem;
   text-align: left;
+  text-decoration: none;
   border: 1px solid var(--tile-border);
   border-radius: 1.75rem;
   background: var(--tile-bg);
   box-shadow: var(--tile-shadow);
   color: inherit;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease,
+    background-color 0.2s ease;
 }
 
 .module-tile:hover {
@@ -27,6 +29,24 @@
   outline-offset: 3px;
 }
 
+.module-tile--progress {
+  border-color: rgba(79, 122, 85, 0.45);
+  box-shadow: 0 8px 24px rgba(79, 122, 85, 0.1);
+}
+
+.module-tile--completed {
+  background: linear-gradient(180deg, #f2f8ef, #e7f1e6);
+  border-color: rgba(79, 122, 85, 0.28);
+}
+
+.module-tile__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 0.75rem;
+}
+
 .module-tile__icon-wrap {
   display: grid;
   place-items: center;
@@ -35,6 +55,19 @@
   border-radius: 1rem;
   background: var(--icon-bg);
   color: var(--accent);
+}
+
+.module-tile__check {
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1;
 }
 
 .module-icon {
@@ -72,4 +105,14 @@
   font-weight: 600;
   color: var(--status-text);
   background: var(--status-bg);
+}
+
+.module-tile--completed .module-tile__status {
+  color: #2f5a38;
+  background: rgba(79, 122, 85, 0.16);
+}
+
+.module-tile--progress .module-tile__status {
+  color: #3d6344;
+  background: rgba(143, 179, 150, 0.28);
 }

@@ -1,44 +1,54 @@
-import { useState } from 'react'
-import { modules } from './data/modules'
+import { Navigate, Routes, Route } from 'react-router-dom'
+import { ProgressProvider, useProgress } from './context/ProgressContext'
+import WelcomeScreen from './pages/WelcomeScreen'
 import Dashboard from './pages/Dashboard'
-import ModulePlaceholder from './pages/ModulePlaceholder'
+import ModuleOverview from './components/ModuleOverview'
+import LessonPage from './components/LessonPage'
 import './App.css'
 
+function RequireWelcome({ children }) {
+  const { welcomeSeen } = useProgress()
+
+  if (!welcomeSeen) {
+    return <Navigate to="/intro" replace />
+  }
+
+  return children
+}
+
 function App() {
-  const [currentView, setCurrentView] = useState('dashboard')
-  const [activeModuleId, setActiveModuleId] = useState(null)
-
-  const activeModule = modules.find((module) => module.id === activeModuleId)
-
-  function goToDashboard() {
-    setCurrentView('dashboard')
-    setActiveModuleId(null)
-  }
-
-  function openModule(moduleId) {
-    setActiveModuleId(moduleId)
-    setCurrentView('module')
-  }
-
-  function startOnboarding() {
-    const firstModule = modules[0]
-    if (firstModule) {
-      openModule(firstModule.id)
-    }
-  }
-
-  if (currentView === 'module') {
-    return (
-      <div className="app">
-        <ModulePlaceholder module={activeModule} onBack={goToDashboard} />
-      </div>
-    )
-  }
-
   return (
-    <div className="app">
-      <Dashboard onStart={startOnboarding} onSelectModule={openModule} />
-    </div>
+    <ProgressProvider>
+      <div className="app">
+        <Routes>
+          <Route path="/intro" element={<WelcomeScreen />} />
+          <Route
+            path="/"
+            element={
+              <RequireWelcome>
+                <Dashboard />
+              </RequireWelcome>
+            }
+          />
+          <Route
+            path="/module/:moduleId"
+            element={
+              <RequireWelcome>
+                <ModuleOverview />
+              </RequireWelcome>
+            }
+          />
+          <Route
+            path="/module/:moduleId/les/:lessonId"
+            element={
+              <RequireWelcome>
+                <LessonPage />
+              </RequireWelcome>
+            }
+          />
+        </Routes>
+      </div>
+    </ProgressProvider>
   )
 }
 

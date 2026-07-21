@@ -1,0 +1,119 @@
+.lesson-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+  padding: 1.4rem;
+  border-radius: 1.75rem;
+  background: var(--surface);
+  border: 1px solid var(--tile-border);
+  box-shadow: var(--tile-shadow);
+}
+
+.lesson-block {
+  margin: 0;
+}
+
+.lesson-block--hero {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  padding: 0.25rem 0 0.5rem;
+}
+
+.lesson-block__hero-eyebrow {
+  margin: 0;
+  font-size: clamp(1.35rem, 3.5vw, 1.75rem);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--accent-strong);
+}
+
+.lesson-block__hero-title {
+  margin: 0;
+  font-size: clamp(1.55rem, 4vw, 2.1rem);
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  color: var(--text-strong);
+}
+
+.lesson-block__hero-text {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.55;
+  color: var(--text-muted);
+}
+
+.lesson-block--paragraph {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--text);
+  white-space: pre-line;
+}
+
+.lesson-block--list {
+  margin: 0;
+  padding: 0 0 0 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  color: var(--text);
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.lesson-block--list li::marker {
+  color: var(--accent);
+}
+
+.lesson-block__label {
+  margin: 0 0 0.45rem;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--accent-strong);
+}
+
+.lesson-block--tip,
+.lesson-block--assignment {
+  padding: 1.1rem 1.15rem;
+  border-radius: 1.25rem;
+}
+
+.lesson-block--tip p:last-child,
+.lesson-block--assignment p:last-child {
+  margin: 0;
+  font-size: 1.02rem;
+  line-height: 1.55;
+  color: var(--text);
+}
+
+.lesson-block--tip {
+  background: linear-gradient(180deg, #f3f8ef, #eaf3e6);
+  border: 1px solid rgba(79, 122, 85, 0.18);
+  box-shadow: 0 6px 18px rgba(79, 122, 85, 0.06);
+}
+
+.lesson-block--assignment {
+  background: #f7f1e6;
+  border: 1px solid rgba(140, 110, 70, 0.18);
+}
+
+.lesson-block--assignment .lesson-block__label {
+  color: #7a5c32;
+}
+
+.lesson-block--signoff {
+  margin-top: 0.35rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--accent-strong);
+}
+
+@media (min-width: 768px) {
+  .lesson-content {
+    padding: 2rem;
+    gap: 1.4rem;
+  }
+}
