@@ -1,5 +1,5 @@
-import { Link, useParams } from 'react-router-dom'
-import { getModuleById } from '../data/modules'
+import { Link, Navigate, useParams } from 'react-router-dom'
+import { getModuleById, isModuleAvailable } from '../data/modules'
 import { useProgress } from '../context/ProgressContext'
 import Header from './Header'
 import ProgressBar from './ProgressBar'
@@ -21,8 +21,11 @@ function ModuleOverview() {
     )
   }
 
+  if (!isModuleAvailable(module)) {
+    return <Navigate to="/" replace />
+  }
+
   const progress = getModuleProgressPercent(module)
-  const hasLessons = module.lessons.length > 0
 
   return (
     <main className="module-overview">
@@ -30,46 +33,43 @@ function ModuleOverview() {
 
       <section className="module-overview__intro">
         <p>{module.description}</p>
+        {module.duration ? (
+          <p className="module-overview__duration">⏱ {module.duration}</p>
+        ) : null}
         <ProgressBar value={progress} label="Voortgang in deze module" />
       </section>
 
       <section className="module-overview__lessons" aria-label="Stappen">
         <h2>Stappen</h2>
 
-        {hasLessons ? (
-          <ol className="module-overview__list">
-            {module.lessons.map((lesson, index) => {
-              const done = isLessonCompleted(module.id, lesson.id)
+        <ol className="module-overview__list">
+          {module.lessons.map((lesson, index) => {
+            const done = isLessonCompleted(module.id, lesson.id)
 
-              return (
-                <li key={lesson.id}>
-                  <Link
-                    to={`/module/${module.id}/les/${lesson.id}`}
-                    className={`module-overview__lesson${done ? ' module-overview__lesson--done' : ''}`}
-                  >
-                    <span className="module-overview__lesson-index">
-                      {done ? '✓' : index + 1}
+            return (
+              <li key={lesson.id}>
+                <Link
+                  to={`/module/${module.id}/les/${lesson.id}`}
+                  className={`module-overview__lesson${done ? ' module-overview__lesson--done' : ''}`}
+                >
+                  <span className="module-overview__lesson-index">
+                    {done ? '✓' : index + 1}
+                  </span>
+                  <span className="module-overview__lesson-body">
+                    <span className="module-overview__lesson-title">
+                      {lesson.title}
                     </span>
-                    <span className="module-overview__lesson-body">
-                      <span className="module-overview__lesson-title">
-                        {lesson.title}
+                    {lesson.summary ? (
+                      <span className="module-overview__lesson-summary">
+                        {lesson.summary}
                       </span>
-                      {lesson.summary ? (
-                        <span className="module-overview__lesson-summary">
-                          {lesson.summary}
-                        </span>
-                      ) : null}
-                    </span>
-                  </Link>
-                </li>
-              )
-            })}
-          </ol>
-        ) : (
-          <p className="module-overview__empty">
-            Er zijn nog geen lessen toegevoegd aan deze module.
-          </p>
-        )}
+                    ) : null}
+                  </span>
+                </Link>
+              </li>
+            )
+          })}
+        </ol>
       </section>
     </main>
   )

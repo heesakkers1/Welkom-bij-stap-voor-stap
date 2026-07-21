@@ -1,5 +1,8 @@
 import ImagePlaceholder from './ImagePlaceholder'
 import VideoPlaceholder from './VideoPlaceholder'
+import ContentCards from './ContentCards'
+import Timeline from './Timeline'
+import ExpandableAnswer from './ExpandableAnswer'
 import './LessonContent.css'
 
 function LessonContentBlock({ block }) {
@@ -31,6 +34,15 @@ function LessonContentBlock({ block }) {
         </ul>
       )
 
+    case 'numberedList':
+      return (
+        <ol className="lesson-block lesson-block--numbered">
+          {(block.items ?? []).map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ol>
+      )
+
     case 'tip':
       return (
         <aside className="lesson-block lesson-block--tip">
@@ -41,13 +53,37 @@ function LessonContentBlock({ block }) {
         </aside>
       )
 
+    case 'highlight':
+      return (
+        <aside className="lesson-block lesson-block--highlight">
+          <p>{block.text}</p>
+        </aside>
+      )
+
+    case 'banner':
+      return (
+        <p className="lesson-block lesson-block--banner">{block.text}</p>
+      )
+
     case 'assignment':
       return (
         <aside className="lesson-block lesson-block--assignment">
           <p className="lesson-block__label">
             {block.label ?? 'Praktijkopdracht'}
           </p>
+          {block.situation ? (
+            <p className="lesson-block__situation">{block.situation}</p>
+          ) : null}
           <p>{block.text}</p>
+          {block.reflective ? (
+            <label className="lesson-block__reflect">
+              <span className="visually-hidden">Jouw reflectie</span>
+              <textarea
+                rows={3}
+                placeholder="Schrijf hier kort je gedachten… (blijft alleen op dit scherm)"
+              />
+            </label>
+          ) : null}
         </aside>
       )
 
@@ -71,6 +107,24 @@ function LessonContentBlock({ block }) {
           title={block.title ?? '▶ Video'}
           text={block.text}
           note={block.note}
+        />
+      )
+
+    case 'cards':
+      return (
+        <ContentCards items={block.items} variant={block.variant ?? 'default'} />
+      )
+
+    case 'timeline':
+      return <Timeline items={block.items} />
+
+    case 'expandableAnswer':
+      return (
+        <ExpandableAnswer
+          situation={block.situation}
+          question={block.question}
+          answer={block.answer}
+          answerLabel={block.answerLabel}
         />
       )
 

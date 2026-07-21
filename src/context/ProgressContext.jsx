@@ -1,5 +1,13 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react'
-import { MODULE_STATUS, modules } from '../data/modules'
+import {
+  MODULE_STATUS,
+  getAvailableModules,
+  getLessonById,
+  isModuleAvailable,
+  lessonKey,
+  modules,
+  parseLessonKey,
+} from '../data/modules'
 
 const STORAGE_KEY = 'stap-voor-stap-progress'
 
@@ -8,13 +16,10 @@ const emptyProgress = {
   completedLessons: [],
   completedModules: [],
   welcomeSeen: false,
+  lastOpenedLesson: null,
 }
 
 const ProgressContext = createContext(null)
-
-function lessonKey(moduleId, lessonId) {
-  return `${moduleId}:${lessonId}`
-}
 
 function loadProgress() {
   try {
@@ -31,6 +36,8 @@ function loadProgress() {
         ? parsed.completedModules
         : [],
       welcomeSeen: Boolean(parsed.welcomeSeen),
+      lastOpenedLesson:
+        typeof parsed.lastOpenedLesson === 'string' ? parsed.lastOpenedLesson : null,
     }
   } catch {
     return emptyProgress
@@ -60,6 +67,7 @@ export function ProgressProvider({ children }) {
     setProgress((current) => ({
       ...current,
       openedLessons: uniquePush(current.openedLessons, key),
+      lastOpenedLesson: key,
     }))
   }, [])
 
@@ -69,6 +77,7 @@ export function ProgressProvider({ children }) {
       ...current,
       openedLessons: uniquePush(current.openedLessons, key),
       completedLessons: uniquePush(current.completedLessons, key),
+      lastOpenedLesson: key,
     }))
   }, [])
 
@@ -118,6 +127,10 @@ export function ProgressProvider({ children }) {
 
   const getModuleStatus = useCallback(
     (module) => {
+      if (!isModuleAvailable(module)) {
+        return MODULE_STATUS.COMING_SOON
+      }
+
       if (progress.completedModules.includes(module.id)) {
         return MODULE_STATUS.COMPLETED
       }
@@ -146,26 +159,18 @@ export function ProgressProvider({ children }) {
   const getModuleProgressPercent = useCallback(
     (module) => {
       const total = module.lessons.length
-      if (total === 0) {
-        return progress.completedModules.includes(module.id) ? 100 : 0
-      }
-
+      if (total === 0) return 0
       return Math.round((getCompletedLessonCount(module) / total) * 100)
     },
-    [getCompletedLessonCount, progress.completedModules],
+    [getCompletedLessonCount],
   )
 
   const overallProgressPercent = useMemo(() => {
+    const available = getAvailableModules()
     let total = 0
     let done = 0
 
-    for (const module of modules) {
-      if (module.lessons.length === 0) {
-        total += 1
-        if (progress.completedModules.includes(module.id)) done += 1
-        continue
-      }
-
+    for (const module of available) {
       total += module.lessons.length
       for (const lesson of module.lessons) {
         if (progress.completedLessons.includes(lessonKey(module.id, lesson.id))) {
@@ -175,6 +180,59 @@ export function ProgressProvider({ children }) {
     }
 
     return total === 0 ? 0 : Math.round((done / total) * 100)
+  }, [progress])
+
+  const hasStarted = useMemo(() => {
+    return getAvailableModules().some((module) => {
+      if (progress.completedModules.includes(module.id)) return true
+      return module.lessons.some((lesson) => {
+        const key = lessonKey(module.id, lesson.id)
+        return (
+          progress.openedLessons.includes(key) ||
+          progress.completedLessons.includes(key)
+        )
+      })
+    })
+  }, [progress])
+
+  const getResumeInfo = useCallback(() => {
+    const available = getAvailableModules()
+
+    const fromLast = parseLessonKey(progress.lastOpenedLesson)
+    if (fromLast) {
+      const module = available.find((item) => item.id === fromLast.moduleId)
+      if (module && !progress.completedModules.includes(module.id)) {
+        const incomplete = module.lessons.find(
+          (lesson) =>
+            !progress.completedLessons.includes(lessonKey(module.id, lesson.id)),
+        )
+        const lesson = incomplete ?? getLessonById(module.id, fromLast.lessonId)?.lesson
+        if (lesson) {
+          return {
+            path: `/module/${module.id}/les/${lesson.id}`,
+            label: `${module.title} · ${lesson.title}`,
+          }
+        }
+      }
+    }
+
+    for (const module of available) {
+      if (progress.completedModules.includes(module.id)) continue
+
+      const incomplete = module.lessons.find(
+        (lesson) =>
+          !progress.completedLessons.includes(lessonKey(module.id, lesson.id)),
+      )
+      const lesson = incomplete ?? module.lessons[0]
+      if (!lesson) continue
+
+      return {
+        path: `/module/${module.id}/les/${lesson.id}`,
+        label: `${module.title} · ${lesson.title}`,
+      }
+    }
+
+    return null
   }, [progress])
 
   const value = useMemo(
@@ -193,6 +251,8 @@ export function ProgressProvider({ children }) {
       getCompletedLessonCount,
       getModuleProgressPercent,
       overallProgressPercent,
+      hasStarted,
+      getResumeInfo,
     }),
     [
       progress,
@@ -208,6 +268,8 @@ export function ProgressProvider({ children }) {
       getCompletedLessonCount,
       getModuleProgressPercent,
       overallProgressPercent,
+      hasStarted,
+      getResumeInfo,
     ],
   )
 
@@ -216,6 +278,7 @@ export function ProgressProvider({ children }) {
   )
 }
 
+/* eslint-disable react-refresh/only-export-components -- useProgress hoort bij deze Provider */
 export function useProgress() {
   const context = useContext(ProgressContext)
   if (!context) {

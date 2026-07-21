@@ -23,6 +23,11 @@
   line-height: 1.55;
 }
 
+.module-overview__duration {
+  font-weight: 700 !important;
+  color: var(--accent-strong) !important;
+}
+
 .module-overview__lessons h2 {
   margin: 0 0 1rem;
   font-size: 1.25rem;

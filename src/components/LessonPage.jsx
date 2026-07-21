@@ -1,9 +1,10 @@
 import { useEffect } from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
+import { Navigate, useNavigate, useParams } from 'react-router-dom'
 import {
+  getAvailableModuleNumber,
   getLessonById,
   getLessonNeighbors,
-  getModuleIndex,
+  isModuleAvailable,
 } from '../data/modules'
 import { useProgress } from '../context/ProgressContext'
 import Header from './Header'
@@ -41,15 +42,18 @@ function LessonPage() {
     )
   }
 
+  if (!isModuleAvailable(result.module)) {
+    return <Navigate to="/" replace />
+  }
+
   const { module, lesson } = result
   const { previous, next } = getLessonNeighbors(moduleId, lessonId)
   const modulePath = `/module/${module.id}`
-  const moduleNumber = getModuleIndex(module.id) + 1
+  const moduleNumber = getAvailableModuleNumber(module.id) ?? 1
   const stepIndex = module.lessons.findIndex((item) => item.id === lesson.id)
   const stepNumber = stepIndex + 1
   const stepTotal = module.lessons.length
   const moduleProgress = getModuleProgressPercent(module)
-  const hasHero = lesson.content?.some((block) => block.type === 'hero')
 
   function goToNext() {
     markLessonCompleted(module.id, lesson.id)
@@ -60,13 +64,20 @@ function LessonPage() {
 
   function finishModule() {
     completeModule(module.id)
-    navigate('/')
+    navigate('/', {
+      state: {
+        completionMessage: module.completionMessage ?? {
+          title: '✓ Module afgerond',
+          text: 'Goed gedaan. Je kunt verder op het dashboard.',
+        },
+      },
+    })
   }
 
   return (
     <main className="lesson-page">
       <Header
-        title={hasHero ? undefined : lesson.title}
+        title={lesson.title}
         backTo={modulePath}
         backLabel={`Terug naar ${module.title}`}
       />
@@ -79,10 +90,7 @@ function LessonPage() {
             Stap {stepNumber} van {stepTotal}
           </span>
         </p>
-        <ProgressBar
-          value={moduleProgress}
-          label={`${module.title}`}
-        />
+        <ProgressBar value={moduleProgress} label={module.title} />
       </section>
 
       <LessonContent blocks={lesson.content} lessonId={lesson.id} />
