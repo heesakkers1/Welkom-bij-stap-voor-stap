@@ -29,8 +29,9 @@ export const modules = [
         summary: 'Een warme kennismaking met Stap voor Stap.',
         content: [
           {
-            type: 'imagePlaceholder',
-            text: 'Hier komt later een sfeervolle foto van onze zorgboerderij.',
+            type: 'image',
+            src: '/fotos/Imara-geitjes.jpeg',
+            alt: 'Imara met geitjes',
             size: 'wide',
           },
           {
