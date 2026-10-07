@@ -109,10 +109,10 @@ export const modules = [
               'onze visie en manier van werken;',
               'onze organisatie en bij wie je terechtkunt;',
               'de zorgboerderij en het ritme van de dag;',
-              'het begeleiden van deelnemers en rapporteren;',
-              'de dagstart en de klusjes;',
               'hoe we werken met het digibord;',
+              'de dagstart en de klusjes;',
               'veilig werken, privacy en meldcodes;',
+              'het begeleiden van deelnemers en rapporteren;',
               'onze systemen en praktische afspraken;',
               'jouw functie en je ontwikkeling.',
             ],
@@ -587,239 +587,6 @@ export const modules = [
     ],
   },
   {
-    id: 'deelnemers-begeleiden',
-    title: 'Deelnemers begeleiden',
-    description:
-      'Het begeleidingsplan, de persoonlijk begeleider, rapporteren en je professionele houding.',
-    icon: 'people',
-    duration: '10 minuten',
-    completionMessage: {
-      title: '🤝 Sterk bezig!',
-      text: 'Je weet nu hoe we deelnemers begeleiden en hoe je goed rapporteert.',
-    },
-    lessons: [
-      {
-        id: 'persoonlijk-begeleider',
-        title: 'Persoonlijk begeleider en begeleidingsplan',
-        summary: 'Wie het vaste aanspreekpunt is en waar de afspraken staan.',
-        content: [
-          {
-            type: 'paragraph',
-            text: 'Iedere deelnemer heeft een persoonlijk begeleider. Dat is het vaste aanspreekpunt voor de deelnemer en betrokkenen.',
-          },
-          {
-            type: 'paragraph',
-            text: 'De persoonlijk begeleider bewaakt het begeleidingsproces, stelt samen met het team het begeleidingsplan op en zorgt voor de uitvoering en evaluatie ervan. Ook onderhoudt hij of zij contact met collega’s, familie en externe betrokkenen.',
-          },
-          {
-            type: 'paragraph',
-            text: 'Voor iedere deelnemer werken we met een begeleidingsplan. Hierin staan doelen, afspraken en aandachtspunten die richting geven aan de begeleiding. De plannen staan in ZilliZ.',
-          },
-          {
-            type: 'bulletList',
-            items: [
-              'Begeleidingsplannen worden meestal twee keer per jaar geëvalueerd met alle betrokkenen.',
-              'Bij de eindevaluatie is er altijd een persoonlijk gesprek met de deelnemer en/of betrokkenen.',
-              'Bij jeugd is altijd een SKJ-geregistreerde professional eindverantwoordelijk voor het begeleidingsplan.',
-            ],
-          },
-          {
-            type: 'tip',
-            label: '💡 Tip voor je eerste week',
-            text: 'Lees in ZilliZ de begeleidingsplannen van de deelnemers met wie je werkt. Zo ken je hun doelen en afspraken.',
-          },
-        ],
-      },
-      {
-        id: 'grenzen-en-veiligheid',
-        title: 'Structuur, grenzen en veiligheid',
-        summary: 'Warm in contact, maar altijd professioneel.',
-        content: [
-          {
-            type: 'paragraph',
-            text: 'In de begeleiding bieden we structuur, duidelijkheid en veiligheid. We zijn betrokken en warm in ons contact, maar blijven altijd professioneel.',
-          },
-          {
-            type: 'paragraph',
-            text: 'Persoonlijke en werkrelaties houden we gescheiden. Je bewaakt je rol als begeleider en de afstand in privésferen.',
-          },
-          {
-            type: 'paragraph',
-            text: 'Let op signalen van onveiligheid. Maak ze bespreekbaar en overleg zo nodig met collega’s of je leidinggevende.',
-          },
-          {
-            type: 'highlight',
-            text: 'De veiligheid van de deelnemer en de groep staat altijd voorop.',
-          },
-        ],
-      },
-      {
-        id: 'rapporteren',
-        title: 'Rapporteren',
-        summary: 'Feitelijk, objectief, respectvol en op tijd.',
-        content: [
-          {
-            type: 'paragraph',
-            text: 'We rapporteren in ZilliZ. Zo blijft informatie actueel en compleet en kan het begeleidingsproces goed gevolgd worden.',
-          },
-          {
-            type: 'numberedList',
-            items: [
-              'Rapporteer feitelijk, objectief, respectvol en op tijd.',
-              'Beschrijf wat je daadwerkelijk hebt gezien, gehoord of gedaan. Vermijd aannames, interpretaties en oordelen.',
-              'Rapporteer na iedere individuele begeleiding, of bij dagbesteding aan het einde van de dag.',
-              'Bijzonderheden, incidenten en belangrijke veranderingen horen ook in de rapportage.',
-            ],
-          },
-          {
-            type: 'tip',
-            label: '💡 Kort en doelgericht',
-            text: 'Schrijf korte zinnen die gericht zijn op de doelen van de deelnemer, in plaats van een lang verhaal.',
-          },
-          {
-            type: 'expandableAnswer',
-            situation:
-              'Je schrijft: “Hij had vandaag een slechte bui en had overal geen zin in.”',
-            question: 'Is dit een feitelijke rapportage? Hoe kun je het beter opschrijven?',
-            answerLabel: 'Bekijk een mogelijke richting',
-            answer:
-              '“Slechte bui” en “geen zin” zijn interpretaties. Beschrijf wat je zag en hoorde, bijvoorbeeld wat de deelnemer zei of deed en hoe jij daarop reageerde.',
-          },
-          {
-            type: 'paragraph',
-            text: 'Twijfel je wat je moet rapporteren? Bespreek het met de persoonlijk begeleider of een collega.',
-          },
-        ],
-      },
-      {
-        id: 'professionele-houding',
-        title: 'Professionele houding',
-        summary: 'Respectvol met elkaar, zorgvuldig online.',
-        content: [
-          {
-            type: 'paragraph',
-            text: 'We gaan respectvol en prettig met elkaar om. We luisteren naar elkaar, spreken elkaar op een normale manier aan en helpen elkaar waar nodig.',
-          },
-          {
-            type: 'paragraph',
-            text: 'Discriminatie, intimidatie, agressie of ander ongewenst gedrag accepteren we niet. Als het toch voorkomt, spreken we elkaar erop aan en zoeken we samen naar een goede oplossing.',
-          },
-          {
-            type: 'bulletList',
-            items: [
-              'Foto’s, informatie of situaties van deelnemers deel je nooit zonder toestemming.',
-              'Online spreek je respectvol over de organisatie, collega’s en deelnemers.',
-              'Wat we op de werkvloer doen, blijft binnen de werkcontext.',
-              'Roken mag alleen op de aangewezen plekken.',
-              'Alcohol of drugs tijdens werktijd zijn niet toegestaan, en je komt niet onder invloed op het werk.',
-            ],
-          },
-        ],
-      },
-    ],
-  },
-  {
-    id: 'dagstart-digibord',
-    title: 'De dagstart',
-    description: 'Hoe de dagstart verloopt en hoe we samen rust in de groep houden.',
-    icon: 'sun',
-    duration: '6 minuten',
-    completionMessage: {
-      title: '☀️ Klaar voor de dagstart!',
-      text: 'Je weet nu hoe de dagstart verloopt. Tijd om het digibord te leren kennen.',
-    },
-    lessons: [
-      {
-        id: 'de-dagstart',
-        title: 'De dagstart',
-        summary: 'Een vaste structuur voor een rustig begin.',
-        content: [
-          {
-            type: 'paragraph',
-            text: 'Iedere dag begint met een dagstart. Die heeft een vaste structuur en met hulp van het digibord verloopt hij steeds efficiënter.',
-          },
-          {
-            type: 'paragraph',
-            text: 'Onderdelen van de dagstart zijn:',
-          },
-          {
-            type: 'bulletList',
-            items: [
-              'centraal, met het scherm;',
-              'telefoon;',
-              'voorbereiding;',
-              'structuur;',
-              'deelnemers;',
-              'personeel: hoe zit je erbij?',
-            ],
-          },
-          {
-            type: 'paragraph',
-            text: 'Op vrijdag werken we ook met de vaste dagstructuur en blokken.',
-          },
-          {
-            type: 'tip',
-            label: '💡 Voorbereiding helpt',
-            text: 'Een goede voorbereiding door de dagleidende helpt enorm om de dagstart soepel te laten verlopen.',
-          },
-        ],
-      },
-      {
-        id: 'prikkelarme-dagstart',
-        title: 'Een rustige, prikkelarme dagstart',
-        summary: 'Afspraken die zorgen voor rust in de groep.',
-        content: [
-          {
-            type: 'paragraph',
-            text: 'We houden de dagstart zo prikkelarm mogelijk. Daar helpen deze afspraken bij:',
-          },
-          {
-            type: 'bulletList',
-            items: [
-              'een bewuste groepskeuze;',
-              'geen ouders binnen tijdens de dagstart;',
-              'collega’s gaan op tijd uit de ruimte;',
-              'deelnemers zo snel mogelijk laten zitten.',
-            ],
-          },
-          {
-            type: 'highlight',
-            text: 'Tijdens de dagstart weiden we niet lang uit over individuele deelnemers.',
-          },
-          {
-            type: 'paragraph',
-            text: 'Speelt er iets groots rond een deelnemer? Dan wordt die deelnemer op de agenda van het maandelijkse DB-overleg gezet. Zo kunnen we strak door de dagstart heen.',
-          },
-        ],
-      },
-      {
-        id: 'leiding-nemen',
-        title: 'Leiding nemen op de DB',
-        summary: 'Durf knopen door te hakken.',
-        content: [
-          {
-            type: 'paragraph',
-            text: 'Op de dagbesteding (DB) is het belangrijk dat er iemand de leiding neemt en knopen doorhakt. Dat geeft rust voor de groep.',
-          },
-          {
-            type: 'paragraph',
-            text: 'Niet iedereen voelt zich daar meteen zeker genoeg voor. Toch is iedereen uitgenodigd om dit wel te doen.',
-          },
-          {
-            type: 'paragraph',
-            text: 'Samen houden we de afspraken over de dagstructuur in de gaten. Dat is ieders verantwoordelijkheid.',
-          },
-          {
-            type: 'assignment',
-            label: 'Praktijkopdracht',
-            text: 'Kijk tijdens je eerstvolgende dagstart mee. Welke onderdelen herken je? Wat doet de dagleidende om de dagstart rustig te houden?',
-            reflective: true,
-          },
-        ],
-      },
-    ],
-  },
-  {
     id: 'digibord',
     title: 'Hoe werken we met het Digibord?',
     description:
@@ -975,6 +742,107 @@ export const modules = [
             type: 'assignment',
             label: 'Praktijkopdracht',
             text: 'Zoek op het digibord je eigen begeleidingskaart op. Welke klussen staan er vandaag voor jou? Sleep er één naar het tijdsblok waarin je hem gaat doen.',
+            reflective: true,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'dagstart-digibord',
+    title: 'De dagstart',
+    description: 'Hoe de dagstart verloopt en hoe we samen rust in de groep houden.',
+    icon: 'sun',
+    duration: '6 minuten',
+    completionMessage: {
+      title: '☀️ Klaar voor de dagstart!',
+      text: 'Je weet nu hoe de dagstart verloopt en hoe we samen rust in de groep houden.',
+    },
+    lessons: [
+      {
+        id: 'de-dagstart',
+        title: 'De dagstart',
+        summary: 'Een vaste structuur voor een rustig begin.',
+        content: [
+          {
+            type: 'paragraph',
+            text: 'Iedere dag begint met een dagstart. Die heeft een vaste structuur en met hulp van het digibord verloopt hij steeds efficiënter.',
+          },
+          {
+            type: 'paragraph',
+            text: 'Onderdelen van de dagstart zijn:',
+          },
+          {
+            type: 'bulletList',
+            items: [
+              'centraal, met het scherm;',
+              'telefoon;',
+              'voorbereiding;',
+              'structuur;',
+              'deelnemers;',
+              'personeel: hoe zit je erbij?',
+            ],
+          },
+          {
+            type: 'paragraph',
+            text: 'Op vrijdag werken we ook met de vaste dagstructuur en blokken.',
+          },
+          {
+            type: 'tip',
+            label: '💡 Voorbereiding helpt',
+            text: 'Een goede voorbereiding door de dagleidende helpt enorm om de dagstart soepel te laten verlopen.',
+          },
+        ],
+      },
+      {
+        id: 'prikkelarme-dagstart',
+        title: 'Een rustige, prikkelarme dagstart',
+        summary: 'Afspraken die zorgen voor rust in de groep.',
+        content: [
+          {
+            type: 'paragraph',
+            text: 'We houden de dagstart zo prikkelarm mogelijk. Daar helpen deze afspraken bij:',
+          },
+          {
+            type: 'bulletList',
+            items: [
+              'een bewuste groepskeuze;',
+              'geen ouders binnen tijdens de dagstart;',
+              'collega’s gaan op tijd uit de ruimte;',
+              'deelnemers zo snel mogelijk laten zitten.',
+            ],
+          },
+          {
+            type: 'highlight',
+            text: 'Tijdens de dagstart weiden we niet lang uit over individuele deelnemers.',
+          },
+          {
+            type: 'paragraph',
+            text: 'Speelt er iets groots rond een deelnemer? Dan wordt die deelnemer op de agenda van het maandelijkse DB-overleg gezet. Zo kunnen we strak door de dagstart heen.',
+          },
+        ],
+      },
+      {
+        id: 'leiding-nemen',
+        title: 'Leiding nemen op de DB',
+        summary: 'Durf knopen door te hakken.',
+        content: [
+          {
+            type: 'paragraph',
+            text: 'Op de dagbesteding (DB) is het belangrijk dat er iemand de leiding neemt en knopen doorhakt. Dat geeft rust voor de groep.',
+          },
+          {
+            type: 'paragraph',
+            text: 'Niet iedereen voelt zich daar meteen zeker genoeg voor. Toch is iedereen uitgenodigd om dit wel te doen.',
+          },
+          {
+            type: 'paragraph',
+            text: 'Samen houden we de afspraken over de dagstructuur in de gaten. Dat is ieders verantwoordelijkheid.',
+          },
+          {
+            type: 'assignment',
+            label: 'Praktijkopdracht',
+            text: 'Kijk tijdens je eerstvolgende dagstart mee. Welke onderdelen herken je? Wat doet de dagleidende om de dagstart rustig te houden?',
             reflective: true,
           },
         ],
@@ -1262,6 +1130,138 @@ export const modules = [
     ],
   },
   {
+    id: 'deelnemers-begeleiden',
+    title: 'Deelnemers begeleiden',
+    description:
+      'Het begeleidingsplan, de persoonlijk begeleider, rapporteren en je professionele houding.',
+    icon: 'people',
+    duration: '10 minuten',
+    completionMessage: {
+      title: '🤝 Sterk bezig!',
+      text: 'Je weet nu hoe we deelnemers begeleiden en hoe je goed rapporteert.',
+    },
+    lessons: [
+      {
+        id: 'persoonlijk-begeleider',
+        title: 'Persoonlijk begeleider en begeleidingsplan',
+        summary: 'Wie het vaste aanspreekpunt is en waar de afspraken staan.',
+        content: [
+          {
+            type: 'paragraph',
+            text: 'Iedere deelnemer heeft een persoonlijk begeleider. Dat is het vaste aanspreekpunt voor de deelnemer en betrokkenen.',
+          },
+          {
+            type: 'paragraph',
+            text: 'De persoonlijk begeleider bewaakt het begeleidingsproces, stelt samen met het team het begeleidingsplan op en zorgt voor de uitvoering en evaluatie ervan. Ook onderhoudt hij of zij contact met collega’s, familie en externe betrokkenen.',
+          },
+          {
+            type: 'paragraph',
+            text: 'Voor iedere deelnemer werken we met een begeleidingsplan. Hierin staan doelen, afspraken en aandachtspunten die richting geven aan de begeleiding. De plannen staan in ZilliZ.',
+          },
+          {
+            type: 'bulletList',
+            items: [
+              'Begeleidingsplannen worden meestal twee keer per jaar geëvalueerd met alle betrokkenen.',
+              'Bij de eindevaluatie is er altijd een persoonlijk gesprek met de deelnemer en/of betrokkenen.',
+              'Bij jeugd is altijd een SKJ-geregistreerde professional eindverantwoordelijk voor het begeleidingsplan.',
+            ],
+          },
+          {
+            type: 'tip',
+            label: '💡 Tip voor je eerste week',
+            text: 'Lees in ZilliZ de begeleidingsplannen van de deelnemers met wie je werkt. Zo ken je hun doelen en afspraken.',
+          },
+        ],
+      },
+      {
+        id: 'grenzen-en-veiligheid',
+        title: 'Structuur, grenzen en veiligheid',
+        summary: 'Warm in contact, maar altijd professioneel.',
+        content: [
+          {
+            type: 'paragraph',
+            text: 'In de begeleiding bieden we structuur, duidelijkheid en veiligheid. We zijn betrokken en warm in ons contact, maar blijven altijd professioneel.',
+          },
+          {
+            type: 'paragraph',
+            text: 'Persoonlijke en werkrelaties houden we gescheiden. Je bewaakt je rol als begeleider en de afstand in privésferen.',
+          },
+          {
+            type: 'paragraph',
+            text: 'Let op signalen van onveiligheid. Maak ze bespreekbaar en overleg zo nodig met collega’s of je leidinggevende.',
+          },
+          {
+            type: 'highlight',
+            text: 'De veiligheid van de deelnemer en de groep staat altijd voorop.',
+          },
+        ],
+      },
+      {
+        id: 'rapporteren',
+        title: 'Rapporteren',
+        summary: 'Feitelijk, objectief, respectvol en op tijd.',
+        content: [
+          {
+            type: 'paragraph',
+            text: 'We rapporteren in ZilliZ. Zo blijft informatie actueel en compleet en kan het begeleidingsproces goed gevolgd worden.',
+          },
+          {
+            type: 'numberedList',
+            items: [
+              'Rapporteer feitelijk, objectief, respectvol en op tijd.',
+              'Beschrijf wat je daadwerkelijk hebt gezien, gehoord of gedaan. Vermijd aannames, interpretaties en oordelen.',
+              'Rapporteer na iedere individuele begeleiding, of bij dagbesteding aan het einde van de dag.',
+              'Bijzonderheden, incidenten en belangrijke veranderingen horen ook in de rapportage.',
+            ],
+          },
+          {
+            type: 'tip',
+            label: '💡 Kort en doelgericht',
+            text: 'Schrijf korte zinnen die gericht zijn op de doelen van de deelnemer, in plaats van een lang verhaal.',
+          },
+          {
+            type: 'expandableAnswer',
+            situation:
+              'Je schrijft: “Hij had vandaag een slechte bui en had overal geen zin in.”',
+            question: 'Is dit een feitelijke rapportage? Hoe kun je het beter opschrijven?',
+            answerLabel: 'Bekijk een mogelijke richting',
+            answer:
+              '“Slechte bui” en “geen zin” zijn interpretaties. Beschrijf wat je zag en hoorde, bijvoorbeeld wat de deelnemer zei of deed en hoe jij daarop reageerde.',
+          },
+          {
+            type: 'paragraph',
+            text: 'Twijfel je wat je moet rapporteren? Bespreek het met de persoonlijk begeleider of een collega.',
+          },
+        ],
+      },
+      {
+        id: 'professionele-houding',
+        title: 'Professionele houding',
+        summary: 'Respectvol met elkaar, zorgvuldig online.',
+        content: [
+          {
+            type: 'paragraph',
+            text: 'We gaan respectvol en prettig met elkaar om. We luisteren naar elkaar, spreken elkaar op een normale manier aan en helpen elkaar waar nodig.',
+          },
+          {
+            type: 'paragraph',
+            text: 'Discriminatie, intimidatie, agressie of ander ongewenst gedrag accepteren we niet. Als het toch voorkomt, spreken we elkaar erop aan en zoeken we samen naar een goede oplossing.',
+          },
+          {
+            type: 'bulletList',
+            items: [
+              'Foto’s, informatie of situaties van deelnemers deel je nooit zonder toestemming.',
+              'Online spreek je respectvol over de organisatie, collega’s en deelnemers.',
+              'Wat we op de werkvloer doen, blijft binnen de werkcontext.',
+              'Roken mag alleen op de aangewezen plekken.',
+              'Alcohol of drugs tijdens werktijd zijn niet toegestaan, en je komt niet onder invloed op het werk.',
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  {
     id: 'procedures',
     title: 'Systemen en afspraken',
     description: 'ZilliZ, protocollen, ziekmelden, verlof, kleding en telefoongebruik.',
@@ -1406,6 +1406,15 @@ export const modules = [
         ],
       },
     ],
+  },
+  {
+    id: 'paarden-dieren',
+    title: 'Paarden en dieren',
+    description: 'Omgaan met paarden en andere dieren op de boerderij.',
+    icon: 'horse',
+    duration: 'Binnenkort',
+    comingSoon: true,
+    lessons: [],
   },
   {
     id: 'jouw-functie',
@@ -1569,15 +1578,6 @@ export const modules = [
         ],
       },
     ],
-  },
-  {
-    id: 'paarden-dieren',
-    title: 'Paarden en dieren',
-    description: 'Omgaan met paarden en andere dieren op de boerderij.',
-    icon: 'horse',
-    duration: 'Binnenkort',
-    comingSoon: true,
-    lessons: [],
   },
   {
     id: 'kennistoets',
