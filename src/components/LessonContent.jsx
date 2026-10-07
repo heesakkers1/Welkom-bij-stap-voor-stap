@@ -3,6 +3,7 @@ import VideoPlaceholder from './VideoPlaceholder'
 import ContentCards from './ContentCards'
 import Timeline from './Timeline'
 import ExpandableAnswer from './ExpandableAnswer'
+import QuizQuestion from './QuizQuestion'
 import './LessonContent.css'
 
 function LessonContentBlock({ block }) {
@@ -125,6 +126,16 @@ function LessonContentBlock({ block }) {
           question={block.question}
           answer={block.answer}
           answerLabel={block.answerLabel}
+        />
+      )
+
+    case 'quiz':
+      return (
+        <QuizQuestion
+          question={block.question}
+          options={block.options}
+          correct={block.correct}
+          explanation={block.explanation}
         />
       )
 
