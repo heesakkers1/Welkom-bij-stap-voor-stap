@@ -16,7 +16,7 @@ function WelcomeScreen() {
   }
 
   return (
-    <main className="welcome-screen">
+    <main className="welcome-screen page-backdrop">
       <div className="welcome-screen__inner">
         <header className="welcome-screen__header">
           <p className="welcome-screen__brand">Team Stap voor Stap</p>

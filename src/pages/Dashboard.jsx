@@ -83,7 +83,7 @@ function Dashboard() {
   }
 
   return (
-    <main className="dashboard">
+    <main className="dashboard page-backdrop">
       <header className="dashboard__header">
         <div className="dashboard__intro">
           <p className="dashboard__eyebrow">Welkom!</p>

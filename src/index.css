@@ -64,3 +64,19 @@ svg {
   display: block;
   max-width: 100%;
 }
+
+/* Lichte, transparante foto als achtergrond op de eerste pagina's. */
+.page-backdrop {
+  position: relative;
+  isolation: isolate;
+}
+
+.page-backdrop::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: url('/fotos/pipowagen.jpg') center / cover no-repeat;
+  opacity: 0.14;
+  pointer-events: none;
+}
