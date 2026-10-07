@@ -1,5 +1,5 @@
 import { useLocation, useNavigate } from 'react-router-dom'
-import { MODULE_STATUS, modules } from '../data/modules'
+import { MODULE_STATUS, getCategoriesWithModules, modules } from '../data/modules'
 import { useProgress } from '../context/ProgressContext'
 import ProgressBar from '../components/ProgressBar'
 import ModuleTile from '../components/ModuleTile'
@@ -20,6 +20,41 @@ function Dashboard() {
 
   const completionMessage = location.state?.completionMessage ?? null
   const resumeInfo = getResumeInfo()
+
+  const categoriesWithModules = getCategoriesWithModules()
+  const resumeModuleId = resumeInfo?.path?.split('/')[2] ?? null
+  const openCategoryId =
+    categoriesWithModules.find((category) =>
+      category.moduleIds.includes(resumeModuleId),
+    )?.id ?? categoriesWithModules[0]?.id
+
+  function renderTile(module) {
+    const status = getModuleStatus(module)
+    const completedCount = getCompletedLessonCount(module)
+    const totalSteps = module.lessons.length
+    const comingSoon = status === MODULE_STATUS.COMING_SOON
+
+    let statusLabel = status
+    if (status === MODULE_STATUS.IN_PROGRESS && totalSteps > 0) {
+      statusLabel = `Bezig · ${completedCount} van ${totalSteps} stappen`
+    } else if (status === MODULE_STATUS.COMPLETED) {
+      statusLabel = 'Afgerond'
+    } else if (status === MODULE_STATUS.NOT_STARTED && totalSteps > 0) {
+      statusLabel = `Nog niet gestart · ${totalSteps} stappen`
+    }
+
+    return (
+      <ModuleTile
+        key={module.id}
+        module={module}
+        status={status}
+        statusLabel={statusLabel}
+        disabled={comingSoon}
+        completedCount={completedCount}
+        totalSteps={totalSteps}
+      />
+    )
+  }
 
   function dismissCelebration() {
     navigate('.', { replace: true, state: {} })
@@ -81,35 +116,42 @@ function Dashboard() {
         </section>
       ) : null}
 
-      <section className="dashboard__modules" aria-label="Onboarding onderdelen">
-        {modules.map((module) => {
-          const status = getModuleStatus(module)
-          const completedCount = getCompletedLessonCount(module)
-          const totalSteps = module.lessons.length
-          const comingSoon = status === MODULE_STATUS.COMING_SOON
-
-          let statusLabel = status
-          if (status === MODULE_STATUS.IN_PROGRESS && totalSteps > 0) {
-            statusLabel = `Bezig · ${completedCount} van ${totalSteps} stappen`
-          } else if (status === MODULE_STATUS.COMPLETED) {
-            statusLabel = 'Afgerond'
-          } else if (status === MODULE_STATUS.NOT_STARTED && totalSteps > 0) {
-            statusLabel = `Nog niet gestart · ${totalSteps} stappen`
-          }
+      <div className="dashboard__categories" aria-label="Onboarding onderdelen">
+        {categoriesWithModules.map((category) => {
+          const available = category.modules.filter(
+            (module) => getModuleStatus(module) !== MODULE_STATUS.COMING_SOON,
+          )
+          const completed = available.filter(
+            (module) => getModuleStatus(module) === MODULE_STATUS.COMPLETED,
+          ).length
 
           return (
-            <ModuleTile
-              key={module.id}
-              module={module}
-              status={status}
-              statusLabel={statusLabel}
-              disabled={comingSoon}
-              completedCount={completedCount}
-              totalSteps={totalSteps}
-            />
+            <details
+              key={category.id}
+              className="dashboard__category"
+              open={category.id === openCategoryId}
+            >
+              <summary className="dashboard__category-header">
+                <span className="dashboard__category-text">
+                  <span className="dashboard__category-title">{category.title}</span>
+                  {category.description ? (
+                    <span className="dashboard__category-description">
+                      {category.description}
+                    </span>
+                  ) : null}
+                  <span className="dashboard__category-count">
+                    {completed} van {available.length} afgerond
+                  </span>
+                </span>
+              </summary>
+
+              <section className="dashboard__modules">
+                {category.modules.map((module) => renderTile(module))}
+              </section>
+            </details>
           )
         })}
-      </section>
+      </div>
 
       <footer className="dashboard__footer">
         <Button onClick={handlePrimaryAction}>

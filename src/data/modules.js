@@ -308,7 +308,7 @@ export const modules = [
   },
   {
     id: 'organisatie',
-    title: 'Onze organisatie',
+    title: 'Wie is wie?',
     description:
       'Voor wie we er zijn, hoe we samenwerken en bij wie je terechtkunt.',
     icon: 'compass',
@@ -946,6 +946,15 @@ export const modules = [
     ],
   },
   {
+    id: 'paarden-dieren',
+    title: 'Paarden en dieren',
+    description: 'Omgaan met paarden en andere dieren op de boerderij.',
+    icon: 'horse',
+    duration: 'Binnenkort',
+    comingSoon: true,
+    lessons: [],
+  },
+  {
     id: 'veilig-werken',
     title: 'Veilig werken',
     description: 'Veiligheid, incidenten melden, BHV, privacy en meldcodes.',
@@ -1408,15 +1417,6 @@ export const modules = [
     ],
   },
   {
-    id: 'paarden-dieren',
-    title: 'Paarden en dieren',
-    description: 'Omgaan met paarden en andere dieren op de boerderij.',
-    icon: 'horse',
-    duration: 'Binnenkort',
-    comingSoon: true,
-    lessons: [],
-  },
-  {
     id: 'jouw-functie',
     title: 'Jouw functie en groei',
     description: 'De functies binnen Stap voor Stap, arbeidsvoorwaarden en ontwikkeling.',
@@ -1778,6 +1778,49 @@ export const modules = [
     ],
   },
 ]
+
+/**
+ * Categorieën op het dashboard. Iedere module hoort bij één categorie;
+ * de volgorde hier bepaalt de volgorde op het dashboard.
+ */
+export const categories = [
+  {
+    id: 'start',
+    title: 'Welkom',
+    moduleIds: ['welkom'],
+  },
+  {
+    id: 'organisatie',
+    title: 'Onze organisatie',
+    description: 'Onze visie, de mensen en de zorgboerderij.',
+    moduleIds: ['onze-visie', 'organisatie', 'zorgboerderij'],
+  },
+  {
+    id: 'de-dag',
+    title: 'De dag op de boerderij',
+    description: 'Het digibord, de dagstart, de klusjes en de dieren.',
+    moduleIds: ['digibord', 'dagstart-digibord', 'klusjes-dagprogramma', 'paarden-dieren'],
+  },
+  {
+    id: 'werken',
+    title: 'Goed en veilig werken',
+    description: 'Veiligheid, begeleiden en de afspraken die we maken.',
+    moduleIds: ['veilig-werken', 'deelnemers-begeleiden', 'procedures'],
+  },
+  {
+    id: 'afronden',
+    title: 'Jij bij Stap voor Stap',
+    description: 'Jouw functie, de kennistoets en de afronding.',
+    moduleIds: ['jouw-functie', 'kennistoets', 'afronding'],
+  },
+]
+
+export function getCategoriesWithModules() {
+  return categories.map((category) => ({
+    ...category,
+    modules: category.moduleIds.map(getModuleById).filter(Boolean),
+  }))
+}
 
 export function isModuleAvailable(module) {
   return Boolean(module && !module.comingSoon && module.lessons?.length > 0)
