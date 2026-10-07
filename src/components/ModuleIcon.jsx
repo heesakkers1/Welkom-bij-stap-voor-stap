@@ -49,6 +49,26 @@ const icons = {
       strokeLinejoin="round"
     />
   ),
+  compass: (
+    <path
+      d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zm3.5-12.5-2 5-5 2 2-5 5-2z"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  ),
+  sprout: (
+    <path
+      d="M12 20v-8m0 0c0-3.5-2.5-6-6.5-6 0 3.5 2.5 6 6.5 6zm0 0c0-3 2.2-5.5 6.5-5.5 0 3-2.2 5.5-6.5 5.5zM7 20h10"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  ),
   board: (
     <path
       d="M4 5h16v12H4V5zm4 16h8M12 17v4M8 9h8M8 12h5"
