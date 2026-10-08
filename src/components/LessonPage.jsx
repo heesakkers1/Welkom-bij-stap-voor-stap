@@ -76,11 +76,7 @@ function LessonPage() {
 
   return (
     <main className="lesson-page">
-      <Header
-        title={lesson.title}
-        backTo={modulePath}
-        backLabel={`Terug naar ${module.title}`}
-      />
+      <Header title={lesson.title} backTo={modulePath} />
 
       <section className="lesson-page__progress" aria-label="Modulevoortgang">
         <p className="lesson-page__meta">
