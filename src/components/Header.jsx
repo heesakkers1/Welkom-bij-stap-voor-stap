@@ -1,13 +1,15 @@
 import { Link } from 'react-router-dom'
 import './Header.css'
 
-function Header({ title, backTo = '/', backLabel = 'Terug naar dashboard' }) {
+function Header({ title, backTo, backLabel }) {
   return (
     <header className="app-header">
       <div className="app-header__row">
-        <Link to={backTo} className="app-header__back">
-          {backLabel}
-        </Link>
+        {backTo ? (
+          <Link to={backTo} className="app-header__back">
+            {backLabel}
+          </Link>
+        ) : null}
         <Link
           to="/"
           className="app-header__home"
