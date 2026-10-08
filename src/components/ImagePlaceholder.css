@@ -11,6 +11,11 @@
   display: block;
 }
 
+.media-image--portrait {
+  max-width: 24rem;
+  margin-inline: auto;
+}
+
 .media-image figcaption {
   margin-top: 0.65rem;
   font-size: 0.92rem;

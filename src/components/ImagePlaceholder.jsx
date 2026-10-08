@@ -7,7 +7,7 @@ import './ImagePlaceholder.css'
 function ImagePlaceholder({
   src,
   alt = '',
-  caption = 'Hier komt later een foto.',
+  caption,
   size = 'wide',
 }) {
   if (src) {
@@ -23,10 +23,12 @@ function ImagePlaceholder({
     <figure
       className={`media-image media-image--${size} media-image--placeholder`}
       role="img"
-      aria-label={caption}
+      aria-label={caption ?? 'Hier komt later een foto.'}
     >
       <div className="media-image__frame">
-        <span className="media-image__hint">{caption}</span>
+        <span className="media-image__hint">
+          {caption ?? 'Hier komt later een foto.'}
+        </span>
       </div>
     </figure>
   )

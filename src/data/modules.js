@@ -205,6 +205,12 @@ export const modules = [
         summary: 'Kijken naar de persoon achter het gedrag.',
         content: [
           {
+            type: 'image',
+            src: '/fotos/pony-knuffelen.jpg',
+            alt: 'Een deelnemer aait samen met een collega een pony',
+            size: 'portrait',
+          },
+          {
             type: 'paragraph',
             text: 'Bij Stap voor Stap kijken we naar de persoon achter het gedrag.',
           },
@@ -280,6 +286,12 @@ export const modules = [
         title: 'Samen stap voor stap',
         summary: 'Samenwerken en hulp vragen.',
         content: [
+          {
+            type: 'image',
+            src: '/fotos/samen-in-het-bos.jpg',
+            alt: 'Collega’s en deelnemers samen met een hond in het bos',
+            size: 'portrait',
+          },
           {
             type: 'paragraph',
             text: 'We werken samen met deelnemers, collega’s en andere betrokkenen.',
@@ -462,8 +474,9 @@ export const modules = [
         summary: 'Begeleiding, activiteiten, dieren en buiten zijn.',
         content: [
           {
-            type: 'imagePlaceholder',
-            text: 'Hier komt later een overzichtsfoto van het erf.',
+            type: 'image',
+            src: '/fotos/pony-menwagen.jpg',
+            alt: 'Twee deelnemers in Stap voor Stap-kleding op de menwagen achter een pony',
             size: 'wide',
           },
           {
@@ -485,6 +498,13 @@ export const modules = [
         title: 'Verschillende plekken op het erf',
         summary: 'Een overzicht van de belangrijkste plekken.',
         content: [
+          {
+            type: 'image',
+            src: '/fotos/gebarenplaat-pony.jpg',
+            alt: 'Een gebarenplaat met het gebaar voor pony aan het hek van de pony’s',
+            size: 'portrait',
+            caption: 'Een gebarenplaat aan het hek bij de pony’s.',
+          },
           {
             type: 'cards',
             variant: 'places',
@@ -558,6 +578,12 @@ export const modules = [
         title: 'Jouw rol op het erf',
         summary: 'Bijdragen aan een veilige en overzichtelijke dag.',
         content: [
+          {
+            type: 'image',
+            src: '/fotos/collega-lammetje.jpg',
+            alt: 'Een collega met een jong geitje in de armen op het erf',
+            size: 'wide',
+          },
           {
             type: 'paragraph',
             text: 'Als medewerker draag je bij aan een veilige, prettige en overzichtelijke dag.',
@@ -866,6 +892,12 @@ export const modules = [
         summary: 'Een basis voor kleinvee en paarden.',
         content: [
           {
+            type: 'image',
+            src: '/fotos/geiten-voeren.jpg',
+            alt: 'Geiten eten komkommer bij het hek',
+            size: 'portrait',
+          },
+          {
             type: 'paragraph',
             text: 'Voor zowel kleinvee als paarden is er een lijst met dagelijkse klussen. Het doel van de lijst is dat je bij vervanging weet hoe het zit.',
           },
@@ -888,6 +920,12 @@ export const modules = [
         title: 'De staldienst',
         summary: 'Wat je doet als je staldienst hebt.',
         content: [
+          {
+            type: 'image',
+            src: '/fotos/ponys-stal.jpg',
+            alt: 'Twee pony’s kijken over het staldeurtje',
+            size: 'portrait',
+          },
           {
             type: 'paragraph',
             text: 'Heb je staldienst? Dan doe je de volgende taken:',
@@ -916,6 +954,12 @@ export const modules = [
         title: 'Samen de boerderij netjes houden',
         summary: 'Poetsen, opruimen en de kraam.',
         content: [
+          {
+            type: 'image',
+            src: '/fotos/samen-harken.jpg',
+            alt: 'Collega’s en deelnemers harken samen het erf aan, met een kruiwagen',
+            size: 'wide',
+          },
           {
             type: 'paragraph',
             text: 'Een schone en opgeruimde boerderij doen we samen. Let vooral op deze punten:',
@@ -1187,6 +1231,12 @@ export const modules = [
         title: 'Structuur, grenzen en veiligheid',
         summary: 'Warm in contact, maar altijd professioneel.',
         content: [
+          {
+            type: 'image',
+            src: '/fotos/collega-geitje.jpg',
+            alt: 'Een collega zit op de grond en maakt contact met een jong geitje',
+            size: 'portrait',
+          },
           {
             type: 'paragraph',
             text: 'In de begeleiding bieden we structuur, duidelijkheid en veiligheid. We zijn betrokken en warm in ons contact, maar blijven altijd professioneel.',
@@ -1804,6 +1854,10 @@ export const categories = [
     title: 'De dag op de boerderij',
     description: 'Het digibord, de dagstart, de klusjes en de dieren.',
     moduleIds: ['digibord', 'dagstart-digibord', 'klusjes-dagprogramma', 'paarden-dieren'],
+    image: {
+      src: '/fotos/ezel.jpg',
+      alt: 'Een ezel kijkt over het hek van de wei',
+    },
   },
   {
     id: 'werken',
