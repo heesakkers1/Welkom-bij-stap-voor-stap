@@ -1,15 +1,25 @@
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import './Header.css'
 
-function Header({ title, backTo, backLabel }) {
+function Header({ title, backTo = '/' }) {
+  const navigate = useNavigate()
+
+  function goBack() {
+    // Zonder eerdere pagina in deze sessie (bijv. via een gedeelde link)
+    // gaan we naar de bovenliggende pagina.
+    if (window.history.state?.idx > 0) {
+      navigate(-1)
+    } else {
+      navigate(backTo, { replace: true })
+    }
+  }
+
   return (
     <header className="app-header">
       <div className="app-header__row">
-        {backTo ? (
-          <Link to={backTo} className="app-header__back">
-            {backLabel}
-          </Link>
-        ) : null}
+        <button type="button" className="app-header__back" onClick={goBack}>
+          <span aria-hidden="true">←</span> Terug
+        </button>
         <Link
           to="/"
           className="app-header__home"
