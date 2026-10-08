@@ -8,7 +8,14 @@ function Header({ title, backTo = '/', backLabel = 'Terug naar dashboard' }) {
         <Link to={backTo} className="app-header__back">
           {backLabel}
         </Link>
-        <p className="app-header__brand">Stap voor Stap</p>
+        <Link
+          to="/"
+          className="app-header__home"
+          aria-label="Naar de startpagina"
+          title="Naar de startpagina"
+        >
+          <img src="/home-icon.png" alt="" />
+        </Link>
       </div>
       {title ? <h1 className="app-header__title">{title}</h1> : null}
     </header>
