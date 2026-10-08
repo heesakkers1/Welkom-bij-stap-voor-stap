@@ -35,8 +35,8 @@ function LessonPage() {
       <main className="lesson-page">
         <Header title="Les niet gevonden" />
         <p className="lesson-page__missing">
-          Deze les bestaat niet. Ga terug naar het dashboard of kies een andere
-          module.
+          Deze les bestaat niet. Ga met de homeknop terug naar de startpagina
+          of kies een andere module.
         </p>
       </main>
     )
@@ -68,7 +68,7 @@ function LessonPage() {
       state: {
         completionMessage: module.completionMessage ?? {
           title: '✓ Module afgerond',
-          text: 'Goed gedaan. Je kunt verder op het dashboard.',
+          text: 'Goed gedaan. Je kunt verder op de startpagina.',
         },
       },
     })

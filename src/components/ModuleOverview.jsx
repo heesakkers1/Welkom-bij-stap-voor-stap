@@ -15,7 +15,7 @@ function ModuleOverview() {
       <main className="module-overview">
         <Header title="Module niet gevonden" />
         <p className="module-overview__empty">
-          Deze module bestaat niet. Ga terug naar het dashboard.
+          Deze module bestaat niet. Ga met de homeknop terug naar de startpagina.
         </p>
       </main>
     )
