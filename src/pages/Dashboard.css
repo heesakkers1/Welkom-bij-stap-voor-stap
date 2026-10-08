@@ -18,6 +18,10 @@
   box-shadow: var(--tile-shadow);
 }
 
+.dashboard__intro {
+  text-align: center;
+}
+
 .dashboard__eyebrow {
   margin: 0 0 0.35rem;
   font-size: 1rem;
@@ -41,6 +45,7 @@
 
 .dashboard__resume-hint {
   margin: 0;
+  text-align: center;
   font-size: 0.98rem;
   color: var(--text-muted);
 }
