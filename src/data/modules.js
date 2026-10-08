@@ -1788,6 +1788,10 @@ export const categories = [
     id: 'start',
     title: 'Welkom',
     moduleIds: ['welkom'],
+    image: {
+      src: '/fotos/welkom-geitjes.jpg',
+      alt: 'Een collega op de picknicktafel tussen de jonge geitjes',
+    },
   },
   {
     id: 'organisatie',
