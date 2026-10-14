@@ -23,7 +23,7 @@ export const quickLinks = [
     title: 'ZilliZ',
     text: 'Dossiers, rapportages, planning, uren en verlof.',
     icon: 'file',
-    href: 'https://zilliz.app/zilliz/?fuseaction=inloggen.uitloggen_verwerken',
+    href: 'https://zilliz.app/zilliz/',
   },
   {
     id: 'siilo',
