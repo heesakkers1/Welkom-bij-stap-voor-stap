@@ -4,6 +4,7 @@ import { useProgress } from '../context/ProgressContext'
 import ProgressBar from '../components/ProgressBar'
 import ModuleTile from '../components/ModuleTile'
 import Button from '../components/Button'
+import QuickLinks from '../components/QuickLinks'
 import './Dashboard.css'
 
 function Dashboard() {
@@ -101,6 +102,8 @@ function Dashboard() {
           </p>
         ) : null}
       </header>
+
+      <QuickLinks />
 
       {completionMessage ? (
         <section className="dashboard__celebration" role="status" aria-live="polite">
