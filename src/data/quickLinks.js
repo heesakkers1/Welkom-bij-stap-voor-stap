@@ -16,20 +16,20 @@ export const quickLinks = [
     title: 'SharePoint',
     text: 'Interne documenten, protocollen en werkinstructies.',
     icon: 'folder',
-    href: null,
+    href: 'https://zorgboerderijstapvoorstap1.sharepoint.com/:f:/s/Zorgboerderijstapvoorstap/IgDE0s45bHRASI6dyXO9AKIGAYtCnuLglqrd9uEgDWjnhRA?e=dM8hmD',
   },
   {
     id: 'zilliz',
     title: 'ZilliZ',
     text: 'Dossiers, rapportages, planning, uren en verlof.',
     icon: 'file',
-    href: null,
+    href: 'https://zilliz.app/zilliz/?fuseaction=inloggen.uitloggen_verwerken',
   },
   {
     id: 'siilo',
     title: 'Siilo',
     text: 'Veilig berichten sturen naar collega’s.',
     icon: 'chat',
-    href: null,
+    href: 'https://connect-web.doctolib.com/signin;r=0',
   },
 ]
