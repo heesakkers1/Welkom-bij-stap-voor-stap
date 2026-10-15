@@ -1,3 +1,5 @@
 .app {
   min-height: 100svh;
+  /* Ruimte onder de pagina voor de knop Vraag stellen. */
+  padding-bottom: 4.5rem;
 }

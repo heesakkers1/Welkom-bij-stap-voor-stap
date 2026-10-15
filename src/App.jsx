@@ -4,6 +4,7 @@ import WelcomeScreen from './pages/WelcomeScreen'
 import Dashboard from './pages/Dashboard'
 import ModuleOverview from './components/ModuleOverview'
 import LessonPage from './components/LessonPage'
+import AskQuestion from './components/AskQuestion'
 import './App.css'
 
 function RequireWelcome({ children }) {
@@ -47,6 +48,7 @@ function App() {
             }
           />
         </Routes>
+        <AskQuestion />
       </div>
     </ProgressProvider>
   )
