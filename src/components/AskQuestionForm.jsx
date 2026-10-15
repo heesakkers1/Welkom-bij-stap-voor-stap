@@ -52,7 +52,7 @@ function AskQuestionForm() {
     return (
       <p className="ask-question__done" role="status">
         Top, je vraag is onderweg! 🐐 Een van ons pakt hem zo snel mogelijk op en komt bij je
-        terug. Vragen stellen mag altijd, daar zijn we voor.
+        terug.
       </p>
     )
   }
