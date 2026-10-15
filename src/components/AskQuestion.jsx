@@ -1,5 +1,5 @@
 import { useEffect, useId, useRef, useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 import ModuleIcon from './ModuleIcon'
 import { askQuestion } from '../data/askQuestion'
 import './AskQuestion.css'
@@ -42,11 +42,8 @@ function AskQuestion() {
             Mail je vraag
           </a>
           <p className="ask-question__note">
-            Je mail komt binnen bij {askQuestion.email}.
+            Je vraag komt terecht bij de leidinggevende en de coördinatoren.
           </p>
-          <Link className="ask-question__action" to={askQuestion.contactsPath}>
-            Wie benader je waarvoor?
-          </Link>
         </section>
       ) : null}
       <button
