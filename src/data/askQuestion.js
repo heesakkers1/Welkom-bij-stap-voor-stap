@@ -1,10 +1,9 @@
 /**
  * Inhoud van de knop "Vraag stellen".
- * Aanspreekpunten komen uit het Handboek collega's (1.6) en
- * Onboarding voor collega's 2026 (buddy of mentor).
+ * Vragen komen per mail binnen bij planning (keuze van Anne, 15-10-2026).
  */
 export const askQuestion = {
-  chatHref: 'https://connect-web.doctolib.com/signin;r=0',
+  email: 'planning@zorgboerderijstapvoorstap.nl',
+  subject: 'Vraag vanuit de onboarding',
   contactsPath: '/module/organisatie/les/wie-benader-je-waarvoor',
-  email: 'info@zorgboerderijstapvoorstap.nl',
 }

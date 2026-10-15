@@ -33,23 +33,20 @@ function AskQuestion() {
         <section id={panelId} className="ask-question__panel" aria-label="Vraag stellen">
           <h2 className="ask-question__title">Heb je een vraag?</h2>
           <p className="ask-question__text">
-            Stel hem gerust! Je buddy, je werkbegeleider en je collega’s helpen je graag.
+            Stel hem gerust! Stuur je vraag per mail, dan helpen we je zo snel mogelijk verder.
           </p>
           <a
             className="ask-question__action ask-question__action--primary"
-            href={askQuestion.chatHref}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={`mailto:${askQuestion.email}?subject=${encodeURIComponent(askQuestion.subject)}`}
           >
-            Stuur een bericht via Zorg-Chat
-            <span className="visually-hidden"> (opent in een nieuw tabblad)</span>
+            Mail je vraag
           </a>
+          <p className="ask-question__note">
+            Je mail komt binnen bij {askQuestion.email}.
+          </p>
           <Link className="ask-question__action" to={askQuestion.contactsPath}>
             Wie benader je waarvoor?
           </Link>
-          <a className="ask-question__action" href={`mailto:${askQuestion.email}`}>
-            Mail naar {askQuestion.email}
-          </a>
         </section>
       ) : null}
       <button

@@ -67,6 +67,13 @@
   line-height: 1.45;
 }
 
+.ask-question__note {
+  margin: -0.2rem 0 0.2rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  overflow-wrap: anywhere;
+}
+
 .ask-question__action {
   display: block;
   padding: 0.65rem 0.85rem;
