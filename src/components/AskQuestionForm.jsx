@@ -51,7 +51,8 @@ function AskQuestionForm() {
   if (status === 'sent') {
     return (
       <p className="ask-question__done" role="status">
-        Bedankt! Je vraag is verstuurd. We nemen zo snel mogelijk contact met je op.
+        Top, je vraag is onderweg! 🐐 Een van ons pakt hem zo snel mogelijk op en komt bij je
+        terug. Vragen stellen mag altijd, daar zijn we voor.
       </p>
     )
   }
