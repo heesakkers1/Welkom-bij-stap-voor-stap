@@ -51,7 +51,7 @@ function AskQuestionForm() {
   if (status === 'sent') {
     return (
       <p className="ask-question__done" role="status">
-        Top, je vraag is onderweg! 🐐 Een van ons pakt hem zo snel mogelijk op en komt bij je
+        Top, je vraag is onderweg! 📨 Een van ons pakt hem zo snel mogelijk op en komt bij je
         terug.
       </p>
     )
