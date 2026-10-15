@@ -59,6 +59,16 @@ const icons = {
       strokeLinejoin="round"
     />
   ),
+  route: (
+    <path
+      d="M6 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM18 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM8 18h7a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h7"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  ),
   sprout: (
     <path
       d="M12 20v-8m0 0c0-3.5-2.5-6-6.5-6 0 3.5 2.5 6 6.5 6zm0 0c0-3 2.2-5.5 6.5-5.5 0 3-2.2 5.5-6.5 5.5zM7 20h10"
