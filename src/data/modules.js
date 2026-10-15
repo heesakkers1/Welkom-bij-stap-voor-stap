@@ -329,7 +329,7 @@ export const modules = [
             items: [
               'je diploma’s, VOG en andere documenten aanleveren bij de backoffice;',
               'de gezamenlijke e-mailhandtekening instellen;',
-              'Siilo installeren om veilig met collega’s te communiceren;',
+              'D-connect installeren om veilig met collega’s te communiceren;',
               'leren hoe je je uren schrijft in SharePoint, vraag daar gerust hulp bij aan een collega.',
             ],
           },
@@ -1825,7 +1825,7 @@ export const modules = [
       {
         id: 'systemen',
         title: 'Onze systemen',
-        summary: 'ZilliZ, SharePoint, Siilo en e-mail.',
+        summary: 'ZilliZ, SharePoint, D-connect en e-mail.',
         content: [
           {
             type: 'cards',
@@ -1839,7 +1839,7 @@ export const modules = [
                 text: 'Voor interne documenten, protocollen en werkinstructies.',
               },
               {
-                title: 'Siilo',
+                title: 'D-connect',
                 text: 'Voor professionele, veilige communicatie tussen collega’s over deelnemers.',
               },
               {
