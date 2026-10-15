@@ -139,6 +139,32 @@ function LessonContentBlock({ block }) {
         />
       )
 
+    case 'document':
+      return (
+        <section className="lesson-block lesson-block--document">
+          <div className="lesson-block__document-text">
+            <p className="lesson-block__document-title">{block.title}</p>
+            {block.meta ? (
+              <p className="lesson-block__document-meta">{block.meta}</p>
+            ) : null}
+          </div>
+          {block.href ? (
+            <a
+              className="lesson-block__document-link"
+              href={block.href}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {block.linkLabel ?? 'Open handboek'}
+            </a>
+          ) : (
+            <span className="lesson-block__document-pending">
+              Link volgt binnenkort
+            </span>
+          )}
+        </section>
+      )
+
     case 'signoff':
       return (
         <p className="lesson-block lesson-block--signoff">
