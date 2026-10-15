@@ -270,4 +270,8 @@
   .dashboard__category-image {
     grid-column: span 2;
   }
+
+  .dashboard__category-image--narrow {
+    grid-column: span 1;
+  }
 }

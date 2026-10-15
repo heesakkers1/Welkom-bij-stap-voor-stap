@@ -151,7 +151,11 @@ function Dashboard() {
               <section className="dashboard__modules">
                 {category.modules.map((module) => renderTile(module))}
                 {category.image ? (
-                  <figure className="dashboard__category-image">
+                  <figure
+                    className={`dashboard__category-image${
+                      category.modules.length % 3 === 2 ? ' dashboard__category-image--narrow' : ''
+                    }`}
+                  >
                     <img src={category.image.src} alt={category.image.alt} loading="lazy" />
                   </figure>
                 ) : null}

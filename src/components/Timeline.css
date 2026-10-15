@@ -51,7 +51,10 @@
   font-size: 1.02rem;
   font-weight: 700;
   color: var(--text-strong);
-  text-transform: capitalize;
+}
+
+.timeline__title::first-letter {
+  text-transform: uppercase;
 }
 
 .timeline__text {
