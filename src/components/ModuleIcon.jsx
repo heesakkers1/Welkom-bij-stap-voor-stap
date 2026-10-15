@@ -89,6 +89,16 @@ const icons = {
       strokeLinejoin="round"
     />
   ),
+  book: (
+    <path
+      d="M4 5.5C4 4.7 4.7 4 5.5 4H11v16H5.5c-.8 0-1.5-.7-1.5-1.5v-13zM20 5.5c0-.8-.7-1.5-1.5-1.5H13v16h5.5c.8 0 1.5-.7 1.5-1.5v-13zM7 8h2M7 11h2M15 8h2M15 11h2"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  ),
   horse: (
     <path
       d="M5 19c1-3 2-5 4-6 1.5-.8 3-.8 4.5 0 .8.4 1.5.4 2.2 0L18 11l1-3-2-1-1 2-2-1c-1-2-3-3-5-2-1.5.7-2.5 2-3 3.5C5 12 4 15 4 19h1zm10-8 2 3"

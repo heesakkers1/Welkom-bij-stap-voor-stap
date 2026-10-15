@@ -1,3 +1,5 @@
+import { handboekLinks } from './handboeken'
+
 export const MODULE_STATUS = {
   NOT_STARTED: 'Nog niet gestart',
   IN_PROGRESS: 'Bezig',
@@ -583,6 +585,151 @@ export const modules = [
           {
             type: 'paragraph',
             text: 'Meer over scholing, je studiebudget en het jaarlijkse gesprek lees je in de module Jouw functie.',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'handboeken',
+    title: 'Onze handboeken',
+    description:
+      'De vier handboeken die je als nieuwe collega leest, met per handboek waar het over gaat.',
+    icon: 'book',
+    duration: '10 minuten',
+    completionMessage: {
+      title: '📚 Je weet de weg!',
+      text: 'Je weet nu welke handboeken er zijn en waar je ze kunt vinden.',
+    },
+    lessons: [
+      {
+        id: 'welke-handboeken',
+        title: 'Welke handboeken zijn er?',
+        summary: 'Een overzicht van de vier handboeken en in welke volgorde je ze leest.',
+        content: [
+          {
+            type: 'hero',
+            eyebrow: 'Handboeken',
+            title: 'Alles op één plek',
+          },
+          {
+            type: 'paragraph',
+            text: 'In onze handboeken staan de afspraken, de werkwijze en de achtergrond van Stap voor Stap. Je hoeft ze niet in één keer te lezen. Neem ze stap voor stap door in je eerste weken.',
+          },
+          {
+            type: 'numberedList',
+            items: [
+              'Handboek collega’s: begin hier, dit is de basis.',
+              'Functiehandboek: lees wat jouw functie inhoudt.',
+              'Handboek deelnemers: zo leggen we onze deelnemers uit hoe het werkt.',
+              'Kwaliteitshandboek: hoe we de kwaliteit van onze zorg bewaken.',
+            ],
+          },
+          {
+            type: 'tip',
+            label: '💡 Zo open je een handboek',
+            text: 'Met de knop open je het handboek als PDF. Je kunt het lezen in je browser of downloaden.',
+          },
+        ],
+      },
+      {
+        id: 'handboek-collegas',
+        title: 'Handboek collega’s',
+        summary: 'Onze organisatie, jouw rol en de belangrijkste afspraken.',
+        content: [
+          {
+            type: 'paragraph',
+            text: 'Het Handboek collega’s is je wegwijzer binnen Stap voor Stap. Het is het eerste document dat je leest.',
+          },
+          {
+            type: 'bulletList',
+            items: [
+              'onze organisatie: missie en visie, doelgroepen, zorgaanbod en wie je waarvoor kunt benaderen;',
+              'onze medewerkers: functies, arbeidsvoorwaarden, rooster, verlof, verzuim en scholing;',
+              'onze deelnemers: werkwijze en beleid;',
+              'veilig en professioneel werken: arbo, privacy, BHV en de meldcodes;',
+              'randzaken: systemen, e-mail, protocollen, vertrouwenspersonen, kleding en telefoongebruik.',
+            ],
+          },
+          {
+            type: 'document',
+            title: 'Handboek collega’s',
+            meta: 'Versie augustus 2026',
+            href: handboekLinks.collegas,
+          },
+        ],
+      },
+      {
+        id: 'functiehandboek',
+        title: 'Functiehandboek',
+        summary: 'Wat er van iedere functie wordt verwacht en hoe je kunt groeien.',
+        content: [
+          {
+            type: 'paragraph',
+            text: 'Het Functiehandboek beschrijft alle functies binnen Stap voor Stap: van Assistent zorgboerderij tot Senior begeleider. Per functie lees je de taken, verantwoordelijkheden, bevoegdheden en ontwikkelmogelijkheden.',
+          },
+          {
+            type: 'paragraph',
+            text: 'De functies volgen de CAO Sociaal Werk. Het handboek wordt ook gebruikt bij inschaling en bij ontwikkel- en beoordelingsgesprekken.',
+          },
+          {
+            type: 'tip',
+            label: '💡 Lees je eigen functie',
+            text: 'Zoek je eigen functie op en bespreek in je inwerkperiode wat je opvalt.',
+          },
+          {
+            type: 'document',
+            title: 'Functiehandboek',
+            meta: 'Aangepaste versie 2026',
+            href: handboekLinks.functies,
+          },
+        ],
+      },
+      {
+        id: 'handboek-deelnemers',
+        title: 'Handboek deelnemers',
+        summary: 'Wat onze deelnemers krijgen als ze bij ons starten.',
+        content: [
+          {
+            type: 'paragraph',
+            text: 'Elke nieuwe deelnemer krijgt dit handboek. Als je het zelf leest, weet je wat deelnemers en hun netwerk van ons mogen verwachten.',
+          },
+          {
+            type: 'bulletList',
+            items: [
+              'ons verhaal, missie en visie, het team en ons zorgaanbod;',
+              'werkwijze, openingstijden en bereikbaarheid;',
+              'boerderijafspraken;',
+              'protocollen, zoals agressie, klachten, medicatie en privacy;',
+              'de vertrouwenspersoon en praktische zaken.',
+            ],
+          },
+          {
+            type: 'document',
+            title: 'Handboek deelnemers',
+            meta: 'Versie juni 2025',
+            href: handboekLinks.deelnemers,
+          },
+        ],
+      },
+      {
+        id: 'kwaliteitshandboek',
+        title: 'Kwaliteitshandboek',
+        summary: 'Hoe we werken aan goede en veilige zorg.',
+        content: [
+          {
+            type: 'paragraph',
+            text: 'In het Kwaliteitshandboek staat hoe Stap voor Stap de kwaliteit van de zorg bewaakt en verbetert: hoe de organisatie is ingericht, en wat we regelen rond inwerken, een veilige werkomgeving, scholing, jaargesprekken en roosters.',
+          },
+          {
+            type: 'document',
+            title: 'Kwaliteitshandboek',
+            meta: 'Versie 1.0, september 2020',
+            href: handboekLinks.kwaliteit,
+          },
+          {
+            type: 'signoff',
+            text: 'Team Stap voor Stap',
           },
         ],
       },
@@ -2328,7 +2475,7 @@ export const categories = [
   {
     id: 'start',
     title: 'Welkom',
-    moduleIds: ['welkom', 'inwerktraject'],
+    moduleIds: ['welkom', 'inwerktraject', 'handboeken'],
     image: {
       src: '/fotos/welkom-geitjes.jpg',
       alt: 'Een collega op de picknicktafel tussen de jonge geitjes',
