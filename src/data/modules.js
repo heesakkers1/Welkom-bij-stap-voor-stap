@@ -244,7 +244,7 @@ export const modules = [
               'alle benodigde documenten invullen en terugsturen, zoals je diploma’s en een VOG;',
               'je contract tekenen; daarmee heb je ook geheimhoudingsplicht;',
               'de instructies voor je accounts opvolgen;',
-              'alvast kennismaken met het team en je buddy.',
+              'alvast kennismaken met het team en je buddy, bijvoorbeeld via de les Maak kennis met… in de module Wie is wie?.',
             ],
           },
           {
@@ -785,7 +785,7 @@ export const modules = [
     description:
       'Voor wie we er zijn, hoe we samenwerken en bij wie je terechtkunt.',
     icon: 'compass',
-    duration: '8 minuten',
+    duration: '10 minuten',
     completionMessage: {
       title: '🧭 Je weet de weg!',
       text: 'Je weet nu voor wie we er zijn en bij wie je met je vragen terechtkunt.',
@@ -849,6 +849,36 @@ export const modules = [
             type: 'tip',
             label: '💡 Vragen?',
             text: 'Heb je vragen of loop je ergens tegenaan? Weet dan vooral je collega’s te vinden of loop even binnen op kantoor.',
+          },
+        ],
+      },
+      {
+        id: 'maak-kennis-met',
+        title: 'Maak kennis met…',
+        summary: 'De collega’s van Stap voor Stap stellen zich voor.',
+        content: [
+          {
+            type: 'paragraph',
+            text: 'Je gaat met veel nieuwe collega’s samenwerken. Hier stellen ze zich alvast aan je voor.',
+          },
+          {
+            type: 'image',
+            src: '/fotos/bente-kuipers.jpg',
+            alt: 'Bente Kuipers lacht met een cavia in haar armen',
+            size: 'portrait',
+            caption: 'Bente Kuipers, mede-eigenaresse. Werkzaam sinds 2020.',
+          },
+          {
+            type: 'paragraph',
+            text: 'Mijn naam is Bente en ik werk als leidinggevende bij Zorgboerderij Stap voor Stap. Ik woon in Boxtel en in mijn vrije tijd houd ik van reizen, paardrijden en tennis. In mijn werk krijg ik energie van ‘het helpen van mensen’ en je kunt mij benaderen bij allerlei problemen!',
+          },
+          {
+            type: 'paragraph',
+            text: 'Collega’s omschrijven mij als gezellig, chaotisch en benaderbaar. Mijn guilty pleasure is chocola en je maakt mij blij met een goed gesprek of een lekker bakkie koffie in het zonnetje!',
+          },
+          {
+            type: 'highlight',
+            text: 'Ik hoop je snel te zien op de zorgboerderij en het lijkt me leuk om je te leren kennen! Veel liefs, Bente',
           },
         ],
       },
