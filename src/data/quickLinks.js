@@ -26,9 +26,9 @@ export const quickLinks = [
     href: 'https://zilliz.app/zilliz/',
   },
   {
-    id: 'd-connect',
-    title: 'D-connect',
-    text: 'Veilig berichten sturen naar collega’s.',
+    id: 'zorg-chat',
+    title: 'Zorg-Chat',
+    text: 'Veilig berichten sturen naar collega’s via D-connect.',
     icon: 'chat',
     href: 'https://connect-web.doctolib.com/signin;r=0',
   },
