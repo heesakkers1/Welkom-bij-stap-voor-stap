@@ -97,9 +97,6 @@ function Dashboard() {
               src="/fotos/varkens.jpg"
               alt="Twee varkens van de boerderij kijken nieuwsgierig in de camera"
             />
-            <span className="dashboard__hero-bubble" aria-hidden="true">
-              Knor knor, welkom!
-            </span>
           </figure>
         </div>
         <ProgressBar
