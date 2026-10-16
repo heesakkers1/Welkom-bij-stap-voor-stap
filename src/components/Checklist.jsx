@@ -23,8 +23,8 @@ function Checklist({ id, title, items = [] }) {
         </p>
       </div>
       <ul className="checklist__items">
-        {items.map((item) => (
-          <li key={item}>
+        {items.map((item, index) => (
+          <li key={index}>
             <label className="checklist__item">
               <input
                 type="checkbox"

@@ -18,7 +18,7 @@ function QuizQuestion({ question, options = [], correct, explanation }) {
           else if (answered && index === chosen) state = ' quiz-question__option--wrong'
 
           return (
-            <li key={option}>
+            <li key={index}>
               <button
                 type="button"
                 className={`quiz-question__option${state}`}
