@@ -95,15 +95,7 @@ function Dashboard() {
           value={overallProgressPercent}
           label="Jouw voortgang"
         />
-        {resumeInfo ? (
-          <p className="dashboard__resume-hint">
-            {hasStarted ? 'Ga verder bij: ' : 'Begin bij: '}
-            <strong>{resumeInfo.label}</strong>
-          </p>
-        ) : null}
       </header>
-
-      <QuickLinks />
 
       {completionMessage ? (
         <section className="dashboard__celebration" role="status" aria-live="polite">
@@ -188,6 +180,8 @@ function Dashboard() {
           Voortgang resetten
         </button>
       </footer>
+
+      <QuickLinks />
     </main>
   )
 }
