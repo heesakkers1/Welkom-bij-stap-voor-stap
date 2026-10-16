@@ -25,7 +25,7 @@ function AskQuestion() {
     return () => window.removeEventListener('keydown', onKeyDown)
   }, [open])
 
-  if (pathname === '/intro') return null
+  if (pathname === '/intro' || pathname === '/voorbereiding') return null
 
   return (
     <div className="ask-question">
