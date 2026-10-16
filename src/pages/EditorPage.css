@@ -333,3 +333,15 @@
   border-radius: 14px;
   padding: 16px;
 }
+
+.editor-danger {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid var(--tile-border);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.editor-danger .editor-remove {
+  border-color: #f0c4bd;
+}
