@@ -33,7 +33,7 @@
       ],
       "image": {
         "src": "/fotos/welkom-geitjes.jpg",
-        "alt": "Een collega op de picknicktafel tussen de jonge geitjes"
+        "alt": "Een deelnemer op de picknicktafel tussen de jonge geitjes"
       }
     },
     {
@@ -117,7 +117,7 @@
     {
       "id": "welkom",
       "title": "Welkom bij Stap voor Stap",
-      "description": "Een rustige eerste kennismaking met Stap voor Stap en deze onboarding.",
+      "description": "Een rustige eerste kennismaking met Stap voor Stap.",
       "icon": "sun",
       "duration": "5 minuten",
       "completionMessage": {
@@ -146,7 +146,7 @@
             },
             {
               "type": "paragraph",
-              "text": "De eerste dagen komt er veel op je af. Je hoeft daarom niet alles direct te weten of te onthouden."
+              "text": "De eerste dagen komt er veel op je af. Je hoeft echt niet alles direct te weten of te onthouden."
             },
             {
               "type": "paragraph",
@@ -155,7 +155,7 @@
             {
               "type": "tip",
               "label": "💡 Tip voor je eerste week",
-              "text": "Stel gerust vragen. We verwachten niet dat je alles meteen zelfstandig kunt."
+              "text": "Stel gerust vragen!"
             },
             {
               "type": "signoff",
