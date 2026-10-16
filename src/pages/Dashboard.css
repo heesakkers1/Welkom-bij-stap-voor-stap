@@ -18,8 +18,52 @@
   box-shadow: var(--tile-shadow);
 }
 
+.dashboard__hero {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 1.5rem;
+}
+
 .dashboard__intro {
   text-align: center;
+}
+
+.dashboard__hero-photo {
+  width: min(100%, 26rem);
+  margin: 0.75rem 0 0;
+  padding: 0.55rem 0.55rem 1.4rem;
+  border-radius: 1.1rem;
+  background: #fff;
+  box-shadow: 0 12px 28px rgba(70, 90, 60, 0.16);
+  transform: rotate(-1.5deg);
+}
+
+.dashboard__hero-photo img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  object-position: center 40%;
+  border-radius: 0.7rem;
+}
+
+@media (min-width: 768px) {
+  .dashboard__hero {
+    display: grid;
+    grid-template-columns: 1fr minmax(0, 24rem);
+    gap: 2.5rem;
+    padding: 0 0.5rem;
+  }
+
+  .dashboard__intro {
+    text-align: left;
+  }
+
+  .dashboard__hero-photo {
+    margin: 0.5rem 0;
+    transform: rotate(2deg);
+  }
 }
 
 .dashboard__eyebrow {

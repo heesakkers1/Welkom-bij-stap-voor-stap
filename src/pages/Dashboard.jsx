@@ -86,10 +86,18 @@ function Dashboard() {
   return (
     <main className="dashboard page-backdrop">
       <header className="dashboard__header">
-        <div className="dashboard__intro">
-          <p className="dashboard__eyebrow">Welkom!</p>
-          <h1>Fijn dat je er bent.</h1>
-          <p>Hieronder zie je jouw reis door Stap voor Stap.</p>
+        <div className="dashboard__hero">
+          <div className="dashboard__intro">
+            <p className="dashboard__eyebrow">Welkom!</p>
+            <h1>Fijn dat je er bent.</h1>
+            <p>Hieronder zie je jouw reis door Stap voor Stap.</p>
+          </div>
+          <figure className="dashboard__hero-photo">
+            <img
+              src="/fotos/varkens.jpg"
+              alt="Twee varkens van de boerderij kijken nieuwsgierig in de camera"
+            />
+          </figure>
         </div>
         <ProgressBar
           value={overallProgressPercent}
