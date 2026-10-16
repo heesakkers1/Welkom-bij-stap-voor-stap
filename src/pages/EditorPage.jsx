@@ -541,6 +541,9 @@ function Workspace({ token, branch, onLogout }) {
         </aside>
         <main className="editor-main">
           <h2>{title}</h2>
+          <p className="editor-note">
+            Tip: zet *sterretjes* om woorden die cursief moeten, bijvoorbeeld *‘je hulplijn’*.
+          </p>
           {body}
         </main>
       </div>

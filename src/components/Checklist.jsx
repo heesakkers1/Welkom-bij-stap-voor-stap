@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { loadChecklist, saveChecklist } from '../utils/checklistStorage'
+import RichText from './RichText'
 import './Checklist.css'
 
 function Checklist({ id, title, items = [] }) {
@@ -31,7 +32,7 @@ function Checklist({ id, title, items = [] }) {
                 checked={checked.includes(item)}
                 onChange={() => toggle(item)}
               />
-              <span>{item}</span>
+              <span><RichText text={item} /></span>
             </label>
           </li>
         ))}

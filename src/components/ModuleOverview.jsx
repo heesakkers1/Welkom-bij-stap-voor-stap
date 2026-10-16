@@ -3,6 +3,7 @@ import { getModuleById, isModuleAvailable } from '../data/modules'
 import { useProgress } from '../context/ProgressContext'
 import Header from './Header'
 import ProgressBar from './ProgressBar'
+import RichText from './RichText'
 import './ModuleOverview.css'
 
 function ModuleOverview() {
@@ -61,7 +62,7 @@ function ModuleOverview() {
                     </span>
                     {lesson.summary ? (
                       <span className="module-overview__lesson-summary">
-                        {lesson.summary}
+                        <RichText text={lesson.summary} />
                       </span>
                     ) : null}
                   </span>

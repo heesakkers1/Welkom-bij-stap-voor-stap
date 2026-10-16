@@ -1,3 +1,4 @@
+import RichText from './RichText'
 import './Timeline.css'
 
 function Timeline({ items = [] }) {
@@ -11,8 +12,8 @@ function Timeline({ items = [] }) {
           <li key={`${label}-${index}`} className="timeline__item">
             <span className="timeline__dot" aria-hidden="true" />
             <div className="timeline__body">
-              <p className="timeline__title">{label}</p>
-              {text ? <p className="timeline__text">{text}</p> : null}
+              <p className="timeline__title"><RichText text={label} /></p>
+              {text ? <p className="timeline__text"><RichText text={text} /></p> : null}
             </div>
           </li>
         )
