@@ -164,43 +164,6 @@
           ]
         },
         {
-          "id": "hoe-werkt-deze-onboarding",
-          "title": "Zo werkt deze onboarding",
-          "summary": "Korte modules, eigen tempo en bewaarde voortgang.",
-          "content": [
-            {
-              "type": "paragraph",
-              "text": "De onboarding bestaat uit korte modules."
-            },
-            {
-              "type": "paragraph",
-              "text": "Iedere module behandelt één onderwerp. Je kunt tussendoor stoppen en later verdergaan waar je gebleven bent."
-            },
-            {
-              "type": "paragraph",
-              "text": "Je voortgang wordt automatisch bewaard op dit apparaat."
-            },
-            {
-              "type": "paragraph",
-              "text": "Bij ieder onderwerp werken we met dezelfde stappen:"
-            },
-            {
-              "type": "numberedList",
-              "items": [
-                "Dit moet je weten: een korte, begrijpelijke uitleg.",
-                "Zo doen we dat bij Stap voor Stap: onze afspraken en voorbeelden.",
-                "Dit ga je doen: een opdracht in de praktijk.",
-                "Dit moet je beheersen: een korte vraag of toets, of een collega die met je meekijkt.",
-                "Vragen? Schrijf ze op en bespreek ze met je vaste aanspreekpunt, of gebruik de knop Vraag stellen."
-              ]
-            },
-            {
-              "type": "paragraph",
-              "text": "De app, je collega’s, je vaste aanspreekpunt en je leidinggevende vormen samen je inwerktraject. De app geeft je de informatie, je collega’s helpen je om het in de praktijk te doen, bij je vaste aanspreekpunt kun je terecht met al je vragen en je leidinggevende houdt je voortgang, je veiligheid en je ontwikkeling in de gaten."
-            }
-          ]
-        },
-        {
           "id": "wat-kun-je-verwachten",
           "title": "Wat kun je verwachten?",
           "summary": "Waar je in de komende modules kennis mee maakt.",
@@ -255,10 +218,6 @@
               "eyebrow": "Jouw eerste 100 dagen",
               "title": "Stap voor stap ingewerkt",
               "text": "Van een warm welkom naar zelfstandig en met vertrouwen werken, in je eerste 100 dagen."
-            },
-            {
-              "type": "paragraph",
-              "text": "Iedere nieuwe collega krijgt dezelfde basis. Je begeleiding en je leerdoelen stemmen we af op jouw functie, je ervaring en je ontwikkeling."
             },
             {
               "type": "paragraph",
