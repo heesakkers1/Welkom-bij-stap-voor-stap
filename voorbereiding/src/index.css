@@ -1,0 +1,66 @@
+:root {
+  --bg-top: #e8f0e4;
+  --bg-bottom: #f7f4ee;
+  --surface: #fffcf7;
+  --tile-bg: #fffcf7;
+  --tile-border: rgba(90, 110, 80, 0.12);
+  --tile-shadow: 0 8px 24px rgba(70, 90, 60, 0.08);
+  --tile-shadow-hover: 0 14px 32px rgba(70, 90, 60, 0.14);
+
+  --text-strong: #2f372c;
+  --text: #3d4638;
+  --text-muted: #5f6a58;
+
+  --accent: #4f7a55;
+  --accent-soft: #8fb396;
+  --accent-strong: #3d6344;
+  --icon-bg: #e7f1e6;
+
+  --progress-track: #dce7d8;
+  --status-bg: #eef3ea;
+  --status-text: #4d5a48;
+
+  --font: 'Segoe UI', 'Nunito Sans', 'Avenir Next', sans-serif;
+
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(159, 196, 150, 0.28), transparent 40%),
+    linear-gradient(180deg, var(--bg-top), var(--bg-bottom));
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100svh;
+}
+
+#root {
+  min-height: 100svh;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}

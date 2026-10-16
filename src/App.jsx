@@ -2,7 +2,6 @@ import { Navigate, Routes, Route } from 'react-router-dom'
 import { ProgressProvider, useProgress } from './context/ProgressContext'
 import WelcomeScreen from './pages/WelcomeScreen'
 import Dashboard from './pages/Dashboard'
-import Voorbereiding from './pages/Voorbereiding'
 import ModuleOverview from './components/ModuleOverview'
 import LessonPage from './components/LessonPage'
 import AskQuestion from './components/AskQuestion'
@@ -24,8 +23,6 @@ function App() {
       <div className="app">
         <Routes>
           <Route path="/intro" element={<WelcomeScreen />} />
-          {/* Voor de begeleiders: alleen via de link, niet in het menu. */}
-          <Route path="/voorbereiding" element={<Voorbereiding />} />
           <Route
             path="/"
             element={

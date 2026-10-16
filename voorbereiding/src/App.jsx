@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { voorbereidingFields, voorbereidingGroups, voorbereidingItemIds } from '../data/voorbereiding'
+import { voorbereidingFields, voorbereidingGroups, voorbereidingItemIds } from './data'
 import {
   emptyVoorbereiding,
   hasVoorbereidingContent,
@@ -7,11 +7,9 @@ import {
   parseVoorbereiding,
   saveLastVoorbereiding,
   voorbereidingToHash,
-} from '../utils/voorbereidingState'
-import ProgressBar from '../components/ProgressBar'
-import MessageComposer from '../components/MessageComposer'
-import '../components/Checklist.css'
-import './Voorbereiding.css'
+} from './state'
+import MessageComposer from './MessageComposer'
+import './App.css'
 
 function formatDate(iso) {
   const date = new Date(`${iso}T12:00:00`)
@@ -30,7 +28,31 @@ function greeting(name) {
   return name ? `Hoi ${name}!` : 'Hoi!'
 }
 
-function Voorbereiding() {
+function ProgressBar({ done, total }) {
+  const percent = Math.round((done / total) * 100)
+  return (
+    <div className="progress">
+      <div className="progress__header">
+        <span className="progress__label">
+          {done} van {total} klaar
+        </span>
+        <span className="progress__value">{percent}%</span>
+      </div>
+      <div
+        className="progress__track"
+        role="progressbar"
+        aria-valuemin={0}
+        aria-valuemax={100}
+        aria-valuenow={percent}
+        aria-label={`${done} van ${total} klaar`}
+      >
+        <div className="progress__fill" style={{ width: `${percent}%` }} />
+      </div>
+    </div>
+  )
+}
+
+function App() {
   const [state, setState] = useState(() => parseVoorbereiding(window.location.hash))
   const [lastState, setLastState] = useState(() =>
     hasVoorbereidingContent(parseVoorbereiding(window.location.hash))
@@ -52,15 +74,7 @@ function Voorbereiding() {
     return () => window.removeEventListener('hashchange', onHashChange)
   }, [])
 
-  useEffect(() => {
-    const previousTitle = document.title
-    document.title = 'Voorbereiding nieuwe collega · Stap voor Stap'
-    return () => {
-      document.title = previousTitle
-    }
-  }, [])
-
-  const link = `${window.location.origin}/voorbereiding${voorbereidingToHash(state)}`
+  const link = `${window.location.origin}/${voorbereidingToHash(state)}`
   const doneCount = voorbereidingItemIds.filter((id) => state.klaar.includes(id)).length
   const totalCount = voorbereidingItemIds.length
   const allDone = doneCount === totalCount
@@ -162,10 +176,7 @@ function Voorbereiding() {
         </div>
       </section>
 
-      <ProgressBar
-        value={Math.round((doneCount / totalCount) * 100)}
-        label={`${doneCount} van ${totalCount} klaar`}
-      />
+      <ProgressBar done={doneCount} total={totalCount} />
 
       {voorbereidingGroups.map((group) => {
         const groupDone = group.items.filter((item) => state.klaar.includes(item.id)).length
@@ -251,4 +262,4 @@ function Voorbereiding() {
   )
 }
 
-export default Voorbereiding
+export default App

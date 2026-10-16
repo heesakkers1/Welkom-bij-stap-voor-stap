@@ -1,7 +1,7 @@
 /**
  * Checklist "Voorbereiding nieuwe collega": wat er vóór de eerste werkdag
- * geregeld moet zijn, en wie dat doet. Deze pagina is voor de begeleiders
- * en staat daarom niet in het menu van de onboarding.
+ * geregeld moet zijn, en wie dat doet. Dit is voor de begeleiders en staat
+ * daarom los van de onboardingsite, op een eigen link.
  *
  * Bronnen: Onboardingplan Stap voor Stap (fase 1 en checklist
  * leidinggevende), Onboarding voor collega's 2026 (preboarding, 30 tot

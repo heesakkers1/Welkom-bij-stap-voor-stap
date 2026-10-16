@@ -1,4 +1,4 @@
-import { voorbereidingFields, voorbereidingItemIds } from '../data/voorbereiding'
+import { voorbereidingFields, voorbereidingItemIds } from './data'
 
 const STORAGE_KEY = 'stap-voor-stap-voorbereiding'
 const MAX_LENGTH = 80
