@@ -91,7 +91,7 @@ export const modules = [
               'Zo doen we dat bij Stap voor Stap: onze afspraken en voorbeelden.',
               'Dit ga je doen: een opdracht in de praktijk.',
               'Dit moet je beheersen: een korte vraag of toets, of een collega die met je meekijkt.',
-              'Vragen? Schrijf ze op en bespreek ze met je coördinator, of gebruik de knop Vraag stellen.',
+              'Vragen? Schrijf ze op en bespreek ze met je vaste aanspreekpunt, of gebruik de knop Vraag stellen.',
             ],
           },
           {
@@ -100,7 +100,7 @@ export const modules = [
           },
           {
             type: 'paragraph',
-            text: 'De app, je collega’s, je coördinator en je leidinggevende vormen samen je inwerktraject. De app geeft je de informatie, je collega’s helpen je om het in de praktijk te doen, bij je coördinator kun je terecht met al je vragen en je leidinggevende houdt je voortgang, je veiligheid en je ontwikkeling in de gaten.',
+            text: 'De app, je collega’s, je vaste aanspreekpunt en je leidinggevende vormen samen je inwerktraject. De app geeft je de informatie, je collega’s helpen je om het in de praktijk te doen, bij je vaste aanspreekpunt kun je terecht met al je vragen en je leidinggevende houdt je voortgang, je veiligheid en je ontwikkeling in de gaten.',
           },
           {
             type: 'tip',
@@ -263,7 +263,7 @@ export const modules = [
           {
             type: 'assignment',
             label: 'Jouw doelen',
-            text: 'Welk van deze vijf doelen vind je nu het spannendst of het belangrijkst? Neem het mee naar een gesprek met je coördinator.',
+            text: 'Welk van deze vijf doelen vind je nu het spannendst of het belangrijkst? Neem het mee naar een gesprek met je vaste aanspreekpunt.',
             reflective: true,
           },
         ],
@@ -271,11 +271,11 @@ export const modules = [
       {
         id: 'wie-helpt-je',
         title: 'Wie helpt je?',
-        summary: 'Je coördinator, je collega’s, je leidinggevende en jijzelf.',
+        summary: 'Je vaste aanspreekpunt, je collega’s, je leidinggevende en jijzelf.',
         content: [
           {
             type: 'paragraph',
-            text: 'Deze app geeft je veel uitleg, maar je werkt niet alleen in. Je coördinator, je collega’s en je leidinggevende helpen je op weg.',
+            text: 'Deze app geeft je veel uitleg, maar je werkt niet alleen in. Je vaste aanspreekpunt, je collega’s en je leidinggevende helpen je op weg.',
           },
           {
             type: 'cards',
@@ -289,8 +289,8 @@ export const modules = [
                 text: 'Beheert deze app, de checklists en de algemene informatie, en houdt je voortgang bij. Deze rol kan bij een leidinggevende liggen.',
               },
               {
-                title: 'Je coördinator',
-                text: 'Je wordt gekoppeld aan een van onze coördinatoren. Bij je coördinator kun je terecht met al je vragen.',
+                title: 'Je vaste aanspreekpunt',
+                text: 'Een van onze coördinatoren is je vaste aanspreekpunt en hulplijn. Je kunt er met al je vragen terecht.',
               },
               {
                 title: 'Je collega’s',
@@ -305,7 +305,7 @@ export const modules = [
           {
             type: 'tip',
             label: '💡 Weet je iets niet?',
-            text: 'Vraag het je coördinator of een collega. Je kunt ook de knop Vraag stellen rechtsonder gebruiken.',
+            text: 'Vraag het je vaste aanspreekpunt of een collega. Je kunt ook de knop Vraag stellen rechtsonder gebruiken.',
           },
           {
             type: 'paragraph',
@@ -320,7 +320,7 @@ export const modules = [
               'Weten bij wie ik met vragen terechtkan',
               'Belangrijke werkafspraken en veiligheidsregels leren',
               'Praktijkopdrachten uitvoeren en bespreken',
-              'Leerdoelen en vragen bespreken met mijn coördinator',
+              'Leerdoelen en vragen bespreken met mijn vaste aanspreekpunt',
               'Feedback vragen en ontvangen',
               'Eigen voortgang evalueren en ontwikkelpunten vastleggen',
             ],
@@ -345,7 +345,7 @@ export const modules = [
             items: [
               'je contract en de personeelsgegevens die we nodig hebben;',
               'het controleren van je VOG en eventuele andere eisen die bij je functie horen;',
-              'een vaste coördinator bij wie je terechtkunt met vragen;',
+              'een vast aanspreekpunt bij wie je terechtkunt met vragen;',
               'toegang tot deze onboardingapp en je accounts;',
               'een welkomstbericht met praktische informatie, zoals je starttijd, je kleding en je contactpersoon;',
               'het programma van je eerste werkdag;',
@@ -362,7 +362,7 @@ export const modules = [
               'alle benodigde documenten invullen en terugsturen, zoals je diploma’s en een VOG;',
               'je contract tekenen; daarmee heb je ook geheimhoudingsplicht;',
               'de instructies voor je accounts opvolgen;',
-              'alvast kennismaken met het team en je coördinator.',
+              'alvast kennismaken met het team en je vaste aanspreekpunt.',
             ],
           },
           {
@@ -413,7 +413,7 @@ export const modules = [
               'Mijn documenten aangeleverd bij de backoffice',
               'Mijn contract getekend',
               'Mijn accounts geactiveerd',
-              'Ik weet wie mijn coördinator is',
+              'Ik weet wie mijn vaste aanspreekpunt is',
               'Ik weet hoe laat ik op mijn eerste werkdag word verwacht',
             ],
           },
@@ -443,7 +443,7 @@ export const modules = [
               'je krijgt een rondleiding over de boerderij;',
               'we vertellen over onze missie, visie en waarden;',
               'je krijgt praktische uitleg over werktijden, systemen en communicatie;',
-              'je maakt kennis met het team en je coördinator.',
+              'je maakt kennis met het team en je vaste aanspreekpunt.',
             ],
           },
           {
@@ -521,7 +521,7 @@ export const modules = [
           },
           {
             type: 'paragraph',
-            text: 'Met al je vragen kun je terecht bij je coördinator. In de praktijk leer je van ervaren collega’s.',
+            text: 'Met al je vragen kun je terecht bij je vaste aanspreekpunt. In de praktijk leer je van ervaren collega’s.',
           },
           {
             type: 'paragraph',
@@ -627,7 +627,7 @@ export const modules = [
               'Maak kennis met de deelnemers en leer welke begeleidingsafspraken belangrijk zijn.',
               'Loop met een ervaren collega langs de dieren en bespreek de veiligheidsafspraken.',
               'Oefen met rapporteren en laat het nakijken door een ervaren collega.',
-              'Bespreek met je coördinator waar je onzeker over bent en welke vragen je hebt.',
+              'Bespreek met je vaste aanspreekpunt waar je onzeker over bent en welke vragen je hebt.',
               'Doe mee aan een eerste voortgangsgesprek met je leidinggevende.',
             ],
           },
@@ -658,7 +658,7 @@ export const modules = [
           {
             type: 'bulletList',
             items: [
-              'je coördinator is je vaste aanspreekpunt;',
+              'je hebt een vast aanspreekpunt voor al je vragen;',
               'je doet mee aan teamoverleggen en informele momenten;',
               'we leggen de ongeschreven regels uit;',
               'we moedigen je aan om vragen te stellen;',
@@ -692,7 +692,7 @@ export const modules = [
         content: [
           {
             type: 'paragraph',
-            text: 'Na de eerste maand verschuift de focus van leren naar doen. Je brengt wat je geleerd hebt steeds meer in de praktijk en neemt meer verantwoordelijkheid. Ervaren collega’s kijken mee waar nodig en je coördinator blijft je aanspreekpunt.',
+            text: 'Na de eerste maand verschuift de focus van leren naar doen. Je brengt wat je geleerd hebt steeds meer in de praktijk en neemt meer verantwoordelijkheid. Ervaren collega’s kijken mee waar nodig en je vaste aanspreekpunt blijft je hulplijn.',
           },
           {
             type: 'paragraph',
@@ -734,7 +734,7 @@ export const modules = [
           {
             type: 'assignment',
             label: 'Jouw leerdoelen voor de tweede maand',
-            text: 'Wat wil je deze maand leren of beter kunnen? Schrijf twee of drie leerdoelen op en bespreek ze met je coördinator.',
+            text: 'Wat wil je deze maand leren of beter kunnen? Schrijf twee of drie leerdoelen op en bespreek ze met je vaste aanspreekpunt.',
             reflective: true,
           },
           {
@@ -804,7 +804,7 @@ export const modules = [
               'Voer je gewone taken zelfstandig uit waar dat verantwoord is.',
               'Houd overzicht over je eigen werk en stem op tijd af met collega’s.',
               'Signaleer bijzonderheden bij deelnemers en bespreek ze op de juiste manier.',
-              'Vraag actief om feedback van je collega’s, je coördinator en je leidinggevende.',
+              'Vraag actief om feedback van je collega’s, je vaste aanspreekpunt en je leidinggevende.',
               'Kies één eigen ontwikkelpunt en bedenk een concrete actie om ermee aan de slag te gaan.',
             ],
           },
