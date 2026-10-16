@@ -28,8 +28,8 @@ function LessonContentBlock({ block }) {
     case 'bulletList':
       return (
         <ul className="lesson-block lesson-block--list">
-          {(block.items ?? []).map((item) => (
-            <li key={item}>{item}</li>
+          {(block.items ?? []).map((item, index) => (
+            <li key={index}>{item}</li>
           ))}
         </ul>
       )
@@ -37,8 +37,8 @@ function LessonContentBlock({ block }) {
     case 'numberedList':
       return (
         <ol className="lesson-block lesson-block--numbered">
-          {(block.items ?? []).map((item) => (
-            <li key={item}>{item}</li>
+          {(block.items ?? []).map((item, index) => (
+            <li key={index}>{item}</li>
           ))}
         </ol>
       )

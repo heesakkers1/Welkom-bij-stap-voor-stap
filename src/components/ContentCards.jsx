@@ -3,8 +3,8 @@ import './ContentCards.css'
 function ContentCards({ items = [], variant = 'default' }) {
   return (
     <ul className={`content-cards content-cards--${variant}`}>
-      {items.map((item) => (
-        <li key={item.title} className="content-card">
+      {items.map((item, index) => (
+        <li key={index} className="content-card">
           {item.placeholder ? (
             <div className="content-card__media" aria-hidden="true" />
           ) : null}

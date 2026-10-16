@@ -1,3 +1,4 @@
+import { lazy, Suspense } from 'react'
 import { Navigate, Routes, Route } from 'react-router-dom'
 import { ProgressProvider, useProgress } from './context/ProgressContext'
 import WelcomeScreen from './pages/WelcomeScreen'
@@ -5,6 +6,8 @@ import Dashboard from './pages/Dashboard'
 import ModuleOverview from './components/ModuleOverview'
 import LessonPage from './components/LessonPage'
 import './App.css'
+
+const EditorPage = lazy(() => import('./pages/EditorPage'))
 
 function RequireWelcome({ children }) {
   const { welcomeSeen } = useProgress()
@@ -22,6 +25,14 @@ function App() {
       <div className="app">
         <Routes>
           <Route path="/intro" element={<WelcomeScreen />} />
+          <Route
+            path="/bewerken"
+            element={
+              <Suspense fallback={null}>
+                <EditorPage />
+              </Suspense>
+            }
+          />
           <Route
             path="/"
             element={
