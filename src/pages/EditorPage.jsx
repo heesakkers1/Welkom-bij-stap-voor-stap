@@ -48,6 +48,38 @@ function RemoveButton({ onClick, label = 'Weghalen' }) {
   )
 }
 
+/**
+ * Haalt een hele module of les weg, en ook de verwijzingen ernaar
+ * (in de categorieën op het dashboard en in lijstjes met modulelinks).
+ */
+function removePage(source, moduleIndex, lessonIndex = null) {
+  const copy = structuredClone(source)
+  const module = copy.modules[moduleIndex]
+  const lessonId = lessonIndex === null ? null : module.lessons[lessonIndex].id
+  const pointsToRemoved = (item) =>
+    item.moduleId === module.id && (lessonId === null || item.lessonId === lessonId)
+
+  if (lessonId === null) {
+    copy.modules.splice(moduleIndex, 1)
+    for (const category of copy.categories ?? []) {
+      category.moduleIds = category.moduleIds.filter((id) => id !== module.id)
+    }
+  } else {
+    module.lessons.splice(lessonIndex, 1)
+  }
+
+  for (const otherModule of copy.modules) {
+    for (const lesson of otherModule.lessons) {
+      for (const block of lesson.content) {
+        if (block.type === 'moduleLinks') {
+          block.items = block.items.filter((item) => !pointsToRemoved(item))
+        }
+      }
+    }
+  }
+  return copy
+}
+
 function getAtPath(source, path) {
   return path.reduce((value, key) => value?.[key], source)
 }
@@ -334,6 +366,18 @@ function Workspace({ token, branch, onLogout }) {
     setMessage(null)
   }
 
+  function handleRemovePage(moduleIndex, lessonIndex = null) {
+    const module = content.modules[moduleIndex]
+    const question =
+      lessonIndex === null
+        ? `De hele module "${module.title}" verwijderen, met alle ${module.lessons.length} lessen erin?`
+        : `De hele les "${module.lessons[lessonIndex].title}" verwijderen?`
+    if (!window.confirm(question)) return
+    setContent((current) => removePage(current, moduleIndex, lessonIndex))
+    setSelection(lessonIndex === null ? { kind: 'welcome' } : { kind: 'module', moduleIndex })
+    setMessage(null)
+  }
+
   async function handleSave() {
     setBusy(true)
     setMessage(null)
@@ -417,6 +461,12 @@ function Workspace({ token, branch, onLogout }) {
             De lessen van deze module vind je links onder de moduletitel.
           </p>
         ) : null}
+        <div className="editor-danger">
+          <RemoveButton
+            label="Hele module verwijderen"
+            onClick={() => handleRemovePage(selection.moduleIndex)}
+          />
+        </div>
       </>
     )
   } else {
@@ -424,12 +474,20 @@ function Workspace({ token, branch, onLogout }) {
     const lesson = getAtPath(content, path)
     title = `Les: ${lesson.title}`
     body = (
-      <LessonEditor
-        lesson={lesson}
-        path={path}
-        onChange={handleChange}
-        onRemove={handleRemove}
-      />
+      <>
+        <LessonEditor
+          lesson={lesson}
+          path={path}
+          onChange={handleChange}
+          onRemove={handleRemove}
+        />
+        <div className="editor-danger">
+          <RemoveButton
+            label="Hele les verwijderen"
+            onClick={() => handleRemovePage(selection.moduleIndex, selection.lessonIndex)}
+          />
+        </div>
+      </>
     )
   }
 
