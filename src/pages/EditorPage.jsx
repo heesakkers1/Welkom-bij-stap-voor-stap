@@ -30,37 +30,62 @@ function setAtPath(source, path, value) {
   return copy
 }
 
+function removeAtPath(source, path) {
+  const copy = structuredClone(source)
+  const list = getAtPath(copy, path.slice(0, -1))
+  list.splice(path[path.length - 1], 1)
+  return copy
+}
+
+/** Lijsten waaruit je niets kunt weghalen, omdat de site op de volgorde rekent. */
+const LOCKED_LISTS = new Set(['options'])
+
+function RemoveButton({ onClick, label = 'Weghalen' }) {
+  return (
+    <button type="button" className="editor-remove" onClick={onClick}>
+      ✕ {label}
+    </button>
+  )
+}
+
 function getAtPath(source, path) {
   return path.reduce((value, key) => value?.[key], source)
 }
 
-function TextField({ label, value, onChange }) {
+function TextField({ label, value, onChange, onRemove }) {
   const rows = Math.max(1, Math.ceil(value.length / 70))
   return (
-    <label className="editor-field">
-      <span className="editor-field__label">{label}</span>
-      <textarea
-        value={value}
-        rows={rows}
-        onChange={(event) => onChange(event.target.value)}
-      />
-    </label>
+    <div className="editor-field">
+      <div className="editor-field__head">
+        <label className="editor-field__label">
+          {label}
+          <textarea
+            value={value}
+            rows={rows}
+            onChange={(event) => onChange(event.target.value)}
+          />
+        </label>
+        {onRemove ? <RemoveButton onClick={onRemove} /> : null}
+      </div>
+    </div>
   )
 }
 
 /** Toont alle tekstvelden in een stuk content, ook in lijsten en kaartjes. */
-function Fields({ value, path, label, onChange }) {
+function Fields({ value, path, label, onChange, onRemove, removeSelf }) {
   if (typeof value === 'string') {
     return (
       <TextField
         label={label}
         value={value}
         onChange={(next) => onChange(path, next)}
+        onRemove={removeSelf}
       />
     )
   }
 
   if (Array.isArray(value)) {
+    const removable = onRemove && !LOCKED_LISTS.has(path[path.length - 1])
     return value.map((item, index) => (
       <Fields
         key={index}
@@ -68,6 +93,8 @@ function Fields({ value, path, label, onChange }) {
         path={[...path, index]}
         label={`${label} ${index + 1}`}
         onChange={onChange}
+        onRemove={onRemove}
+        removeSelf={removable ? () => onRemove([...path, index]) : null}
       />
     ))
   }
@@ -81,12 +108,18 @@ function Fields({ value, path, label, onChange }) {
         path={[...path, key]}
         label={fieldName(key)}
         onChange={onChange}
+        onRemove={onRemove}
       />
     ))
     if (!label) return fields
     return (
       <fieldset className="editor-group">
         <legend>{label}</legend>
+        {removeSelf ? (
+          <div className="editor-group__remove">
+            <RemoveButton onClick={removeSelf} />
+          </div>
+        ) : null}
         {fields}
       </fieldset>
     )
@@ -215,7 +248,7 @@ function Navigation({ content, selection, onSelect }) {
   )
 }
 
-function LessonEditor({ lesson, path, onChange }) {
+function LessonEditor({ lesson, path, onChange, onRemove }) {
   return (
     <>
       <Fields value={lesson.title} path={[...path, 'title']} label="Titel van de les" onChange={onChange} />
@@ -223,13 +256,24 @@ function LessonEditor({ lesson, path, onChange }) {
       <h3 className="editor-subheading">Inhoud van de les</h3>
       {lesson.content.map((block, index) => {
         const blockPath = [...path, 'content', index]
+        const blockName = BLOCK_NAMES[block.type] ?? block.type
         return (
           <section key={index} className="editor-block">
-            <p className="editor-block__type">{BLOCK_NAMES[block.type] ?? block.type}</p>
+            <div className="editor-block__head">
+              <p className="editor-block__type">{blockName}</p>
+              <RemoveButton
+                label="Tekstvak verwijderen"
+                onClick={() => {
+                  if (window.confirm(`Dit tekstvak (${blockName.toLowerCase()}) verwijderen?`)) {
+                    onRemove(blockPath)
+                  }
+                }}
+              />
+            </div>
             {block.type === 'image' && block.src ? (
               <img src={block.src} alt="" className="editor-block__thumb" />
             ) : null}
-            <Fields value={block} path={blockPath} onChange={onChange} />
+            <Fields value={block} path={blockPath} onChange={onChange} onRemove={onRemove} />
           </section>
         )
       })}
@@ -282,6 +326,11 @@ function Workspace({ token, branch, onLogout }) {
 
   function handleChange(path, value) {
     setContent((current) => setAtPath(current, path, value))
+    setMessage(null)
+  }
+
+  function handleRemove(path) {
+    setContent((current) => removeAtPath(current, path))
     setMessage(null)
   }
 
@@ -349,7 +398,12 @@ function Workspace({ token, branch, onLogout }) {
         />
       ))
     ) : (
-      <Fields value={content[selection.kind]} path={[selection.kind]} onChange={handleChange} />
+      <Fields
+        value={content[selection.kind]}
+        path={[selection.kind]}
+        onChange={handleChange}
+        onRemove={handleRemove}
+      />
     )
   } else if (selection.kind === 'module') {
     const path = ['modules', selection.moduleIndex]
@@ -369,7 +423,14 @@ function Workspace({ token, branch, onLogout }) {
     const path = ['modules', selection.moduleIndex, 'lessons', selection.lessonIndex]
     const lesson = getAtPath(content, path)
     title = `Les: ${lesson.title}`
-    body = <LessonEditor lesson={lesson} path={path} onChange={handleChange} />
+    body = (
+      <LessonEditor
+        lesson={lesson}
+        path={path}
+        onChange={handleChange}
+        onRemove={handleRemove}
+      />
+    )
   }
 
   return (
