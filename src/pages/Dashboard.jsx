@@ -122,7 +122,9 @@ function Dashboard() {
       <div className="dashboard__categories" aria-label="Onboarding onderdelen">
         {categoriesWithModules.map((category) => {
           const available = category.modules.filter(
-            (module) => getModuleStatus(module) !== MODULE_STATUS.COMING_SOON,
+            (module) =>
+              !module.forBegeleiders &&
+              getModuleStatus(module) !== MODULE_STATUS.COMING_SOON,
           )
           const completed = available.filter(
             (module) => getModuleStatus(module) === MODULE_STATUS.COMPLETED,
@@ -142,9 +144,11 @@ function Dashboard() {
                       {category.description}
                     </span>
                   ) : null}
-                  <span className="dashboard__category-count">
-                    {completed} van {available.length} afgerond
-                  </span>
+                  {available.length > 0 ? (
+                    <span className="dashboard__category-count">
+                      {completed} van {available.length} afgerond
+                    </span>
+                  ) : null}
                 </span>
               </summary>
 

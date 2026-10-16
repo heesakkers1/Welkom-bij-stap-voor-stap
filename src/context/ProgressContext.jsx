@@ -1,13 +1,14 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react'
 import {
   MODULE_STATUS,
-  getAvailableModules,
+  getLearnerModules,
   getLessonById,
   isModuleAvailable,
   lessonKey,
   modules,
   parseLessonKey,
 } from '../data/modules'
+import { clearChecklists } from '../utils/checklistStorage'
 
 const STORAGE_KEY = 'stap-voor-stap-progress'
 
@@ -106,6 +107,7 @@ export function ProgressProvider({ children }) {
 
   const resetProgress = useCallback(() => {
     setProgress(emptyProgress)
+    clearChecklists()
   }, [])
 
   const isLessonOpened = useCallback(
@@ -166,7 +168,7 @@ export function ProgressProvider({ children }) {
   )
 
   const overallProgressPercent = useMemo(() => {
-    const available = getAvailableModules()
+    const available = getLearnerModules()
     let total = 0
     let done = 0
 
@@ -183,7 +185,7 @@ export function ProgressProvider({ children }) {
   }, [progress])
 
   const hasStarted = useMemo(() => {
-    return getAvailableModules().some((module) => {
+    return getLearnerModules().some((module) => {
       if (progress.completedModules.includes(module.id)) return true
       return module.lessons.some((lesson) => {
         const key = lessonKey(module.id, lesson.id)
@@ -196,7 +198,7 @@ export function ProgressProvider({ children }) {
   }, [progress])
 
   const getResumeInfo = useCallback(() => {
-    const available = getAvailableModules()
+    const available = getLearnerModules()
 
     const fromLast = parseLessonKey(progress.lastOpenedLesson)
     if (fromLast) {

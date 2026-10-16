@@ -169,6 +169,16 @@ const icons = {
       strokeLinejoin="round"
     />
   ),
+  clipboard: (
+    <path
+      d="M9 3h6v3H9zM7 4.5H6a2 2 0 0 0-2 2V19a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6.5a2 2 0 0 0-2-2h-1M8 12.5l2 2 4-4M8 17.5h8"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  ),
   chat: (
     <path
       d="M5 5h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-7l-4 3v-3H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"
