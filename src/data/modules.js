@@ -91,7 +91,7 @@ export const modules = [
               'Zo doen we dat bij Stap voor Stap: onze afspraken en voorbeelden.',
               'Dit ga je doen: een opdracht in de praktijk.',
               'Dit moet je beheersen: een korte vraag of toets, of een collega die met je meekijkt.',
-              'Vragen? Schrijf ze op en bespreek ze met je buddy, of gebruik de knop Vraag stellen.',
+              'Vragen? Schrijf ze op en bespreek ze met je coördinator, of gebruik de knop Vraag stellen.',
             ],
           },
           {
@@ -100,7 +100,7 @@ export const modules = [
           },
           {
             type: 'paragraph',
-            text: 'De app, je buddy en je leidinggevende vormen samen je inwerktraject. De app geeft je de informatie, je buddy helpt je om het in de praktijk te doen en je leidinggevende houdt je voortgang, je veiligheid en je ontwikkeling in de gaten.',
+            text: 'De app, je collega’s, je coördinator en je leidinggevende vormen samen je inwerktraject. De app geeft je de informatie, je collega’s helpen je om het in de praktijk te doen, bij je coördinator kun je terecht met al je vragen en je leidinggevende houdt je voortgang, je veiligheid en je ontwikkeling in de gaten.',
           },
           {
             type: 'tip',
@@ -263,7 +263,7 @@ export const modules = [
           {
             type: 'assignment',
             label: 'Jouw doelen',
-            text: 'Welk van deze vijf doelen vind je nu het spannendst of het belangrijkst? Neem het mee naar een gesprek met je buddy.',
+            text: 'Welk van deze vijf doelen vind je nu het spannendst of het belangrijkst? Neem het mee naar een gesprek met je coördinator.',
             reflective: true,
           },
         ],
@@ -271,11 +271,11 @@ export const modules = [
       {
         id: 'wie-helpt-je',
         title: 'Wie helpt je?',
-        summary: 'Je buddy, je leidinggevende en jijzelf.',
+        summary: 'Je coördinator, je collega’s, je leidinggevende en jijzelf.',
         content: [
           {
             type: 'paragraph',
-            text: 'Deze app geeft je veel uitleg, maar je werkt niet alleen in. De app, je buddy en je leidinggevende vormen samen je inwerktraject.',
+            text: 'Deze app geeft je veel uitleg, maar je werkt niet alleen in. Je coördinator, je collega’s en je leidinggevende helpen je op weg.',
           },
           {
             type: 'cards',
@@ -289,8 +289,12 @@ export const modules = [
                 text: 'Beheert deze app, de checklists en de algemene informatie, en houdt je voortgang bij. Deze rol kan bij een leidinggevende liggen.',
               },
               {
-                title: 'Je buddy',
-                text: 'Een vaste collega voor je dagelijkse vragen, uitleg, praktische instructies, meekijken en feedback.',
+                title: 'Je coördinator',
+                text: 'Je wordt gekoppeld aan een van onze coördinatoren. Bij je coördinator kun je terecht met al je vragen.',
+              },
+              {
+                title: 'Je collega’s',
+                text: 'In de praktijk kijk je mee met ervaren collega’s. Zij leggen uit, doen voor en kijken mee als jij het zelf doet.',
               },
               {
                 title: 'Jij',
@@ -300,8 +304,8 @@ export const modules = [
           },
           {
             type: 'tip',
-            label: '💡 Je buddy hoeft niet alles te weten',
-            text: 'Je buddy maakt je wegwijs en weet bij wie je terechtkunt. Je krijgt je buddy al voor je eerste werkdag.',
+            label: '💡 Weet je iets niet?',
+            text: 'Vraag het je coördinator of een collega. Je kunt ook de knop Vraag stellen rechtsonder gebruiken.',
           },
           {
             type: 'paragraph',
@@ -316,22 +320,9 @@ export const modules = [
               'Weten bij wie ik met vragen terechtkan',
               'Belangrijke werkafspraken en veiligheidsregels leren',
               'Praktijkopdrachten uitvoeren en bespreken',
-              'Leerdoelen en vragen bespreken met mijn buddy',
+              'Leerdoelen en vragen bespreken met mijn coördinator',
               'Feedback vragen en ontvangen',
               'Eigen voortgang evalueren en ontwikkelpunten vastleggen',
-            ],
-          },
-          {
-            type: 'paragraph',
-            text: 'Je buddy en je leidinggevende hebben hun eigen checklist. Benieuwd wat zij voor je doen?',
-          },
-          {
-            type: 'moduleLinks',
-            items: [
-              {
-                moduleId: 'begeleiders',
-                text: 'Hoe je buddy en je leidinggevende je inwerken.',
-              },
             ],
           },
         ],
@@ -354,7 +345,7 @@ export const modules = [
             items: [
               'je contract en de personeelsgegevens die we nodig hebben;',
               'het controleren van je VOG en eventuele andere eisen die bij je functie horen;',
-              'een vaste buddy voor jou;',
+              'een vaste coördinator bij wie je terechtkunt met vragen;',
               'toegang tot deze onboardingapp en je accounts;',
               'een welkomstbericht met praktische informatie, zoals je starttijd, je kleding en je contactpersoon;',
               'het programma van je eerste werkdag;',
@@ -371,7 +362,7 @@ export const modules = [
               'alle benodigde documenten invullen en terugsturen, zoals je diploma’s en een VOG;',
               'je contract tekenen; daarmee heb je ook geheimhoudingsplicht;',
               'de instructies voor je accounts opvolgen;',
-              'alvast kennismaken met het team en je buddy.',
+              'alvast kennismaken met het team en je coördinator.',
             ],
           },
           {
@@ -422,7 +413,7 @@ export const modules = [
               'Mijn documenten aangeleverd bij de backoffice',
               'Mijn contract getekend',
               'Mijn accounts geactiveerd',
-              'Ik weet wie mijn buddy en mijn contactpersoon zijn',
+              'Ik weet wie mijn coördinator is',
               'Ik weet hoe laat ik op mijn eerste werkdag word verwacht',
             ],
           },
@@ -452,7 +443,7 @@ export const modules = [
               'je krijgt een rondleiding over de boerderij;',
               'we vertellen over onze missie, visie en waarden;',
               'je krijgt praktische uitleg over werktijden, systemen en communicatie;',
-              'je maakt kennis met het team en je buddy.',
+              'je maakt kennis met het team en je coördinator.',
             ],
           },
           {
@@ -530,7 +521,7 @@ export const modules = [
           },
           {
             type: 'paragraph',
-            text: 'Je buddy is in deze fase je vaste aanspreekpunt, met ondersteuning van je leidinggevende.',
+            text: 'Met al je vragen kun je terecht bij je coördinator. In de praktijk leer je van ervaren collega’s.',
           },
           {
             type: 'paragraph',
@@ -636,7 +627,7 @@ export const modules = [
               'Maak kennis met de deelnemers en leer welke begeleidingsafspraken belangrijk zijn.',
               'Loop met een ervaren collega langs de dieren en bespreek de veiligheidsafspraken.',
               'Oefen met rapporteren en laat het nakijken door een ervaren collega.',
-              'Bespreek met je buddy waar je onzeker over bent en welke vragen je hebt.',
+              'Bespreek met je coördinator waar je onzeker over bent en welke vragen je hebt.',
               'Doe mee aan een eerste voortgangsgesprek met je leidinggevende.',
             ],
           },
@@ -667,7 +658,7 @@ export const modules = [
           {
             type: 'bulletList',
             items: [
-              'je buddy maakt je wegwijs;',
+              'je coördinator is je vaste aanspreekpunt;',
               'je doet mee aan teamoverleggen en informele momenten;',
               'we leggen de ongeschreven regels uit;',
               'we moedigen je aan om vragen te stellen;',
@@ -701,7 +692,7 @@ export const modules = [
         content: [
           {
             type: 'paragraph',
-            text: 'Na de eerste maand verschuift de focus van leren naar doen. Je brengt wat je geleerd hebt steeds meer in de praktijk en neemt meer verantwoordelijkheid. Je buddy blijft beschikbaar en kijkt mee waar nodig.',
+            text: 'Na de eerste maand verschuift de focus van leren naar doen. Je brengt wat je geleerd hebt steeds meer in de praktijk en neemt meer verantwoordelijkheid. Ervaren collega’s kijken mee waar nodig en je coördinator blijft je aanspreekpunt.',
           },
           {
             type: 'paragraph',
@@ -743,7 +734,7 @@ export const modules = [
           {
             type: 'assignment',
             label: 'Jouw leerdoelen voor de tweede maand',
-            text: 'Wat wil je deze maand leren of beter kunnen? Schrijf twee of drie leerdoelen op en bespreek ze met je buddy.',
+            text: 'Wat wil je deze maand leren of beter kunnen? Schrijf twee of drie leerdoelen op en bespreek ze met je coördinator.',
             reflective: true,
           },
           {
@@ -754,7 +745,7 @@ export const modules = [
               'Voer afgesproken begeleidingsactiviteiten uit, met passende ondersteuning.',
               'Bereid een activiteit voor en bespreek die vooraf met een collega.',
               'Doe een overdracht en bespreek wat belangrijke informatie is.',
-              'Schrijf rapportages en bespreek ze met je buddy.',
+              'Schrijf rapportages en bespreek ze met een ervaren collega.',
               'Oefen met het werk op het erf en bij de dieren, binnen wat je al mag en kunt.',
               'Bespreek een praktijksituatie met een collega: wat ging goed, wat kon anders en waarom?',
             ],
@@ -813,7 +804,7 @@ export const modules = [
               'Voer je gewone taken zelfstandig uit waar dat verantwoord is.',
               'Houd overzicht over je eigen werk en stem op tijd af met collega’s.',
               'Signaleer bijzonderheden bij deelnemers en bespreek ze op de juiste manier.',
-              'Vraag actief om feedback van je buddy en je leidinggevende.',
+              'Vraag actief om feedback van je collega’s, je coördinator en je leidinggevende.',
               'Kies één eigen ontwikkelpunt en bedenk een concrete actie om ermee aan de slag te gaan.',
             ],
           },
@@ -2857,294 +2848,6 @@ export const modules = [
       },
     ],
   },
-  {
-    id: 'begeleiders',
-    title: 'Voor buddy en leidinggevende',
-    description:
-      'Hoe je een nieuwe collega in de eerste 100 dagen begeleidt, met je eigen checklist.',
-    icon: 'clipboard',
-    duration: '10 minuten',
-    forBegeleiders: true,
-    completionMessage: {
-      title: '🤝 Klaar om te begeleiden!',
-      text: 'Je weet wat er van jou verwacht wordt bij het inwerken van een nieuwe collega.',
-    },
-    lessons: [
-      {
-        id: 'samen-inwerken',
-        title: 'Samen één inwerktraject',
-        summary: 'De app, de buddy en de leidinggevende vullen elkaar aan.',
-        content: [
-          {
-            type: 'hero',
-            eyebrow: 'Voor buddy en leidinggevende',
-            title: 'Samen één inwerktraject',
-            text: 'Deze module is voor de collega’s die een nieuwe collega inwerken. Nieuwe collega’s mogen hem ook lezen, dan weten ze wat ze van jullie kunnen verwachten.',
-          },
-          {
-            type: 'paragraph',
-            text: 'De app neemt veel uitleg uit handen, maar inwerken is niet iets wat een nieuwe collega alleen doorloopt. Juist door de begeleiding van collega’s leert iemand de cultuur van Stap voor Stap kennen.',
-          },
-          {
-            type: 'cards',
-            items: [
-              {
-                title: 'De app',
-                text: 'Geeft structuur en zorgt dat iedereen dezelfde informatie krijgt.',
-              },
-              {
-                title: 'De buddy',
-                text: 'Vertaalt die informatie naar de dagelijkse praktijk.',
-              },
-              {
-                title: 'De leidinggevende',
-                text: 'Bewaakt de voortgang, de veiligheid en de ontwikkeling.',
-              },
-            ],
-          },
-          {
-            type: 'paragraph',
-            text: 'Iedere nieuwe collega krijgt dezelfde basis. De begeleiding en de leerdoelen stem je af op de functie, de ervaring en de ontwikkeling van de nieuwe collega. Wat er per functie verwacht wordt, staat in het Functiehandboek.',
-          },
-          {
-            type: 'highlight',
-            text: 'Gelezen is nog niet gekund. Bij veiligheid, medicatie, incidenten, dieren en privacy kijkt een verantwoordelijke collega in de praktijk mee en bevestigt dat de nieuwe collega het goed toepast.',
-          },
-          {
-            type: 'paragraph',
-            text: 'Per fase neemt iemand anders het voortouw:',
-          },
-          {
-            type: 'bulletList',
-            items: [
-              'voor de eerste werkdag: de leidinggevende of de onboardingverantwoordelijke;',
-              'dag 1 tot 30: de buddy, met ondersteuning van de leidinggevende;',
-              'dag 31 tot 60: de buddy en de leidinggevende;',
-              'dag 61 tot 90: de leidinggevende.',
-            ],
-          },
-          {
-            type: 'tip',
-            label: '💡 Eén vaste buddy',
-            text: 'Wijs voor iedere nieuwe collega vooraf één buddy aan en spreek af hoeveel tijd de buddy krijgt voor de begeleiding. Zo hangt het inwerken niet af van wie er toevallig dienst heeft.',
-          },
-        ],
-      },
-      {
-        id: 'voorbereiden',
-        title: 'Voorbereiden voor dag 1',
-        summary: 'Wat er geregeld moet zijn, en wie dat doet.',
-        content: [
-          {
-            type: 'paragraph',
-            text: 'Het doel: de nieuwe collega hoeft op de eerste werkdag niet te zoeken naar informatie en weet wat er verwacht wordt.',
-          },
-          {
-            type: 'cards',
-            items: [
-              {
-                title: 'Contract en personeelsgegevens regelen',
-                text: 'Leidinggevende of administratie',
-              },
-              {
-                title: 'VOG en eventuele eisen voor de functie controleren',
-                text: 'Leidinggevende',
-              },
-              {
-                title: 'Een vaste buddy aanwijzen',
-                text: 'Leidinggevende',
-              },
-              {
-                title: 'Toegang tot de onboardingapp versturen',
-                text: 'Onboardingverantwoordelijke',
-              },
-              {
-                title: 'Welkomstbericht met praktische informatie versturen',
-                text: 'Leidinggevende',
-              },
-              {
-                title: 'Eerste werkdag en programma afstemmen',
-                text: 'Buddy en leidinggevende',
-              },
-              {
-                title: 'Werkkleding, toegang en praktische zaken voorbereiden',
-                text: 'Verantwoordelijke collega',
-              },
-            ],
-          },
-          {
-            type: 'tip',
-            label: '💡 Niet te veel tegelijk',
-            text: 'Geef voor de eerste werkdag alleen de informatie die iemand dan echt nodig heeft. De rest komt tijdens het inwerken. Zo voelt de app niet meteen als een berg huiswerk.',
-          },
-          {
-            type: 'paragraph',
-            text: 'Wat de nieuwe collega voor de start in de app leest, staat in deze les:',
-          },
-          {
-            type: 'moduleLinks',
-            items: [
-              {
-                moduleId: 'inwerktraject',
-                lessonId: 'voor-je-eerste-werkdag',
-                text: 'Wat de nieuwe collega voor de eerste werkdag doet en leest.',
-              },
-            ],
-          },
-        ],
-      },
-      {
-        id: 'checklist-leidinggevende',
-        title: 'Checklist leidinggevende',
-        summary: 'Zeven punten voor iedere nieuwe collega.',
-        content: [
-          {
-            type: 'paragraph',
-            text: 'Als leidinggevende ben je eindverantwoordelijk voor het inwerktraject: de planning, de doelen die bij de functie horen, de evaluaties en het oplossen van knelpunten.',
-          },
-          {
-            type: 'checklist',
-            id: 'leidinggevende',
-            title: 'Checklist leidinggevende',
-            items: [
-              'Contract, benodigde documenten en praktische zaken geregeld',
-              'Buddy aangewezen en geïnformeerd',
-              'Toegang tot de app geregeld',
-              'Eerste werkdag en eerste week gepland',
-              'Leerdoelen voor de functie vastgesteld',
-              'Evaluaties op dag 30, 60, 90 en 100 ingepland',
-              'Voortgang en eventuele knelpunten opgevolgd',
-            ],
-          },
-        ],
-      },
-      {
-        id: 'checklist-buddy',
-        title: 'Checklist buddy',
-        summary: 'Zeven punten voor de vaste collega van de nieuwe collega.',
-        content: [
-          {
-            type: 'paragraph',
-            text: 'Als buddy ben je de vaste collega voor dagelijkse vragen, uitleg, praktische instructies, meekijken en feedback. Je hoeft niet alles zelf te weten. Je maakt de nieuwe collega wegwijs en weet bij wie hij of zij terechtkan.',
-          },
-          {
-            type: 'checklist',
-            id: 'buddy',
-            title: 'Checklist buddy',
-            items: [
-              'De nieuwe collega welkom geheten en wegwijs gemaakt',
-              'Dagelijkse werkafspraken en routines uitgelegd',
-              'Belangrijke afspraken rond deelnemers en dieren besproken',
-              'Praktijkopdrachten samen uitgevoerd',
-              'Ruimte gemaakt voor vragen en onzekerheden',
-              'Feedback gegeven en leerpunten besproken',
-              'Voortgang teruggekoppeld aan de leidinggevende',
-            ],
-          },
-          {
-            type: 'paragraph',
-            text: 'De praktijkopdrachten per fase vind je hier:',
-          },
-          {
-            type: 'moduleLinks',
-            items: [
-              {
-                moduleId: 'inwerktraject',
-                lessonId: 'de-eerste-maand',
-                text: 'Dag 1 tot 30.',
-              },
-              {
-                moduleId: 'inwerktraject',
-                lessonId: 'kennis-toepassen',
-                text: 'Dag 31 tot 60.',
-              },
-              {
-                moduleId: 'inwerktraject',
-                lessonId: 'vertrouwen-en-zelfstandigheid',
-                text: 'Dag 61 tot 90.',
-              },
-            ],
-          },
-        ],
-      },
-      {
-        id: 'evaluaties-voeren',
-        title: 'De evaluatiegesprekken',
-        summary: 'Waar je het op dag 30, 60, 90 en 100 over hebt.',
-        content: [
-          {
-            type: 'paragraph',
-            text: 'De leidinggevende voert vier gesprekken met de nieuwe collega: op dag 30, 60, 90 en 100. Leg de belangrijkste afspraken steeds vast in het personeelsdocument dat daarvoor bedoeld is.',
-          },
-          {
-            type: 'cards',
-            items: [
-              {
-                title: 'Dag 30',
-                text: 'Wat gaat al goed en waar voelt de nieuwe collega zich prettig bij? Welke kennis of vaardigheden vragen nog extra aandacht? Wat is nodig om de komende maand meer taken op te pakken?',
-              },
-              {
-                title: 'Dag 60',
-                text: 'Bespreek de voortgang aan de hand van concrete voorbeelden. Welke taken kan de nieuwe collega inmiddels uitvoeren, bij welke taken is nog begeleiding nodig en welke stap past nu?',
-              },
-              {
-                title: 'Dag 90',
-                text: 'Welke onderdelen beheerst de nieuwe collega, waar is nog extra ondersteuning nodig en past het takenpakket? Zelfstandigheid is geen doel op zich: bij complexe situaties of veiligheidsrisico’s blijft overleg nodig.',
-              },
-              {
-                title: 'Dag 100',
-                text: 'Rond het inwerken af. Wat beheerst de nieuwe collega, waar is nog ontwikkeling nodig en welke ondersteuning hoort daarbij? Leg verdere leerdoelen en scholingswensen vast en spreek af hoe feedback en begeleiding doorlopen.',
-              },
-            ],
-          },
-          {
-            type: 'paragraph',
-            text: 'Vraag de nieuwe collega na 30 en na 100 dagen ook naar het inwerken zelf:',
-          },
-          {
-            type: 'bulletList',
-            items: [
-              'Wat had je graag eerder willen weten?',
-              'Voel je je voldoende ondersteund?',
-              'Weet je wat er van je verwacht wordt?',
-              'Welke informatie in de app was onduidelijk of overbodig?',
-              'Wat zou je veranderen aan het inwerken?',
-            ],
-          },
-          {
-            type: 'paragraph',
-            text: 'Werkt het inwerken? Let op vier dingen:',
-          },
-          {
-            type: 'cards',
-            items: [
-              {
-                title: 'Voortgang',
-                text: 'Zijn de verplichte modules en opdrachten afgerond?',
-              },
-              {
-                title: 'Bekwaamheid',
-                text: 'Kan de nieuwe collega belangrijke werkzaamheden uitleggen en in de praktijk uitvoeren?',
-              },
-              {
-                title: 'Welbevinden',
-                text: 'Voelt de nieuwe collega zich welkom, veilig en gesteund?',
-              },
-              {
-                title: 'Kwaliteit van het inwerken',
-                text: 'Wat kan beter volgens de nieuwe collega, de buddy en de leidinggevende?',
-              },
-            ],
-          },
-          {
-            type: 'tip',
-            label: '💡 Blijf verbeteren',
-            text: 'Gebruik de antwoorden om het inwerken steeds beter te maken. Moet er iets in deze app veranderen? Laat het de onboardingverantwoordelijke weten.',
-          },
-        ],
-      },
-    ],
-  },
 ]
 
 /**
@@ -3189,12 +2892,6 @@ export const categories = [
     description: 'Jouw functie, de kennistoets en de afronding.',
     moduleIds: ['jouw-functie', 'kennistoets', 'afronding'],
   },
-  {
-    id: 'begeleiders',
-    title: 'Voor begeleiders',
-    description: 'Voor de buddy en leidinggevende van een nieuwe collega. Telt niet mee in je voortgang.',
-    moduleIds: ['begeleiders'],
-  },
 ]
 
 export function getCategoriesWithModules() {
@@ -3210,15 +2907,6 @@ export function isModuleAvailable(module) {
 
 export function getAvailableModules() {
   return modules.filter(isModuleAvailable)
-}
-
-/**
- * De modules die een nieuwe collega doorloopt. Modules met
- * `forBegeleiders: true` zijn voor de buddy en leidinggevende en tellen
- * niet mee in de voortgang.
- */
-export function getLearnerModules() {
-  return getAvailableModules().filter((module) => !module.forBegeleiders)
 }
 
 export function getModuleById(moduleId) {

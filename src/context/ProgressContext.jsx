@@ -1,7 +1,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react'
 import {
   MODULE_STATUS,
-  getLearnerModules,
+  getAvailableModules,
   getLessonById,
   isModuleAvailable,
   lessonKey,
@@ -168,7 +168,7 @@ export function ProgressProvider({ children }) {
   )
 
   const overallProgressPercent = useMemo(() => {
-    const available = getLearnerModules()
+    const available = getAvailableModules()
     let total = 0
     let done = 0
 
@@ -185,7 +185,7 @@ export function ProgressProvider({ children }) {
   }, [progress])
 
   const hasStarted = useMemo(() => {
-    return getLearnerModules().some((module) => {
+    return getAvailableModules().some((module) => {
       if (progress.completedModules.includes(module.id)) return true
       return module.lessons.some((lesson) => {
         const key = lessonKey(module.id, lesson.id)
@@ -198,7 +198,7 @@ export function ProgressProvider({ children }) {
   }, [progress])
 
   const getResumeInfo = useCallback(() => {
-    const available = getLearnerModules()
+    const available = getAvailableModules()
 
     const fromLast = parseLessonKey(progress.lastOpenedLesson)
     if (fromLast) {
