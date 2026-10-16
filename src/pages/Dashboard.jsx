@@ -1,5 +1,5 @@
 import { useLocation, useNavigate } from 'react-router-dom'
-import { MODULE_STATUS, getCategoriesWithModules, modules } from '../data/modules'
+import { MODULE_STATUS, getCategoriesWithModules, modules, siteTexts } from '../data/modules'
 import { useProgress } from '../context/ProgressContext'
 import ProgressBar from '../components/ProgressBar'
 import ModuleTile from '../components/ModuleTile'
@@ -19,6 +19,7 @@ function Dashboard() {
     getResumeInfo,
   } = useProgress()
 
+  const texts = siteTexts.dashboard
   const completionMessage = location.state?.completionMessage ?? null
   const resumeInfo = getResumeInfo()
 
@@ -88,14 +89,14 @@ function Dashboard() {
       <header className="dashboard__header">
         <div className="dashboard__hero">
           <div className="dashboard__intro">
-            <p className="dashboard__eyebrow">Welkom!</p>
-            <h1>Fijn dat je er bent.</h1>
-            <p>Hieronder zie je jouw reis door Stap voor Stap.</p>
+            <p className="dashboard__eyebrow">{texts.eyebrow}</p>
+            <h1>{texts.title}</h1>
+            <p>{texts.intro}</p>
           </div>
           <figure className="dashboard__hero-photo">
             <img
               src="/fotos/varkens.jpg"
-              alt="Twee varkens van de boerderij kijken nieuwsgierig in de camera"
+              alt={texts.photoAlt}
             />
           </figure>
         </div>
