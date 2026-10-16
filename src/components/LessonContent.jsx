@@ -4,6 +4,8 @@ import ContentCards from './ContentCards'
 import Timeline from './Timeline'
 import ExpandableAnswer from './ExpandableAnswer'
 import QuizQuestion from './QuizQuestion'
+import Checklist from './Checklist'
+import ModuleLinks from './ModuleLinks'
 import './LessonContent.css'
 
 function LessonContentBlock({ block }) {
@@ -138,6 +140,12 @@ function LessonContentBlock({ block }) {
           explanation={block.explanation}
         />
       )
+
+    case 'checklist':
+      return <Checklist id={block.id} title={block.title} items={block.items} />
+
+    case 'moduleLinks':
+      return <ModuleLinks items={block.items} />
 
     case 'document':
       return (

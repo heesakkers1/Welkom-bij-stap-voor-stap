@@ -43,18 +43,6 @@
   color: var(--text-muted);
 }
 
-.dashboard__resume-hint {
-  margin: 0;
-  text-align: center;
-  font-size: 0.98rem;
-  color: var(--text-muted);
-}
-
-.dashboard__resume-hint strong {
-  color: var(--accent-strong);
-  font-weight: 700;
-}
-
 .dashboard__celebration {
   position: relative;
   padding: 1.35rem 1.5rem;

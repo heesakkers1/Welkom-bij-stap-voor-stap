@@ -81,13 +81,26 @@ export const modules = [
             text: 'Je voortgang wordt automatisch bewaard op dit apparaat.',
           },
           {
+            type: 'paragraph',
+            text: 'Bij ieder onderwerp werken we met dezelfde stappen:',
+          },
+          {
             type: 'numberedList',
             items: [
-              'Bekijk de korte uitleg.',
-              'Sta even stil bij de praktijksituatie.',
-              'Voer kleine opdrachten of vragen uit.',
-              'Rond de module af.',
+              'Dit moet je weten: een korte, begrijpelijke uitleg.',
+              'Zo doen we dat bij Stap voor Stap: onze afspraken en voorbeelden.',
+              'Dit ga je doen: een opdracht in de praktijk.',
+              'Dit moet je beheersen: een korte vraag of toets, of een collega die met je meekijkt.',
+              'Vragen? Schrijf ze op en bespreek ze met je vaste aanspreekpunt, of gebruik de knop Vraag stellen.',
             ],
+          },
+          {
+            type: 'highlight',
+            text: 'Gelezen is nog niet gekund. Bij veiligheid, medicatie, incidenten, dieren en privacy kijkt een verantwoordelijke collega in de praktijk met je mee, voordat je het zelf doet.',
+          },
+          {
+            type: 'paragraph',
+            text: 'De app, je collega’s, je vaste aanspreekpunt en je leidinggevende vormen samen je inwerktraject. De app geeft je de informatie, je collega’s helpen je om het in de praktijk te doen, bij je vaste aanspreekpunt kun je terecht met al je vragen en je leidinggevende houdt je voortgang, je veiligheid en je ontwikkeling in de gaten.',
           },
           {
             type: 'tip',
@@ -108,7 +121,7 @@ export const modules = [
           {
             type: 'bulletList',
             items: [
-              'je inwerktraject en de evaluaties op dag 30, 60 en 90;',
+              'je eerste 100 dagen, wie je daarbij helpt en de evaluatiegesprekken;',
               'onze visie en manier van werken;',
               'onze organisatie en bij wie je terechtkunt;',
               'de zorgboerderij en het ritme van de dag;',
@@ -132,95 +145,196 @@ export const modules = [
   },
   {
     id: 'inwerktraject',
-    title: 'Jouw inwerktraject',
+    title: 'Jouw eerste 100 dagen',
     description:
-      'Wat je in je eerste 90 dagen bij Stap voor Stap kunt verwachten, en daarna.',
+      'Hoe je in 100 dagen stap voor stap wordt ingewerkt, wie je daarbij helpt en wat je per fase doet.',
     icon: 'route',
-    duration: '15 minuten',
+    duration: '25 minuten',
     completionMessage: {
       title: '🧭 Je weet waar je naartoe werkt!',
-      text: 'Je kent nu de fasen van je inwerktraject en de evaluaties op dag 30, 60 en 90.',
+      text: 'Je kent nu de fasen van je eerste 100 dagen, je doelen en wie je daarbij helpt.',
     },
     lessons: [
       {
         id: 'inwerktraject-in-fasen',
-        title: 'Je inwerktraject in fasen',
-        summary: 'Van je eerste werkdag tot een jaar verder.',
+        title: 'Je eerste 100 dagen in één oogopslag',
+        summary: 'Van een warm welkom naar zelfstandig en met vertrouwen werken.',
         content: [
           {
             type: 'hero',
-            eyebrow: 'Jouw inwerktraject',
+            eyebrow: 'Jouw eerste 100 dagen',
             title: 'Stap voor stap ingewerkt',
-            text: 'Een goede start vinden we belangrijk. Daarom werken we je in volgens een vast traject.',
+            text: 'Van een warm welkom naar zelfstandig en met vertrouwen werken, in je eerste 100 dagen.',
           },
           {
             type: 'paragraph',
-            text: 'In je inwerkperiode maak je stap voor stap kennis met de organisatie, de deelnemers, de werkwijze en de dagelijkse praktijk. Je wordt begeleid door collega’s en krijgt de ruimte om vragen te stellen en mee te kijken voordat je zelfstandig taken oppakt.',
+            text: 'Iedere nieuwe collega krijgt dezelfde basis. Je begeleiding en je leerdoelen stemmen we af op jouw functie, je ervaring en je ontwikkeling.',
           },
           {
             type: 'paragraph',
-            text: 'Je inwerktraject bestaat uit deze fasen:',
+            text: 'Je inwerktijd bestaat uit vijf fasen:',
           },
           {
             type: 'timeline',
             items: [
               {
-                title: 'Preboarding (30 tot 0 dagen voor je start)',
-                text: 'We bereiden je voor op je eerste werkdag.',
+                title: 'Fase 1: voorbereiden (voor je eerste werkdag)',
+                text: 'We heten je welkom, regelen de praktische zaken, geven je toegang tot deze app en bespreken wat je kunt verwachten.',
               },
               {
-                title: 'Werkdag 1',
-                text: 'Een warm en persoonlijk welkom en een kennismaking met het team.',
+                title: 'Fase 2: kennismaken en leren (dag 1 tot 30)',
+                text: 'Je leert de organisatie, de deelnemers, je collega’s, de dieren, de afspraken en onze werkwijze kennen. Vooral kijken, vragen stellen en oefenen.',
               },
               {
-                title: 'Introductie en oriëntatie (dag 2 tot 30)',
-                text: 'Leren, ontdekken en wennen.',
+                title: 'Fase 3: kennis toepassen (dag 31 tot 60)',
+                text: 'Je voert taken steeds meer zelf uit, begeleidt deelnemers met passende ondersteuning en leert rapporteren en afstemmen met collega’s.',
               },
               {
-                title: 'Eerste evaluatie (dag 30)',
-                text: 'Hoe bevalt je rol en het team?',
+                title: 'Fase 4: vertrouwen en zelfstandigheid (dag 61 tot 90)',
+                text: 'Je werkt zelfstandiger binnen je eigen rol, neemt verantwoordelijkheid, past feedback toe en bespreekt je ontwikkelpunten.',
               },
               {
-                title: 'Rol- en taakduidelijkheid (dag 31 tot 60)',
-                text: 'Je past toe wat je hebt geleerd en neemt meer verantwoordelijkheid.',
-              },
-              {
-                title: 'Tweede evaluatie (dag 60)',
-                text: 'Je voortgang en de samenwerking met collega’s.',
-              },
-              {
-                title: 'Groei en evaluatie (dag 61 tot 90)',
-                text: 'Je werkt zelfstandig en kijkt vooruit.',
-              },
-              {
-                title: 'Derde evaluatie (dag 90)',
-                text: 'Je functiedoelen, sterke punten en ontwikkelpunten.',
-              },
-              {
-                title: 'Lange termijn onboarding (3 tot 12 maanden)',
-                text: 'Verdieping in je rol en je persoonlijke ontwikkeling.',
+                title: 'Fase 5: afronden en vooruitkijken (dag 91 tot 100)',
+                text: 'We kijken samen terug, staan stil bij wat goed ging en maken afspraken over je verdere ontwikkeling.',
               },
             ],
           },
           {
             type: 'highlight',
-            text: 'Naast deze fasen loopt van dag 2 tot 60 de sociale integratie: je leert je collega’s kennen en raakt thuis in het team.',
+            text: 'Op dag 30, 60 en 90 heb je een evaluatiegesprek. Op dag 100 ronden we je inwerktijd samen af.',
+          },
+          {
+            type: 'paragraph',
+            text: 'Ook na 100 dagen blijft je ontwikkeling in beeld, tot een jaar na je start. Daarover lees je in de laatste les van deze module.',
           },
           {
             type: 'tip',
-            label: '💡 Elke fase heeft twee kanten',
-            text: 'Per fase lees je wat wij voor jou doen en wat we van jou verwachten. Zo weet je steeds waar je aan toe bent.',
+            label: '💡 Je hoeft niet alles meteen te kunnen',
+            text: 'We verwachten niet dat je na een paar weken alles zelfstandig kunt. Je krijgt de tijd om te leren.',
+          },
+        ],
+      },
+      {
+        id: 'doelen',
+        title: 'Waar werken we naartoe?',
+        summary: 'De vijf doelen van je inwerktijd.',
+        content: [
+          {
+            type: 'paragraph',
+            text: 'Inwerken is bij Stap voor Stap meer dan protocollen doornemen. We willen dat je je welkom voelt, begrijpt hoe we werken en veilig en verantwoord leert omgaan met deelnemers, dieren en collega’s.',
+          },
+          {
+            type: 'paragraph',
+            text: 'Daarom werk je in je eerste 100 dagen aan vijf doelen:',
+          },
+          {
+            type: 'cards',
+            items: [
+              {
+                title: 'Verbondenheid',
+                text: 'Je voelt je welkom en ervaart onze cultuur: samen, buiten, gewoon, met rust en aandacht.',
+              },
+              {
+                title: 'Duidelijkheid',
+                text: 'Je weet wat er van je verwacht wordt, bij wie je met vragen terechtkunt en waar je informatie vindt.',
+              },
+              {
+                title: 'Veiligheid en kwaliteit',
+                text: 'Je kent de belangrijkste afspraken over deelnemers, dieren, incidenten, privacy en professioneel handelen.',
+              },
+              {
+                title: 'Vakbekwaamheid',
+                text: 'Je leert de dagelijkse begeleiding, het rapporteren en de werkzaamheden in de praktijk uitvoeren.',
+              },
+              {
+                title: 'Zelfstandigheid en ontwikkeling',
+                text: 'Je groeit stap voor stap in verantwoordelijkheid en weet waar je nog ondersteuning nodig hebt.',
+              },
+            ],
+          },
+          {
+            type: 'paragraph',
+            text: 'Deze doelen zijn de rode draad van deze app, je inwerkperiode en de evaluatiegesprekken.',
+          },
+          {
+            type: 'highlight',
+            text: 'Het gaat er niet om dat je na 100 dagen alle vakjes hebt afgevinkt. Het gaat erom dat je je verbonden voelt met Stap voor Stap, de afspraken kent en je functie verantwoord kunt uitvoeren.',
+          },
+          {
+            type: 'assignment',
+            label: 'Jouw doelen',
+            text: 'Welk van deze vijf doelen vind je nu het spannendst of het belangrijkst? Neem het mee naar een gesprek met je vaste aanspreekpunt.',
+            reflective: true,
+          },
+        ],
+      },
+      {
+        id: 'wie-helpt-je',
+        title: 'Wie helpt je?',
+        summary: 'Je vaste aanspreekpunt, je collega’s, je leidinggevende en jijzelf.',
+        content: [
+          {
+            type: 'paragraph',
+            text: 'Deze app geeft je veel uitleg, maar je werkt niet alleen in. Je vaste aanspreekpunt, je collega’s en je leidinggevende helpen je op weg.',
+          },
+          {
+            type: 'cards',
+            items: [
+              {
+                title: 'Eigenaren en leidinggevende',
+                text: 'Eindverantwoordelijk voor je inwerktraject: de planning, de doelen die bij je functie horen, de evaluaties en het oplossen van knelpunten.',
+              },
+              {
+                title: 'Onboardingverantwoordelijke',
+                text: 'Beheert deze app, de checklists en de algemene informatie, en houdt je voortgang bij. Deze rol kan bij een leidinggevende liggen.',
+              },
+              {
+                title: 'Je vaste aanspreekpunt',
+                text: 'Een van onze coördinatoren is je vaste aanspreekpunt en hulplijn. Je kunt er met al je vragen terecht.',
+              },
+              {
+                title: 'Je collega’s',
+                text: 'In de praktijk kijk je mee met ervaren collega’s. Zij leggen uit, doen voor en kijken mee als jij het zelf doet.',
+              },
+              {
+                title: 'Jij',
+                text: 'Je doorloopt de modules, voert de opdrachten uit, stelt vragen, vraagt om feedback en geeft aan wat je nodig hebt om goed te kunnen leren.',
+              },
+            ],
+          },
+          {
+            type: 'tip',
+            label: '💡 Weet je iets niet?',
+            text: 'Vraag het je vaste aanspreekpunt of een collega. Je kunt ook de knop Vraag stellen rechtsonder gebruiken.',
+          },
+          {
+            type: 'paragraph',
+            text: 'Dit is jouw deel. Vink af wat je gedaan hebt:',
+          },
+          {
+            type: 'checklist',
+            id: 'medewerker-100-dagen',
+            title: 'Jouw checklist',
+            items: [
+              'Welkomstinformatie en eerste modules doorlopen',
+              'Weten bij wie ik met vragen terechtkan',
+              'Belangrijke werkafspraken en veiligheidsregels leren',
+              'Praktijkopdrachten uitvoeren en bespreken',
+              'Leerdoelen en vragen bespreken met mijn vaste aanspreekpunt',
+              'Feedback vragen en ontvangen',
+              'Eigen voortgang evalueren en ontwikkelpunten vastleggen',
+            ],
           },
         ],
       },
       {
         id: 'voor-je-eerste-werkdag',
-        title: 'Voor je eerste werkdag',
-        summary: 'Preboarding: 30 tot 0 dagen voor je start.',
+        title: 'Fase 1: voor je eerste werkdag',
+        summary: 'Voorbereiden, in de weken voor je start.',
         content: [
           {
             type: 'paragraph',
-            text: 'In de weken voor je start bereiden we je voor op je eerste werkdag. Zo kun je vanaf het begin goed van start gaan, heb je minder zenuwen en blijf je betrokken.',
+            text: 'In de weken voor je start bereiden we je voor. Zo hoef je op je eerste werkdag niet te zoeken naar informatie en weet je wat er van je verwacht wordt.',
           },
           {
             type: 'paragraph',
@@ -229,11 +343,13 @@ export const modules = [
           {
             type: 'bulletList',
             items: [
-              'een welkomstmail met praktische informatie: je starttijd, kleding en je contactpersoon;',
-              'je contract en de administratie;',
-              'je accounts en toegang tot de systemen;',
-              'een introductie van het team en een buddy voor jou;',
-              'eventueel wat voorbereidend materiaal of een kleine opdracht.',
+              'je contract en de personeelsgegevens die we nodig hebben;',
+              'het controleren van je VOG en eventuele andere eisen die bij je functie horen;',
+              'een vast aanspreekpunt bij wie je terechtkunt met vragen;',
+              'toegang tot deze onboardingapp en je accounts;',
+              'een welkomstbericht met praktische informatie, zoals je starttijd, je kleding en je contactpersoon;',
+              'het programma van je eerste werkdag;',
+              'je werkkleding en andere praktische zaken.',
             ],
           },
           {
@@ -246,13 +362,64 @@ export const modules = [
               'alle benodigde documenten invullen en terugsturen, zoals je diploma’s en een VOG;',
               'je contract tekenen; daarmee heb je ook geheimhoudingsplicht;',
               'de instructies voor je accounts opvolgen;',
-              'alvast kennismaken met het team en je buddy, bijvoorbeeld via de les Maak kennis met… in de module Wie is wie?.',
+              'alvast kennismaken met het team en je vaste aanspreekpunt.',
             ],
           },
           {
-            type: 'assignment',
-            label: 'Checklist voor je start',
-            text: 'Heb je je documenten bij de backoffice aangeleverd, je accounts geactiveerd en weet je wie je contactpersoon is? Mis je iets, neem dan contact op met je leidinggevende.',
+            type: 'paragraph',
+            text: 'Voor je start lees je in deze app alleen wat je dan echt nodig hebt:',
+          },
+          {
+            type: 'moduleLinks',
+            items: [
+              {
+                moduleId: 'welkom',
+                text: 'Een eerste kennismaking met Stap voor Stap.',
+              },
+              {
+                moduleId: 'onze-visie',
+                text: 'Wie we zijn en waar we voor staan.',
+              },
+              {
+                moduleId: 'zorgboerderij',
+                text: 'Het verhaal van de zorgboerderij en het ritme van de dag.',
+              },
+              {
+                moduleId: 'organisatie',
+                text: 'Je collega’s, hun rollen en bij wie je terechtkunt.',
+              },
+              {
+                moduleId: 'procedures',
+                lessonId: 'kleding-en-telefoon',
+                text: 'Praktische informatie over je werkkleding.',
+              },
+              {
+                moduleId: 'inwerktraject',
+                lessonId: 'je-eerste-werkdag',
+                text: 'Wat je op je eerste werkdag kunt verwachten.',
+              },
+            ],
+          },
+          {
+            type: 'tip',
+            label: '💡 Rustig aan',
+            text: 'Je hoeft voor je start niet de hele app door te nemen. De rest komt tijdens je inwerktijd vanzelf aan bod.',
+          },
+          {
+            type: 'checklist',
+            id: 'voor-je-start',
+            title: 'Checklist voor je start',
+            items: [
+              'Mijn documenten aangeleverd bij de backoffice',
+              'Mijn contract getekend',
+              'Mijn accounts geactiveerd',
+              'Ik weet wie mijn vaste aanspreekpunt is',
+              'Ik weet hoe laat ik op mijn eerste werkdag word verwacht',
+            ],
+          },
+          {
+            type: 'paragraph',
+            text: 'Mis je iets? Neem dan contact op met je leidinggevende.',
           },
         ],
       },
@@ -276,7 +443,7 @@ export const modules = [
               'je krijgt een rondleiding over de boerderij;',
               'we vertellen over onze missie, visie en waarden;',
               'je krijgt praktische uitleg over werktijden, systemen en communicatie;',
-              'je maakt kennis met het team.',
+              'je maakt kennis met het team en je vaste aanspreekpunt.',
             ],
           },
           {
@@ -306,33 +473,29 @@ export const modules = [
         content: [
           {
             type: 'paragraph',
-            text: 'Bij je start krijg je een aantal dingen van ons, en regel je zelf ook een paar zaken. Gebruik deze lijst om te checken of alles klaar is.',
+            text: 'Bij je start krijg je een aantal dingen van ons, en regel je zelf ook een paar zaken. Vink af wat klaar is.',
           },
           {
-            type: 'paragraph',
-            text: 'Dit krijg je van ons:',
-          },
-          {
-            type: 'bulletList',
+            type: 'checklist',
+            id: 'krijg-je-van-ons',
+            title: 'Dit krijg je van ons',
             items: [
-              'een eigen e-mailadres van Stap voor Stap;',
-              'een account op ZilliZ, dat regelt de backoffice;',
-              'toegang tot SharePoint;',
-              'bedrijfskleding;',
-              'een eigen postvakje en een vakje voor je tas in de personeelsruimte.',
+              'Een eigen e-mailadres van Stap voor Stap',
+              'Een account op ZilliZ, dat regelt de backoffice',
+              'Toegang tot SharePoint',
+              'Bedrijfskleding',
+              'Een eigen postvakje en een vakje voor je tas in de personeelsruimte',
             ],
           },
           {
-            type: 'paragraph',
-            text: 'Dit regel je zelf:',
-          },
-          {
-            type: 'bulletList',
+            type: 'checklist',
+            id: 'regel-je-zelf',
+            title: 'Dit regel je zelf',
             items: [
-              'je diploma’s, VOG en andere documenten aanleveren bij de backoffice;',
-              'de gezamenlijke e-mailhandtekening instellen;',
-              'Zorg-Chat (D-connect) installeren om veilig met collega’s te communiceren;',
-              'leren hoe je je uren schrijft in SharePoint, vraag daar gerust hulp bij aan een collega.',
+              'Je diploma’s, VOG en andere documenten aanleveren bij de backoffice',
+              'De gezamenlijke e-mailhandtekening instellen',
+              'Zorg-Chat (D-connect) installeren om veilig met collega’s te communiceren',
+              'Leren hoe je je uren schrijft in SharePoint, vraag daar gerust hulp bij aan een collega',
             ],
           },
           {
@@ -343,18 +506,22 @@ export const modules = [
           {
             type: 'assignment',
             label: 'Praktijkopdracht',
-            text: 'Loop de lijst na. Staat er iets nog niet klaar? Vraag het na bij de backoffice of je leidinggevende.',
+            text: 'Staat er iets nog niet klaar? Vraag het na bij de backoffice of je leidinggevende.',
           },
         ],
       },
       {
         id: 'de-eerste-maand',
-        title: 'De eerste maand',
-        summary: 'Dag 2 tot 30: leren, ontdekken en wennen.',
+        title: 'Fase 2: kennismaken en leren',
+        summary: 'Dag 1 tot 30: kijken, vragen stellen en oefenen.',
         content: [
           {
             type: 'paragraph',
-            text: 'De eerste maand draait om leren, ontdekken en wennen. Je leert hoe we werken en welke afspraken er zijn, je ontmoet je collega’s en je ontdekt wat er van je verwacht wordt.',
+            text: 'In je eerste maand draait het om kennismaken, kijken, vragen stellen en veilig leren werken. We verwachten nog niet dat je alles zelfstandig beheerst.',
+          },
+          {
+            type: 'paragraph',
+            text: 'Met al je vragen kun je terecht bij je vaste aanspreekpunt. In de praktijk leer je van ervaren collega’s.',
           },
           {
             type: 'paragraph',
@@ -379,13 +546,61 @@ export const modules = [
           },
           {
             type: 'paragraph',
+            text: 'Deze modules doe je in je eerste maand:',
+          },
+          {
+            type: 'moduleLinks',
+            items: [
+              {
+                moduleId: 'onze-visie',
+                text: 'Hoe we omgaan met deelnemers, ouders, collega’s en verschillen tussen mensen.',
+              },
+              {
+                moduleId: 'deelnemers-begeleiden',
+                text: 'Onze doelgroep, de begeleiding, grenzen, nabijheid en eigen regie.',
+              },
+              {
+                moduleId: 'digibord',
+                text: 'De dagindeling, de groepen en het dagprogramma.',
+              },
+              {
+                moduleId: 'dagstart-digibord',
+                text: 'Hoe we samen de dag beginnen.',
+              },
+              {
+                moduleId: 'klusjes-dagprogramma',
+                text: 'De klusjes, de staldienst en de taakverdeling.',
+              },
+              {
+                moduleId: 'veilig-werken',
+                text: 'Noodprocedures, incidenten melden, noodmedicatie, privacy en de meldcode.',
+              },
+              {
+                moduleId: 'zorgboerderij',
+                text: 'Het terrein en de plekken op het erf.',
+              },
+              {
+                moduleId: 'paarden-dieren',
+                text: 'Omgaan met de dieren en veilig werken op het erf.',
+              },
+              {
+                moduleId: 'procedures',
+                text: 'Werken met ZilliZ, SharePoint en Zorg-Chat.',
+              },
+              {
+                moduleId: 'organisatie',
+                text: 'Samenwerken: bij wie je terechtkunt met welke vraag.',
+              },
+            ],
+          },
+          {
+            type: 'paragraph',
             text: 'Wat wij doen:',
           },
           {
             type: 'bulletList',
             items: [
               'we spreken duidelijke doelen en verantwoordelijkheden met je af;',
-              'je volgt het inwerkprogramma, waaronder deze onboarding;',
               'je hebt wekelijks een check-in met je leidinggevende;',
               'er zijn vaste momenten voor feedback.',
             ],
@@ -404,6 +619,23 @@ export const modules = [
             ],
           },
           {
+            type: 'checklist',
+            id: 'praktijk-fase-2',
+            title: 'Praktijkopdrachten in je eerste maand',
+            items: [
+              'Loop mee met verschillende collega’s en kijk hoe zij begeleiden.',
+              'Maak kennis met de deelnemers en leer welke begeleidingsafspraken belangrijk zijn.',
+              'Loop met een ervaren collega langs de dieren en bespreek de veiligheidsafspraken.',
+              'Oefen met rapporteren en laat het nakijken door een ervaren collega.',
+              'Bespreek met je vaste aanspreekpunt waar je onzeker over bent en welke vragen je hebt.',
+              'Doe mee aan een eerste voortgangsgesprek met je leidinggevende.',
+            ],
+          },
+          {
+            type: 'highlight',
+            text: 'Aan het eind van dag 30 heb je je eerste evaluatiegesprek. Hoe dat gaat, lees je in de les over de evaluaties.',
+          },
+          {
             type: 'tip',
             label: '💡 Je leert vooral op de werkvloer',
             text: 'Het meeste leer je door het te doen en door met collega’s samen te werken. Deze onboarding geeft je de basis, de praktijk doet de rest.',
@@ -413,11 +645,11 @@ export const modules = [
       {
         id: 'thuis-in-het-team',
         title: 'Thuis raken in het team',
-        summary: 'Sociale integratie: dag 2 tot 60.',
+        summary: 'Dag 2 tot 60: je plek vinden in het team.',
         content: [
           {
             type: 'paragraph',
-            text: 'Naast het leren van je taken is het belangrijk dat je je thuis voelt in het team. Deze fase loopt van dag 2 tot 60, tegelijk met je introductie en de fase waarin je je rol leert kennen.',
+            text: 'Naast het leren van je taken is het belangrijk dat je je thuis voelt in het team. Dat loopt van dag 2 tot 60, tegelijk met fase 2 en 3.',
           },
           {
             type: 'paragraph',
@@ -426,7 +658,7 @@ export const modules = [
           {
             type: 'bulletList',
             items: [
-              'je krijgt een buddy of mentor die je wegwijs maakt;',
+              'je hebt een vast aanspreekpunt voor al je vragen;',
               'je doet mee aan teamoverleggen en informele momenten;',
               'we leggen de ongeschreven regels uit;',
               'we moedigen je aan om vragen te stellen;',
@@ -454,71 +686,228 @@ export const modules = [
         ],
       },
       {
-        id: 'je-rol-en-groei',
-        title: 'Je rol pakken en groeien',
-        summary: 'Dag 31 tot 90: toepassen en zelfstandig werken.',
+        id: 'kennis-toepassen',
+        title: 'Fase 3: kennis toepassen',
+        summary: 'Dag 31 tot 60: steeds meer zelf doen.',
         content: [
           {
             type: 'paragraph',
-            text: 'Na de eerste maand verschuift de focus van leren naar doen.',
+            text: 'Na de eerste maand verschuift de focus van leren naar doen. Je brengt wat je geleerd hebt steeds meer in de praktijk en neemt meer verantwoordelijkheid. Ervaren collega’s kijken mee waar nodig en je vaste aanspreekpunt blijft je hulplijn.',
           },
           {
-            type: 'cards',
+            type: 'paragraph',
+            text: 'De wekelijkse check-ins en feedbackmomenten lopen door.',
+          },
+          {
+            type: 'paragraph',
+            text: 'Hier ga je in de app verder mee:',
+          },
+          {
+            type: 'moduleLinks',
             items: [
               {
-                title: 'Dag 31 tot 60: rol- en taakduidelijkheid',
-                text: 'Je past de kennis toe die je hebt opgedaan, neemt meer verantwoordelijkheden op je en zoekt manieren om je eigen bijdrage te leveren. De wekelijkse check-ins en feedbackmomenten lopen door.',
+                moduleId: 'deelnemers-begeleiden',
+                lessonId: 'persoonlijk-begeleider',
+                text: 'Verdieping in de begeleiding en het begeleidingsplan van deelnemers.',
               },
               {
-                title: 'Dag 61 tot 90: groei en evaluatie',
-                text: 'Je krijgt meer zelfvertrouwen en werkt zelfstandig. Je verkent je doelen voor de langere termijn en krijgt de kans om je eigen stempel te drukken.',
+                moduleId: 'deelnemers-begeleiden',
+                lessonId: 'rapporteren',
+                text: 'Zelf rapporteren en weten wanneer je overlegt.',
+              },
+              {
+                moduleId: 'veilig-werken',
+                lessonId: 'incidenten-melden',
+                text: 'De afspraken rond incidenten toepassen.',
+              },
+              {
+                moduleId: 'jouw-functie',
+                text: 'Je eigen rol in het team en de taakverdeling.',
+              },
+              {
+                moduleId: 'procedures',
+                lessonId: 'protocollen',
+                text: 'Protocollen terugvinden en toepassen.',
               },
             ],
           },
           {
-            type: 'paragraph',
-            text: 'In de laatste fase bespreken we wat goed gaat en waar je nog ondersteuning nodig hebt. Waar nodig stellen we je doelen bij en kijken we samen naar je perspectief binnen de organisatie.',
+            type: 'assignment',
+            label: 'Jouw leerdoelen voor de tweede maand',
+            text: 'Wat wil je deze maand leren of beter kunnen? Schrijf twee of drie leerdoelen op en bespreek ze met je vaste aanspreekpunt.',
+            reflective: true,
           },
           {
-            type: 'paragraph',
-            text: 'Wat we van jou vragen:',
-          },
-          {
-            type: 'bulletList',
+            type: 'checklist',
+            id: 'praktijk-fase-3',
+            title: 'Praktijkopdrachten in je tweede maand',
             items: [
-              'geef open en eerlijk feedback over je ervaringen;',
-              'kijk kritisch naar je eigen werk en je uitdagingen;',
-              'benoem je doelen en ontwikkelpunten;',
-              'denk actief mee over je loopbaan binnen Stap voor Stap.',
+              'Voer afgesproken begeleidingsactiviteiten uit, met passende ondersteuning.',
+              'Bereid een activiteit voor en bespreek die vooraf met een collega.',
+              'Doe een overdracht en bespreek wat belangrijke informatie is.',
+              'Schrijf rapportages en bespreek ze met een ervaren collega.',
+              'Oefen met het werk op het erf en bij de dieren, binnen wat je al mag en kunt.',
+              'Bespreek een praktijksituatie met een collega: wat ging goed, wat kon anders en waarom?',
             ],
+          },
+          {
+            type: 'highlight',
+            text: 'Aan het eind van dag 60 heb je je tweede evaluatiegesprek.',
+          },
+        ],
+      },
+      {
+        id: 'vertrouwen-en-zelfstandigheid',
+        title: 'Fase 4: vertrouwen en zelfstandigheid',
+        summary: 'Dag 61 tot 90: zelfstandig werken binnen je rol.',
+        content: [
+          {
+            type: 'paragraph',
+            text: 'In deze fase ligt de nadruk op zelfstandig werken, binnen de verantwoordelijkheden die we met je hebben afgesproken. Je leidinggevende begeleidt deze fase.',
+          },
+          {
+            type: 'paragraph',
+            text: 'Je krijgt meer zelfvertrouwen, verkent je doelen voor de langere termijn en krijgt de kans om je eigen stempel te drukken.',
+          },
+          {
+            type: 'paragraph',
+            text: 'Hier ga je in de app mee aan de slag:',
+          },
+          {
+            type: 'moduleLinks',
+            items: [
+              {
+                moduleId: 'jouw-functie',
+                lessonId: 'verschillen-in-functies',
+                text: 'Wat er bij jouw functie hoort.',
+              },
+              {
+                moduleId: 'handboeken',
+                text: 'De belangrijkste afspraken en protocollen terugvinden.',
+              },
+              {
+                moduleId: 'deelnemers-begeleiden',
+                lessonId: 'professionele-houding',
+                text: 'Terugkijken op je eigen handelen en professioneel gedrag.',
+              },
+              {
+                moduleId: 'kennistoets',
+                text: 'Check wat je al weet.',
+              },
+            ],
+          },
+          {
+            type: 'checklist',
+            id: 'praktijk-fase-4',
+            title: 'Praktijkopdrachten in je derde maand',
+            items: [
+              'Voer je gewone taken zelfstandig uit waar dat verantwoord is.',
+              'Houd overzicht over je eigen werk en stem op tijd af met collega’s.',
+              'Signaleer bijzonderheden bij deelnemers en bespreek ze op de juiste manier.',
+              'Vraag actief om feedback van je collega’s, je vaste aanspreekpunt en je leidinggevende.',
+              'Kies één eigen ontwikkelpunt en bedenk een concrete actie om ermee aan de slag te gaan.',
+            ],
+          },
+          {
+            type: 'assignment',
+            label: 'Jouw ontwikkelpunt',
+            text: 'Wat is jouw ontwikkelpunt, en wat ga je concreet doen?',
+            reflective: true,
+          },
+          {
+            type: 'highlight',
+            text: 'Zelfstandig werken is geen doel op zich. Bij complexe situaties of veiligheidsrisico’s overleg je altijd.',
+          },
+          {
+            type: 'paragraph',
+            text: 'Aan het eind van dag 90 heb je je derde evaluatiegesprek.',
+          },
+        ],
+      },
+      {
+        id: 'afronden-en-vooruitkijken',
+        title: 'Fase 5: afronden en vooruitkijken',
+        summary: 'Dag 91 tot 100: je inwerktijd bewust afsluiten.',
+        content: [
+          {
+            type: 'paragraph',
+            text: 'In de laatste dagen sluiten we je inwerktijd bewust af, zodat je goed overgaat naar je gewone werk.',
+          },
+          {
+            type: 'checklist',
+            id: 'afronden-fase-5',
+            title: 'Je inwerktijd afronden',
+            items: [
+              'Rond de openstaande onderdelen in de app af, of spreek af wanneer je dat doet.',
+              'Bespreek hoe je je inwerktijd hebt ervaren.',
+              'Vertel welke informatie ontbrak, onduidelijk was of juist erg hielp.',
+              'Leg je verdere leerdoelen en eventuele scholingswensen vast.',
+              'Spreek af hoe je daarna feedback en begeleiding blijft krijgen.',
+              'Sta stil bij wat je al hebt geleerd en bereikt.',
+            ],
+          },
+          {
+            type: 'highlight',
+            text: 'Het resultaat: samen hebben we een beeld van wat je beheerst, waar je je nog verder in ontwikkelt en welke ondersteuning daarbij hoort.',
+          },
+          {
+            type: 'tip',
+            label: '🎉 Sta stil bij wat je bereikt hebt',
+            text: 'Kijk terug op je eerste werkdag. Wat heb je sindsdien geleerd? Ook kleine stappen zijn de moeite waard.',
           },
         ],
       },
       {
         id: 'evaluatiegesprekken',
-        title: 'De evaluaties op dag 30, 60 en 90',
-        summary: 'Drie vaste momenten om terug en vooruit te kijken.',
+        title: 'De evaluaties op dag 30, 60, 90 en 100',
+        summary: 'Vier vaste momenten om terug en vooruit te kijken.',
         content: [
           {
             type: 'paragraph',
-            text: 'Tijdens je inwerktraject heb je drie evaluatiegesprekken. Zo weet je steeds waar je staat en kunnen we je ondersteunen waar dat nodig is.',
+            text: 'Tijdens je inwerktijd heb je vier vaste gesprekken met je leidinggevende. Zo weet je steeds waar je staat en kunnen we je ondersteunen waar dat nodig is.',
           },
           {
             type: 'cards',
             items: [
               {
                 title: 'Dag 30: eerste evaluatie',
-                text: 'We vragen naar je eerste indruk van je rol en het team. Uitdagingen, vragen, werkprocessen en je taken bespreken we uitgebreid. Je krijgt eerste feedback en we kijken of de systemen, werkwijzen en begeleiding voor jou werken.',
+                text: 'Wat gaat al goed en waar voel je je prettig bij? Welke kennis of vaardigheden vragen nog extra aandacht? En wat heb je nodig om de komende maand meer taken op te pakken?',
               },
               {
                 title: 'Dag 60: tweede evaluatie',
-                text: 'We kijken naar je voortgang in je taken en je rol, en naar de samenwerking met collega’s. Je krijgt gerichte feedback, en we stellen je doelen en prioriteiten bij als dat nodig is.',
+                text: 'We bespreken je voortgang aan de hand van concrete voorbeelden. Welke taken kun je inmiddels uitvoeren, bij welke taken heb je nog begeleiding nodig en welke stap past nu?',
               },
               {
                 title: 'Dag 90: derde evaluatie',
-                text: 'We bespreken je functiedoelen en of de verwachtingen van je functie zijn behaald. We nemen je sterke punten en ontwikkelpunten door en praten over je groeimogelijkheden. Ook evalueren we samen hoe je inwerktraject is verlopen.',
+                text: 'Wat beheers je, waar heb je nog extra ondersteuning nodig en past je takenpakket bij je? We nemen ook je sterke punten en ontwikkelpunten door.',
+              },
+              {
+                title: 'Dag 100: afronding',
+                text: 'We kijken samen terug op je inwerktijd, leggen je verdere leerdoelen vast en spreken af hoe je begeleiding daarna verdergaat.',
               },
             ],
+          },
+          {
+            type: 'paragraph',
+            text: 'De belangrijkste afspraken uit elk gesprek worden vastgelegd.',
+          },
+          {
+            type: 'paragraph',
+            text: 'Na 30 en na 100 dagen vragen we je ook hoe je het inwerken ervaart:',
+          },
+          {
+            type: 'bulletList',
+            items: [
+              'Wat had je graag eerder willen weten?',
+              'Voel je je voldoende ondersteund?',
+              'Weet je wat er van je verwacht wordt?',
+              'Welke informatie in de app was onduidelijk of overbodig?',
+              'Wat zou je veranderen aan het inwerken?',
+            ],
+          },
+          {
+            type: 'paragraph',
+            text: 'Met jouw antwoorden maken we het inwerken voor nieuwe collega’s steeds beter.',
           },
           {
             type: 'paragraph',
@@ -530,26 +919,25 @@ export const modules = [
               'deel je ervaringen en waar je tegenaan loopt;',
               'geef aan wat duidelijk is en wat niet;',
               'vraag actief om ondersteuning en sta open voor feedback;',
-              'denk mee over verbeteringen en je eigen groei;',
-              'geef ook feedback op je inwerktraject en de samenwerking.',
+              'denk mee over verbeteringen en je eigen groei.',
             ],
           },
           {
             type: 'assignment',
-            label: 'Bereid je eerste evaluatie voor',
-            text: 'Wat gaat goed, waar loop je tegenaan en wat wil je nog leren? Schrijf het kort op, dan heb je het bij de hand voor je gesprek op dag 30.',
+            label: 'Bereid je gesprek voor',
+            text: 'Wat gaat goed, waar loop je tegenaan en wat wil je nog leren? Schrijf het kort op, dan heb je het bij de hand voor je volgende gesprek.',
             reflective: true,
           },
         ],
       },
       {
         id: 'na-drie-maanden',
-        title: 'Na de eerste drie maanden',
-        summary: 'Lange termijn onboarding: 3 tot 12 maanden.',
+        title: 'Na je eerste 100 dagen',
+        summary: 'Je ontwikkeling blijft in beeld, tot een jaar na je start.',
         content: [
           {
             type: 'paragraph',
-            text: 'Na drie maanden ben je volledig onderdeel van het team. We verwachten dan dat je betrokken bent, je verder ontwikkelt en je taken zelfstandig en volwaardig uitvoert.',
+            text: 'Na je eerste 100 dagen ben je volledig onderdeel van het team. We verwachten dan dat je betrokken bent, je verder ontwikkelt en je taken zelfstandig en volwaardig uitvoert.',
           },
           {
             type: 'paragraph',
@@ -578,13 +966,8 @@ export const modules = [
             ],
           },
           {
-            type: 'tip',
-            label: '💡 Sta stil bij wat je bereikt',
-            text: 'Kijk na elke fase even terug. Wat heb je geleerd, wat ging goed? Ook kleine stappen zijn de moeite waard.',
-          },
-          {
             type: 'paragraph',
-            text: 'Meer over scholing, je studiebudget en het jaarlijkse gesprek lees je in de module Jouw functie.',
+            text: 'Meer over scholing, je studiebudget en het jaarlijkse gesprek lees je in de module Jouw functie en groei.',
           },
         ],
       },

@@ -8,6 +8,7 @@ import {
   modules,
   parseLessonKey,
 } from '../data/modules'
+import { clearChecklists } from '../utils/checklistStorage'
 
 const STORAGE_KEY = 'stap-voor-stap-progress'
 
@@ -106,6 +107,7 @@ export function ProgressProvider({ children }) {
 
   const resetProgress = useCallback(() => {
     setProgress(emptyProgress)
+    clearChecklists()
   }, [])
 
   const isLessonOpened = useCallback(
