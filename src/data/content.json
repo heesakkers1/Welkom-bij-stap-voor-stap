@@ -788,29 +788,53 @@
               "variant": "places",
               "items": [
                 {
-                  "title": "Algemene ruimtes",
+                  "title": "'t Kot",
+                  "text": "Ruimte voor 1 op 1 begeleidingen + Kantoor ",
+                  "placeholder": true
+                },
+                {
+                  "title": "de Unit",
+                  "text": "Ruimte voor de Dagbesteding",
+                  "placeholder": true
+                },
+                {
+                  "title": "Pipowagen",
+                  "text": "Ruimte voor de Dagbesteding en Spreekkamer ",
+                  "placeholder": true
+                },
+                {
+                  "title": "Mancave",
+                  "text": "Creatieve -en ontspanningsruimte ",
+                  "placeholder": true
+                },
+                {
+                  "title": "Paardenstallen",
                   "text": "Hier komt later een foto.",
                   "placeholder": true
                 },
                 {
-                  "title": "Dierenverblijven",
-                  "text": "Hier komt later een foto.",
-                  "placeholder": true
+                  "title": "Moestuin",
+                  "text": ""
                 },
                 {
-                  "title": "Buitenruimtes",
-                  "text": "Hier komt later een foto.",
-                  "placeholder": true
+                  "title": "Kleinvee",
+                  "text": ""
                 },
                 {
-                  "title": "Werk- en klusplekken",
-                  "text": "Hier komt later een foto.",
-                  "placeholder": true
+                  "title": "Ezels",
+                  "text": ""
                 },
                 {
-                  "title": "Rustige plekken",
-                  "text": "Hier komt later een foto.",
-                  "placeholder": true
+                  "title": "Hondenwei",
+                  "text": ""
+                },
+                {
+                  "title": "Roundpen",
+                  "text": ""
+                },
+                {
+                  "title": "Paardenbak",
+                  "text": ""
                 }
               ]
             },
