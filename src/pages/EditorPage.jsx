@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useId, useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import LessonContent from '../components/LessonContent'
 import {
@@ -85,20 +85,22 @@ function getAtPath(source, path) {
 }
 
 function TextField({ label, value, onChange, onRemove }) {
+  const id = useId()
   const rows = Math.max(1, Math.ceil(value.length / 70))
   return (
     <div className="editor-field">
       <div className="editor-field__head">
-        <label className="editor-field__label">
+        <label className="editor-field__label" htmlFor={id}>
           {label}
-          <textarea
-            value={value}
-            rows={rows}
-            onChange={(event) => onChange(event.target.value)}
-          />
         </label>
         {onRemove ? <RemoveButton onClick={onRemove} /> : null}
       </div>
+      <textarea
+        id={id}
+        value={value}
+        rows={rows}
+        onChange={(event) => onChange(event.target.value)}
+      />
     </div>
   )
 }
@@ -322,6 +324,7 @@ function Workspace({ token, branch, onLogout }) {
   const [saved, setSaved] = useState('')
   const [sha, setSha] = useState('')
   const [selection, setSelection] = useState({ kind: 'welcome' })
+  const [navOpen, setNavOpen] = useState(false)
   const [message, setMessage] = useState(null)
   const [busy, setBusy] = useState(false)
 
@@ -497,7 +500,12 @@ function Workspace({ token, branch, onLogout }) {
         <div>
           <p className="editor-bar__title">✏️ Teksten bewerken</p>
           <p className="editor-bar__state">
-            {dirty ? 'Je hebt wijzigingen die nog niet zijn opgeslagen.' : 'Alles is opgeslagen.'}
+            <span className="editor-bar__state-long">
+              {dirty ? 'Je hebt wijzigingen die nog niet zijn opgeslagen.' : 'Alles is opgeslagen.'}
+            </span>
+            <span className="editor-bar__state-short">
+              {dirty ? 'Niet opgeslagen' : 'Opgeslagen ✓'}
+            </span>
           </p>
         </div>
         <div className="editor-bar__actions">
@@ -523,20 +531,36 @@ function Workspace({ token, branch, onLogout }) {
       ) : null}
 
       <div className="editor-columns">
-        <aside className="editor-sidebar">
-          <Navigation
-            content={content}
-            selection={selection}
-            onSelect={(next) => {
-              setSelection(next)
-              window.scrollTo({ top: 0 })
-            }}
-          />
-          <div className="editor-sidebar__footer">
-            <Link to="/" className="editor-link">← Naar de site</Link>
-            <button type="button" className="editor-link" onClick={onLogout}>
-              Sleutel vergeten op dit apparaat
-            </button>
+        <aside className={`editor-sidebar${navOpen ? ' is-open' : ''}`}>
+          {/* Op een telefoon is de lijst ingeklapt, zodat je meteen de tekstvakken ziet. */}
+          <button
+            type="button"
+            className="editor-sidebar__toggle"
+            aria-expanded={navOpen}
+            onClick={() => setNavOpen((open) => !open)}
+          >
+            <span>
+              <span className="editor-sidebar__toggle-label">Kies wat je wilt bewerken</span>
+              <span className="editor-sidebar__toggle-current">{title}</span>
+            </span>
+            <span aria-hidden="true">{navOpen ? '▴' : '▾'}</span>
+          </button>
+          <div className="editor-sidebar__content">
+            <Navigation
+              content={content}
+              selection={selection}
+              onSelect={(next) => {
+                setSelection(next)
+                setNavOpen(false)
+                window.scrollTo({ top: 0 })
+              }}
+            />
+            <div className="editor-sidebar__footer">
+              <Link to="/" className="editor-link">← Naar de site</Link>
+              <button type="button" className="editor-link" onClick={onLogout}>
+                Sleutel vergeten op dit apparaat
+              </button>
+            </div>
           </div>
         </aside>
         <main className="editor-main">
