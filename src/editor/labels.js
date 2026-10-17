@@ -2,6 +2,7 @@
 export const BLOCK_NAMES = {
   hero: 'Grote kop',
   paragraph: 'Alinea',
+  heading: 'Tussenkopje',
   bulletList: 'Opsomming',
   numberedList: 'Genummerde lijst',
   tip: 'Tip',

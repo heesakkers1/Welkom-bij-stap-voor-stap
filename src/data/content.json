@@ -254,6 +254,23 @@
             },
             {
               "type": "paragraph",
+              "text": "In die gesprekken kijk je samen met je leidinggevende terug en vooruit. De belangrijkste afspraken worden vastgelegd. Wat er in elk gesprek aan bod komt, lees je aan het eind van elke fase."
+            },
+            {
+              "type": "paragraph",
+              "text": "Wat we van jou vragen in deze gesprekken:"
+            },
+            {
+              "type": "bulletList",
+              "items": [
+                "deel je ervaringen en waar je tegenaan loopt;",
+                "geef aan wat duidelijk is en wat niet;",
+                "vraag actief om ondersteuning en sta open voor feedback;",
+                "denk mee over verbeteringen en je eigen groei."
+              ]
+            },
+            {
+              "type": "paragraph",
               "text": "Ook na 100 dagen blijft je ontwikkeling in beeld, tot een jaar na je start. Daarover lees je in de laatste les van deze module."
             },
             {
@@ -474,9 +491,13 @@
         },
         {
           "id": "je-eerste-werkdag",
-          "title": "Je eerste werkdag",
-          "summary": "Een warm welkom en een eerste kennismaking.",
+          "title": "Fase 2: je eerste werkdag en eerste weken",
+          "summary": "Dag 1: een warm welkom, en wat je in je eerste weken krijgt en regelt.",
           "content": [
+            {
+              "type": "heading",
+              "text": "Je eerste werkdag"
+            },
             {
               "type": "paragraph",
               "text": "Op je eerste werkdag willen we dat je je thuis voelt. Je krijgt een warm en persoonlijk welkom, een introductie in hoe we werken en een kennismaking met het team."
@@ -512,14 +533,11 @@
               "label": "Jouw eerste indrukken",
               "text": "Wat viel je op tijdens je eerste werkdag? Wat wil je nog vragen?",
               "reflective": true
-            }
-          ]
-        },
-        {
-          "id": "checklist-eerste-weken",
-          "title": "Checklist voor je eerste weken",
-          "summary": "Alles wat je bij de start krijgt en regelt.",
-          "content": [
+            },
+            {
+              "type": "heading",
+              "text": "Je eerste weken"
+            },
             {
               "type": "paragraph",
               "text": "Bij je start krijg je een aantal dingen van ons, en regel je zelf ook een paar zaken. Vink af wat klaar is."
@@ -562,7 +580,7 @@
         {
           "id": "de-eerste-maand",
           "title": "Fase 2: kennismaken en leren",
-          "summary": "Dag 1 tot 30: kijken, vragen stellen en oefenen.",
+          "summary": "Dag 1 tot 30: kijken, vragen stellen, oefenen en je thuis gaan voelen in het team.",
           "content": [
             {
               "type": "paragraph",
@@ -644,6 +662,10 @@
             },
             {
               "type": "paragraph",
+              "text": "Naast het leren van je taken is het belangrijk dat je je thuis voelt in het team. Daar besteden we tot dag 60 aandacht aan."
+            },
+            {
+              "type": "paragraph",
               "text": "Wat wij doen:"
             },
             {
@@ -651,63 +673,7 @@
               "items": [
                 "we spreken duidelijke doelen en verantwoordelijkheden met je af;",
                 "je hebt wekelijks een check-in met je leidinggevende;",
-                "er zijn vaste momenten voor feedback."
-              ]
-            },
-            {
-              "type": "paragraph",
-              "text": "Wat we van jou vragen:"
-            },
-            {
-              "type": "bulletList",
-              "items": [
-                "leer actief en oefen je taken;",
-                "stel vragen als iets niet duidelijk is;",
-                "sta open voor feedback en doe er iets mee;",
-                "neem zelf initiatief om het werk te begrijpen en uit te voeren."
-              ]
-            },
-            {
-              "type": "checklist",
-              "id": "praktijk-fase-2",
-              "title": "Praktijkopdrachten in je eerste maand",
-              "items": [
-                "Loop mee met verschillende collega’s en kijk hoe zij begeleiden.",
-                "Maak kennis met de deelnemers en leer welke begeleidingsafspraken belangrijk zijn.",
-                "Loop met een ervaren collega langs de dieren en bespreek de veiligheidsafspraken.",
-                "Oefen met rapporteren en laat het nakijken door een ervaren collega.",
-                "Bespreek met *‘je hulplijn’* waar je onzeker over bent en welke vragen je hebt.",
-                "Doe mee aan een eerste voortgangsgesprek met je leidinggevende."
-              ]
-            },
-            {
-              "type": "highlight",
-              "text": "Aan het eind van dag 30 heb je je eerste evaluatiegesprek. Hoe dat gaat, lees je in de les over de evaluaties."
-            },
-            {
-              "type": "tip",
-              "label": "💡 Je leert vooral op de werkvloer",
-              "text": "Het meeste leer je door het te doen en door met collega’s samen te werken. Deze onboarding geeft je de basis, de praktijk doet de rest."
-            }
-          ]
-        },
-        {
-          "id": "thuis-in-het-team",
-          "title": "Thuis raken in het team",
-          "summary": "Dag 2 tot 60: je plek vinden in het team.",
-          "content": [
-            {
-              "type": "paragraph",
-              "text": "Naast het leren van je taken is het belangrijk dat je je thuis voelt in het team. Dat loopt van dag 2 tot 60, tegelijk met fase 2 en 3."
-            },
-            {
-              "type": "paragraph",
-              "text": "Wat wij doen:"
-            },
-            {
-              "type": "bulletList",
-              "items": [
-                "je kunt met al je vragen terecht bij *‘je hulplijn’*;",
+                "er zijn vaste momenten voor feedback.",
                 "je doet mee aan teamoverleggen en informele momenten;",
                 "we leggen de ongeschreven regels uit;",
                 "we moedigen je aan om vragen te stellen;",
@@ -721,16 +687,73 @@
             {
               "type": "bulletList",
               "items": [
+                "leer actief en oefen je taken;",
+                "stel vragen als iets niet duidelijk is;",
+                "sta open voor feedback en doe er iets mee;",
+                "neem zelf initiatief om het werk te begrijpen en uit te voeren.",
                 "maak kennis met je collega’s;",
                 "doe mee aan teamoverleggen en informele momenten;",
-                "neem zelf initiatief om vragen te stellen en hulp te vragen;",
                 "kijk hoe we met elkaar omgaan en doe daar actief aan mee."
               ]
             },
             {
+              "type": "checklist",
+              "id": "praktijk-fase-2",
+              "title": "Praktijkopdrachten in je eerste maand",
+              "items": [
+                "Loop mee met verschillende collega’s en kijk hoe zij begeleiden.",
+                "Maak kennis met de deelnemers en leer welke begeleidingsafspraken belangrijk zijn.",
+                "Loop met een ervaren collega langs de dieren en bespreek de veiligheidsafspraken.",
+                "Oefen met rapporteren en laat het nakijken door een ervaren collega.",
+                "Bespreek met *‘je hulplijn’* waar je onzeker over bent en welke vragen je hebt.",
+                "Doe mee aan een eerste voortgangsgesprek met je leidinggevende.",
+                "Maak een kort praatje met de collega’s met wie je de komende weken het meest samenwerkt."
+              ]
+            },
+            {
+              "type": "tip",
+              "label": "💡 Je leert vooral op de werkvloer",
+              "text": "Het meeste leer je door het te doen en door met collega’s samen te werken. Deze onboarding geeft je de basis, de praktijk doet de rest."
+            },
+            {
+              "type": "heading",
+              "text": "Dag 30: je eerste evaluatie"
+            },
+            {
+              "type": "paragraph",
+              "text": "Aan het eind van je eerste maand heb je je eerste evaluatiegesprek met je leidinggevende. Daarin bespreken jullie:"
+            },
+            {
+              "type": "bulletList",
+              "items": [
+                "Wat gaat al goed en waar voel je je prettig bij?",
+                "Welke kennis of vaardigheden vragen nog extra aandacht?",
+                "Wat heb je nodig om de komende maand meer taken op te pakken?"
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "We vragen je ook hoe je het inwerken tot nu toe ervaart:"
+            },
+            {
+              "type": "bulletList",
+              "items": [
+                "Wat had je graag eerder willen weten?",
+                "Voel je je voldoende ondersteund?",
+                "Weet je wat er van je verwacht wordt?",
+                "Welke informatie in de app was onduidelijk of overbodig?",
+                "Wat zou je veranderen aan het inwerken?"
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "Met jouw antwoorden maken we het inwerken voor nieuwe collega’s steeds beter."
+            },
+            {
               "type": "assignment",
-              "label": "Praktijkopdracht",
-              "text": "Wie zijn de collega’s met wie je de komende weken het meest samenwerkt? Maak met ieder van hen een kort praatje over hun werk."
+              "label": "Bereid je gesprek voor",
+              "text": "Wat gaat goed, waar loop je tegenaan en wat wil je nog leren? Schrijf het kort op, dan heb je het bij de hand voor je volgende gesprek.",
+              "reflective": true
             }
           ]
         },
@@ -800,8 +823,12 @@
               ]
             },
             {
-              "type": "highlight",
-              "text": "Aan het eind van dag 60 heb je je tweede evaluatiegesprek."
+              "type": "heading",
+              "text": "Dag 60: je tweede evaluatie"
+            },
+            {
+              "type": "paragraph",
+              "text": "Aan het eind van dag 60 heb je je tweede evaluatiegesprek. We bespreken je voortgang aan de hand van concrete voorbeelden. Welke taken kun je inmiddels uitvoeren, bij welke taken heb je nog begeleiding nodig en welke stap past nu?"
             }
           ]
         },
@@ -868,15 +895,19 @@
               "text": "Zelfstandig werken is geen doel op zich. Bij complexe situaties of veiligheidsrisico’s overleg je altijd."
             },
             {
+              "type": "heading",
+              "text": "Dag 90: je derde evaluatie"
+            },
+            {
               "type": "paragraph",
-              "text": "Aan het eind van dag 90 heb je je derde evaluatiegesprek."
+              "text": "Aan het eind van dag 90 heb je je derde evaluatiegesprek. Wat beheers je, waar heb je nog extra ondersteuning nodig en past je takenpakket bij je? We nemen ook je sterke punten en ontwikkelpunten door."
             }
           ]
         },
         {
           "id": "afronden-en-vooruitkijken",
           "title": "Fase 5: afronden en vooruitkijken",
-          "summary": "Dag 91 tot 100: je inwerktijd bewust afsluiten.",
+          "summary": "Dag 91 tot 100: je inwerktijd afsluiten, en hoe het daarna verdergaat.",
           "content": [
             {
               "type": "paragraph",
@@ -900,90 +931,26 @@
               "text": "Het resultaat: samen hebben we een beeld van wat je beheerst, waar je je nog verder in ontwikkelt en welke ondersteuning daarbij hoort."
             },
             {
+              "type": "heading",
+              "text": "Dag 100: afronding"
+            },
+            {
+              "type": "paragraph",
+              "text": "Op dag 100 heb je je laatste gesprek van je inwerktijd. We kijken samen terug op je inwerktijd, leggen je verdere leerdoelen vast en spreken af hoe je begeleiding daarna verdergaat."
+            },
+            {
+              "type": "paragraph",
+              "text": "We vragen je dan ook nog een keer hoe je het inwerken hebt ervaren, net als na 30 dagen."
+            },
+            {
               "type": "tip",
               "label": "🎉 Sta stil bij wat je bereikt hebt",
               "text": "Kijk terug op je eerste werkdag. Wat heb je sindsdien geleerd? Ook kleine stappen zijn de moeite waard."
-            }
-          ]
-        },
-        {
-          "id": "evaluatiegesprekken",
-          "title": "De evaluaties op dag 30, 60, 90 en 100",
-          "summary": "Vier vaste momenten om terug en vooruit te kijken.",
-          "content": [
-            {
-              "type": "paragraph",
-              "text": "Tijdens je inwerktijd heb je vier vaste gesprekken met je leidinggevende. Zo weet je steeds waar je staat en kunnen we je ondersteunen waar dat nodig is."
             },
             {
-              "type": "cards",
-              "items": [
-                {
-                  "title": "Dag 30: eerste evaluatie",
-                  "text": "Wat gaat al goed en waar voel je je prettig bij? Welke kennis of vaardigheden vragen nog extra aandacht? En wat heb je nodig om de komende maand meer taken op te pakken?"
-                },
-                {
-                  "title": "Dag 60: tweede evaluatie",
-                  "text": "We bespreken je voortgang aan de hand van concrete voorbeelden. Welke taken kun je inmiddels uitvoeren, bij welke taken heb je nog begeleiding nodig en welke stap past nu?"
-                },
-                {
-                  "title": "Dag 90: derde evaluatie",
-                  "text": "Wat beheers je, waar heb je nog extra ondersteuning nodig en past je takenpakket bij je? We nemen ook je sterke punten en ontwikkelpunten door."
-                },
-                {
-                  "title": "Dag 100: afronding",
-                  "text": "We kijken samen terug op je inwerktijd, leggen je verdere leerdoelen vast en spreken af hoe je begeleiding daarna verdergaat."
-                }
-              ]
+              "type": "heading",
+              "text": "Na je eerste 100 dagen"
             },
-            {
-              "type": "paragraph",
-              "text": "De belangrijkste afspraken uit elk gesprek worden vastgelegd."
-            },
-            {
-              "type": "paragraph",
-              "text": "Na 30 en na 100 dagen vragen we je ook hoe je het inwerken ervaart:"
-            },
-            {
-              "type": "bulletList",
-              "items": [
-                "Wat had je graag eerder willen weten?",
-                "Voel je je voldoende ondersteund?",
-                "Weet je wat er van je verwacht wordt?",
-                "Welke informatie in de app was onduidelijk of overbodig?",
-                "Wat zou je veranderen aan het inwerken?"
-              ]
-            },
-            {
-              "type": "paragraph",
-              "text": "Met jouw antwoorden maken we het inwerken voor nieuwe collega’s steeds beter."
-            },
-            {
-              "type": "paragraph",
-              "text": "Wat we van jou vragen in deze gesprekken:"
-            },
-            {
-              "type": "bulletList",
-              "items": [
-                "deel je ervaringen en waar je tegenaan loopt;",
-                "geef aan wat duidelijk is en wat niet;",
-                "vraag actief om ondersteuning en sta open voor feedback;",
-                "denk mee over verbeteringen en je eigen groei."
-              ]
-            },
-            {
-              "type": "assignment",
-              "label": "Bereid je gesprek voor",
-              "text": "Wat gaat goed, waar loop je tegenaan en wat wil je nog leren? Schrijf het kort op, dan heb je het bij de hand voor je volgende gesprek.",
-              "reflective": true
-            }
-          ]
-        },
-        {
-          "id": "na-drie-maanden",
-          "title": "Na je eerste 100 dagen",
-          "summary": "Je ontwikkeling blijft in beeld, tot een jaar na je start.",
-          "content": [
             {
               "type": "paragraph",
               "text": "Na je eerste 100 dagen ben je volledig onderdeel van het team. We verwachten dan dat je betrokken bent, je verder ontwikkelt en je taken zelfstandig en volwaardig uitvoert."
