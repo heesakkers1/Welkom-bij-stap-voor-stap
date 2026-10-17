@@ -1,4 +1,5 @@
-import { useEffect, useId, useMemo, useState } from 'react'
+import { useEffect, useId, useMemo, useRef, useState } from 'react'
+import { flushSync } from 'react-dom'
 import { Link } from 'react-router-dom'
 import LessonContent from '../components/LessonContent'
 import {
@@ -37,14 +38,48 @@ function removeAtPath(source, path) {
   return copy
 }
 
-/** Lijsten waaruit je niets kunt weghalen, omdat de site op de volgorde rekent. */
+/** Lijsten waaruit je niets kunt weghalen of toevoegen, omdat de site op de volgorde rekent. */
 const LOCKED_LISTS = new Set(['options'])
+
+/**
+ * Een nieuw, leeg punt voor een lijst, in dezelfde vorm als de punten die er al
+ * staan: een losse tekst, of een kaartje met dezelfde tekstvelden (titel, tekst).
+ */
+function newItemFor(list, blockType) {
+  if (list.length === 0) return blockType === 'cards' ? { title: '', text: '' } : ''
+  if (list.every((item) => typeof item === 'string')) return ''
+  const item = {}
+  for (const entry of list) {
+    if (!entry || typeof entry !== 'object') continue
+    for (const [key, value] of Object.entries(entry)) {
+      if (typeof value === 'string' && !HIDDEN_FIELDS.has(key)) item[key] = ''
+    }
+  }
+  return item
+}
 
 function RemoveButton({ onClick, label = 'Weghalen' }) {
   return (
     <button type="button" className="editor-remove" onClick={onClick}>
       ✕ {label}
     </button>
+  )
+}
+
+function AddButton({ label, onClick }) {
+  const ref = useRef(null)
+  function handleClick() {
+    // Eerst het nieuwe punt tonen, dan meteen de cursor erin zetten, zodat je
+    // direct kunt typen (en op een telefoon het toetsenbord opent).
+    flushSync(onClick)
+    ref.current?.previousElementSibling?.querySelector('textarea')?.focus()
+  }
+  return (
+    <div className="editor-add" ref={ref}>
+      <button type="button" className="editor-add__button" onClick={handleClick}>
+        ＋ {label} toevoegen
+      </button>
+    </div>
   )
 }
 
@@ -106,7 +141,7 @@ function TextField({ label, value, onChange, onRemove }) {
 }
 
 /** Toont alle tekstvelden in een stuk content, ook in lijsten en kaartjes. */
-function Fields({ value, path, label, onChange, onRemove, removeSelf }) {
+function Fields({ value, path, label, onChange, onRemove, onAdd, removeSelf, blockType }) {
   if (typeof value === 'string') {
     return (
       <TextField
@@ -119,18 +154,28 @@ function Fields({ value, path, label, onChange, onRemove, removeSelf }) {
   }
 
   if (Array.isArray(value)) {
-    const removable = onRemove && !LOCKED_LISTS.has(path[path.length - 1])
-    return value.map((item, index) => (
-      <Fields
-        key={index}
-        value={item}
-        path={[...path, index]}
-        label={`${label} ${index + 1}`}
-        onChange={onChange}
-        onRemove={onRemove}
-        removeSelf={removable ? () => onRemove([...path, index]) : null}
-      />
-    ))
+    const locked = LOCKED_LISTS.has(path[path.length - 1])
+    const removable = onRemove && !locked
+    const addable = onAdd && !locked
+    return (
+      <>
+        {value.map((item, index) => (
+          <Fields
+            key={index}
+            value={item}
+            path={[...path, index]}
+            label={`${label} ${index + 1}`}
+            onChange={onChange}
+            onRemove={onRemove}
+            onAdd={onAdd}
+            removeSelf={removable ? () => onRemove([...path, index]) : null}
+          />
+        ))}
+        {addable ? (
+          <AddButton label={label} onClick={() => onAdd(path, newItemFor(value, blockType))} />
+        ) : null}
+      </>
+    )
   }
 
   if (value && typeof value === 'object') {
@@ -143,6 +188,8 @@ function Fields({ value, path, label, onChange, onRemove, removeSelf }) {
         label={fieldName(key)}
         onChange={onChange}
         onRemove={onRemove}
+        onAdd={onAdd}
+        blockType={value.type}
       />
     ))
     if (!label) return fields
@@ -282,7 +329,7 @@ function Navigation({ content, selection, onSelect }) {
   )
 }
 
-function LessonEditor({ lesson, path, onChange, onRemove }) {
+function LessonEditor({ lesson, path, onChange, onRemove, onAdd }) {
   return (
     <>
       <Fields value={lesson.title} path={[...path, 'title']} label="Titel van de les" onChange={onChange} />
@@ -307,7 +354,13 @@ function LessonEditor({ lesson, path, onChange, onRemove }) {
             {block.type === 'image' && block.src ? (
               <img src={block.src} alt="" className="editor-block__thumb" />
             ) : null}
-            <Fields value={block} path={blockPath} onChange={onChange} onRemove={onRemove} />
+            <Fields
+              value={block}
+              path={blockPath}
+              onChange={onChange}
+              onRemove={onRemove}
+              onAdd={onAdd}
+            />
           </section>
         )
       })}
@@ -366,6 +419,11 @@ function Workspace({ token, branch, onLogout }) {
 
   function handleRemove(path) {
     setContent((current) => removeAtPath(current, path))
+    setMessage(null)
+  }
+
+  function handleAdd(path, item) {
+    setContent((current) => setAtPath(current, path, [...getAtPath(current, path), item]))
     setMessage(null)
   }
 
@@ -450,6 +508,7 @@ function Workspace({ token, branch, onLogout }) {
         path={[selection.kind]}
         onChange={handleChange}
         onRemove={handleRemove}
+        onAdd={handleAdd}
       />
     )
   } else if (selection.kind === 'module') {
@@ -483,6 +542,7 @@ function Workspace({ token, branch, onLogout }) {
           path={path}
           onChange={handleChange}
           onRemove={handleRemove}
+          onAdd={handleAdd}
         />
         <div className="editor-danger">
           <RemoveButton
