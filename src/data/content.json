@@ -872,18 +872,15 @@
             {
               "type": "timeline",
               "items": [
-                "9.00 ",
-                "dagstart",
-                "activiteiten of begeleiding",
-                "pauzemomenten",
-                "verzorging van dieren",
-                "klusjes",
-                "gezamenlijke afronding"
+                "9.00 Dagstart met collega's",
+                "9.30 Dagstart deelnemers",
+                "10.00 Klusjes per dierengroepje",
+                "11.00 Fruitpauze",
+                "11.30 keuze Activiteit ",
+                "12.30 Lunchpauze ",
+                "13.00 Mesten",
+                "13.45 Activiteiten "
               ]
-            },
-            {
-              "type": "highlight",
-              "text": "Het precieze programma kan per deelnemer en per dag verschillen."
             }
           ]
         },
