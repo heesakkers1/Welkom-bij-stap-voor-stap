@@ -30,29 +30,23 @@
 .editor-field__head {
   display: flex;
   gap: 8px;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 28px;
 }
 
 .editor-field__label {
-  flex: 1;
   min-width: 0;
-  display: grid;
-  gap: 4px;
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--text-muted);
-}
-
-.editor-field__label textarea {
-  font-size: 1rem;
-  font-weight: 400;
 }
 
 .editor-remove {
   flex-shrink: 0;
   border: 1px solid transparent;
   border-radius: 8px;
-  padding: 6px 10px;
+  padding: 4px 10px;
   background: transparent;
   color: #8a2e22;
   font-size: 0.85rem;
@@ -344,4 +338,93 @@
 
 .editor-danger .editor-remove {
   border-color: #f0c4bd;
+}
+
+.editor-sidebar__toggle {
+  -webkit-tap-highlight-color: transparent;
+  border-radius: 8px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 4px;
+  border: none;
+  background: transparent;
+  color: var(--text-strong);
+  text-align: left;
+  cursor: pointer;
+}
+
+.editor-sidebar__toggle > span:first-child {
+  display: grid;
+}
+
+.editor-sidebar__toggle-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.editor-sidebar__toggle-current {
+  font-weight: 600;
+}
+
+@media (max-width: 859px) {
+  .editor-sidebar__content {
+    display: none;
+    margin-top: 8px;
+  }
+
+  .editor-sidebar.is-open .editor-sidebar__content {
+    display: block;
+  }
+
+  .editor-bar {
+    flex-wrap: nowrap;
+    padding: 8px 12px;
+  }
+
+  .editor-bar__title {
+    display: none;
+  }
+
+  .editor-bar__state-long {
+    display: none;
+  }
+
+  .editor-bar .editor-button {
+    font-size: 0.95rem;
+  }
+
+  .editor-bar .editor-button {
+    padding: 8px 14px;
+    white-space: nowrap;
+  }
+
+  .editor-columns {
+    padding: 12px;
+    gap: 12px;
+  }
+}
+
+@media (min-width: 860px) {
+  .editor-sidebar__toggle {
+    display: none;
+  }
+}
+
+.editor-bar__state-short {
+  display: none;
+}
+
+@media (max-width: 859px) {
+  .editor-bar__state-short {
+    display: inline;
+  }
+}
+
+@media (max-width: 359px) {
+  .editor-bar {
+    flex-wrap: wrap;
+  }
 }
