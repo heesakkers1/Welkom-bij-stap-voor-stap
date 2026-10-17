@@ -186,12 +186,6 @@
                 "onze systemen en praktische afspraken;",
                 "jouw functie en je ontwikkeling."
               ]
-            },
-            {
-              "type": "assignment",
-              "label": "Jouw eerste verwachting",
-              "text": "Waar ben je het meest benieuwd naar tijdens je eerste weken bij Stap voor Stap?",
-              "reflective": true
             }
           ]
         }
