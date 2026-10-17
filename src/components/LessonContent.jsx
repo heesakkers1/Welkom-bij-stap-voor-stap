@@ -6,6 +6,7 @@ import ExpandableAnswer from './ExpandableAnswer'
 import QuizQuestion from './QuizQuestion'
 import Checklist from './Checklist'
 import ModuleLinks from './ModuleLinks'
+import RichText from './RichText'
 import './LessonContent.css'
 
 function LessonContentBlock({ block }) {
@@ -14,25 +15,25 @@ function LessonContentBlock({ block }) {
       return (
         <header className="lesson-block lesson-block--hero">
           {block.eyebrow ? (
-            <p className="lesson-block__hero-eyebrow">{block.eyebrow}</p>
+            <p className="lesson-block__hero-eyebrow"><RichText text={block.eyebrow} /></p>
           ) : null}
           {block.title ? (
-            <h2 className="lesson-block__hero-title">{block.title}</h2>
+            <h2 className="lesson-block__hero-title"><RichText text={block.title} /></h2>
           ) : null}
           {block.text ? (
-            <p className="lesson-block__hero-text">{block.text}</p>
+            <p className="lesson-block__hero-text"><RichText text={block.text} /></p>
           ) : null}
         </header>
       )
 
     case 'paragraph':
-      return <p className="lesson-block lesson-block--paragraph">{block.text}</p>
+      return <p className="lesson-block lesson-block--paragraph"><RichText text={block.text} /></p>
 
     case 'bulletList':
       return (
         <ul className="lesson-block lesson-block--list">
-          {(block.items ?? []).map((item) => (
-            <li key={item}>{item}</li>
+          {(block.items ?? []).map((item, index) => (
+            <li key={index}><RichText text={item} /></li>
           ))}
         </ul>
       )
@@ -40,8 +41,8 @@ function LessonContentBlock({ block }) {
     case 'numberedList':
       return (
         <ol className="lesson-block lesson-block--numbered">
-          {(block.items ?? []).map((item) => (
-            <li key={item}>{item}</li>
+          {(block.items ?? []).map((item, index) => (
+            <li key={index}><RichText text={item} /></li>
           ))}
         </ol>
       )
@@ -52,20 +53,20 @@ function LessonContentBlock({ block }) {
           <p className="lesson-block__label">
             {block.label ?? '💡 Tip voor je eerste week'}
           </p>
-          <p>{block.text}</p>
+          <p><RichText text={block.text} /></p>
         </aside>
       )
 
     case 'highlight':
       return (
         <aside className="lesson-block lesson-block--highlight">
-          <p>{block.text}</p>
+          <p><RichText text={block.text} /></p>
         </aside>
       )
 
     case 'banner':
       return (
-        <p className="lesson-block lesson-block--banner">{block.text}</p>
+        <p className="lesson-block lesson-block--banner"><RichText text={block.text} /></p>
       )
 
     case 'assignment':
@@ -75,9 +76,9 @@ function LessonContentBlock({ block }) {
             {block.label ?? 'Praktijkopdracht'}
           </p>
           {block.situation ? (
-            <p className="lesson-block__situation">{block.situation}</p>
+            <p className="lesson-block__situation"><RichText text={block.situation} /></p>
           ) : null}
-          <p>{block.text}</p>
+          <p><RichText text={block.text} /></p>
           {block.reflective ? (
             <label className="lesson-block__reflect">
               <span className="visually-hidden">Jouw reflectie</span>
@@ -151,7 +152,7 @@ function LessonContentBlock({ block }) {
       return (
         <section className="lesson-block lesson-block--document">
           <div className="lesson-block__document-text">
-            <p className="lesson-block__document-title">{block.title}</p>
+            <p className="lesson-block__document-title"><RichText text={block.title} /></p>
             {block.meta ? (
               <p className="lesson-block__document-meta">{block.meta}</p>
             ) : null}
