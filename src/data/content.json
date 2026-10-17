@@ -319,19 +319,15 @@
           "summary": "*‘Je hulplijn’*, je collega’s, je leidinggevende en jijzelf.",
           "content": [
             {
-              "type": "paragraph",
-              "text": "Deze app geeft je veel uitleg, maar je werkt niet alleen in. *‘Je hulplijn’*, je collega’s en je leidinggevende helpen je op weg."
-            },
-            {
               "type": "cards",
               "items": [
                 {
-                  "title": "Eigenaren en leidinggevende",
+                  "title": "Bente (leidinggevende)",
                   "text": "Eindverantwoordelijk voor je inwerktraject: de planning, de doelen die bij je functie horen, de evaluaties en het oplossen van knelpunten."
                 },
                 {
-                  "title": "Onboardingverantwoordelijke",
-                  "text": "Beheert deze app, de checklists en de algemene informatie, en houdt je voortgang bij. Deze rol kan bij een leidinggevende liggen."
+                  "title": "Anne H (coördinator werkprocessen) ",
+                  "text": "Beheert deze app, de checklists en de algemene informatie, en houdt je voortgang bij. "
                 },
                 {
                   "title": "*‘Je hulplijn’*",
@@ -351,24 +347,6 @@
               "type": "tip",
               "label": "💡 Weet je iets niet?",
               "text": "Vraag het *‘je hulplijn’* of een collega. Je kunt ook de knop Vraag stellen rechtsonder gebruiken."
-            },
-            {
-              "type": "paragraph",
-              "text": "Dit is jouw deel. Vink af wat je gedaan hebt:"
-            },
-            {
-              "type": "checklist",
-              "id": "medewerker-100-dagen",
-              "title": "Jouw checklist",
-              "items": [
-                "Welkomstinformatie en eerste modules doorlopen",
-                "Weten bij wie ik met vragen terechtkan",
-                "Belangrijke werkafspraken en veiligheidsregels leren",
-                "Praktijkopdrachten uitvoeren en bespreken",
-                "Leerdoelen en vragen bespreken met *‘mijn hulplijn’*",
-                "Feedback vragen en ontvangen",
-                "Eigen voortgang evalueren en ontwikkelpunten vastleggen"
-              ]
             }
           ]
         }
