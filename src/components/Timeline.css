@@ -62,4 +62,5 @@
   font-size: 0.95rem;
   line-height: 1.45;
   color: var(--text-muted);
+  white-space: pre-line;
 }

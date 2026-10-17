@@ -29,9 +29,6 @@ function LessonContentBlock({ block }) {
     case 'paragraph':
       return <p className="lesson-block lesson-block--paragraph"><RichText text={block.text} /></p>
 
-    case 'heading':
-      return <h3 className="lesson-block lesson-block--heading"><RichText text={block.text} /></h3>
-
     case 'bulletList':
       return (
         <ul className="lesson-block lesson-block--list">
