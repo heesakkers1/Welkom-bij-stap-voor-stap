@@ -732,30 +732,6 @@
               "text": "Zorgboerderij Stap voor Stap\nVogelsven 7, 5491 RM Sint-Oedenrode\n06 - 28 53 06 13\ninfo@zorgboerderijstapvoorstap.nl"
             }
           ]
-        },
-        {
-          "id": "vertrouwenspersoon",
-          "title": "De vertrouwenspersoon",
-          "summary": "Een veilige plek voor lastige of gevoelige vragen.",
-          "content": [
-            {
-              "type": "paragraph",
-              "text": "Soms speelt er iets wat je niet direct op de werkvloer wilt bespreken. Daarvoor kun je altijd terecht bij onze interne vertrouwenspersoon Josee Hoogenboom."
-            },
-            {
-              "type": "paragraph",
-              "text": "Zij is er voor medewerkers, vrijwilligers en stagiaires. Informatie wordt vertrouwelijk behandeld en niet gedeeld zonder toestemming."
-            },
-            {
-              "type": "paragraph",
-              "text": "Wil je liever met iemand buiten de organisatie praten? Dan kun je de externe, onafhankelijke vertrouwenspersoon van de Federatie Landbouw en Zorg benaderen via de ZLTO informatielijn: 073 - 2173333 of info@zlto.nl."
-            },
-            {
-              "type": "tip",
-              "label": "💡 Goed om te weten",
-              "text": "Je hoeft een vervelende situatie niet alleen te dragen. Een gesprek met de vertrouwenspersoon kan altijd."
-            }
-          ]
         }
       ]
     },
