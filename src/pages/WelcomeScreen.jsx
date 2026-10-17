@@ -32,7 +32,8 @@ function WelcomeScreen() {
         </section>
 
         <ImagePlaceholder
-          caption={texts.imageCaption}
+          src="/fotos/pony-aaien-stal.jpg"
+          alt={texts.photoAlt}
           size="wide"
         />
 
