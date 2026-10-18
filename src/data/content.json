@@ -1128,12 +1128,12 @@
         },
         {
           "id": "klussen-op-het-digibord",
-          "title": "Klusjes bijhouden",
+          "title": "Klusjes op het Dagprogramma ",
           "summary": "Afvinken en naar je tijdsblok slepen.",
           "content": [
             {
               "type": "paragraph",
-              "text": "Op het Digibord staan twee soorten klusjes:"
+              "text": "Op het dagprogramma staan aan de rechterkant twee soorten klusjes:"
             },
             {
               "type": "cards",
@@ -1152,10 +1152,6 @@
               "type": "tip",
               "label": "💡 Sleep de klus naar je tijdsblok",
               "text": "Sleep een klus in het dagprogramma naar het tijdsblok waarin je hem gaat doen. Dat geeft veel rust en overzicht, voor jou en voor je collega’s."
-            },
-            {
-              "type": "paragraph",
-              "text": "De vaste klussenlijst voor kleinvee en paarden hangt geplastificeerd in de unit en staat in SharePoint. Daar werken we vanuit. Onderling schuiven is geen probleem."
             },
             {
               "type": "assignment",
