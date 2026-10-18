@@ -1129,7 +1129,7 @@
         {
           "id": "klussen-op-het-digibord",
           "title": "Klusjes op het Dagprogramma ",
-          "summary": "Afvinken en naar je tijdsblok slepen.",
+          "summary": "Afvinken en naar een tijdsblok slepen.",
           "content": [
             {
               "type": "paragraph",
@@ -1150,13 +1150,13 @@
             },
             {
               "type": "tip",
-              "label": "💡 Sleep de klus naar je tijdsblok",
+              "label": "💡 Sleep de klusjes die die dag moeten gebeuren naar een tijdsblok",
               "text": "Sleep een klus in het dagprogramma naar het tijdsblok waarin je hem gaat doen. Dat geeft veel rust en overzicht, voor jou en voor je collega’s."
             },
             {
               "type": "assignment",
               "label": "Praktijkopdracht",
-              "text": "Zoek je eigen begeleidingskaart op: welke klusjes heb je vandaag? Sleep er in het dagprogramma één naar het tijdsblok waarin je hem gaat doen.",
+              "text": "Sleep in het dagprogramma een taak naar het tijdsblok waarin je hem gaat doen.",
               "reflective": true
             }
           ]
