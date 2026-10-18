@@ -1118,7 +1118,7 @@
               "question": "Waar begin je bij de dagstart op het Digibord?",
               "options": [
                 "Bij Overzicht vandaag",
-                "Bij stap 1: Afmelden",
+                "Afmelden",
                 "Waar je zelf wilt"
               ],
               "correct": 1,
