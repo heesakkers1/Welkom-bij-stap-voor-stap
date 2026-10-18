@@ -892,43 +892,6 @@
               ]
             }
           ]
-        },
-        {
-          "id": "jouw-rol-op-het-erf",
-          "title": "Jouw rol op het erf",
-          "summary": "Bijdragen aan een veilige en overzichtelijke dag.",
-          "content": [
-            {
-              "type": "image",
-              "src": "/fotos/collega-lammetje.jpg",
-              "alt": "Een collega met een jong geitje in de armen op het erf",
-              "size": "wide"
-            },
-            {
-              "type": "paragraph",
-              "text": "Als medewerker draag je bij aan een veilige, prettige en overzichtelijke dag."
-            },
-            {
-              "type": "paragraph",
-              "text": "Dat betekent onder andere:"
-            },
-            {
-              "type": "bulletList",
-              "items": [
-                "aanwezig en benaderbaar zijn;",
-                "afspraken en bijzonderheden kennen;",
-                "veranderingen tijdig delen;",
-                "overzicht houden;",
-                "deelnemers ondersteunen zonder alles over te nemen;",
-                "hulp vragen bij twijfel."
-              ]
-            },
-            {
-              "type": "tip",
-              "label": "💡 Eerst afstemmen",
-              "text": "Weet je niet zeker wat van jou wordt verwacht? Stem dan eerst af met een collega voordat je handelt."
-            }
-          ]
         }
       ]
     },
