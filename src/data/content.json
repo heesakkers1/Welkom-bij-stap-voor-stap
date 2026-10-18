@@ -1190,22 +1190,22 @@
             {
               "type": "bulletList",
               "items": [
-                "centraal, met het scherm;",
-                "telefoon;",
-                "voorbereiding;",
-                "structuur;",
-                "deelnemers;",
-                "personeel: hoe zit je erbij?"
+                "Werktelefoon checken op afmeldingen of bijzonderheden --> verwerken in het Digibord",
+                "D-Connect (Siilo) checken op afmeldingen of bijzonderheden --> verwerken in het Digibord ",
+                "Koffie en thee zetten",
+                "Pictobordjes voor deelnemers",
+                "Centraal: de stappen op Digibord doorlopen, bespreken en invoeren",
+                "Rondje collega's: hoe gaat ie? 👍🏻👎🏻\nKunnen we elkaar helpen? "
               ]
             },
             {
               "type": "paragraph",
-              "text": "Op vrijdag werken we ook met de vaste dagstructuur en blokken."
+              "text": "Als hetgeen besproken is, ook in het Digibord wordt ingevuld geeft dit duidelijkheid en overzicht voor iedereen. "
             },
             {
               "type": "tip",
-              "label": "💡 Voorbereiding helpt",
-              "text": "Een goede voorbereiding door de dagleidende helpt enorm om de dagstart soepel te laten verlopen."
+              "label": "💡 Een gestructureerde dagstart geeft duidelijkheid voor de hele dag",
+              "text": ""
             }
           ]
         },
