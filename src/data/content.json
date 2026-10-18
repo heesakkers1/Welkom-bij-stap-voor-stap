@@ -867,19 +867,20 @@
             },
             {
               "type": "paragraph",
-              "text": "Een dag van de dagbesteding ziet er in het algemeen zo uit:"
+              "text": "Op maandag, dinsdag, donderdag en vrijdag ziet een gemiddelde dag er zo uit:"
             },
             {
               "type": "timeline",
               "items": [
-                "9.00 Dagstart met collega's",
-                "9.30 Dagstart deelnemers",
-                "10.00 Klusjes per dierengroepje",
-                "11.00 Fruitpauze",
-                "11.30 keuze Activiteit ",
-                "12.30 Lunchpauze ",
-                "13.00 Mesten",
-                "13.45 Activiteiten "
+                "08:45 Aankomst",
+                "09:30 Dagstart deelnemers",
+                "10:00 Dagbesteding",
+                "11:00 Fruitpauze",
+                "11:30 Pauze",
+                "12:30 Lunchpauze",
+                "13:30 Dagbesteding",
+                "15:00 Pauze",
+                "16:30 Afsluiten en naar huis"
               ]
             }
           ]
