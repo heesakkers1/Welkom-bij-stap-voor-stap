@@ -1042,178 +1042,125 @@
     {
       "id": "digibord",
       "title": "Hoe werken we met het Digibord?",
-      "description": "Wat er op het digibord staat en hoe je het stap voor stap gebruikt tijdens de dag.",
+      "description": "De vaste stappen van de dagstart en hoe je klusjes bijhoudt.",
       "icon": "board",
-      "duration": "10 minuten",
+      "duration": "5 minuten",
       "completionMessage": {
         "title": "📋 Digibord-proof!",
-        "text": "Je weet nu wat er op het digibord staat en hoe je klussen bijhoudt."
+        "text": "Je kent de stappen van de dagstart en weet hoe je klusjes bijhoudt."
       },
       "lessons": [
         {
           "id": "wat-is-het-digibord",
-          "title": "Wat is het digibord?",
-          "summary": "Eén scherm met het overzicht van de dag.",
+          "title": "Zo werkt het Digibord",
+          "summary": "De dagstart in zes vaste stappen.",
           "content": [
             {
               "type": "paragraph",
-              "text": "Het digibord is ons digitale overzicht van de dag. Tijdens de dagstart staat het centraal op het scherm. Met hulp van het digibord verloopt de dagstart steeds efficiënter."
+              "text": "Het Digibord is ons digitale overzicht van de dag. Bij de dagstart staat het op het scherm en lopen we het samen door."
             },
             {
               "type": "paragraph",
-              "text": "Op de startpagina van de Dagstart kies je waar je wilt beginnen:"
+              "text": "De dagstart heeft zes vaste stappen. Begin bij stap 1 en klik onderaan steeds op *Volgende stap*."
+            },
+            {
+              "type": "timeline",
+              "items": [
+                {
+                  "title": "Stap 1: Afmelden",
+                  "text": "Wie is er vandaag niet? Hier worden deelnemers en collega’s afgemeld."
+                },
+                {
+                  "title": "Stap 2: Aanwezigheid",
+                  "text": "Wie er vandaag is en hoe de groepjes zijn ingedeeld."
+                },
+                {
+                  "title": "Stap 3: Bijzonderheden",
+                  "text": "Meldingen en reminders per onderwerp, zoals Dieren en Koffiekraam."
+                },
+                {
+                  "title": "Stap 4: Dagprogramma",
+                  "text": "De dag in tijdsblokken, met de groepjes en klusjes."
+                },
+                {
+                  "title": "Stap 5: Klusjes per dierengroep",
+                  "text": "De klusjes voor paarden, ezels, kleinvee en vogels, en de dagelijkse klusjes."
+                },
+                {
+                  "title": "Stap 6: Overzicht vandaag",
+                  "text": "Alles van vandaag op een rij: wat belangrijk is, wie er niet is en het dagprogramma."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "Daarnaast heeft iedereen een eigen kaart:"
             },
             {
               "type": "cards",
               "items": [
                 {
-                  "title": "☀️ Overzicht vandaag",
-                  "text": "Belangrijk vandaag, wie er niet is en het dagprogramma."
-                },
-                {
-                  "title": "📋 Bijzonderheden",
-                  "text": "Meldingen en reminders, per onderwerp."
-                },
-                {
-                  "title": "👥 Aanwezigheid",
-                  "text": "Wie er vandaag is en hoe de groepen zijn ingedeeld."
-                },
-                {
-                  "title": "📅 Dagprogramma",
-                  "text": "De dag in tijdsblokken, met de groepen en klussen."
-                },
-                {
-                  "title": "🐎 Klusjes per dierengroep",
-                  "text": "De klussen voor paarden, ezels, kleinvee, vogels en de dagelijkse klusjes."
+                  "title": "🧑‍🏫 Begeleidingskaart",
+                  "text": "Jouw dag op één kaart: je rooster, groepje, klusjes, individuele begeleidingen en persoonlijke reminders."
                 },
                 {
                   "title": "🪪 Deelnemerskaart",
-                  "text": "De dag van één deelnemer op één kaart."
-                },
-                {
-                  "title": "🧑‍🏫 Begeleidingskaart",
-                  "text": "De dag van één begeleider op één kaart."
+                  "text": "De dag van één deelnemer. Deelnemers kiezen hier ook een smiley bij “Hoe voel je je vandaag?” en kunnen iets doorgeven aan de begeleiding."
                 }
               ]
             },
             {
-              "type": "tip",
-              "label": "💡 Begin bij het overzicht",
-              "text": "Twijfel je waar je moet kijken? Begin bij Overzicht vandaag. Daar zie je in één keer wat er vandaag belangrijk is."
-            }
-          ]
-        },
-        {
-          "id": "overzicht-en-bijzonderheden",
-          "title": "Overzicht vandaag en bijzonderheden",
-          "summary": "Weten wat er vandaag speelt.",
-          "content": [
-            {
-              "type": "paragraph",
-              "text": "Op Overzicht vandaag zie je drie dingen:"
-            },
-            {
-              "type": "bulletList",
-              "items": [
-                "Belangrijk vandaag: de meldingen die je vandaag echt moet weten;",
-                "Wie is er niet?: welke collega’s en deelnemers er vandaag niet zijn;",
-                "Dagprogramma: hoe de dag eruitziet."
-              ]
-            },
-            {
-              "type": "paragraph",
-              "text": "Bij Bijzonderheden staan de meldingen per onderwerp, bijvoorbeeld Dieren, Deelnemers & Begeleiding, Algemene reminders, Koffiekraam en Extra taken."
-            },
-            {
               "type": "highlight",
-              "text": "Wat je op het digibord zet, kunnen anderen meelezen. Schrijf feitelijk en deel alleen wat nodig is voor het werk."
-            }
-          ]
-        },
-        {
-          "id": "kaarten",
-          "title": "De deelnemerskaart en begeleidingskaart",
-          "summary": "Ieders dag op één kaart.",
-          "content": [
-            {
-              "type": "paragraph",
-              "text": "Op de deelnemerskaart kies je een deelnemer. Je ziet dan onder andere zijn of haar rooster, het dagprogramma van vandaag, de klusjes en het dierengroepje van deze ochtend."
+              "text": "Wat je op het Digibord zet, kunnen anderen meelezen. Schrijf feitelijk en deel alleen wat nodig is voor het werk."
             },
             {
-              "type": "paragraph",
-              "text": "Deelnemers kunnen op hun kaart ook een smiley kiezen bij “Hoe voel je je vandaag?” en iets doorgeven bij “Wil je nog iets tegen begeleiding zeggen?”."
-            },
-            {
-              "type": "paragraph",
-              "text": "Op de begeleidingskaart kies je een collega. Je ziet zijn of haar rooster, groepje, klussen, individuele begeleidingen en persoonlijke reminders."
+              "type": "quiz",
+              "question": "Waar begin je bij de dagstart op het Digibord?",
+              "options": [
+                "Bij Overzicht vandaag",
+                "Bij stap 1: Afmelden",
+                "Waar je zelf wilt"
+              ],
+              "correct": 1,
+              "explanation": "De dagstart heeft een vaste volgorde. Je begint bij stap 1 en klikt steeds op Volgende stap."
             }
           ]
         },
         {
           "id": "klussen-op-het-digibord",
-          "title": "Klussen op het digibord",
-          "summary": "Incidentele en dagelijkse klussen bijhouden.",
+          "title": "Klusjes bijhouden",
+          "summary": "Afvinken en naar je tijdsblok slepen.",
           "content": [
             {
               "type": "paragraph",
-              "text": "Op het digibord staan twee soorten klussen: dagelijkse klussen en incidentele (extra) klussen. Ze werken net iets anders."
+              "text": "Op het Digibord staan twee soorten klusjes:"
             },
             {
               "type": "cards",
               "items": [
                 {
-                  "title": "Dagelijkse klus",
-                  "text": "Zet een vinkje als hij gedaan is. Deze verwijder je niet!"
+                  "title": "Dagelijkse klusjes",
+                  "text": "Komen elke dag terug. Gedaan? Zet een vinkje. Verwijder ze niet!"
                 },
                 {
-                  "title": "Incidentele klus",
-                  "text": "Is de klus gedaan? Verwijder hem dan van het bord."
+                  "title": "Extra klusjes",
+                  "text": "Eenmalige klusjes, onder Extra klusjes vandaag. Gedaan? Zet een vinkje. De volgende dag zijn ze vanzelf van het bord."
                 }
               ]
-            },
-            {
-              "type": "paragraph",
-              "text": "Daarnaast is er de klussenlijst voor kleinvee en paarden, geplastificeerd in de unit en in SharePoint. Die lijst is de basis waar we vanuit werken. Onderling schuiven is geen probleem."
             },
             {
               "type": "tip",
               "label": "💡 Sleep de klus naar je tijdsblok",
               "text": "Sleep een klus in het dagprogramma naar het tijdsblok waarin je hem gaat doen. Dat geeft veel rust en overzicht, voor jou en voor je collega’s."
-            }
-          ]
-        },
-        {
-          "id": "zo-werk-je-ermee",
-          "title": "Zo werk je met het digibord",
-          "summary": "Het digibord stap voor stap door de dag.",
-          "content": [
-            {
-              "type": "numberedList",
-              "items": [
-                "Tijdens de dagstart staat het digibord centraal op het scherm. Samen loop je het door.",
-                "Kijk bij Overzicht vandaag wat er belangrijk is en wie er niet is.",
-                "Lees de bijzonderheden die voor jouw werk gelden, zoals bij de dieren.",
-                "Kijk in het dagprogramma en op je begeleidingskaart wat jouw groepje en jouw klussen zijn.",
-                "Sleep de klussen naar het tijdsblok waarin je ze gaat doen.",
-                "Klus gedaan? Dagelijkse klus: vinkje zetten. Incidentele klus: verwijderen.",
-                "Pas je iets aan, bijvoorbeeld de keuzemomenten van deelnemers? Doe dat bewust en controleer of het klopt."
-              ]
             },
             {
-              "type": "quiz",
-              "question": "Je hebt een incidentele klus afgerond. Wat doe je op het digibord?",
-              "options": [
-                "Een vinkje zetten en laten staan",
-                "De klus verwijderen van het bord",
-                "Niets, iemand anders ruimt het op"
-              ],
-              "correct": 1,
-              "explanation": "Een incidentele klus verwijder je als hij gedaan is. Alleen bij een dagelijkse klus zet je een vinkje en laat je hem staan."
+              "type": "paragraph",
+              "text": "De vaste klussenlijst voor kleinvee en paarden hangt geplastificeerd in de unit en staat in SharePoint. Daar werken we vanuit. Onderling schuiven is geen probleem."
             },
             {
               "type": "assignment",
               "label": "Praktijkopdracht",
-              "text": "Zoek op het digibord je eigen begeleidingskaart op. Welke klussen staan er vandaag voor jou? Sleep er één naar het tijdsblok waarin je hem gaat doen.",
+              "text": "Zoek je eigen begeleidingskaart op: welke klusjes heb je vandaag? Sleep er in het dagprogramma één naar het tijdsblok waarin je hem gaat doen.",
               "reflective": true
             }
           ]
