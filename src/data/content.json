@@ -1177,7 +1177,7 @@
         {
           "id": "de-dagstart",
           "title": "De dagstart",
-          "summary": "Een vaste structuur voor een rustig begin.",
+          "summary": "De coördinator dagbesteding leidt de dagstart",
           "content": [
             {
               "type": "paragraph",
@@ -1244,31 +1244,6 @@
             {
               "type": "paragraph",
               "text": "Speelt er iets groots rond een deelnemer? Dan wordt die deelnemer op de agenda van het maandelijkse DB-overleg gezet. Zo kunnen we strak door de dagstart heen."
-            }
-          ]
-        },
-        {
-          "id": "leiding-nemen",
-          "title": "Leiding nemen op de DB",
-          "summary": "Durf knopen door te hakken.",
-          "content": [
-            {
-              "type": "paragraph",
-              "text": "Op de dagbesteding (DB) is het belangrijk dat er iemand de leiding neemt en knopen doorhakt. Dat geeft rust voor de groep."
-            },
-            {
-              "type": "paragraph",
-              "text": "Niet iedereen voelt zich daar meteen zeker genoeg voor. Toch is iedereen uitgenodigd om dit wel te doen."
-            },
-            {
-              "type": "paragraph",
-              "text": "Samen houden we de afspraken over de dagstructuur in de gaten. Dat is ieders verantwoordelijkheid."
-            },
-            {
-              "type": "assignment",
-              "label": "Praktijkopdracht",
-              "text": "Kijk tijdens je eerstvolgende dagstart mee. Welke onderdelen herken je? Wat doet de dagleidende om de dagstart rustig te houden?",
-              "reflective": true
             }
           ]
         }
