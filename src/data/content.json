@@ -107,8 +107,8 @@
     },
     {
       "id": "zorg-chat",
-      "title": "Zorg-Chat",
-      "text": "Veilig berichten sturen naar collega’s via D-connect.",
+      "title": "D-connect (Siilo)",
+      "text": "Veilig berichten sturen naar collega’s.",
       "icon": "chat",
       "href": "https://connect-web.doctolib.com/signin;r=0"
     }
@@ -222,7 +222,7 @@
               "items": [
                 {
                   "title": "Fase 1: voorbereiden (voor je eerste werkdag)",
-                  "text": "Meeloopochtend om op een laagdrempelige manier een eerste indruk te krijgen en samen een aantal praktische zaken te regelen:\n\nWerkkleding passen en bestellen\nContract\nToegang SharePoint, Zilliz, D-connect, Digibord\nWerkmail (Outlook)\nFoto maken voor het Digibord"
+                  "text": "Meeloopochtend om op een laagdrempelige manier een eerste indruk te krijgen en samen een aantal praktische zaken te regelen:\n\nWerkkleding passen en bestellen\nContract\nToegang SharePoint, Zilliz, D-connect (Siilo), Digibord\nWerkmail (Outlook)\nFoto maken voor het Digibord"
                 },
                 {
                   "title": "Fase 2: kennismaken en leren (dag 1 tot 30)",
@@ -1191,7 +1191,7 @@
               "type": "timeline",
               "items": [
                 {
-                  "title": "Werktelefoon en D-connect (Zorg-Chat) checken",
+                  "title": "Werktelefoon en D-connect (Siilo) checken",
                   "text": "Zijn er afmeldingen of bijzonderheden? Verwerk ze in het Digibord."
                 },
                 {
@@ -1729,7 +1729,7 @@
         {
           "id": "systemen",
           "title": "Onze systemen",
-          "summary": "ZilliZ, SharePoint, Zorg-Chat en e-mail.",
+          "summary": "ZilliZ, SharePoint, D-connect (Siilo) en e-mail.",
           "content": [
             {
               "type": "cards",
@@ -1743,8 +1743,8 @@
                   "text": "Voor interne documenten, protocollen en werkinstructies."
                 },
                 {
-                  "title": "Zorg-Chat",
-                  "text": "Voor professionele, veilige communicatie tussen collega’s over deelnemers. De app heet D-connect."
+                  "title": "D-connect (Siilo)",
+                  "text": "Voor professionele, veilige communicatie tussen collega’s over deelnemers."
                 },
                 {
                   "title": "E-mail (Outlook)",
