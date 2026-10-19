@@ -1258,8 +1258,8 @@
       "lessons": [
         {
           "id": "klussenlijst",
-          "title": "De lijst met dagelijkse klussen",
-          "summary": "Een basis voor kleinvee en paarden.",
+          "title": "De lijst met dagelijkse klusjes per dierengroepje",
+          "summary": "Een basis voor paarden, kleinvee en de ezels",
           "content": [
             {
               "type": "image",
@@ -1269,19 +1269,7 @@
             },
             {
               "type": "paragraph",
-              "text": "Voor zowel kleinvee als paarden is er een lijst met dagelijkse klussen. Het doel van de lijst is dat je bij vervanging weet hoe het zit."
-            },
-            {
-              "type": "paragraph",
               "text": "Onderling schuiven met klussen is geen probleem. De lijst is de basis waar we vanuit werken."
-            },
-            {
-              "type": "bulletList",
-              "items": [
-                "De lijst ligt geplastificeerd in de unit.",
-                "De lijst staat ook in SharePoint. Iedereen mag daar veranderingen verwerken.",
-                "Kom je er niet uit? Schakel dan Anne S in."
-              ]
             }
           ]
         },
