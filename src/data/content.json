@@ -1248,12 +1248,12 @@
     {
       "id": "klusjes-dagprogramma",
       "title": "Klusjes en dagprogramma",
-      "description": "De klussenlijst, de staldienst en samen de boerderij netjes houden.",
+      "description": "De klussenlijs per dierengroepje en de klusjes om samen de boerderij netjes te houden.",
       "icon": "tasks",
       "duration": "7 minuten",
       "completionMessage": {
         "title": "🧹 Top!",
-        "text": "Je weet nu waar de klussenlijst ligt en wat er bij de staldienst hoort."
+        "text": "Je weet nu hoe we met z'n allen zorgen dat alles gedaan wordt wat er gedaan moet worden!"
       },
       "lessons": [
         {
