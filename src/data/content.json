@@ -107,8 +107,8 @@
     },
     {
       "id": "zorg-chat",
-      "title": "Zorg-Chat",
-      "text": "Veilig berichten sturen naar collega’s via D-connect.",
+      "title": "D-connect (Siilo)",
+      "text": "Veilig berichten sturen naar collega’s.",
       "icon": "chat",
       "href": "https://connect-web.doctolib.com/signin;r=0"
     }
@@ -222,7 +222,7 @@
               "items": [
                 {
                   "title": "Fase 1: voorbereiden (voor je eerste werkdag)",
-                  "text": "Meeloopochtend om op een laagdrempelige manier een eerste indruk te krijgen en samen een aantal praktische zaken te regelen:\n\nWerkkleding passen en bestellen\nContract\nToegang SharePoint, Zilliz, D-connect, Digibord\nWerkmail (Outlook)\nFoto maken voor het Digibord"
+                  "text": "Meeloopochtend om op een laagdrempelige manier een eerste indruk te krijgen en samen een aantal praktische zaken te regelen:\n\nWerkkleding passen en bestellen\nContract\nToegang SharePoint, Zilliz, D-connect (Siilo), Digibord\nWerkmail (Outlook)\nFoto maken voor het Digibord"
                 },
                 {
                   "title": "Fase 2: kennismaken en leren (dag 1 tot 30)",
@@ -1181,31 +1181,40 @@
           "content": [
             {
               "type": "paragraph",
-              "text": "Iedere dag begint met een dagstart. Die heeft een vaste structuur en met hulp van het digibord verloopt hij steeds efficiënter."
+              "text": "Iedere dag begint met een dagstart. Die heeft een vaste structuur en met hulp van het Digibord verloopt hij steeds efficiënter."
             },
             {
               "type": "paragraph",
-              "text": "Onderdelen van de dagstart zijn:"
+              "text": "Zo ziet de dagstart eruit:"
             },
             {
-              "type": "bulletList",
+              "type": "timeline",
               "items": [
-                "Werktelefoon checken op afmeldingen of bijzonderheden --> verwerken in het Digibord",
-                "D-Connect (Siilo) checken op afmeldingen of bijzonderheden --> verwerken in het Digibord ",
-                "Koffie en thee zetten",
-                "Pictobordjes voor deelnemers",
-                "Centraal: de stappen op Digibord doorlopen, bespreken en invoeren",
-                "Rondje collega's: hoe gaat ie? 👍🏻👎🏻\nKunnen we elkaar helpen? "
+                {
+                  "title": "Werktelefoon en D-connect (Siilo) checken",
+                  "text": "Zijn er afmeldingen of bijzonderheden? Verwerk ze in het Digibord."
+                },
+                {
+                  "title": "Koffie en thee zetten",
+                  "text": ""
+                },
+                {
+                  "title": "Pictobordjes klaarzetten voor de deelnemers",
+                  "text": ""
+                },
+                {
+                  "title": "Samen het Digibord doorlopen",
+                  "text": "Centraal loop je de stappen op het Digibord door. Wat je bespreekt, vul je meteen in. Zo heeft iedereen duidelijkheid en overzicht."
+                },
+                {
+                  "title": "Rondje collega’s",
+                  "text": "Hoe gaat het? 👍🏻 👎🏻 Kunnen we elkaar helpen?"
+                }
               ]
             },
             {
-              "type": "paragraph",
-              "text": "Als hetgeen besproken is, ook in het Digibord wordt ingevuld geeft dit duidelijkheid en overzicht voor iedereen. "
-            },
-            {
-              "type": "tip",
-              "label": "💡 Een gestructureerde dagstart geeft duidelijkheid voor de hele dag",
-              "text": ""
+              "type": "highlight",
+              "text": "Een gestructureerde dagstart geeft duidelijkheid voor de hele dag."
             }
           ]
         },
@@ -1720,7 +1729,7 @@
         {
           "id": "systemen",
           "title": "Onze systemen",
-          "summary": "ZilliZ, SharePoint, Zorg-Chat en e-mail.",
+          "summary": "ZilliZ, SharePoint, D-connect (Siilo) en e-mail.",
           "content": [
             {
               "type": "cards",
@@ -1734,8 +1743,8 @@
                   "text": "Voor interne documenten, protocollen en werkinstructies."
                 },
                 {
-                  "title": "Zorg-Chat",
-                  "text": "Voor professionele, veilige communicatie tussen collega’s over deelnemers. De app heet D-connect."
+                  "title": "D-connect (Siilo)",
+                  "text": "Voor professionele, veilige communicatie tussen collega’s over deelnemers."
                 },
                 {
                   "title": "E-mail (Outlook)",
