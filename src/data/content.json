@@ -1248,7 +1248,7 @@
     {
       "id": "klusjes-dagprogramma",
       "title": "Klusjes en dagprogramma",
-      "description": "De klussenlijs per dierengroepje en de klusjes om samen de boerderij netjes te houden.",
+      "description": "De klussenlijst per dierengroepje en de klusjes om samen de boerderij netjes te houden.",
       "icon": "tasks",
       "duration": "7 minuten",
       "completionMessage": {
