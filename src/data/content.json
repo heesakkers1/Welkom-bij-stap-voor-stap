@@ -1250,7 +1250,7 @@
       "title": "Klusjes en dagprogramma",
       "description": "De klussenlijst per dierengroepje en de klusjes om samen de boerderij netjes te houden.",
       "icon": "tasks",
-      "duration": "7 minuten",
+      "duration": "5 minuten",
       "completionMessage": {
         "title": "🧹 Top!",
         "text": "Je weet nu hoe we met z'n allen zorgen dat alles gedaan wordt wat er gedaan moet worden!"
@@ -1315,40 +1315,6 @@
               "label": "Praktijkopdracht",
               "text": "Open in het Digibord de pagina *Klusjes per dierengroep*. Koppel jezelf aan een taak naar keuze: sleep je foto naar een klusje, of tik op je foto en daarna op het klusje.\nGelukt? Haal jezelf er daarna weer af met het kruisje (×) bij je foto.",
               "reflective": true
-            }
-          ]
-        },
-        {
-          "id": "staldienst",
-          "title": "De staldienst",
-          "summary": "Wat je doet als je staldienst hebt.",
-          "content": [
-            {
-              "type": "image",
-              "src": "/fotos/ponys-stal.jpg",
-              "alt": "Twee pony’s kijken over het staldeurtje",
-              "size": "portrait"
-            },
-            {
-              "type": "paragraph",
-              "text": "Heb je staldienst? Dan doe je de volgende taken:"
-            },
-            {
-              "type": "numberedList",
-              "items": [
-                "Met een emmer warm water en een spons de waterbakken dagelijks uitdoen.",
-                "Met een vaatdoek en een emmer warm water dagelijks een doekje door de voerbakken halen.",
-                "Met de spinnenragger in alle ruimtes de spinnenwebben weghalen, ook in de voerhokken.",
-                "Vegen op de bestrating en voor de stallen.",
-                "De fronten van de stallen schoonmaken.",
-                "Vegen in de ruimtes.",
-                "Prullenbak legen."
-              ]
-            },
-            {
-              "type": "tip",
-              "label": "💡 Rondje lopen",
-              "text": "Loop een rondje door de stallen en om het gebouw heen. Zichtbare verontreiniging haal je weg met de handveger, en waar nodig met een emmer water en een borstel of vaatdoek."
             }
           ]
         },
