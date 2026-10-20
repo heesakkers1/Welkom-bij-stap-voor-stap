@@ -1269,7 +1269,17 @@
             },
             {
               "type": "paragraph",
+              "text": "Op het digibord staan alle taken per dierengroepje: \nDagstart --> Klusjes per dierengroep\nHier zie je de standaard klusjes die van 10.00 tot 11.00 u worden gedaan door de dagbesteding. \nVaak hebben deelnemers hun eigen vaste taken. Als iemand ziek is op deze pagina zichtbaar welke taken er overgenomen moeten worden. Ook kun je dan een begeleider of deelnemer koppelen aan die taak. "
+            },
+            {
+              "type": "paragraph",
               "text": "Onderling schuiven met klussen is geen probleem. De lijst is de basis waar we vanuit werken."
+            },
+            {
+              "type": "assignment",
+              "label": "Praktijkopdracht",
+              "text": "Ga naar de pagina 'Klusjes per dierengroepje' van de site van het Digibord. Koppel jezelf aan een willekeurige taak. Is dit gelukt? \nVerwijder jezelf vervolgens weer van die taak. ",
+              "reflective": true
             }
           ]
         },
