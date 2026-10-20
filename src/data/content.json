@@ -1265,20 +1265,55 @@
               "type": "image",
               "src": "/fotos/geiten-voeren.jpg",
               "alt": "Geiten eten komkommer bij het hek",
-              "size": "portrait"
+              "size": "landscape"
             },
             {
               "type": "paragraph",
-              "text": "Op het digibord staan alle taken per dierengroepje: \nDagstart --> Klusjes per dierengroep\nHier zie je de standaard klusjes die van 10.00 tot 11.00 u worden gedaan door de dagbesteding. \nVaak hebben deelnemers hun eigen vaste taken. Als iemand ziek is op deze pagina zichtbaar welke taken er overgenomen moeten worden. Ook kun je dan een begeleider of deelnemer koppelen aan die taak. "
+              "text": "Op het Digibord staan alle dagelijkse klusjes per dierengroepje. Je vindt ze bij *Dagstart --> Klusjes per dierengroep*. Elk groepje heeft daar een eigen kaart:"
             },
             {
-              "type": "paragraph",
-              "text": "Onderling schuiven met klussen is geen probleem. De lijst is de basis waar we vanuit werken."
+              "type": "cards",
+              "variant": "values",
+              "items": [
+                {
+                  "title": "🐎 Paarden"
+                },
+                {
+                  "title": "🫏 Ezels"
+                },
+                {
+                  "title": "🐑 Kleinvee"
+                },
+                {
+                  "title": "🐦 Vogels"
+                }
+              ]
+            },
+            {
+              "type": "cards",
+              "items": [
+                {
+                  "title": "🕙 Van 10.00 tot 11.00 uur",
+                  "text": "Dan doet de dagbesteding de standaard klusjes van de lijst."
+                },
+                {
+                  "title": "🙋 Vaste taken",
+                  "text": "Deelnemers hebben vaak hun eigen vaste taken."
+                },
+                {
+                  "title": "🤒 Is er iemand ziek?",
+                  "text": "Op deze pagina zie je welke taken overgenomen moeten worden. Koppel er dan een begeleider of deelnemer aan."
+                }
+              ]
+            },
+            {
+              "type": "highlight",
+              "text": "🔄 Onderling schuiven met klussen is geen probleem. De lijst is de basis waar we vanuit werken."
             },
             {
               "type": "assignment",
               "label": "Praktijkopdracht",
-              "text": "Ga naar de pagina 'Klusjes per dierengroepje' van de site van het Digibord. Koppel jezelf aan een willekeurige taak. Is dit gelukt? \nVerwijder jezelf vervolgens weer van die taak. ",
+              "text": "Open in het Digibord de pagina *Klusjes per dierengroep*. Koppel jezelf aan een taak naar keuze: sleep je foto naar een klusje, of tik op je foto en daarna op het klusje.\nGelukt? Haal jezelf er daarna weer af met het kruisje (×) bij je foto.",
               "reflective": true
             }
           ]
