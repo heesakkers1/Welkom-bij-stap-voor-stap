@@ -46,3 +46,10 @@
   line-height: 1.45;
   color: var(--text-muted);
 }
+
+/* Kaartje met alleen een titel (bijv. een dierengroepje). */
+.content-card:has(> .content-card__title:only-child) {
+  justify-content: center;
+  padding-block: 0.8rem;
+  text-align: center;
+}

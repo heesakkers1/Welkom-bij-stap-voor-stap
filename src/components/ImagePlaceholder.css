@@ -16,6 +16,18 @@
   margin-inline: auto;
 }
 
+/* Liggende uitsnede: een staande foto wordt een lagere, brede foto. */
+.media-image--landscape img {
+  aspect-ratio: 3 / 2;
+  object-position: 50% 35%;
+}
+
+@media (min-width: 768px) {
+  .media-image--landscape img {
+    aspect-ratio: 2 / 1;
+  }
+}
+
 .media-image figcaption {
   margin-top: 0.65rem;
   font-size: 0.92rem;
