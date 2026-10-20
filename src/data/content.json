@@ -1317,44 +1317,6 @@
               "reflective": true
             }
           ]
-        },
-        {
-          "id": "samen-netjes",
-          "title": "Samen de boerderij netjes houden",
-          "summary": "Poetsen, opruimen en de kraam.",
-          "content": [
-            {
-              "type": "image",
-              "src": "/fotos/samen-harken.jpg",
-              "alt": "Collega’s en deelnemers harken samen het erf aan, met een kruiwagen",
-              "size": "wide"
-            },
-            {
-              "type": "paragraph",
-              "text": "Een schone en opgeruimde boerderij doen we samen. Let vooral op deze punten:"
-            },
-            {
-              "type": "cards",
-              "items": [
-                {
-                  "title": "Poetsen van de ruimtes",
-                  "text": "Werk met de poetslijst. Vergeet de kleine dingen niet, zoals papieren handdoekjes aanvullen."
-                },
-                {
-                  "title": "Opruimen na de pauzes",
-                  "text": "Betrek deelnemers actief bij het opruimen. Fruitschillen breng je meteen weg."
-                },
-                {
-                  "title": "Koffiekar en productenkraam",
-                  "text": "De ezels- of kleinveegroep checkt dagelijks of er iets schoongemaakt moet worden. Bij regen gaan kwetsbare producten naar binnen."
-                }
-              ]
-            },
-            {
-              "type": "highlight",
-              "text": "Het precieze programma verschilt per dag. Kijk op het digibord welke klussen er vandaag zijn."
-            }
-          ]
         }
       ]
     },
