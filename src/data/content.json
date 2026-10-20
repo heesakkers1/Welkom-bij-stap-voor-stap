@@ -1269,7 +1269,7 @@
             },
             {
               "type": "paragraph",
-              "text": "Op het Digibord staan alle dagelijkse klusjes per dierengroepje. Je vindt ze bij *Dagstart --> Klusjes per dierengroep*. Elk groepje heeft daar een eigen kaart:"
+              "text": "Op het Digibord staan alle dagelijkse klusjes per dierengroepje. Je vindt ze bij *Dagstart --> Klusjes per dierengroep*. Elk groepje heeft daar een eigen klusjeskaart, waarbij zichtbaar is wie welk klusje doet."
             },
             {
               "type": "cards",
@@ -1302,7 +1302,7 @@
                 },
                 {
                   "title": "🤒 Is er iemand ziek?",
-                  "text": "Op deze pagina zie je welke taken overgenomen moeten worden. Koppel er dan een begeleider of deelnemer aan."
+                  "text": "Op de pagina 'Klusjes per dierengroep' van het digibord zie je welke taken overgenomen moeten worden. Koppel er een begeleider of deelnemer aan."
                 }
               ]
             },
