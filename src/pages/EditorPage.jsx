@@ -1,4 +1,4 @@
-import { useEffect, useId, useMemo, useRef, useState } from 'react'
+import { Fragment, useEffect, useId, useMemo, useRef, useState } from 'react'
 import { flushSync } from 'react-dom'
 import { Link } from 'react-router-dom'
 import LessonContent from '../components/LessonContent'
@@ -56,6 +56,96 @@ function newItemFor(list, blockType) {
     }
   }
   return item
+}
+
+/** Tekstvakken die je zelf aan een les kunt toevoegen, elk met een lege beginvorm. */
+const NEW_BLOCKS = [
+  {
+    type: 'paragraph',
+    hint: 'Gewone tekst',
+    create: () => ({ type: 'paragraph', text: '' }),
+  },
+  {
+    type: 'bulletList',
+    hint: 'Punten onder elkaar',
+    create: () => ({ type: 'bulletList', items: [''] }),
+  },
+  {
+    type: 'numberedList',
+    hint: 'Stappen met een nummer',
+    create: () => ({ type: 'numberedList', items: [''] }),
+  },
+  {
+    type: 'tip',
+    hint: 'Vak met een kopje en tekst',
+    create: () => ({ type: 'tip', label: '💡 Tip', text: '' }),
+  },
+  {
+    type: 'highlight',
+    hint: 'Eén belangrijke zin in een kader',
+    create: () => ({ type: 'highlight', text: '' }),
+  },
+  {
+    type: 'cards',
+    hint: 'Kaartjes met een titel en tekst',
+    create: () => ({ type: 'cards', items: [{ title: '', text: '' }] }),
+  },
+  {
+    type: 'timeline',
+    hint: 'Stappen op een lijn, met titel en tekst',
+    create: () => ({ type: 'timeline', items: [{ title: '', text: '' }] }),
+  },
+  {
+    type: 'assignment',
+    hint: 'Opdracht voor in de praktijk',
+    create: () => ({ type: 'assignment', label: 'Praktijkopdracht', text: '', reflective: true }),
+  },
+]
+
+function insertAtPath(source, listPath, index, item) {
+  const copy = structuredClone(source)
+  getAtPath(copy, listPath).splice(index, 0, item)
+  return copy
+}
+
+/** Knop om een nieuw tekstvak in te voegen; eerst kies je wat voor tekstvak. */
+function InsertBlock({ onInsert, compact = false }) {
+  const [open, setOpen] = useState(false)
+
+  if (!open) {
+    return (
+      <div className={`editor-add${compact ? ' editor-add--between' : ''}`}>
+        <button type="button" className="editor-add__button" onClick={() => setOpen(true)}>
+          {compact ? '＋ Hier een tekstvak invoegen' : '＋ Tekstvak toevoegen'}
+        </button>
+      </div>
+    )
+  }
+
+  return (
+    <div className="editor-insert">
+      <p className="editor-insert__question">Wat voor tekstvak wil je toevoegen?</p>
+      <div className="editor-insert__options">
+        {NEW_BLOCKS.map((option) => (
+          <button
+            key={option.type}
+            type="button"
+            className="editor-insert__option"
+            onClick={() => {
+              setOpen(false)
+              onInsert(option.create())
+            }}
+          >
+            <span className="editor-insert__name">{BLOCK_NAMES[option.type]}</span>
+            <span className="editor-insert__hint">{option.hint}</span>
+          </button>
+        ))}
+      </div>
+      <button type="button" className="editor-link" onClick={() => setOpen(false)}>
+        Annuleren
+      </button>
+    </div>
+  )
 }
 
 function RemoveButton({ onClick, label = 'Weghalen' }) {
@@ -329,41 +419,65 @@ function Navigation({ content, selection, onSelect }) {
   )
 }
 
-function LessonEditor({ lesson, path, onChange, onRemove, onAdd }) {
+function LessonEditor({ lesson, path, onChange, onRemove, onAdd, onInsert }) {
+  const contentRef = useRef(null)
+  const contentPath = [...path, 'content']
+
+  function insertBlock(index, block) {
+    // Eerst het nieuwe tekstvak tonen, dan de cursor erin zetten, zodat je
+    // meteen kunt typen (en op een telefoon het toetsenbord opent).
+    flushSync(() => onInsert(contentPath, index, block))
+    // Het eerste lege veld, zodat een al ingevuld kopje (zoals bij een tip) blijft staan.
+    const textareas = [
+      ...(contentRef.current?.querySelectorAll(`[data-block-index="${index}"] textarea`) ?? []),
+    ]
+    const textarea = textareas.find((field) => field.value === '') ?? textareas[0]
+    textarea?.focus()
+    textarea?.scrollIntoView({ block: 'center' })
+  }
+
   return (
     <>
       <Fields value={lesson.title} path={[...path, 'title']} label="Titel van de les" onChange={onChange} />
       <Fields value={lesson.summary ?? ''} path={[...path, 'summary']} label="Korte samenvatting" onChange={onChange} />
       <h3 className="editor-subheading">Inhoud van de les</h3>
-      {lesson.content.map((block, index) => {
-        const blockPath = [...path, 'content', index]
-        const blockName = BLOCK_NAMES[block.type] ?? block.type
-        return (
-          <section key={index} className="editor-block">
-            <div className="editor-block__head">
-              <p className="editor-block__type">{blockName}</p>
-              <RemoveButton
-                label="Tekstvak verwijderen"
-                onClick={() => {
-                  if (window.confirm(`Dit tekstvak (${blockName.toLowerCase()}) verwijderen?`)) {
-                    onRemove(blockPath)
-                  }
-                }}
-              />
-            </div>
-            {block.type === 'image' && block.src ? (
-              <img src={block.src} alt="" className="editor-block__thumb" />
-            ) : null}
-            <Fields
-              value={block}
-              path={blockPath}
-              onChange={onChange}
-              onRemove={onRemove}
-              onAdd={onAdd}
-            />
-          </section>
-        )
-      })}
+      <div ref={contentRef}>
+        {lesson.content.map((block, index) => {
+          const blockPath = [...contentPath, index]
+          const blockName = BLOCK_NAMES[block.type] ?? block.type
+          return (
+            <Fragment key={index}>
+              {index > 0 ? (
+                <InsertBlock compact onInsert={(newBlock) => insertBlock(index, newBlock)} />
+              ) : null}
+              <section className="editor-block" data-block-index={index}>
+                <div className="editor-block__head">
+                  <p className="editor-block__type">{blockName}</p>
+                  <RemoveButton
+                    label="Tekstvak verwijderen"
+                    onClick={() => {
+                      if (window.confirm(`Dit tekstvak (${blockName.toLowerCase()}) verwijderen?`)) {
+                        onRemove(blockPath)
+                      }
+                    }}
+                  />
+                </div>
+                {block.type === 'image' && block.src ? (
+                  <img src={block.src} alt="" className="editor-block__thumb" />
+                ) : null}
+                <Fields
+                  value={block}
+                  path={blockPath}
+                  onChange={onChange}
+                  onRemove={onRemove}
+                  onAdd={onAdd}
+                />
+              </section>
+            </Fragment>
+          )
+        })}
+      </div>
+      <InsertBlock onInsert={(newBlock) => insertBlock(lesson.content.length, newBlock)} />
       <h3 className="editor-subheading">Voorbeeld</h3>
       <div className="editor-preview">
         <LessonContent blocks={lesson.content} lessonId={lesson.id} />
@@ -424,6 +538,11 @@ function Workspace({ token, branch, onLogout }) {
 
   function handleAdd(path, item) {
     setContent((current) => setAtPath(current, path, [...getAtPath(current, path), item]))
+    setMessage(null)
+  }
+
+  function handleInsert(listPath, index, item) {
+    setContent((current) => insertAtPath(current, listPath, index, item))
     setMessage(null)
   }
 
@@ -543,6 +662,7 @@ function Workspace({ token, branch, onLogout }) {
           onChange={handleChange}
           onRemove={handleRemove}
           onAdd={handleAdd}
+          onInsert={handleInsert}
         />
         <div className="editor-danger">
           <RemoveButton
