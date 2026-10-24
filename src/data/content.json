@@ -1453,7 +1453,7 @@
           "content": [
             {
               "type": "paragraph",
-              "text": "We gaan zorgvuldig om met alle persoonsgegevens van deelnemers en medewerkers. We werken volgens de AVG en gebruiken gegevens alleen wanneer dat nodig is voor goede begeleiding en zorg."
+              "text": "We gaan zorgvuldig om met alle persoonsgegevens van deelnemers en medewerkers. We werken volgens de AVG en gebruiken gegevens alleen wanneer dat nodig is voor goede begeleiding en zorg. \nIn de unit in de ruimte voor het personeel, hangt een lijst aan het bord. Op deze lijst zie je welke deelnemers wel en niet op social media mogen. "
             },
             {
               "type": "paragraph",
@@ -1467,10 +1467,6 @@
                 "Deel geen foto’s of informatie over deelnemers via je privételefoon of social media.",
                 "Controleer altijd of je informatie naar de juiste persoon stuurt."
               ]
-            },
-            {
-              "type": "paragraph",
-              "text": "Heb je een (vermoeden van een) datalek? Meld het direct bij je leidinggevende."
             },
             {
               "type": "tip",
