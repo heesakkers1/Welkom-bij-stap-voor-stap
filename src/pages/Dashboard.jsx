@@ -6,6 +6,7 @@ import ModuleTile from '../components/ModuleTile'
 import Button from '../components/Button'
 import QuickLinks from '../components/QuickLinks'
 import './Dashboard.css'
+import RichText from '../components/RichText'
 
 function Dashboard() {
   const navigate = useNavigate()
@@ -91,7 +92,7 @@ function Dashboard() {
           <div className="dashboard__intro">
             <p className="dashboard__eyebrow">{texts.eyebrow}</p>
             <h1>{texts.title}</h1>
-            <p>{texts.intro}</p>
+            <p><RichText text={texts.intro} /></p>
           </div>
           <figure className="dashboard__hero-photo">
             <img
@@ -109,7 +110,7 @@ function Dashboard() {
       {completionMessage ? (
         <section className="dashboard__celebration" role="status" aria-live="polite">
           <h2>{completionMessage.title}</h2>
-          <p>{completionMessage.text}</p>
+          <p><RichText text={completionMessage.text} /></p>
           <button
             type="button"
             className="dashboard__celebration-close"
@@ -140,7 +141,7 @@ function Dashboard() {
                   <span className="dashboard__category-title">{category.title}</span>
                   {category.description ? (
                     <span className="dashboard__category-description">
-                      {category.description}
+                      <RichText text={category.description} />
                     </span>
                   ) : null}
                   <span className="dashboard__category-count">

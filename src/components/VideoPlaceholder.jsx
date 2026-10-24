@@ -1,4 +1,5 @@
 import './VideoPlaceholder.css'
+import RichText from './RichText'
 
 /**
  * Tijdloze video-component.
@@ -44,8 +45,8 @@ function VideoPlaceholder({
           ▶
         </span>
         <p className="media-video__title">{title}</p>
-        <p className="media-video__text">{text}</p>
-        {note ? <p className="media-video__note">{note}</p> : null}
+        <p className="media-video__text"><RichText text={text} /></p>
+        {note ? <p className="media-video__note"><RichText text={note} /></p> : null}
       </div>
     </div>
   )
