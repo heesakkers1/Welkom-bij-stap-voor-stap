@@ -1395,7 +1395,7 @@
           "content": [
             {
               "type": "paragraph",
-              "text": "Er zijn opgeleide bedrijfshulpverleners (BHV’ers) aanwezig. Zij weten hoe te handelen bij ongevallen, brand of een evacuatie. Je volgt hun aanwijzingen altijd op."
+              "text": "Onze opgeleide bedrijfshulpverleners (BHV’ers) zijn: \nJoost\nElske\nBente\nBert\nPia\n\nZij weten hoe te handelen bij ongevallen, brand of een evacuatie. Je volgt hun aanwijzingen altijd op."
             },
             {
               "type": "paragraph",
@@ -1413,10 +1413,6 @@
                 "wie de BHV’ers zijn;",
                 "wat je moet doen bij een evacuatie."
               ]
-            },
-            {
-              "type": "highlight",
-              "text": "Bij twijfel: veiligheid gaat altijd voor."
             },
             {
               "type": "assignment",
