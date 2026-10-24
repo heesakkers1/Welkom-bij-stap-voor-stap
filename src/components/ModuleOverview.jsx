@@ -33,7 +33,7 @@ function ModuleOverview() {
       <Header title={module.title} />
 
       <section className="module-overview__intro">
-        <p>{module.description}</p>
+        <p><RichText text={module.description} /></p>
         {module.duration ? (
           <p className="module-overview__duration">⏱ {module.duration}</p>
         ) : null}

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './QuizQuestion.css'
+import RichText from './RichText'
 
 function QuizQuestion({ question, options = [], correct, explanation }) {
   const [chosen, setChosen] = useState(null)
@@ -9,7 +10,7 @@ function QuizQuestion({ question, options = [], correct, explanation }) {
   return (
     <section className="quiz-question">
       <p className="quiz-question__label">Vraag</p>
-      <p className="quiz-question__text">{question}</p>
+      <p className="quiz-question__text"><RichText text={question} /></p>
 
       <ul className="quiz-question__options">
         {options.map((option, index) => {
@@ -26,7 +27,7 @@ function QuizQuestion({ question, options = [], correct, explanation }) {
                 disabled={answered}
                 onClick={() => setChosen(index)}
               >
-                {option}
+                <RichText text={option} />
               </button>
             </li>
           )
@@ -38,7 +39,7 @@ function QuizQuestion({ question, options = [], correct, explanation }) {
           <p className="quiz-question__verdict">
             {isCorrect ? '✓ Goed!' : 'Net niet. Het juiste antwoord is groen gemarkeerd.'}
           </p>
-          {explanation ? <p>{explanation}</p> : null}
+          {explanation ? <p><RichText text={explanation} /></p> : null}
           <button
             type="button"
             className="quiz-question__retry"

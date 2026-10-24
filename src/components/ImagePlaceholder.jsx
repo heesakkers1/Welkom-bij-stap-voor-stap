@@ -1,4 +1,5 @@
 import './ImagePlaceholder.css'
+import RichText from './RichText'
 
 /**
  * Tijdloze image-component.
@@ -14,7 +15,7 @@ function ImagePlaceholder({
     return (
       <figure className={`media-image media-image--${size}`}>
         <img src={src} alt={alt} />
-        {caption ? <figcaption>{caption}</figcaption> : null}
+        {caption ? <figcaption><RichText text={caption} /></figcaption> : null}
       </figure>
     )
   }

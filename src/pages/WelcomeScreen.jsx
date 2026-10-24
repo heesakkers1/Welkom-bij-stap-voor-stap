@@ -4,6 +4,7 @@ import { useProgress } from '../context/ProgressContext'
 import ImagePlaceholder from '../components/ImagePlaceholder'
 import Button from '../components/Button'
 import './WelcomeScreen.css'
+import RichText from '../components/RichText'
 
 function WelcomeScreen() {
   const navigate = useNavigate()
@@ -22,12 +23,12 @@ function WelcomeScreen() {
         <header className="welcome-screen__header">
           <p className="welcome-screen__brand">{texts.brand}</p>
           <h1>{texts.title}</h1>
-          <p className="welcome-screen__subtitle">{texts.subtitle}</p>
+          <p className="welcome-screen__subtitle"><RichText text={texts.subtitle} /></p>
         </header>
 
         <section className="welcome-screen__intro">
           {texts.intro.map((paragraph, index) => (
-            <p key={index}>{paragraph}</p>
+            <p key={index}><RichText text={paragraph} /></p>
           ))}
         </section>
 
@@ -50,7 +51,7 @@ function WelcomeScreen() {
 
           <article className="welcome-fact welcome-fact--goal">
             <p className="welcome-fact__label">{texts.goalLabel}</p>
-            <p className="welcome-fact__value">{texts.goalValue}</p>
+            <p className="welcome-fact__value"><RichText text={texts.goalValue} /></p>
           </article>
         </section>
 

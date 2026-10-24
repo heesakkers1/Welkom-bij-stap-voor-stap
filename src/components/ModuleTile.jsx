@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { MODULE_STATUS } from '../data/modules'
 import ModuleIcon from './ModuleIcon'
 import './ModuleTile.css'
+import RichText from './RichText'
 
 function ModuleTile({
   module,
@@ -41,7 +42,7 @@ function ModuleTile({
 
       <span className="module-tile__body">
         <span className="module-tile__title">{module.title}</span>
-        <span className="module-tile__description">{module.description}</span>
+        <span className="module-tile__description"><RichText text={module.description} /></span>
       </span>
 
       <span className="module-tile__meta">

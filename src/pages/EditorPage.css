@@ -116,6 +116,57 @@
   border-color: var(--accent);
 }
 
+.editor-field textarea {
+  tab-size: 4;
+}
+
+/* Opmaakknoppen boven het tekstvak waar je in typt */
+.editor-format {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+
+.editor-format__button {
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+  min-height: 34px;
+  padding: 4px 12px;
+  border: 1px solid var(--tile-border);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--text-strong);
+  font: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.editor-format__button:focus-visible {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+@media (hover: hover) {
+  .editor-format__button:hover {
+    border-color: var(--accent);
+    background: var(--accent-soft);
+  }
+}
+
+.editor-format__hint {
+  flex-basis: 100%;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+@media (min-width: 720px) {
+  .editor-format__hint {
+    flex-basis: auto;
+  }
+}
+
 .editor-button {
   border: none;
   border-radius: 999px;

@@ -1,0 +1,5 @@
+/* Een tab in een tekst: een vast stukje inspringing. */
+.rich-text__tab {
+  display: inline-block;
+  width: 2em;
+}
