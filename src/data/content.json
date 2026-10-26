@@ -869,8 +869,7 @@
               "items": [
                 "Handboek collega’s: begin hier, dit is de basis.",
                 "Functiehandboek: lees wat jouw functie inhoudt.",
-                "Handboek deelnemers: zo leggen we onze deelnemers uit hoe het werkt.",
-                "Kwaliteitshandboek: hoe we de kwaliteit van onze zorg bewaken."
+                "Handboek deelnemers: zo leggen we onze deelnemers uit hoe het werkt."
               ]
             },
             {
@@ -957,27 +956,6 @@
               "title": "Handboek deelnemers",
               "meta": "Versie juni 2025",
               "handboek": "deelnemers"
-            }
-          ]
-        },
-        {
-          "id": "kwaliteitshandboek",
-          "title": "Kwaliteitshandboek",
-          "summary": "Hoe we werken aan goede en veilige zorg.",
-          "content": [
-            {
-              "type": "paragraph",
-              "text": "In het Kwaliteitshandboek staat hoe Stap voor Stap de kwaliteit van de zorg bewaakt en verbetert: hoe de organisatie is ingericht, en wat we regelen rond inwerken, een veilige werkomgeving, scholing, jaargesprekken en roosters."
-            },
-            {
-              "type": "document",
-              "title": "Kwaliteitshandboek",
-              "meta": "Versie 1.0, september 2020",
-              "handboek": "kwaliteit"
-            },
-            {
-              "type": "signoff",
-              "text": "Team Stap voor Stap"
             }
           ]
         }
