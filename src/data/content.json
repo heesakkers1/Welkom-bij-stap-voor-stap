@@ -295,22 +295,22 @@
         {
           "id": "wie-helpt-je",
           "title": "Wie helpt je?",
-          "summary": "*‘Je hulplijn’*, je collega’s, je leidinggevende en jijzelf.",
+          "summary": "",
           "content": [
             {
               "type": "cards",
               "items": [
                 {
-                  "title": "Bente (leidinggevende)",
+                  "title": "Bente",
                   "text": "Eindverantwoordelijk voor je inwerktraject: de planning, de doelen die bij je functie horen, de evaluaties en het oplossen van knelpunten."
                 },
                 {
-                  "title": "Anne H (coördinator werkprocessen) ",
-                  "text": "Beheert deze app, de checklists en de algemene informatie, en houdt je voortgang bij. "
+                  "title": "Sanne en Anne H ",
+                  "text": "Helpen jou op weg en zijn beschikbaar voor vragen."
                 },
                 {
-                  "title": "*‘Je hulplijn’*",
-                  "text": "Een van onze coördinatoren is *‘je hulplijn’*. Je kunt er met al je vragen terecht."
+                  "title": "Jaap",
+                  "text": "Regelt jouw contract en is benaderbaar voor financiële vraagstukken."
                 },
                 {
                   "title": "Je collega’s",
@@ -321,11 +321,6 @@
                   "text": "Je doorloopt de modules, voert de opdrachten uit, stelt vragen, vraagt om feedback en geeft aan wat je nodig hebt om goed te kunnen leren."
                 }
               ]
-            },
-            {
-              "type": "tip",
-              "label": "💡 Weet je iets niet?",
-              "text": "Vraag het *‘je hulplijn’* of een collega. Je kunt ook de knop Vraag stellen rechtsonder gebruiken."
             }
           ]
         }
