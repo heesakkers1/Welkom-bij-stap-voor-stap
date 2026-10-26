@@ -114,7 +114,7 @@
     {
       "id": "welkom",
       "title": "Welkom bij Stap voor Stap",
-      "description": "Een rustige eerste kennismaking met Stap voor Stap.",
+      "description": "Maak kennis met ons bedrijf!",
       "icon": "sun",
       "duration": "5 minuten",
       "completionMessage": {
@@ -125,7 +125,7 @@
         {
           "id": "fijn-dat-je-er-bent",
           "title": "Fijn dat je er bent!",
-          "summary": "Een warme kennismaking met Stap voor Stap.",
+          "summary": "",
           "content": [
             {
               "type": "image",
