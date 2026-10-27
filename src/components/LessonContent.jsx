@@ -1,6 +1,7 @@
 import ImagePlaceholder from './ImagePlaceholder'
 import VideoPlaceholder from './VideoPlaceholder'
 import ContentCards from './ContentCards'
+import AnimalCards from './AnimalCards'
 import Timeline from './Timeline'
 import ExpandableAnswer from './ExpandableAnswer'
 import QuizQuestion from './QuizQuestion'
@@ -118,6 +119,9 @@ function LessonContentBlock({ block }) {
       return (
         <ContentCards items={block.items} variant={block.variant ?? 'default'} />
       )
+
+    case 'animalCards':
+      return <AnimalCards items={block.items} />
 
     case 'timeline':
       return <Timeline items={block.items} />

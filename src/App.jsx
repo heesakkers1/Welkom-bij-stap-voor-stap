@@ -6,6 +6,7 @@ import Dashboard from './pages/Dashboard'
 import ModuleOverview from './components/ModuleOverview'
 import LessonPage from './components/LessonPage'
 import AskQuestion from './components/AskQuestion'
+import DierenkaartPage from './pages/DierenkaartPage'
 import './App.css'
 
 const EditorPage = lazy(() => import('./pages/EditorPage'))
@@ -23,12 +24,14 @@ function RequireWelcome({ children }) {
 function App() {
   const { pathname } = useLocation()
   const editing = pathname.startsWith('/bewerken')
+  const standalone = pathname.startsWith('/dierenkaart')
 
   return (
     <ProgressProvider>
       <div className="app">
         <Routes>
           <Route path="/intro" element={<WelcomeScreen />} />
+          <Route path="/dierenkaart" element={<DierenkaartPage />} />
           <Route
             path="/bewerken"
             element={
@@ -62,7 +65,7 @@ function App() {
             }
           />
         </Routes>
-        {editing ? null : <AskQuestion />}
+        {editing || standalone ? null : <AskQuestion />}
       </div>
     </ProgressProvider>
   )
