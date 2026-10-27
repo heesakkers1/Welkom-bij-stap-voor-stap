@@ -1,5 +1,6 @@
 {
   "rewrites": [
+    { "source": "/dierenkaart", "destination": "/dierenkaart.html" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
