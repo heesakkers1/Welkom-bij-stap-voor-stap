@@ -1275,17 +1275,17 @@
                 },
                 {
                   "title": "🐎 Paardencoaching",
-                  "text": "Paardencoaching hoort bij ons zorgaanbod. Dat doen onze paardencoaches."
+                  "text": "Paardencoaching hoort bij ons zorgaanbod. Dat doen onze paardencoaches die hiervoor zijn opgeleid."
                 },
                 {
-                  "title": "🥾 Goed aangekleed",
-                  "text": "Stevige schoenen en kleding die geschikt is voor werken met dieren en buiten."
+                  "title": " ☀️Bij temperaturen boven 26 graden, zetten we onze paarden niet in. ",
+                  "text": "Wel verwennen we ze met een verkoelende douche! 💦\nVanuit Anne of Elske wordt aangegeven wanneer het Tropenrooster van toepassing is. "
                 }
               ]
             },
             {
               "type": "highlight",
-              "text": "Gaat er iets mis met een paard, bijvoorbeeld een trap, beet of een paard dat losbreekt? Zorg eerst voor de veiligheid van jezelf en anderen. Meld het bij je leidinggevende en leg het vast in ZilliZ met het incidentmeldingsformulier. Twijfel je? Meld het dan altijd."
+              "text": "Gaat er iets mis met een paard, bijvoorbeeld een trap, beet of een paard dat losbreekt? Zorg eerst voor de veiligheid van jezelf en anderen. Schakel een paardencollega in.\n\nMeld het later bij je leidinggevende en leg het vast in ZilliZ met het incidentmeldingsformulier wanneer een deelnemer betrokken is geweest. "
             },
             {
               "type": "paragraph",
@@ -1297,7 +1297,7 @@
                 {
                   "naam": "Abby",
                   "leeftijd": "",
-                  "karakter": "",
+                  "karakter": "superchill",
                   "bijzonderheden": "",
                   "ditMag": "",
                   "ditNiet": "",
@@ -1325,7 +1325,7 @@
                   "waarschuwen": ""
                 },
                 {
-                  "naam": "De shetlanders",
+                  "naam": "Mr. Nilsson",
                   "leeftijd": "",
                   "karakter": "",
                   "bijzonderheden": "",
