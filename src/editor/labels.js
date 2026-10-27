@@ -13,6 +13,7 @@ export const BLOCK_NAMES = {
   video: 'Video',
   videoPlaceholder: 'Plek voor video',
   cards: 'Kaartjes',
+  animalCards: 'Dierenkaarten',
   timeline: 'Tijdlijn',
   expandableAnswer: 'Vraag met uitklapbaar antwoord',
   signoff: 'Ondertekening',
@@ -54,6 +55,14 @@ export const FIELD_NAMES = {
   options: 'Antwoord',
   explanation: 'Uitleg na het antwoord',
   meta: 'Extra informatie',
+  naam: 'Naam',
+  leeftijd: 'Leeftijd',
+  karakter: 'Karakter',
+  bijzonderheden: 'Bijzonderheden en gezondheid',
+  ditMag: 'Dit mag',
+  ditNiet: 'Dit niet',
+  metDeelnemers: 'Met deelnemers',
+  waarschuwen: 'Wie waarschuw je?',
 }
 
 /** Velden die geen tekst zijn en dus niet in de bewerkpagina staan. */
