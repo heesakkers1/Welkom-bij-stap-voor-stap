@@ -1335,13 +1335,6 @@
                   "waarschuwen": ""
                 }
               ]
-            },
-            {
-              "type": "document",
-              "title": "De dierenkaart paarden",
-              "meta": "Alle kaarten op één pagina, ook handig om te delen",
-              "href": "/dierenkaart",
-              "linkLabel": "Open dierenkaart"
             }
           ]
         }
