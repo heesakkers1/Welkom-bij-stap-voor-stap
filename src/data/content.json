@@ -1295,69 +1295,9 @@
               "type": "animalCards",
               "items": [
                 {
-                  "naam": "Nillson",
+                  "naam": "Abby",
                   "leeftijd": "",
-                  "karakter": "",
-                  "bijzonderheden": "",
-                  "ditMag": "",
-                  "ditNiet": "",
-                  "metDeelnemers": "",
-                  "waarschuwen": ""
-                },
-                {
-                  "naam": "Jolly",
-                  "leeftijd": "",
-                  "karakter": "",
-                  "bijzonderheden": "",
-                  "ditMag": "",
-                  "ditNiet": "",
-                  "metDeelnemers": "",
-                  "waarschuwen": ""
-                },
-                {
-                  "naam": "Diego",
-                  "leeftijd": "",
-                  "karakter": "",
-                  "bijzonderheden": "",
-                  "ditMag": "",
-                  "ditNiet": "",
-                  "metDeelnemers": "",
-                  "waarschuwen": ""
-                },
-                {
-                  "naam": "Marus",
-                  "leeftijd": "",
-                  "karakter": "",
-                  "bijzonderheden": "",
-                  "ditMag": "",
-                  "ditNiet": "",
-                  "metDeelnemers": "",
-                  "waarschuwen": ""
-                },
-                {
-                  "naam": "Goof",
-                  "leeftijd": "",
-                  "karakter": "",
-                  "bijzonderheden": "",
-                  "ditMag": "",
-                  "ditNiet": "",
-                  "metDeelnemers": "",
-                  "waarschuwen": ""
-                },
-                {
-                  "naam": "Naomi",
-                  "leeftijd": "",
-                  "karakter": "",
-                  "bijzonderheden": "",
-                  "ditMag": "",
-                  "ditNiet": "",
-                  "metDeelnemers": "",
-                  "waarschuwen": ""
-                },
-                {
-                  "naam": "Pallas",
-                  "leeftijd": "",
-                  "karakter": "",
+                  "karakter": "superchill",
                   "bijzonderheden": "",
                   "ditMag": "",
                   "ditNiet": "",
@@ -1385,7 +1325,67 @@
                   "waarschuwen": ""
                 },
                 {
+                  "naam": "Diego",
+                  "leeftijd": "",
+                  "karakter": "",
+                  "bijzonderheden": "",
+                  "ditMag": "",
+                  "ditNiet": "",
+                  "metDeelnemers": "",
+                  "waarschuwen": ""
+                },
+                {
+                  "naam": "Goof",
+                  "leeftijd": "",
+                  "karakter": "",
+                  "bijzonderheden": "",
+                  "ditMag": "",
+                  "ditNiet": "",
+                  "metDeelnemers": "",
+                  "waarschuwen": ""
+                },
+                {
+                  "naam": "Jolly",
+                  "leeftijd": "",
+                  "karakter": "",
+                  "bijzonderheden": "",
+                  "ditMag": "",
+                  "ditNiet": "",
+                  "metDeelnemers": "",
+                  "waarschuwen": ""
+                },
+                {
                   "naam": "Lulu",
+                  "leeftijd": "",
+                  "karakter": "",
+                  "bijzonderheden": "",
+                  "ditMag": "",
+                  "ditNiet": "",
+                  "metDeelnemers": "",
+                  "waarschuwen": ""
+                },
+                {
+                  "naam": "Marus",
+                  "leeftijd": "",
+                  "karakter": "",
+                  "bijzonderheden": "",
+                  "ditMag": "",
+                  "ditNiet": "",
+                  "metDeelnemers": "",
+                  "waarschuwen": ""
+                },
+                {
+                  "naam": "Naomi",
+                  "leeftijd": "",
+                  "karakter": "",
+                  "bijzonderheden": "",
+                  "ditMag": "",
+                  "ditNiet": "",
+                  "metDeelnemers": "",
+                  "waarschuwen": ""
+                },
+                {
+                  "naam": "Nillson",
                   "leeftijd": "",
                   "karakter": "",
                   "bijzonderheden": "",
@@ -1405,7 +1405,7 @@
                   "waarschuwen": ""
                 },
                 {
-                  "naam": "Starskie",
+                  "naam": "Pallas",
                   "leeftijd": "",
                   "karakter": "",
                   "bijzonderheden": "",
@@ -1415,9 +1415,9 @@
                   "waarschuwen": ""
                 },
                 {
-                  "naam": "Abby",
+                  "naam": "Starskie",
                   "leeftijd": "",
-                  "karakter": "superchill",
+                  "karakter": "",
                   "bijzonderheden": "",
                   "ditMag": "",
                   "ditNiet": "",
