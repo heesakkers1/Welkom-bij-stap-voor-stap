@@ -32,9 +32,9 @@ function WelcomeScreen() {
         </section>
 
         <ImagePlaceholder
-          src="/fotos/pony-aaien-stal.jpg"
+          src="/fotos/welkom-pony-leiden.jpg"
           alt={texts.photoAlt}
-          size="wide"
+          size="portrait"
         />
 
         <section className="welcome-screen__facts" aria-label="Over deze onboarding">
