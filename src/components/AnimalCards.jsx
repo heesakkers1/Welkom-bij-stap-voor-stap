@@ -9,10 +9,10 @@ const HINTS = {
   ditMag: 'Wat mogen collega’s zonder dierkennis doen?',
   ditNiet: 'Wat is alleen voor ervaren collega’s, of mag nooit?',
   metDeelnemers: 'Wat mogen deelnemers met dit dier doen? Geschikt voor coaching of groepsactiviteit?',
-  waarschuwen: 'Bij wie meld je bijzonderheden over dit dier?',
   rijden: 'Mag er op gereden worden? Zo ja, door wie?',
   naarBos: 'Mag het mee naar het bos? Waar let je dan op?',
-  rijdenBos: 'Mag er in het bos gereden worden?',
+  rijdenBos: 'Mag er in het bos gereden worden? Waar let je dan op?',
+  verplaatsen: 'Mag een deelnemer dit paard uit de paddock of wei halen? Waar let je op?',
   gangen: 'Welke gangen mogen: stap, draf, galop?',
   hoeveelheid: 'Hoeveel mag het per gang, hoe lang of hoe vaak?',
   longeren: 'Waar let je op bij het longeren?',
@@ -102,13 +102,13 @@ function AnimalCards({ items = [] }) {
             <Field item={item} name="longeren" label="Longeren" />
             <Field item={item} name="roundpen" label="In de roundpen" />
             <Field item={item} name="paardenbak" label="In de paardenbak" />
+            <Field item={item} name="verplaatsen" label="Verplaatsen (paddock of wei)" />
           </Group>
           <div className="animal-card__split">
             <Field item={item} name="ditMag" label="✓ Dit mag" className="animal-card__row--ok" />
             <Field item={item} name="ditNiet" label="✕ Dit niet" className="animal-card__row--no" />
           </div>
           <Field item={item} name="metDeelnemers" label="Met deelnemers" />
-          <Field item={item} name="waarschuwen" label="Wie waarschuw je?" className="animal-card__row--alarm" />
         </article>
       ) : (
         <p className="animal-cards__hint">Tik op een naam om de kaart te zien.</p>

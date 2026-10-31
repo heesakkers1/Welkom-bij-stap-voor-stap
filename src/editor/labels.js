@@ -66,12 +66,12 @@ export const FIELD_NAMES = {
   longeren: 'Longeren: waar let je op?',
   roundpen: 'Roundpen: waar let je op?',
   paardenbak: 'Paardenbak: waar let je op?',
+  verplaatsen: 'Verplaatsen uit paddock of wei',
   karakter: 'Karakter',
   bijzonderheden: 'Bijzonderheden en gezondheid',
   ditMag: 'Dit mag',
   ditNiet: 'Dit niet',
   metDeelnemers: 'Met deelnemers',
-  waarschuwen: 'Wie waarschuw je?',
 }
 
 /** Velden die geen tekst zijn en dus niet in de bewerkpagina staan. */
