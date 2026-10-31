@@ -5,11 +5,37 @@ import './AnimalCards.css'
 /** Hulpvraag die je ziet zolang een vakje nog leeg is. */
 const HINTS = {
   karakter: 'Hoe is dit dier? Rustig, nieuwsgierig, schrikachtig? Met wie staat het graag samen?',
-  bijzonderheden: 'Leeftijd, medische bijzonderheden, apart voeren, beperking bij gras?',
+  bijzonderheden: 'Medische bijzonderheden, apart voeren, beperking bij gras?',
   ditMag: 'Wat mogen collega’s zonder dierkennis doen?',
   ditNiet: 'Wat is alleen voor ervaren collega’s, of mag nooit?',
   metDeelnemers: 'Wat mogen deelnemers met dit dier doen? Geschikt voor coaching of groepsactiviteit?',
   waarschuwen: 'Bij wie meld je bijzonderheden over dit dier?',
+  rijden: 'Mag er op gereden worden? Zo ja, door wie?',
+  naarBos: 'Mag het mee naar het bos? Waar let je dan op?',
+  rijdenBos: 'Mag er in het bos gereden worden?',
+  gangen: 'Welke gangen mogen: stap, draf, galop?',
+  hoeveelheid: 'Hoeveel mag het per gang, hoe lang of hoe vaak?',
+  longeren: 'Waar let je op bij het longeren?',
+  roundpen: 'Waar let je op in de roundpen?',
+  paardenbak: 'Waar let je op in de paardenbak?',
+}
+
+/** Regel onder de naam, zoals "Geboren in 2012 · Merrie". */
+function subtitle(item) {
+  const jaar = item.geboortejaar?.trim()
+  const geslacht = item.geslacht?.trim()
+  const parts = [jaar ? `Geboren in ${jaar}` : 'Geboortejaar: nog in te vullen']
+  if (geslacht) parts.push(geslacht)
+  return parts.join(' · ')
+}
+
+function Group({ title, children }) {
+  return (
+    <>
+      <p className="animal-card__group">{title}</p>
+      {children}
+    </>
+  )
 }
 
 function Field({ item, name, label, className = '' }) {
@@ -60,13 +86,23 @@ function AnimalCards({ items = [] }) {
             )}
             <div>
               <h3 className="animal-card__name">{item.naam}</h3>
-              <p className="animal-card__sub">
-                {item.leeftijd?.trim() ? <RichText text={item.leeftijd} /> : 'Leeftijd: nog in te vullen'}
-              </p>
+              <p className="animal-card__sub">{subtitle(item)}</p>
             </div>
           </header>
           <Field item={item} name="karakter" label="Karakter" />
           <Field item={item} name="bijzonderheden" label="Bijzonderheden en gezondheid" />
+          <Group title="Rijden en naar buiten">
+            <Field item={item} name="rijden" label="Rijden" />
+            <Field item={item} name="naarBos" label="Mee naar het bos" />
+            <Field item={item} name="rijdenBos" label="Rijden in het bos" />
+            <Field item={item} name="gangen" label="Gangen" />
+            <Field item={item} name="hoeveelheid" label="Hoeveel per gang" />
+          </Group>
+          <Group title="Waar let je op?">
+            <Field item={item} name="longeren" label="Longeren" />
+            <Field item={item} name="roundpen" label="In de roundpen" />
+            <Field item={item} name="paardenbak" label="In de paardenbak" />
+          </Group>
           <div className="animal-card__split">
             <Field item={item} name="ditMag" label="✓ Dit mag" className="animal-card__row--ok" />
             <Field item={item} name="ditNiet" label="✕ Dit niet" className="animal-card__row--no" />
