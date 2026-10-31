@@ -9,12 +9,12 @@ const HINTS = {
   ditMag: 'Wat mogen collega’s zonder dierkennis doen?',
   ditNiet: 'Wat is alleen voor ervaren collega’s, of mag nooit?',
   metDeelnemers: 'Wat mogen deelnemers met dit dier doen? Geschikt voor coaching of groepsactiviteit?',
-  rijden: 'Mag er op gereden worden? Zo ja, door wie?',
+  rijden: 'Mag er op gereden worden? Zo ja, ook door beginners?',
   naarBos: 'Mag het mee naar het bos? Waar let je dan op?',
   rijdenBos: 'Mag er in het bos gereden worden? Waar let je dan op?',
   verplaatsen: 'Mag een deelnemer dit paard uit de paddock of wei halen? Waar let je op?',
   gangen: 'Welke gangen mogen: stap, draf, galop?',
-  hoeveelheid: 'Hoeveel mag het per gang, hoe lang of hoe vaak?',
+  hoeveelheid: 'Hoe lang of hoe vaak mag een gang, of waar let je bij een gang op?',
   longeren: 'Waar let je op bij het longeren?',
   roundpen: 'Waar let je op in de roundpen?',
   paardenbak: 'Waar let je op in de paardenbak?',
@@ -96,7 +96,7 @@ function AnimalCards({ items = [] }) {
             <Field item={item} name="naarBos" label="Mee naar het bos" />
             <Field item={item} name="rijdenBos" label="Rijden in het bos" />
             <Field item={item} name="gangen" label="Gangen" />
-            <Field item={item} name="hoeveelheid" label="Hoeveel per gang" />
+            <Field item={item} name="hoeveelheid" label="Toelichting over een gang" />
           </Group>
           <Group title="Waar let je op?">
             <Field item={item} name="longeren" label="Longeren" />

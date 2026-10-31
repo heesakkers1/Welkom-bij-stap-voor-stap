@@ -62,7 +62,7 @@ export const FIELD_NAMES = {
   naarBos: 'Mee naar het bos',
   rijdenBos: 'Rijden in het bos',
   gangen: 'Gangen (stap, draf, galop)',
-  hoeveelheid: 'Hoeveel per gang',
+  hoeveelheid: 'Toelichting over een gang',
   longeren: 'Longeren: waar let je op?',
   roundpen: 'Roundpen: waar let je op?',
   paardenbak: 'Paardenbak: waar let je op?',
