@@ -6,7 +6,7 @@
     "intro": [
       "We gaan je stap voor stap wegwijs maken op onze zorgboerderij.\nJe hoeft niet alles vandaag te leren. Neem rustig de tijd.\nDeze leeromgeving blijft altijd beschikbaar zodat je later onderdelen opnieuw kunt bekijken."
     ],
-    "photoAlt": "Een meisje aait samen met een collega een pony in de stal",
+    "photoAlt": "Twee geiten liggen naast elkaar op de boerderij",
     "durationLabel": "⏱ Totale duur",
     "durationValue": "ongeveer 60–90 minuten",
     "modulesLabel": "📚 Modules",
@@ -29,8 +29,8 @@
         "inwerktraject"
       ],
       "image": {
-        "src": "/fotos/welkom-geitjes.jpg",
-        "alt": "Een deelnemer op de picknicktafel tussen de jonge geitjes"
+        "src": "/fotos/boerderij-pipowagen.jpg",
+        "alt": "De houten pipowagen op het erf, onder de bomen"
       }
     },
     {
@@ -404,8 +404,8 @@
           "content": [
             {
               "type": "image",
-              "src": "/fotos/pony-knuffelen.jpg",
-              "alt": "Een deelnemer aait samen met een collega een pony",
+              "src": "/fotos/boerderij-paard.jpg",
+              "alt": "Een paard met lichte manen kijkt rustig in de camera",
               "size": "portrait"
             },
             {
@@ -455,8 +455,8 @@
           "content": [
             {
               "type": "image",
-              "src": "/fotos/samen-in-het-bos.jpg",
-              "alt": "Collega’s en deelnemers samen met een hond in het bos",
+              "src": "/fotos/boerderij-ponys-samen.jpg",
+              "alt": "Twee pony’s staan dicht bij elkaar in de paddock",
               "size": "portrait"
             },
             {
@@ -697,8 +697,8 @@
           "content": [
             {
               "type": "image",
-              "src": "/fotos/pony-menwagen.jpg",
-              "alt": "Twee deelnemers in Stap voor Stap-kleding op de menwagen achter een pony",
+              "src": "/fotos/boerderij-erf-kruiwagen.jpg",
+              "alt": "Een kruiwagen op het erf, met de dierenweide op de achtergrond",
               "size": "wide"
             },
             {
@@ -1185,8 +1185,8 @@
           "content": [
             {
               "type": "image",
-              "src": "/fotos/geiten-voeren.jpg",
-              "alt": "Geiten eten komkommer bij het hek",
+              "src": "/fotos/boerderij-geiten-klimtafel.jpg",
+              "alt": "Drie geiten staan op de klimtafel in de wei",
               "size": "landscape"
             },
             {
@@ -1660,8 +1660,8 @@
           "content": [
             {
               "type": "image",
-              "src": "/fotos/collega-geitje.jpg",
-              "alt": "Een collega zit op de grond en maakt contact met een jong geitje",
+              "src": "/fotos/boerderij-geit.jpg",
+              "alt": "Een bruin-witte geit staat op een houten vlonder",
               "size": "portrait"
             },
             {
