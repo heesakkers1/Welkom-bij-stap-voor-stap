@@ -95,7 +95,7 @@ function Dashboard() {
           </div>
           <figure className="dashboard__hero-photo">
             <img
-              src="/fotos/boerderij-varken.jpg"
+              src="/fotos/varkens.jpg"
               alt={texts.photoAlt}
             />
           </figure>
