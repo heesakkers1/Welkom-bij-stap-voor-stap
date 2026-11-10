@@ -32,7 +32,7 @@ function WelcomeScreen() {
         </section>
 
         <ImagePlaceholder
-          src="/fotos/pony-aaien-stal.jpg"
+          src="/fotos/boerderij-geiten-samen.jpg"
           alt={texts.photoAlt}
           size="wide"
         />
