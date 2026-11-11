@@ -209,21 +209,129 @@ function getAtPath(source, path) {
   return path.reduce((value, key) => value?.[key], source)
 }
 
+const BOLD_PLACEHOLDER = 'vette tekst'
+
+/** Zet **sterretjes** om de geselecteerde woorden, of haalt ze weg als ze er al staan. */
+function toggleBold(text, start, end) {
+  let from = start
+  let to = end
+  while (to > from && /\s/.test(text[to - 1])) to -= 1
+  while (from < to && /\s/.test(text[from])) from += 1
+
+  if (text.slice(from - 2, from) === '**' && text.slice(to, to + 2) === '**') {
+    return {
+      text: text.slice(0, from - 2) + text.slice(from, to) + text.slice(to + 2),
+      start: from - 2,
+      end: to - 2,
+    }
+  }
+  const inner = from === to ? BOLD_PLACEHOLDER : text.slice(from, to)
+  return {
+    text: `${text.slice(0, from)}**${inner}**${text.slice(to)}`,
+    start: from + 2,
+    end: from + 2 + inner.length,
+  }
+}
+
+function insertTab(text, start, end) {
+  return { text: `${text.slice(0, start)}\t${text.slice(end)}`, start: start + 1, end: start + 1 }
+}
+
+function rowsFor(value) {
+  return Math.max(
+    1,
+    value.split('\n').reduce((total, line) => total + Math.max(1, Math.ceil(line.length / 70)), 0),
+  )
+}
+
 function TextField({ label, value, onChange, onRemove }) {
   const id = useId()
-  const rows = Math.max(1, Math.ceil(value.length / 70))
+  const fieldRef = useRef(null)
+  const areaRef = useRef(null)
+  const escapedRef = useRef(false)
+  const [active, setActive] = useState(false)
+
+  // De knoppen blijven staan tot je in een ander veld gaat typen.
+  useEffect(() => {
+    if (!active) return undefined
+    function handleFocusIn(event) {
+      if (!fieldRef.current?.contains(event.target)) setActive(false)
+    }
+    document.addEventListener('focusin', handleFocusIn)
+    return () => document.removeEventListener('focusin', handleFocusIn)
+  }, [active])
+
+  function apply(edit) {
+    const area = areaRef.current
+    if (!area) return
+    const result = edit(area.value, area.selectionStart, area.selectionEnd)
+    flushSync(() => onChange(result.text))
+    area.focus()
+    area.setSelectionRange(result.start, result.end)
+  }
+
+  function handleKeyDown(event) {
+    if (event.key === 'Escape') {
+      escapedRef.current = true
+      return
+    }
+    if (event.key === 'Tab' && !event.shiftKey && !event.altKey && !event.ctrlKey && !event.metaKey) {
+      // Na Esc werkt Tab weer als "naar het volgende veld".
+      if (escapedRef.current) {
+        escapedRef.current = false
+        return
+      }
+      event.preventDefault()
+      apply(insertTab)
+      return
+    }
+    if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 'b') {
+      event.preventDefault()
+      apply(toggleBold)
+      return
+    }
+    escapedRef.current = false
+  }
+
+  // Houd de cursor in het tekstvak als je op een knop tikt.
+  const keepFocus = (event) => event.preventDefault()
+
   return (
-    <div className="editor-field">
+    <div className="editor-field" ref={fieldRef}>
       <div className="editor-field__head">
         <label className="editor-field__label" htmlFor={id}>
           {label}
         </label>
         {onRemove ? <RemoveButton onClick={onRemove} /> : null}
       </div>
+      {active ? (
+        <div className="editor-format" role="toolbar" aria-label={`Opmaak voor ${label}`}>
+          <button
+            type="button"
+            className="editor-format__button"
+            onMouseDown={keepFocus}
+            onClick={() => apply(toggleBold)}
+          >
+            <strong>B</strong> Vet
+          </button>
+          <button
+            type="button"
+            className="editor-format__button"
+            onMouseDown={keepFocus}
+            onClick={() => apply(insertTab)}
+          >
+            <span aria-hidden="true">⇥</span> Tab
+          </button>
+          <span className="editor-format__hint">Selecteer woorden en tik op Vet. Een enter maakt een nieuwe regel.</span>
+        </div>
+      ) : null}
       <textarea
         id={id}
+        ref={areaRef}
         value={value}
-        rows={rows}
+        rows={rowsFor(value)}
+        onFocus={() => setActive(true)}
+        onKeyDown={handleKeyDown}
         onChange={(event) => onChange(event.target.value)}
       />
     </div>

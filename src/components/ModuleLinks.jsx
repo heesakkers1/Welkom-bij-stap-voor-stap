@@ -3,6 +3,7 @@ import { MODULE_STATUS, getLessonById, getModuleById } from '../data/modules'
 import { useProgress } from '../context/ProgressContext'
 import ModuleIcon from './ModuleIcon'
 import './ModuleLinks.css'
+import RichText from './RichText'
 
 /**
  * Een lijstje met links naar modules (of één les daarin), met per link
@@ -35,7 +36,7 @@ function ModuleLinks({ items = [] }) {
             </span>
             <span className="module-links__body">
               <span className="module-links__title">{title}</span>
-              {text ? <span className="module-links__text">{text}</span> : null}
+              {text ? <span className="module-links__text"><RichText text={text} /></span> : null}
             </span>
             {comingSoon ? (
               <span className="module-links__status">Binnenkort</span>

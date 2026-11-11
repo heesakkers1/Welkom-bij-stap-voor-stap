@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './ExpandableAnswer.css'
+import RichText from './RichText'
 
 function ExpandableAnswer({
   situation,
@@ -14,14 +15,14 @@ function ExpandableAnswer({
       {situation ? (
         <div className="expandable-answer__situation">
           <p className="expandable-answer__label">Situatie</p>
-          <p>{situation}</p>
+          <p><RichText text={situation} /></p>
         </div>
       ) : null}
 
       {question ? (
         <div className="expandable-answer__question">
           <p className="expandable-answer__label">Reflectievraag</p>
-          <p>{question}</p>
+          <p><RichText text={question} /></p>
         </div>
       ) : null}
 
@@ -36,7 +37,7 @@ function ExpandableAnswer({
 
       {open ? (
         <div className="expandable-answer__panel">
-          <p>{answer}</p>
+          <p><RichText text={answer} /></p>
         </div>
       ) : null}
     </section>
