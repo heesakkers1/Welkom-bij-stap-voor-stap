@@ -160,3 +160,13 @@
     border-right: 0;
   }
 }
+
+.animal-card__group {
+  margin: 0;
+  padding: 0.6rem 1rem;
+  background: var(--icon-bg);
+  border-bottom: 1px solid var(--tile-border);
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--accent-strong);
+}
