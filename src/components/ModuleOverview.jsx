@@ -1,79 +1,26 @@
-import { Link, Navigate, useParams } from 'react-router-dom'
+import { Navigate, useParams } from 'react-router-dom'
 import { getModuleById, isModuleAvailable } from '../data/modules'
 import { useProgress } from '../context/ProgressContext'
-import Header from './Header'
-import ProgressBar from './ProgressBar'
-import RichText from './RichText'
-import './ModuleOverview.css'
 
+/**
+ * Een module heeft geen aparte tussenpagina meer: je gaat meteen naar de
+ * eerste stap die je nog niet hebt afgerond (of naar stap 1). Alle stappen
+ * staan bovenaan elke stap in de stappenbalk.
+ */
 function ModuleOverview() {
   const { moduleId } = useParams()
   const module = getModuleById(moduleId)
-  const { getModuleProgressPercent, isLessonCompleted } = useProgress()
+  const { isLessonCompleted } = useProgress()
 
-  if (!module) {
-    return (
-      <main className="module-overview">
-        <Header title="Module niet gevonden" />
-        <p className="module-overview__empty">
-          Deze module bestaat niet. Ga met de homeknop terug naar de startpagina.
-        </p>
-      </main>
-    )
-  }
-
-  if (!isModuleAvailable(module)) {
+  if (!module || !isModuleAvailable(module)) {
     return <Navigate to="/" replace />
   }
 
-  const progress = getModuleProgressPercent(module)
+  const lesson =
+    module.lessons.find((item) => !isLessonCompleted(module.id, item.id)) ??
+    module.lessons[0]
 
-  return (
-    <main className="module-overview">
-      <Header title={module.title} />
-
-      <section className="module-overview__intro">
-        <p>{module.description}</p>
-        {module.duration ? (
-          <p className="module-overview__duration">⏱ {module.duration}</p>
-        ) : null}
-        <ProgressBar value={progress} label="Voortgang in deze module" />
-      </section>
-
-      <section className="module-overview__lessons" aria-label="Stappen">
-        <h2>Stappen</h2>
-
-        <ol className="module-overview__list">
-          {module.lessons.map((lesson, index) => {
-            const done = isLessonCompleted(module.id, lesson.id)
-
-            return (
-              <li key={lesson.id}>
-                <Link
-                  to={`/module/${module.id}/les/${lesson.id}`}
-                  className={`module-overview__lesson${done ? ' module-overview__lesson--done' : ''}`}
-                >
-                  <span className="module-overview__lesson-index">
-                    {done ? '✓' : index + 1}
-                  </span>
-                  <span className="module-overview__lesson-body">
-                    <span className="module-overview__lesson-title">
-                      {lesson.title}
-                    </span>
-                    {lesson.summary ? (
-                      <span className="module-overview__lesson-summary">
-                        <RichText text={lesson.summary} />
-                      </span>
-                    ) : null}
-                  </span>
-                </Link>
-              </li>
-            )
-          })}
-        </ol>
-      </section>
-    </main>
-  )
+  return <Navigate to={`/module/${module.id}/les/${lesson.id}`} replace />
 }
 
 export default ModuleOverview

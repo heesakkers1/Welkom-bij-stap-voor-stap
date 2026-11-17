@@ -1,27 +1,21 @@
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import './Header.css'
 
-function Header({ title, backTo = '/' }) {
-  const navigate = useNavigate()
-
-  function goBack() {
-    // Zonder eerdere pagina in deze sessie (bijv. via een gedeelde link)
-    // gaan we naar de bovenliggende pagina.
-    if (window.history.state?.idx > 0) {
-      navigate(-1)
-    } else {
-      navigate(backTo, { replace: true })
-    }
-  }
-
+/**
+ * Bovenbalk van een module: "← Overzicht" brengt je altijd terug naar de
+ * startpagina (niet door alle vorige stappen heen), met daaronder in welk
+ * onderdeel en welke module je bent.
+ */
+function Header({ title, eyebrow, backTo = '/', backLabel = 'Overzicht', backState }) {
   return (
     <header className="app-header">
       <div className="app-header__row">
-        <button type="button" className="app-header__back" onClick={goBack}>
-          <span aria-hidden="true">←</span> Terug
-        </button>
+        <Link to={backTo} state={backState} className="app-header__back">
+          <span aria-hidden="true">←</span> {backLabel}
+        </Link>
         <Link
           to="/"
+          state={backState}
           className="app-header__home"
           aria-label="Naar de startpagina"
           title="Naar de startpagina"
@@ -29,6 +23,7 @@ function Header({ title, backTo = '/' }) {
           <img src="/home-icon.png" alt="" />
         </Link>
       </div>
+      {eyebrow ? <p className="app-header__eyebrow">{eyebrow}</p> : null}
       {title ? <h1 className="app-header__title">{title}</h1> : null}
     </header>
   )
