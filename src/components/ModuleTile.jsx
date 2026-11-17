@@ -61,14 +61,14 @@ function ModuleTile({
 
   if (isComingSoon) {
     return (
-      <div className={className} aria-disabled="true">
+      <div className={className} aria-disabled="true" data-module-id={module.id}>
         {body}
       </div>
     )
   }
 
   return (
-    <Link to={`/module/${module.id}`} className={className}>
+    <Link to={`/module/${module.id}`} className={className} data-module-id={module.id}>
       {body}
     </Link>
   )

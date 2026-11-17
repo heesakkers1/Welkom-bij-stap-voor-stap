@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { MODULE_STATUS, getCategoriesWithModules, modules, siteTexts } from '../data/modules'
 import { useProgress } from '../context/ProgressContext'
@@ -24,11 +25,19 @@ function Dashboard() {
   const resumeInfo = getResumeInfo()
 
   const categoriesWithModules = getCategoriesWithModules()
+  const focusModuleId = location.state?.focusModule ?? null
   const resumeModuleId = resumeInfo?.path?.split('/')[2] ?? null
   const openCategoryId =
     categoriesWithModules.find((category) =>
-      category.moduleIds.includes(resumeModuleId),
+      category.moduleIds.includes(focusModuleId ?? resumeModuleId),
     )?.id ?? categoriesWithModules[0]?.id
+
+  // Terug uit een module: laat meteen de tegel zien van de module waar je was.
+  useEffect(() => {
+    if (!focusModuleId) return
+    const tile = document.querySelector(`[data-module-id="${focusModuleId}"]`)
+    tile?.scrollIntoView({ block: 'center' })
+  }, [focusModuleId])
 
   function renderTile(module) {
     const status = getModuleStatus(module)
