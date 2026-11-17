@@ -88,6 +88,7 @@ function LessonPage() {
         title={module.title}
       />
 
+      {stepTotal > 1 ? (
       <nav className="step-nav" aria-label={`Stappen van ${module.title}`}>
         <ol className="step-nav__dots">
           {module.lessons.map((item, index) => {
@@ -160,6 +161,7 @@ function LessonPage() {
           </ol>
         ) : null}
       </nav>
+      ) : null}
 
       <LessonContent blocks={lesson.content} lessonId={lesson.id} />
 
