@@ -147,32 +147,6 @@
               "text": "Team Stap voor Stap"
             }
           ]
-        },
-        {
-          "id": "wat-kun-je-verwachten",
-          "title": "Wat kun je verwachten?",
-          "summary": "",
-          "content": [
-            {
-              "type": "paragraph",
-              "text": "Tijdens deze onboarding maak je onder andere kennis met:"
-            },
-            {
-              "type": "bulletList",
-              "items": [
-                "je eerste 100 dagen, wie je daarbij helpt en de evaluatiegesprekken;",
-                "onze visie en manier van werken;",
-                "onze organisatie en bij wie je terechtkunt;",
-                "de zorgboerderij en het ritme van de dag;",
-                "hoe we werken met het digibord;",
-                "de dagstart en de klusjes;",
-                "veilig werken, privacy en meldcodes;",
-                "het begeleiden van deelnemers en rapporteren;",
-                "onze systemen en praktische afspraken;",
-                "jouw functie en je ontwikkeling."
-              ]
-            }
-          ]
         }
       ]
     },
@@ -197,10 +171,6 @@
               "eyebrow": "Jouw eerste 100 dagen",
               "title": "Stap voor stap ingewerkt",
               "text": "Van een warm welkom naar zelfstandig en met vertrouwen werken, in je eerste 100 dagen."
-            },
-            {
-              "type": "paragraph",
-              "text": "Je inwerktijd bestaat uit vijf fasen:"
             },
             {
               "type": "timeline",
@@ -277,10 +247,6 @@
               ]
             },
             {
-              "type": "paragraph",
-              "text": "Deze doelen zijn de rode draad van deze app, je inwerkperiode en de evaluatiegesprekken."
-            },
-            {
               "type": "highlight",
               "text": "Het gaat er niet om dat je na 100 dagen alle vakjes hebt afgevinkt. Het gaat erom dat je je verbonden voelt met Stap voor Stap, de afspraken kent en je functie verantwoord kunt uitvoeren."
             },
@@ -339,12 +305,11 @@
       "lessons": [
         {
           "id": "onze-missie",
-          "title": "Onze missie",
-          "summary": "Waar Stap voor Stap voor staat.",
+          "title": "Missie en visie",
+          "summary": "Waar we voor staan.",
           "content": [
             {
               "type": "hero",
-              "eyebrow": "Missie & visie",
               "title": "Onze missie"
             },
             {
@@ -362,17 +327,9 @@
             {
               "type": "highlight",
               "text": "Begeleiding die past bij de mens, niet andersom."
-            }
-          ]
-        },
-        {
-          "id": "onze-visie-kern",
-          "title": "Onze visie",
-          "summary": "Hoe wij kijken naar mensen, natuur en ontwikkeling.",
-          "content": [
+            },
             {
               "type": "hero",
-              "eyebrow": "Missie & visie",
               "title": "Onze visie"
             },
             {
@@ -399,9 +356,13 @@
         },
         {
           "id": "deelnemer-staat-centraal",
-          "title": "De deelnemer staat centraal",
-          "summary": "Kijken naar de persoon achter het gedrag.",
+          "title": "Zo zie je het in de praktijk",
+          "summary": "De deelnemer centraal, mogelijkheden, veiligheid en samenwerken.",
           "content": [
+            {
+              "type": "hero",
+              "title": "De deelnemer staat centraal"
+            },
             {
               "type": "image",
               "src": "/fotos/boerderij-paard.jpg",
@@ -411,14 +372,11 @@
             {
               "type": "paragraph",
               "text": "Bij Stap voor Stap kijken we naar de persoon achter het gedrag. Iedere deelnemer heeft eigen talenten, behoeften, mogelijkheden en grenzen. We sluiten zoveel mogelijk aan bij wat iemand nodig heeft om zich veilig te voelen en mee te kunnen doen.\nNiet iedereen hoeft hetzelfde te doen om erbij te horen."
-            }
-          ]
-        },
-        {
-          "id": "kijken-naar-mogelijkheden",
-          "title": "Kijken naar mogelijkheden",
-          "summary": "Aandacht voor wat iemand al kan.",
-          "content": [
+            },
+            {
+              "type": "hero",
+              "title": "Kijken naar mogelijkheden"
+            },
             {
               "type": "paragraph",
               "text": "We kijken niet alleen naar wat moeilijk is, maar juist ook naar wat iemand al kan. Een kleine stap kan voor een deelnemer een grote overwinning zijn. \nWe bieden ondersteuning waar dat nodig is en ruimte waar dat mogelijk is."
@@ -427,14 +385,11 @@
               "type": "tip",
               "label": "💡 Zie ook de kleine successen van een deelnemer ",
               "text": "Benoem concreet wat goed gaat. Een oprecht compliment kan veel betekenen."
-            }
-          ]
-        },
-        {
-          "id": "veiligheid-en-vertrouwen",
-          "title": "Veiligheid en vertrouwen",
-          "summary": "Rust, duidelijkheid en voorspelbaarheid.",
-          "content": [
+            },
+            {
+              "type": "hero",
+              "title": "Veiligheid en vertrouwen"
+            },
             {
               "type": "paragraph",
               "text": "Ontwikkeling ontstaat wanneer iemand zich veilig en gezien voelt. Daarom werken we rustig, duidelijk en voorspelbaar. We maken afspraken begrijpelijk en komen erop terug wanneer dat nodig is."
@@ -445,14 +400,11 @@
               "question": "Wat zou je eerst willen weten voordat je de deelnemer opnieuw aanspoort?",
               "answerLabel": "Bekijk een mogelijke richting",
               "answer": "Denk bijvoorbeeld aan spanning, onduidelijkheid, overprikkeling, vermoeidheid, eerdere ervaringen of de manier waarop de opdracht is aangeboden."
-            }
-          ]
-        },
-        {
-          "id": "samen-stap-voor-stap",
-          "title": "Samen stap voor stap",
-          "summary": "Samenwerken en hulp vragen.",
-          "content": [
+            },
+            {
+              "type": "hero",
+              "title": "Samen stap voor stap"
+            },
             {
               "type": "image",
               "src": "/fotos/boerderij-ponys-samen.jpg",
@@ -502,9 +454,13 @@
       "lessons": [
         {
           "id": "voor-wie-we-er-zijn",
-          "title": "Voor wie we er zijn",
-          "summary": "Onze doelgroepen en ons zorgaanbod.",
+          "title": "Wie we zijn",
+          "summary": "Voor wie we er zijn en onze cultuur.",
           "content": [
+            {
+              "type": "hero",
+              "title": "Voor wie we er zijn"
+            },
             {
               "type": "paragraph",
               "text": "Bij Zorgboerderij Stap voor Stap werken we met kinderen, jongeren, volwassenen en ouderen die behoefte hebben aan begeleiding, structuur en een zinvolle daginvulling."
@@ -540,14 +496,11 @@
             {
               "type": "highlight",
               "text": "Geen standaardtrajecten, maar begeleiding die aansluit bij de persoon."
-            }
-          ]
-        },
-        {
-          "id": "onze-cultuur",
-          "title": "Onze cultuur",
-          "summary": "Een warme, open en informele familiesfeer.",
-          "content": [
+            },
+            {
+              "type": "hero",
+              "title": "Onze cultuur"
+            },
             {
               "type": "paragraph",
               "text": "Binnen Stap voor Stap werken we vanuit een warme, open en informele familiesfeer."
@@ -577,10 +530,6 @@
           "summary": "De collega’s van Stap voor Stap stellen zich voor.",
           "content": [
             {
-              "type": "paragraph",
-              "text": "Je gaat met veel nieuwe collega’s samenwerken. Hier stellen ze zich alvast aan je voor."
-            },
-            {
               "type": "image",
               "src": "/fotos/bente-kuipers.jpg",
               "alt": "Bente Kuipers lacht met een cavia in haar armen",
@@ -609,10 +558,6 @@
             {
               "type": "paragraph",
               "text": "De directie bestaat uit Bente Kuipers en Jaap Reckers. In 2018 heeft Anne Stottelaar de zorgboerderij opgericht en is samen met de directie eigenaar. Hilde Thoonen is onze externe HR.\n"
-            },
-            {
-              "type": "paragraph",
-              "text": "Met deze vragen kun je bij de volgende personen terecht:"
             },
             {
               "type": "cards",
@@ -692,9 +637,13 @@
       "lessons": [
         {
           "id": "plek-om-mee-te-doen",
-          "title": "Een plek om mee te doen",
-          "summary": "Begeleiding, activiteiten, dieren en buiten zijn.",
+          "title": "De boerderij en het erf",
+          "summary": "Een plek om mee te doen, en de plekken op het erf.",
           "content": [
+            {
+              "type": "hero",
+              "title": "Een plek om mee te doen"
+            },
             {
               "type": "image",
               "src": "/fotos/boerderij-erf-kruiwagen.jpg",
@@ -712,14 +661,11 @@
             {
               "type": "paragraph",
               "text": "Werkzaamheden zijn geen doel op zichzelf. Ze kunnen helpen bij structuur, zelfvertrouwen, samenwerking, ontspanning en ontwikkeling."
-            }
-          ]
-        },
-        {
-          "id": "verschillende-plekken",
-          "title": "Verschillende plekken op het erf",
-          "summary": "Een overzicht van de belangrijkste plekken.",
-          "content": [
+            },
+            {
+              "type": "hero",
+              "title": "Verschillende plekken op het erf"
+            },
             {
               "type": "image",
               "src": "/fotos/gebarenplaat-pony.jpg",
@@ -793,10 +739,6 @@
                   "text": ""
                 }
               ]
-            },
-            {
-              "type": "paragraph",
-              "text": "Iedere plek heeft eigen afspraken en aandachtspunten. Later in de onboarding komen veiligheid en het werken met dieren uitgebreider aan bod."
             }
           ]
         },
@@ -1015,15 +957,11 @@
         {
           "id": "de-dagstart",
           "title": "De dagstart",
-          "summary": "De coördinator dagbesteding leidt de dagstart",
+          "summary": "Hoe de dagstart verloopt en hoe we hem rustig houden.",
           "content": [
             {
               "type": "paragraph",
               "text": "Iedere dag begint met een dagstart. Die heeft een vaste structuur en met hulp van het Digibord verloopt hij steeds efficiënter."
-            },
-            {
-              "type": "paragraph",
-              "text": "Zo ziet de dagstart eruit:"
             },
             {
               "type": "timeline",
@@ -1053,14 +991,11 @@
             {
               "type": "highlight",
               "text": "Tijdens de dagstart weiden we niet lang uit over individuele deelnemers of situaties."
-            }
-          ]
-        },
-        {
-          "id": "prikkelarme-dagstart",
-          "title": "Een rustige, prikkelarme dagstart",
-          "summary": "Afspraken die zorgen voor rust in de groep.",
-          "content": [
+            },
+            {
+              "type": "hero",
+              "title": "Een rustige, prikkelarme dagstart"
+            },
             {
               "type": "paragraph",
               "text": "We houden de dagstart zo prikkelarm mogelijk. Daar helpen deze afspraken bij:"
@@ -1363,9 +1298,13 @@
       "lessons": [
         {
           "id": "veiligheid-voorop",
-          "title": "Veiligheid staat voorop",
-          "summary": "Samen alert op risico’s.",
+          "title": "Veiligheid en incidenten",
+          "summary": "Veiligheid voorop en hoe je een incident meldt.",
           "content": [
+            {
+              "type": "hero",
+              "title": "Veiligheid staat voorop"
+            },
             {
               "type": "paragraph",
               "text": "Binnen Stap voor Stap staat veiligheid altijd voorop. We werken samen aan een veilige omgeving voor deelnemers, collega’s en bezoekers."
@@ -1381,14 +1320,11 @@
             {
               "type": "highlight",
               "text": "Zie je een onveilige situatie? Signaleer en bespreek het direct met een collega of je leidinggevende."
-            }
-          ]
-        },
-        {
-          "id": "incidenten-melden",
-          "title": "Incidenten melden",
-          "summary": "Ook een bijna-incident is belangrijk.",
-          "content": [
+            },
+            {
+              "type": "hero",
+              "title": "Incidenten melden"
+            },
             {
               "type": "numberedList",
               "items": [
@@ -1411,9 +1347,13 @@
         },
         {
           "id": "bhv-en-calamiteiten",
-          "title": "BHV en calamiteiten",
-          "summary": "Rustig blijven en instructies opvolgen.",
+          "title": "BHV en noodsituaties",
+          "summary": "De BHV’ers, calamiteiten en wat je doet bij een aanval.",
           "content": [
+            {
+              "type": "hero",
+              "title": "BHV en calamiteiten"
+            },
             {
               "type": "paragraph",
               "text": "Onze opgeleide bedrijfshulpverleners (BHV’ers) zijn: \nJoost\nElske\nBente\nPia\n(Bert)\n\nZij weten hoe te handelen bij ongevallen, brand of een evacuatie. Je volgt hun aanwijzingen altijd op."
@@ -1439,14 +1379,11 @@
               "type": "assignment",
               "label": "Praktijkopdracht",
               "text": "Loop een rondje over het erf. Zoek de nooduitgangen, de blusmiddelen en de BHV-tas op, en vraag wie er vandaag BHV’er is."
-            }
-          ]
-        },
-        {
-          "id": "epileptische-aanval",
-          "title": "Als een deelnemer een aanval krijgt",
-          "summary": "De eerste stappen bij een insult.",
-          "content": [
+            },
+            {
+              "type": "hero",
+              "title": "Als een deelnemer een aanval krijgt"
+            },
             {
               "type": "paragraph",
               "text": "Krijgt een deelnemer een epileptische aanval (insult)? Dan volg je deze stappen:"
@@ -1469,9 +1406,13 @@
         },
         {
           "id": "privacy-avg",
-          "title": "Privacy en AVG",
-          "summary": "Zorgvuldig omgaan met persoonsgegevens.",
+          "title": "Privacy en zorgen over een deelnemer",
+          "summary": "Zorgvuldig met gegevens, en wat je doet met zorgen.",
           "content": [
+            {
+              "type": "hero",
+              "title": "Privacy en AVG"
+            },
             {
               "type": "paragraph",
               "text": "We gaan zorgvuldig om met alle persoonsgegevens van deelnemers en medewerkers. We werken volgens de AVG en gebruiken gegevens alleen wanneer dat nodig is voor goede begeleiding en zorg. \nIn de unit in de ruimte voor het personeel, hangt een lijst aan het bord. Op deze lijst zie je welke deelnemers wel en niet op social media mogen. "
@@ -1493,14 +1434,11 @@
               "type": "tip",
               "label": "💡 Twijfel je?",
               "text": "Twijfel je of je iets mag delen? Vraag het eerst aan je leidinggevende."
-            }
-          ]
-        },
-        {
-          "id": "meldcodes",
-          "title": "Zorgen over een deelnemer",
-          "summary": "Werken met meldcodes.",
-          "content": [
+            },
+            {
+              "type": "hero",
+              "title": "Zorgen over een deelnemer"
+            },
             {
               "type": "paragraph",
               "text": "We werken met meldcodes en richtlijnen voor situaties waarin er zorgen zijn over de veiligheid of het welzijn van een deelnemer. Ze helpen je om signalen op tijd te herkennen, bespreekbaar te maken en zorgvuldig te handelen."
@@ -1678,9 +1616,13 @@
       "lessons": [
         {
           "id": "systemen",
-          "title": "Onze systemen",
-          "summary": "ZilliZ, SharePoint, D-connect (Siilo) en e-mail.",
+          "title": "Systemen en protocollen",
+          "summary": "ZilliZ, e-mail, D-connect en waar je de protocollen vindt.",
           "content": [
+            {
+              "type": "hero",
+              "title": "Onze systemen"
+            },
             {
               "type": "cards",
               "items": [
@@ -1709,14 +1651,11 @@
             {
               "type": "paragraph",
               "text": "Let bij e-mail op zorgvuldig taalgebruik, de juiste ontvangers en het vermijden van onnodige of gevoelige informatie."
-            }
-          ]
-        },
-        {
-          "id": "protocollen",
-          "title": "Protocollen en procedures",
-          "summary": "Waar je ze vindt en wat er van je verwacht wordt.",
-          "content": [
+            },
+            {
+              "type": "hero",
+              "title": "Protocollen en procedures"
+            },
             {
               "type": "paragraph",
               "text": "Protocollen en procedures helpen je om veilig, professioneel en eenduidig te werken."
@@ -1743,9 +1682,13 @@
         },
         {
           "id": "rooster-ziek-verlof",
-          "title": "Rooster, ziekmelden en verlof",
-          "summary": "Wat je moet weten over je werktijden.",
+          "title": "Rooster, ziek, kleding en telefoon",
+          "summary": "Werktijden, ziekmelden, verlof, werkkleding en je telefoon.",
           "content": [
+            {
+              "type": "hero",
+              "title": "Rooster, ziekmelden en verlof"
+            },
             {
               "type": "paragraph",
               "text": "We werken meestal overdag op doordeweekse dagen. We vragen je om op tijd aanwezig te zijn, zodat we de dag rustig kunnen starten."
@@ -1775,14 +1718,11 @@
               "type": "tip",
               "label": "💡 Goed om te weten",
               "text": "Je hoeft geen medische details te delen. Houd tijdens je verzuim wel contact en geef het aan als je situatie verandert."
-            }
-          ]
-        },
-        {
-          "id": "kleding-en-telefoon",
-          "title": "Werkkleding en telefoongebruik",
-          "summary": "Praktische afspraken voor op het erf.",
-          "content": [
+            },
+            {
+              "type": "hero",
+              "title": "Werkkleding en telefoongebruik"
+            },
             {
               "type": "paragraph",
               "text": "Omdat we veel buiten en met dieren werken, krijg je naar rato van je gewerkte uren een kledingpakket van Stap voor Stap. Daarin zitten onder andere jassen, een bodywarmer, trui, vest, polo, T-shirt, pet en muts."
@@ -1824,9 +1764,13 @@
       "lessons": [
         {
           "id": "functies",
-          "title": "De functies binnen Stap voor Stap",
-          "summary": "Een duidelijke groeilijn.",
+          "title": "De functies",
+          "summary": "Alle functies, de verschillen, en stagiaires en vrijwilligers.",
           "content": [
+            {
+              "type": "hero",
+              "title": "De functies binnen Stap voor Stap"
+            },
             {
               "type": "paragraph",
               "text": "Binnen Stap voor Stap zijn er zes functies. Ze sluiten aan bij de CAO Sociaal Werk."
@@ -1876,14 +1820,11 @@
               "type": "tip",
               "label": "💡 Meer lezen?",
               "text": "In het Functiehandboek staat per functie precies wat er van je verwacht wordt. Je vindt het in ZilliZ onder Intranet."
-            }
-          ]
-        },
-        {
-          "id": "verschillen-in-functies",
-          "title": "Wat verschilt er per functie?",
-          "summary": "Zelfstandigheid en verantwoordelijkheid.",
-          "content": [
+            },
+            {
+              "type": "hero",
+              "title": "Wat verschilt er per functie?"
+            },
             {
               "type": "cards",
               "items": [
@@ -1916,14 +1857,34 @@
             {
               "type": "highlight",
               "text": "Een functie wordt niet alleen beoordeeld op opleidingsniveau, maar op de inhoud, zelfstandigheid en verantwoordelijkheden in de praktijk."
+            },
+            {
+              "type": "hero",
+              "title": "Stagiaires en vrijwilligers"
+            },
+            {
+              "type": "paragraph",
+              "text": "Vrijwilligers en stagiaires spelen een waardevolle rol in de dagelijkse begeleiding en activiteiten. Ze worden altijd ingewerkt en begeleid door een vaste medewerker."
+            },
+            {
+              "type": "bulletList",
+              "items": [
+                "Sanne is stagecoördinator en het eerste aanspreekpunt voor stagezaken.",
+                "Voor vrijwilligers en stagiaires is een geldige VOG verplicht. Zonder VOG kan iemand niet starten.",
+                "Ook vrijwilligers en stagiaires hebben geheimhoudingsplicht, tijdens en na hun periode op de zorgboerderij."
+              ]
             }
           ]
         },
         {
           "id": "arbeidsvoorwaarden",
-          "title": "Arbeidsvoorwaarden",
-          "summary": "Geregeld volgens de CAO Sociaal Werk.",
+          "title": "Arbeidsvoorwaarden en ontwikkelen",
+          "summary": "De CAO, je contract en hoe je kunt groeien.",
           "content": [
+            {
+              "type": "hero",
+              "title": "Arbeidsvoorwaarden"
+            },
             {
               "type": "paragraph",
               "text": "We werken volgens de CAO Sociaal Werk. Afspraken over salaris, werktijden, verlof en verzuim zijn daarmee goed geregeld."
@@ -1940,14 +1901,11 @@
             {
               "type": "highlight",
               "text": "Iedere medewerker heeft geheimhoudingsplicht. Je tekent een geheimhoudingsovereenkomst die in je dossier komt."
-            }
-          ]
-        },
-        {
-          "id": "leren-en-ontwikkelen",
-          "title": "Leren en ontwikkelen",
-          "summary": "Inwerken, scholing en het jaarlijkse gesprek.",
-          "content": [
+            },
+            {
+              "type": "hero",
+              "title": "Leren en ontwikkelen"
+            },
             {
               "type": "paragraph",
               "text": "Je start met een inwerkperiode. Je wordt begeleid door collega’s en krijgt de ruimte om vragen te stellen en mee te kijken voordat je zelfstandig taken oppakt."
@@ -1970,25 +1928,6 @@
               "text": "Omdat we met jeugd werken, zijn er SKJ-geregistreerde Jeugd- en Gezinsprofessionals in dienst. Zij blijven zelf verantwoordelijk voor voldoende scholing voor hun herregistratie."
             }
           ]
-        },
-        {
-          "id": "stagiaires-vrijwilligers",
-          "title": "Stagiaires en vrijwilligers",
-          "summary": "Een waardevolle rol in het team.",
-          "content": [
-            {
-              "type": "paragraph",
-              "text": "Vrijwilligers en stagiaires spelen een waardevolle rol in de dagelijkse begeleiding en activiteiten. Ze worden altijd ingewerkt en begeleid door een vaste medewerker."
-            },
-            {
-              "type": "bulletList",
-              "items": [
-                "Sanne is stagecoördinator en het eerste aanspreekpunt voor stagezaken.",
-                "Voor vrijwilligers en stagiaires is een geldige VOG verplicht. Zonder VOG kan iemand niet starten.",
-                "Ook vrijwilligers en stagiaires hebben geheimhoudingsplicht, tijdens en na hun periode op de zorgboerderij."
-              ]
-            }
-          ]
         }
       ]
     },
@@ -2005,8 +1944,8 @@
       "lessons": [
         {
           "id": "toets-deel-1",
-          "title": "Toets deel 1: begeleiden en veiligheid",
-          "summary": "Vier vragen over begeleiden en veilig werken.",
+          "title": "Kennistoets",
+          "summary": "Acht vragen over de belangrijkste afspraken.",
           "content": [
             {
               "type": "paragraph",
@@ -2055,14 +1994,7 @@
               ],
               "correct": 2,
               "explanation": "Je hoeft niet zelf te bepalen wat er aan de hand is. Bespreek je zorgen en volg de stappen uit de meldcode."
-            }
-          ]
-        },
-        {
-          "id": "toets-deel-2",
-          "title": "Toets deel 2: de dag en afspraken",
-          "summary": "Vier vragen over de dagstart en praktische afspraken.",
-          "content": [
+            },
             {
               "type": "quiz",
               "question": "Je hebt een dagelijkse klus op het digibord gedaan. Wat doe je?",
@@ -2124,8 +2056,8 @@
       "lessons": [
         {
           "id": "waar-vind-je-wat",
-          "title": "Waar vind je wat?",
-          "summary": "Een overzicht om op terug te vallen.",
+          "title": "Afronding",
+          "summary": "Waar je alles terugvindt, en tot slot.",
           "content": [
             {
               "type": "paragraph",
@@ -2165,14 +2097,11 @@
               "label": "Terugblik",
               "text": "Wat neem je mee uit deze onboarding? En waar wil je nog meer over weten?",
               "reflective": true
-            }
-          ]
-        },
-        {
-          "id": "tot-slot",
-          "title": "Tot slot",
-          "summary": "Ga ontdekken, ervaren en genieten.",
-          "content": [
+            },
+            {
+              "type": "hero",
+              "title": "Tot slot"
+            },
             {
               "type": "image",
               "src": "/fotos/Imara-geitjes.jpeg",
