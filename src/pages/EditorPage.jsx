@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useId, useMemo, useRef, useState } from 'react'
+import { Fragment, createContext, useContext, useEffect, useId, useMemo, useRef, useState } from 'react'
 import { flushSync } from 'react-dom'
 import { Link } from 'react-router-dom'
 import LessonContent from '../components/LessonContent'
@@ -9,8 +9,11 @@ import {
   getStoredToken,
   loadContent,
   saveContent,
+  shrinkImage,
   storeToken,
+  uploadImage,
 } from '../editor/github'
+import { previewSrc, registerPreview } from '../components/imagePreview'
 import { BLOCK_NAMES, HIDDEN_FIELDS, fieldName } from '../editor/labels'
 import './EditorPage.css'
 
@@ -230,8 +233,59 @@ function TextField({ label, value, onChange, onRemove }) {
   )
 }
 
+/** Zet een foto op GitHub en geeft het pad terug; wordt gevuld door de Workspace. */
+const UploadContext = createContext(null)
+
+/** Vak om bij een kaartje een foto te kiezen, te vervangen of weg te halen. */
+function PhotoField({ item, path, onChange }) {
+  const upload = useContext(UploadContext)
+  const inputRef = useRef(null)
+  const [busy, setBusy] = useState(false)
+  const [error, setError] = useState('')
+
+  async function handleFile(event) {
+    const file = event.target.files?.[0]
+    event.target.value = ''
+    if (!file || !upload) return
+    setBusy(true)
+    setError('')
+    try {
+      const dataUrl = await shrinkImage(file)
+      const src = await upload(dataUrl, `erf-${item.title || 'plek'}`)
+      registerPreview(src, dataUrl)
+      onChange([...path, 'src'], src)
+    } catch (err) {
+      setError(err.message)
+    } finally {
+      setBusy(false)
+    }
+  }
+
+  return (
+    <div className="editor-field editor-photo">
+      <span className="editor-field__label">Foto</span>
+      {item.src ? <img src={previewSrc(item.src)} alt="" className="editor-block__thumb" /> : null}
+      <div className="editor-photo__actions">
+        <button
+          type="button"
+          className="editor-add__button"
+          disabled={busy}
+          onClick={() => inputRef.current?.click()}
+        >
+          {busy ? 'Foto wordt geüpload…' : item.src ? '📷 Andere foto kiezen' : '📷 Foto kiezen'}
+        </button>
+        {item.src && !busy ? (
+          <RemoveButton label="Foto weghalen" onClick={() => onChange([...path, 'src'], undefined)} />
+        ) : null}
+      </div>
+      <input ref={inputRef} type="file" accept="image/*" hidden onChange={handleFile} />
+      {error ? <p className="editor-message editor-message--error">{error}</p> : null}
+    </div>
+  )
+}
+
 /** Toont alle tekstvelden in een stuk content, ook in lijsten en kaartjes. */
-function Fields({ value, path, label, onChange, onRemove, onAdd, removeSelf, blockType }) {
+function Fields({ value, path, label, onChange, onRemove, onAdd, removeSelf, blockType, withPhoto }) {
   if (typeof value === 'string') {
     return (
       <TextField
@@ -259,6 +313,7 @@ function Fields({ value, path, label, onChange, onRemove, onAdd, removeSelf, blo
             onRemove={onRemove}
             onAdd={onAdd}
             removeSelf={removable ? () => onRemove([...path, index]) : null}
+            withPhoto={withPhoto}
           />
         ))}
         {addable ? (
@@ -280,8 +335,10 @@ function Fields({ value, path, label, onChange, onRemove, onAdd, removeSelf, blo
         onRemove={onRemove}
         onAdd={onAdd}
         blockType={value.type}
+        withPhoto={key === 'items' && value.type === 'cards' && value.variant === 'places'}
       />
     ))
+    if (withPhoto) fields.unshift(<PhotoField key="__photo" item={value} path={path} onChange={onChange} />)
     if (!label) return fields
     return (
       <fieldset className="editor-group">
@@ -526,6 +583,10 @@ function Workspace({ token, branch, onLogout }) {
     return () => window.removeEventListener('beforeunload', warn)
   }, [dirty])
 
+  function uploadPhoto(dataUrl, nameHint) {
+    return uploadImage(token, branch, dataUrl, nameHint)
+  }
+
   function handleChange(path, value) {
     setContent((current) => setAtPath(current, path, value))
     setMessage(null)
@@ -656,14 +717,16 @@ function Workspace({ token, branch, onLogout }) {
     title = `Les: ${lesson.title}`
     body = (
       <>
-        <LessonEditor
-          lesson={lesson}
-          path={path}
-          onChange={handleChange}
-          onRemove={handleRemove}
-          onAdd={handleAdd}
-          onInsert={handleInsert}
-        />
+        <UploadContext.Provider value={uploadPhoto}>
+          <LessonEditor
+            lesson={lesson}
+            path={path}
+            onChange={handleChange}
+            onRemove={handleRemove}
+            onAdd={handleAdd}
+            onInsert={handleInsert}
+          />
+        </UploadContext.Provider>
         <div className="editor-danger">
           <RemoveButton
             label="Hele les verwijderen"
