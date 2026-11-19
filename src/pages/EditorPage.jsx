@@ -254,7 +254,7 @@ function Fields({ value, path, label, onChange, onRemove, onAdd, removeSelf, blo
             key={index}
             value={item}
             path={[...path, index]}
-            label={`${label} ${index + 1}`}
+            label={item && typeof item === 'object' && item.naam ? item.naam : `${label} ${index + 1}`}
             onChange={onChange}
             onRemove={onRemove}
             onAdd={onAdd}
