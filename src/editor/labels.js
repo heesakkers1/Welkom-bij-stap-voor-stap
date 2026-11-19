@@ -14,6 +14,7 @@ export const BLOCK_NAMES = {
   videoPlaceholder: 'Plek voor video',
   cards: 'Kaartjes',
   animalCards: 'Dierenkaarten',
+  colleagueCards: 'Kennismakingskaarten collega’s',
   timeline: 'Tijdlijn',
   expandableAnswer: 'Vraag met uitklapbaar antwoord',
   signoff: 'Ondertekening',
@@ -63,6 +64,10 @@ export const FIELD_NAMES = {
   ditNiet: 'Dit niet',
   metDeelnemers: 'Met deelnemers',
   waarschuwen: 'Wie waarschuw je?',
+  functie: 'Functie',
+  werkzaamSinds: 'Werkzaam sinds',
+  tekst: 'Tekst (witregel = nieuwe alinea)',
+  afsluiting: 'Afsluitende zin',
 }
 
 /** Velden die geen tekst zijn en dus niet in de bewerkpagina staan. */
