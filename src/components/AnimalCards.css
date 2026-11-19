@@ -160,3 +160,21 @@
     border-right: 0;
   }
 }
+
+.animal-cards__names,
+.animal-cards__card {
+  scroll-margin-top: 6rem;
+}
+
+.animal-card .colleague-card__nav {
+  margin-top: 1rem;
+}
+
+.dierenkaart__terug {
+  display: inline-block;
+  margin-bottom: 0.4rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--accent-strong);
+  text-decoration: none;
+}
