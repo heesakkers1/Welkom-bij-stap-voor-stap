@@ -974,6 +974,14 @@
               "text": "Het Digibord is ons digitale overzicht van de dag. Bij de dagstart staat het op het scherm en lopen we het samen door."
             },
             {
+              "type": "highlight",
+              "text": "Wat je op het Digibord zet, kunnen anderen meelezen. Zie je ergens een foutje of info dat niet meer van toepassing is? --> Pas het aan en wacht niet tot een ander het doet. "
+            },
+            {
+              "type": "highlight",
+              "text": "Loopt er iets niet lekker of handig in het Digibord, geef dit door aan Anne H!"
+            },
+            {
               "type": "paragraph",
               "text": "De dagstart heeft zes vaste stappen. Begin bij stap 1 en klik onderaan steeds op *Volgende stap*."
             },
@@ -1071,14 +1079,6 @@
                   "alt": "De deelnemerskaart op het Digibord"
                 }
               ]
-            },
-            {
-              "type": "highlight",
-              "text": "Wat je op het Digibord zet, kunnen anderen meelezen. Zie je ergens een foutje of info dat niet meer van toepassing is? --> Pas het aan en wacht niet tot een ander het doet. "
-            },
-            {
-              "type": "highlight",
-              "text": "Loopt er iets niet lekker of handig in het Digibord, geef dit door aan Anne H!"
             },
             {
               "type": "assignment",
