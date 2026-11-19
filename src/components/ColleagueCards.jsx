@@ -9,6 +9,7 @@ import './ColleagueCards.css'
 function ColleagueCards({ items = [] }) {
   const [open, setOpen] = useState(null)
   const cardRef = useRef(null)
+  const gridRef = useRef(null)
   const item = open === null ? null : items[open]
 
   useEffect(() => {
@@ -17,6 +18,11 @@ function ColleagueCards({ items = [] }) {
     }
   }, [open])
 
+  const backToOverview = () => {
+    setOpen(null)
+    gridRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
+
   const paragraphs = (item?.tekst ?? '')
     .split(/\n\s*\n/)
     .map((part) => part.trim())
@@ -24,7 +30,7 @@ function ColleagueCards({ items = [] }) {
 
   return (
     <section className="lesson-block colleague-cards">
-      <div className="colleague-cards__grid" role="group" aria-label="Kies een collega">
+      <div className="colleague-cards__grid" ref={gridRef} role="group" aria-label="Kies een collega">
         {items.map((entry, index) => (
           <button
             key={index}
@@ -68,9 +74,31 @@ function ColleagueCards({ items = [] }) {
               <aside className="colleague-card__closing"><RichText text={item.afsluiting} /></aside>
             ) : null}
           </div>
-          <button type="button" className="colleague-card__close" onClick={() => setOpen(null)}>
-            Sluiten
-          </button>
+          <nav className="colleague-card__nav" aria-label="Andere collega's">
+            <button
+              type="button"
+              className="colleague-card__navbtn"
+              disabled={open === 0}
+              onClick={() => setOpen(open - 1)}
+            >
+              ← Vorige
+            </button>
+            <button
+              type="button"
+              className="colleague-card__navbtn"
+              disabled={open === items.length - 1}
+              onClick={() => setOpen(open + 1)}
+            >
+              Volgende →
+            </button>
+            <button
+              type="button"
+              className="colleague-card__navbtn colleague-card__navbtn--all"
+              onClick={backToOverview}
+            >
+              ↑ Terug naar alle collega's
+            </button>
+          </nav>
         </article>
       ) : (
         <p className="colleague-cards__hint">Tik op een collega om kennis te maken.</p>
