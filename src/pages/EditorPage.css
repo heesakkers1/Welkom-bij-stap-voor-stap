@@ -90,11 +90,49 @@
 
 .editor-block__head .editor-block__type {
   margin: 0;
+  margin-right: auto;
+}
+
+.editor-field__actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.editor-move {
+  display: inline-flex;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.editor-move__button {
+  min-width: 34px;
+  height: 30px;
+  border: 1px solid var(--accent-soft);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--accent-strong);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.editor-move__button:hover:not(:disabled) {
+  background: var(--icon-bg);
+}
+
+.editor-move__button:disabled {
+  opacity: 0.3;
+  cursor: default;
 }
 
 .editor-group__remove {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+  gap: 4px;
   margin-bottom: 4px;
 }
 

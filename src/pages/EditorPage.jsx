@@ -105,6 +105,46 @@ const NEW_BLOCKS = [
   },
 ]
 
+/** Verschuift een punt in een lijst één plek omhoog (-1) of omlaag (+1). */
+function moveAtPath(source, path, direction) {
+  const copy = structuredClone(source)
+  const list = getAtPath(copy, path.slice(0, -1))
+  const from = path[path.length - 1]
+  const to = from + direction
+  if (to < 0 || to >= list.length) return source
+  ;[list[from], list[to]] = [list[to], list[from]]
+  return copy
+}
+
+/** Pijltjes om iets een plek omhoog of omlaag te schuiven. */
+function MoveButtons({ index, count, onMove, what = 'dit' }) {
+  if (!onMove || count < 2) return null
+  return (
+    <span className="editor-move">
+      <button
+        type="button"
+        className="editor-move__button"
+        onClick={() => onMove(-1)}
+        disabled={index === 0}
+        title={`Schuif ${what} omhoog`}
+        aria-label={`Schuif ${what} omhoog`}
+      >
+        ↑
+      </button>
+      <button
+        type="button"
+        className="editor-move__button"
+        onClick={() => onMove(1)}
+        disabled={index === count - 1}
+        title={`Schuif ${what} omlaag`}
+        aria-label={`Schuif ${what} omlaag`}
+      >
+        ↓
+      </button>
+    </span>
+  )
+}
+
 function insertAtPath(source, listPath, index, item) {
   const copy = structuredClone(source)
   getAtPath(copy, listPath).splice(index, 0, item)
@@ -212,7 +252,7 @@ function getAtPath(source, path) {
   return path.reduce((value, key) => value?.[key], source)
 }
 
-function TextField({ label, value, onChange, onRemove }) {
+function TextField({ label, value, onChange, onRemove, move }) {
   const id = useId()
   const rows = Math.max(1, Math.ceil(value.length / 70))
   return (
@@ -221,7 +261,10 @@ function TextField({ label, value, onChange, onRemove }) {
         <label className="editor-field__label" htmlFor={id}>
           {label}
         </label>
-        {onRemove ? <RemoveButton onClick={onRemove} /> : null}
+        <span className="editor-field__actions">
+          {move ? <MoveButtons {...move} what="dit punt" /> : null}
+          {onRemove ? <RemoveButton onClick={onRemove} /> : null}
+        </span>
       </div>
       <textarea
         id={id}
@@ -285,7 +328,7 @@ function PhotoField({ item, path, onChange }) {
 }
 
 /** Toont alle tekstvelden in een stuk content, ook in lijsten en kaartjes. */
-function Fields({ value, path, label, onChange, onRemove, onAdd, removeSelf, blockType, withPhoto }) {
+function Fields({ value, path, label, onChange, onRemove, onAdd, onMove, removeSelf, move, blockType, withPhoto }) {
   if (typeof value === 'string') {
     return (
       <TextField
@@ -293,6 +336,7 @@ function Fields({ value, path, label, onChange, onRemove, onAdd, removeSelf, blo
         value={value}
         onChange={(next) => onChange(path, next)}
         onRemove={removeSelf}
+        move={move}
       />
     )
   }
@@ -312,7 +356,13 @@ function Fields({ value, path, label, onChange, onRemove, onAdd, removeSelf, blo
             onChange={onChange}
             onRemove={onRemove}
             onAdd={onAdd}
+            onMove={onMove}
             removeSelf={removable ? () => onRemove([...path, index]) : null}
+            move={
+              onMove && !locked
+                ? { index, count: value.length, onMove: (direction) => onMove([...path, index], direction) }
+                : null
+            }
             withPhoto={withPhoto}
           />
         ))}
@@ -334,6 +384,7 @@ function Fields({ value, path, label, onChange, onRemove, onAdd, removeSelf, blo
         onChange={onChange}
         onRemove={onRemove}
         onAdd={onAdd}
+        onMove={onMove}
         blockType={value.type}
         withPhoto={key === 'items' && ((value.type === 'cards' && value.variant === 'places') || value.type === 'timeline')}
       />
@@ -343,9 +394,10 @@ function Fields({ value, path, label, onChange, onRemove, onAdd, removeSelf, blo
     return (
       <fieldset className="editor-group">
         <legend>{label}</legend>
-        {removeSelf ? (
+        {removeSelf || move ? (
           <div className="editor-group__remove">
-            <RemoveButton onClick={removeSelf} />
+            {move ? <MoveButtons {...move} what="dit kaartje" /> : null}
+            {removeSelf ? <RemoveButton onClick={removeSelf} /> : null}
           </div>
         ) : null}
         {fields}
@@ -476,7 +528,7 @@ function Navigation({ content, selection, onSelect }) {
   )
 }
 
-function LessonEditor({ lesson, path, onChange, onRemove, onAdd, onInsert }) {
+function LessonEditor({ lesson, path, onChange, onRemove, onAdd, onInsert, onMove }) {
   const contentRef = useRef(null)
   const contentPath = [...path, 'content']
 
@@ -491,6 +543,16 @@ function LessonEditor({ lesson, path, onChange, onRemove, onAdd, onInsert }) {
     const textarea = textareas.find((field) => field.value === '') ?? textareas[0]
     textarea?.focus()
     textarea?.scrollIntoView({ block: 'center' })
+  }
+
+  function moveBlock(index, direction) {
+    const target = index + direction
+    if (target < 0 || target >= lesson.content.length) return
+    // Na het schuiven het tekstvak in beeld houden, zodat je het kunt blijven volgen.
+    flushSync(() => onMove([...contentPath, index], direction))
+    contentRef.current
+      ?.querySelector(`[data-block-index="${target}"]`)
+      ?.scrollIntoView({ block: 'nearest', behavior: 'smooth' })
   }
 
   return (
@@ -510,6 +572,12 @@ function LessonEditor({ lesson, path, onChange, onRemove, onAdd, onInsert }) {
               <section className="editor-block" data-block-index={index}>
                 <div className="editor-block__head">
                   <p className="editor-block__type">{blockName}</p>
+                  <MoveButtons
+                    index={index}
+                    count={lesson.content.length}
+                    onMove={(direction) => moveBlock(index, direction)}
+                    what="dit tekstvak"
+                  />
                   <RemoveButton
                     label="Tekstvak verwijderen"
                     onClick={() => {
@@ -528,6 +596,7 @@ function LessonEditor({ lesson, path, onChange, onRemove, onAdd, onInsert }) {
                   onChange={onChange}
                   onRemove={onRemove}
                   onAdd={onAdd}
+                  onMove={onMove}
                 />
               </section>
             </Fragment>
@@ -599,6 +668,11 @@ function Workspace({ token, branch, onLogout }) {
 
   function handleAdd(path, item) {
     setContent((current) => setAtPath(current, path, [...getAtPath(current, path), item]))
+    setMessage(null)
+  }
+
+  function handleMove(path, direction) {
+    setContent((current) => moveAtPath(current, path, direction))
     setMessage(null)
   }
 
@@ -725,6 +799,7 @@ function Workspace({ token, branch, onLogout }) {
             onRemove={handleRemove}
             onAdd={handleAdd}
             onInsert={handleInsert}
+            onMove={handleMove}
           />
         </UploadContext.Provider>
         <div className="editor-danger">
