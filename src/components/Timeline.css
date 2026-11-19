@@ -71,3 +71,11 @@
   padding-top: 0.8rem;
   border-top: 1px dashed var(--tile-border);
 }
+
+.timeline__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 0.7rem;
+  border-radius: 0.6rem;
+}

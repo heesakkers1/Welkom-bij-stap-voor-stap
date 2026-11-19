@@ -956,12 +956,12 @@
     {
       "id": "digibord",
       "title": "Hoe werken we met het Digibord?",
-      "description": "De vaste stappen van de dagstart en hoe je klusjes bijhoudt.",
+      "description": "De vaste stappen van de dagstart en hoe je taken inplant.",
       "icon": "board",
       "duration": "5 minuten",
       "completionMessage": {
         "title": "📋 Digibord-proof!",
-        "text": "Je kent de stappen van de dagstart en weet hoe je klusjes bijhoudt."
+        "text": "Je kent de stappen van de dagstart en weet hoe je taken inplant."
       },
       "lessons": [
         {
@@ -1014,7 +1014,28 @@
                   "title": "Stap 4: Dagprogramma",
                   "text": "De dag in tijdsblokken, met de groepjes en klusjes.",
                   "src": "/fotos/digibord/stap4-dagprogramma.webp",
-                  "alt": "Het Dagprogramma met tijdsblokken en groepjes"
+                  "alt": "Het Dagprogramma met tijdsblokken en groepjes",
+                  "extra": [
+                    {
+                      "text": "Rechts staat *Taken inplannen*. Dat zijn taken die je in de loop van de dag kunt inplannen, dus niet de vaste klusjes die de dierengroepjes ’s ochtends doen. De taken staan in categorieën, zoals 2 DO'S of Dieren.",
+                      "src": "/fotos/digibord/taken-inplannen.webp",
+                      "alt": "De lijst Taken inplannen met categorieën"
+                    },
+                    {
+                      "text": "Achter elke taak staan drie knopjes. De vlag (1): de taak moet vandaag gebeuren en komt bovenaan bij *Vandaag doen*. Het mapje (2): zet de taak in een andere categorie. De pijltjes (3): zwart betekent dat de taak elke dag terugkomt, grijs dat hij maar één keer is. Tik erop om dat te wisselen.",
+                      "src": "/fotos/digibord/taken-iconen.webp",
+                      "alt": "Een taak met de knopjes vlag, mapje en pijltjes",
+                      "zoom": false
+                    },
+                    {
+                      "text": "Een taak inplannen: ga met je vinger of muis over de taak en tik op het pijltje ➜. Tik daarna op *Zet hier* bij een groepje, of op *Hier plaatsen* bij een tijdsblok. Staat hij verkeerd? Tik op het kruisje bij de taak in het vak.",
+                      "src": "/fotos/digibord/taak-plaatsen.webp",
+                      "alt": "Het dagprogramma met knoppen Zet hier en Hier plaatsen"
+                    },
+                    {
+                      "text": "Met *Taak toevoegen* maak je een nieuwe taak, met *Categorie toevoegen* een nieuwe categorie."
+                    }
+                  ]
                 },
                 {
                   "title": "Stap 5: Klusjes per dierengroep",
@@ -1056,6 +1077,12 @@
               "text": "Wat je op het Digibord zet, kunnen anderen meelezen. Zie je ergens een foutje of info dat niet meer van toepassing is? --> Pas het aan en wacht niet tot een ander het doet. "
             },
             {
+              "type": "assignment",
+              "label": "Praktijkopdracht",
+              "text": "Plan in het dagprogramma een taak in bij het tijdsblok of groepje waarin je hem gaat doen.",
+              "reflective": true
+            },
+            {
               "type": "quiz",
               "question": "Waar begin je bij de dagstart op het Digibord?",
               "options": [
@@ -1065,48 +1092,6 @@
               ],
               "correct": 1,
               "explanation": "De dagstart heeft een vaste volgorde. Je begint bij stap 1 en klikt steeds op Volgende stap."
-            }
-          ]
-        },
-        {
-          "id": "klussen-op-het-digibord",
-          "title": "Klusjes op het Dagprogramma ",
-          "summary": "Afvinken en naar een tijdsblok slepen.",
-          "content": [
-            {
-              "type": "paragraph",
-              "text": "Op het dagprogramma staan rechts onder *Taken inplannen* alle klusjes van vandaag. Er zijn twee soorten:"
-            },
-            {
-              "type": "cards",
-              "items": [
-                {
-                  "title": "Dagelijkse klusjes",
-                  "text": "Komen elke dag terug. Gedaan? Zet een vinkje. Verwijder ze niet!"
-                },
-                {
-                  "title": "Extra klusjes",
-                  "text": "Eenmalige klusjes, onder Extra klusjes vandaag. Gedaan? Zet een vinkje. De volgende dag zijn ze vanzelf van het bord."
-                }
-              ]
-            },
-            {
-              "type": "tip",
-              "label": "💡 Sleep de klusjes die die dag moeten gebeuren naar een tijdsblok",
-              "text": "Sleep een klus in het dagprogramma naar het tijdsblok waarin je hem gaat doen. Dat geeft veel rust en overzicht, voor jou en voor je collega’s."
-            },
-            {
-              "type": "image",
-              "src": "/fotos/digibord/klusjes-naar-tijdsblok.webp",
-              "alt": "Het dagprogramma: rechts de klusjes, links de tijdsblokken met per groepje een vak Klusjes",
-              "caption": "Rechts staan de klusjes. Sleep er een naar het vak Klusjes in het tijdsblok.",
-              "zoom": true
-            },
-            {
-              "type": "assignment",
-              "label": "Praktijkopdracht",
-              "text": "Sleep in het dagprogramma een taak naar het tijdsblok waarin je hem gaat doen.",
-              "reflective": true
             }
           ]
         }
