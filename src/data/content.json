@@ -1224,7 +1224,7 @@
                 },
                 {
                   "title": "🙋 Vaste taken",
-                  "text": "Deelnemers hebben vaak hun eigen vaste taken."
+                  "text": "Deelnemers hebben vaak hun eigen vaste taken.\n\n🔄 Onderling schuiven met klussen is geen probleem. De lijst is de basis waar we vanuit werken."
                 },
                 {
                   "title": "🤒 Is er iemand ziek?",
@@ -1233,12 +1233,8 @@
               ]
             },
             {
-              "type": "highlight",
-              "text": "🔄 Onderling schuiven met klussen is geen probleem. De lijst is de basis waar we vanuit werken."
-            },
-            {
               "type": "paragraph",
-              "text": "Voer zelf wijzigingen in de klusjeskaarten door, indien nodig. Is de wijziging structureel? Klik 'deze week en toekomstige weken' aan. "
+              "text": "Voer zelf wijzigingen in de klusjeskaarten door, indien nodig. \nIs de wijziging een structurele aanpassing? Klik dan 'deze week en toekomstige weken' aan. "
             },
             {
               "type": "assignment",
