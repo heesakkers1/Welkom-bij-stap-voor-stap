@@ -808,10 +808,9 @@
             },
             {
               "type": "image",
-              "src": "/fotos/gebarenplaat-pony.jpg",
-              "alt": "Een gebarenplaat met het gebaar voor pony aan het hek van de pony’s",
-              "size": "portrait",
-              "caption": "Een gebarenplaat aan het hek bij de pony’s."
+              "src": "/fotos/erf-konijnen.jpg",
+              "alt": "Konijnen bij hun voerbak in het konijnenhok",
+              "size": "portrait"
             },
             {
               "type": "cards",
