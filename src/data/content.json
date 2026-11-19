@@ -982,27 +982,39 @@
               "items": [
                 {
                   "title": "Stap 1: Afmelden",
-                  "text": "Wie is er vandaag niet? Hier worden deelnemers en collega’s afgemeld."
+                  "text": "Wie is er vandaag niet? Hier worden deelnemers en collega’s afgemeld.",
+                  "src": "/fotos/digibord/stap1-afmelden.webp",
+                  "alt": "Het scherm Afmelden op het Digibord"
                 },
                 {
                   "title": "Stap 2: Aanwezigheid",
-                  "text": "Wie er vandaag is en hoe de groepjes zijn ingedeeld."
+                  "text": "Wie er vandaag is en hoe de groepjes zijn ingedeeld.",
+                  "src": "/fotos/digibord/stap2-aanwezigheid.webp",
+                  "alt": "Het scherm Aanwezigheid met de groepjes"
                 },
                 {
                   "title": "Stap 3: Bijzonderheden",
-                  "text": "Meldingen en reminders per onderwerp, zoals Dieren en Koffiekraam."
+                  "text": "Meldingen en reminders per onderwerp, zoals Dieren en Koffiekraam.",
+                  "src": "/fotos/digibord/stap3-bijzonderheden.webp",
+                  "alt": "Het scherm Bijzonderheden met de onderwerpen"
                 },
                 {
                   "title": "Stap 4: Dagprogramma",
-                  "text": "De dag in tijdsblokken, met de groepjes en klusjes."
+                  "text": "De dag in tijdsblokken, met de groepjes en klusjes.",
+                  "src": "/fotos/digibord/stap4-dagprogramma.webp",
+                  "alt": "Het Dagprogramma met tijdsblokken en groepjes"
                 },
                 {
                   "title": "Stap 5: Klusjes per dierengroep",
-                  "text": "De klusjes voor paarden, ezels, kleinvee en vogels, en de dagelijkse klusjes."
+                  "text": "De klusjes voor paarden, ezels, kleinvee en vogels, en de dagelijkse klusjes.",
+                  "src": "/fotos/digibord/stap5-klusjes.webp",
+                  "alt": "Het scherm Klusjes per dierengroep"
                 },
                 {
                   "title": "Stap 6: Overzicht vandaag",
-                  "text": "Alles van vandaag op een rij: wat belangrijk is, wie er niet is en het dagprogramma."
+                  "text": "Alles van vandaag op een rij: wat belangrijk is, wie er niet is en het dagprogramma.",
+                  "src": "/fotos/digibord/stap6-overzicht-vandaag.webp",
+                  "alt": "Het scherm Overzicht vandaag"
                 }
               ]
             },
@@ -1015,11 +1027,15 @@
               "items": [
                 {
                   "title": "🧑‍🏫 Begeleidingskaart",
-                  "text": "Jouw dag op één kaart: je rooster, groepje, klusjes, individuele begeleidingen en persoonlijke reminders."
+                  "text": "Jouw dag op één kaart: je rooster, groepje, klusjes, individuele begeleidingen en persoonlijke reminders.",
+                  "src": "/fotos/digibord/begeleidingskaart.webp",
+                  "alt": "De begeleidingskaart op het Digibord"
                 },
                 {
                   "title": "🪪 Deelnemerskaart",
-                  "text": "De dag van één deelnemer. Deelnemers kiezen hier ook een smiley bij “Hoe voel je je vandaag?” en kunnen iets doorgeven aan de begeleiding."
+                  "text": "De dag van één deelnemer. Deelnemers kiezen hier ook een smiley bij “Hoe voel je je vandaag?” en kunnen iets doorgeven aan de begeleiding.",
+                  "src": "/fotos/digibord/deelnemerskaart.webp",
+                  "alt": "De deelnemerskaart op het Digibord"
                 }
               ]
             },
@@ -1047,7 +1063,7 @@
           "content": [
             {
               "type": "paragraph",
-              "text": "Op het dagprogramma staan aan de rechterkant twee soorten klusjes:"
+              "text": "Op het dagprogramma staan rechts onder *Taken inplannen* alle klusjes van vandaag. Er zijn twee soorten:"
             },
             {
               "type": "cards",
@@ -1066,6 +1082,13 @@
               "type": "tip",
               "label": "💡 Sleep de klusjes die die dag moeten gebeuren naar een tijdsblok",
               "text": "Sleep een klus in het dagprogramma naar het tijdsblok waarin je hem gaat doen. Dat geeft veel rust en overzicht, voor jou en voor je collega’s."
+            },
+            {
+              "type": "image",
+              "src": "/fotos/digibord/klusjes-naar-tijdsblok.webp",
+              "alt": "Het dagprogramma: rechts de klusjes, links de tijdsblokken met per groepje een vak Klusjes",
+              "caption": "Rechts staan de klusjes. Sleep er een naar het vak Klusjes in het tijdsblok.",
+              "zoom": true
             },
             {
               "type": "assignment",

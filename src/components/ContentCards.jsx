@@ -1,5 +1,6 @@
 import RichText from './RichText'
 import { previewSrc } from './imagePreview'
+import ZoomImage from './ZoomImage'
 import './ContentCards.css'
 
 function ContentCards({ items = [], variant = 'default' }) {
@@ -23,6 +24,7 @@ function ContentCards({ items = [], variant = 'default' }) {
           ) : null}
           <p className="content-card__title"><RichText text={item.title} /></p>
           {item.text ? <p className="content-card__text"><RichText text={item.text} /></p> : null}
+          {!withPhoto && item.src ? <ZoomImage src={item.src} alt={item.alt || item.title} /> : null}
         </li>
       ))}
     </ul>

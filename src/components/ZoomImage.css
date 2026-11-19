@@ -1,0 +1,97 @@
+.zoom-image {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 0.7rem 0 0;
+  padding: 0;
+  border: 1px solid var(--tile-border);
+  border-radius: 0.85rem;
+  overflow: hidden;
+  background: #f0efe9;
+  cursor: zoom-in;
+}
+
+.zoom-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.zoom-image__hint {
+  position: absolute;
+  right: 0.4rem;
+  bottom: 0.4rem;
+  padding: 0.15rem 0.45rem;
+  border-radius: 999px;
+  background: rgba(31, 51, 36, 0.78);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.zoom-image__overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  background: rgba(20, 28, 22, 0.92);
+}
+
+.zoom-image__close {
+  align-self: flex-end;
+  margin: 0.75rem;
+  padding: 0.5rem 0.9rem;
+  border: 0;
+  border-radius: 999px;
+  background: #fff;
+  color: #1f3324;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.zoom-image__scroll {
+  flex: 1;
+  overflow: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 0.75rem 1.5rem;
+}
+
+/* Op de telefoon breder dan het scherm, zodat je kunt schuiven en de tekst kunt lezen. */
+.zoom-image__scroll img {
+  display: block;
+  width: auto;
+  max-width: none;
+  height: auto;
+  min-width: 100%;
+  max-height: none;
+  border-radius: 0.5rem;
+}
+
+@media (max-width: 767px) {
+  .zoom-image__scroll {
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .zoom-image__scroll img {
+    flex-shrink: 0;
+    width: 200%;
+  }
+}
+
+@media (min-width: 768px) {
+  .zoom-image__scroll {
+    align-items: center;
+  }
+
+  .zoom-image__scroll img {
+    min-width: 0;
+    max-width: 100%;
+    max-height: calc(100vh - 5rem);
+    width: auto;
+  }
+}

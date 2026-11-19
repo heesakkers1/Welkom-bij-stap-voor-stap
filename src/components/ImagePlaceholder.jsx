@@ -1,3 +1,4 @@
+import ZoomImage from './ZoomImage'
 import './ImagePlaceholder.css'
 
 /**
@@ -9,7 +10,17 @@ function ImagePlaceholder({
   alt = '',
   caption,
   size = 'wide',
+  zoom = false,
 }) {
+  if (src && zoom) {
+    return (
+      <figure className={`media-image media-image--${size} media-image--zoom`}>
+        <ZoomImage src={src} alt={alt} />
+        {caption ? <figcaption>{caption}</figcaption> : null}
+      </figure>
+    )
+  }
+
   if (src) {
     return (
       <figure className={`media-image media-image--${size}`}>
