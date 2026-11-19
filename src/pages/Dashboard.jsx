@@ -190,6 +190,9 @@ function Dashboard() {
                         <span className="stepplan__marker" aria-hidden="true">
                           {isDone ? '✓' : step.number}
                         </span>
+                        <span className="stepplan__icon" aria-hidden="true">
+                          <ModuleIcon name={step.module.icon} />
+                        </span>
                         <span className="stepplan__body">
                           <span className="stepplan__title">{step.module.title}</span>
                           <span className="stepplan__meta">

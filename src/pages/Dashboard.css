@@ -461,3 +461,24 @@
     padding: 2rem 1.75rem 1.5rem;
   }
 }
+
+.stepplan__icon {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 0.8rem;
+  background: var(--icon-bg);
+  color: var(--accent-strong);
+}
+
+.stepplan__icon .module-icon {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+.stepplan__step--done .stepplan__icon {
+  opacity: 0.7;
+}
