@@ -956,12 +956,12 @@
     {
       "id": "digibord",
       "title": "Hoe werken we met het Digibord?",
-      "description": "De vaste stappen van de dagstart en hoe je klusjes bijhoudt.",
+      "description": "De vaste stappen van de dagstart en hoe je taken inplant.",
       "icon": "board",
       "duration": "5 minuten",
       "completionMessage": {
         "title": "📋 Digibord-proof!",
-        "text": "Je kent de stappen van de dagstart en weet hoe je klusjes bijhoudt."
+        "text": "Je kent de stappen van de dagstart en weet hoe je taken inplant."
       },
       "lessons": [
         {
@@ -1077,6 +1077,12 @@
               "text": "Wat je op het Digibord zet, kunnen anderen meelezen. Zie je ergens een foutje of info dat niet meer van toepassing is? --> Pas het aan en wacht niet tot een ander het doet. "
             },
             {
+              "type": "assignment",
+              "label": "Praktijkopdracht",
+              "text": "Plan in het dagprogramma een taak in bij het tijdsblok of groepje waarin je hem gaat doen.",
+              "reflective": true
+            },
+            {
               "type": "quiz",
               "question": "Waar begin je bij de dagstart op het Digibord?",
               "options": [
@@ -1086,24 +1092,6 @@
               ],
               "correct": 1,
               "explanation": "De dagstart heeft een vaste volgorde. Je begint bij stap 1 en klikt steeds op Volgende stap."
-            }
-          ]
-        },
-        {
-          "id": "klussen-op-het-digibord",
-          "title": "Klusjes op het Dagprogramma ",
-          "summary": "Taken inplannen in een tijdsblok.",
-          "content": [
-            {
-              "type": "tip",
-              "label": "💡 Plan de taken van vandaag in een tijdsblok",
-              "text": "Zet een taak in het tijdsblok of groepje waarin je hem gaat doen. Dat geeft veel rust en overzicht, voor jou en voor je collega’s. Hoe dat werkt, lees je bij stap 4 op de vorige pagina."
-            },
-            {
-              "type": "assignment",
-              "label": "Praktijkopdracht",
-              "text": "Plan in het dagprogramma een taak in bij het tijdsblok of groepje waarin je hem gaat doen.",
-              "reflective": true
             }
           ]
         }
