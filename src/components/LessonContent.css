@@ -148,6 +148,53 @@
   color: var(--accent-strong);
 }
 
+.lesson-block--highlight .lesson-block__label--highlight {
+  margin-bottom: 0.25rem;
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+.lesson-block--highlight .lesson-block__label--highlight + p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text);
+}
+
+.lesson-block__steps {
+  list-style: none;
+  counter-reset: stap;
+  margin: 0.85rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.lesson-block__steps li {
+  counter-increment: stap;
+  position: relative;
+  padding-left: 2.3rem;
+  min-height: 1.7rem;
+  font-size: 1.02rem;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+.lesson-block__steps li::before {
+  content: counter(stap);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1.7rem;
+  height: 1.7rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+
 .lesson-block--banner {
   margin: 0;
   padding: 0.9rem 1.15rem;

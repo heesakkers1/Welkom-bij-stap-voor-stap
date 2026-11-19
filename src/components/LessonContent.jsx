@@ -62,7 +62,15 @@ function LessonContentBlock({ block }) {
     case 'highlight':
       return (
         <aside className="lesson-block lesson-block--highlight">
-          <p><RichText text={block.text} /></p>
+          {block.label ? <p className="lesson-block__label lesson-block__label--highlight"><RichText text={block.label} /></p> : null}
+          {block.text ? <p><RichText text={block.text} /></p> : null}
+          {block.items?.length ? (
+            <ol className="lesson-block__steps">
+              {block.items.map((item, index) => (
+                <li key={index}><RichText text={item} /></li>
+              ))}
+            </ol>
+          ) : null}
         </aside>
       )
 

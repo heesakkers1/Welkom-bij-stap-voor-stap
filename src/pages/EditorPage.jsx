@@ -590,14 +590,21 @@ function LessonEditor({ lesson, path, onChange, onRemove, onAdd, onInsert, onMov
                 {block.type === 'image' && block.src ? (
                   <img src={block.src} alt="" className="editor-block__thumb" />
                 ) : null}
-                <Fields
-                  value={block}
-                  path={blockPath}
-                  onChange={onChange}
-                  onRemove={onRemove}
-                  onAdd={onAdd}
-                  onMove={onMove}
-                />
+                {block.type === 'animalCards' ? (
+                  <p className="editor-block__note">
+                    De paardenkaarten komen automatisch uit het Digibord. Pas ze daar aan
+                    (Paardenkaarten); na ongeveer een minuut staat het ook hier.
+                  </p>
+                ) : (
+                  <Fields
+                    value={block}
+                    path={blockPath}
+                    onChange={onChange}
+                    onRemove={onRemove}
+                    onAdd={onAdd}
+                    onMove={onMove}
+                  />
+                )}
               </section>
             </Fragment>
           )
