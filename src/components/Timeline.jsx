@@ -18,6 +18,14 @@ function Timeline({ items = [] }) {
               {typeof item === 'object' && item.src ? (
                 <ZoomImage src={item.src} alt={item.alt || label} />
               ) : null}
+              {typeof item === 'object' && Array.isArray(item.extra)
+                ? item.extra.map((extra, extraIndex) => (
+                    <div key={extraIndex} className="timeline__extra">
+                      {extra.text ? <p className="timeline__text"><RichText text={extra.text} /></p> : null}
+                      {extra.src ? <ZoomImage src={extra.src} alt={extra.alt || ''} /> : null}
+                    </div>
+                  ))
+                : null}
             </div>
           </li>
         )

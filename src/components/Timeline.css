@@ -64,3 +64,10 @@
   color: var(--text-muted);
   white-space: pre-line;
 }
+
+/* Extra uitleg onder een stap, met een eigen plaatje. */
+.timeline__extra {
+  margin-top: 0.9rem;
+  padding-top: 0.8rem;
+  border-top: 1px dashed var(--tile-border);
+}

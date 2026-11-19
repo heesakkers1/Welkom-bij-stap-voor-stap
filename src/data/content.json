@@ -996,7 +996,19 @@
                   "title": "Stap 3: Bijzonderheden",
                   "text": "Meldingen en reminders per onderwerp, zoals Dieren en Koffiekraam.",
                   "src": "/fotos/digibord/stap3-bijzonderheden.webp",
-                  "alt": "Het scherm Bijzonderheden met de onderwerpen"
+                  "alt": "Het scherm Bijzonderheden met de onderwerpen",
+                  "extra": [
+                    {
+                      "text": "Alles in één lijst? Tik onderaan op *Alle bijzonderheden*. Je ziet dan alles van die dag bij elkaar, en je kunt erin zoeken.",
+                      "src": "/fotos/digibord/stap3-alle-bijzonderheden.webp",
+                      "alt": "Het scherm Alle bijzonderheden"
+                    },
+                    {
+                      "text": "Meer nadruk geven? Zet een vinkje bij *Belangrijk*. De bijzonderheid wordt dan rood, staat bovenaan en komt bij *Belangrijk vandaag* op het Overzicht vandaag.",
+                      "src": "/fotos/digibord/stap3-belangrijk.webp",
+                      "alt": "Een bijzonderheid met het vinkje Belangrijk aan"
+                    }
+                  ]
                 },
                 {
                   "title": "Stap 4: Dagprogramma",
