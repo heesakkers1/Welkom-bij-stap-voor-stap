@@ -115,7 +115,7 @@
       "id": "welkom",
       "title": "Welkom bij Stap voor Stap",
       "description": "Maak kennis met ons bedrijf!",
-      "icon": "sun",
+      "icon": "smile",
       "duration": "5 minuten",
       "completionMessage": {
         "title": "🌱 De eerste stap is gezet!",
@@ -445,7 +445,7 @@
       "id": "organisatie",
       "title": "Wie is wie?",
       "description": "Voor wie we er zijn, hoe we samenwerken en bij wie je terechtkunt.",
-      "icon": "compass",
+      "icon": "people",
       "duration": "10 minuten",
       "completionMessage": {
         "title": "🧭 Je weet de weg!",
@@ -1022,7 +1022,7 @@
       "id": "klusjes-dagprogramma",
       "title": "Klusjes en dagprogramma",
       "description": "De klussenlijst per dierengroepje en de klusjes om samen de boerderij netjes te houden.",
-      "icon": "tasks",
+      "icon": "clipboard",
       "duration": "5 minuten",
       "completionMessage": {
         "title": "🧹 Top!",
@@ -1097,7 +1097,7 @@
       "id": "paarden-dieren",
       "title": "Paarden en dieren",
       "description": "Omgaan met paarden en andere dieren op de boerderij.",
-      "icon": "horse",
+      "icon": "horseshoe",
       "duration": "5 minuten",
       "lessons": [
         {
@@ -1468,7 +1468,7 @@
       "id": "deelnemers-begeleiden",
       "title": "Deelnemers begeleiden",
       "description": "Het begeleidingsplan, de persoonlijk begeleider, rapporteren en je professionele houding.",
-      "icon": "people",
+      "icon": "handHeart",
       "duration": "10 minuten",
       "completionMessage": {
         "title": "🤝 Sterk bezig!",
@@ -1607,7 +1607,7 @@
       "id": "procedures",
       "title": "Systemen en afspraken",
       "description": "ZilliZ, protocollen, ziekmelden, verlof, kleding en telefoongebruik.",
-      "icon": "list",
+      "icon": "laptop",
       "duration": "10 minuten",
       "completionMessage": {
         "title": "🗂️ Helemaal wegwijs!",

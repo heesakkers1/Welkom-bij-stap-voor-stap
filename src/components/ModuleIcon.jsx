@@ -1,4 +1,64 @@
 const icons = {
+  smile: (
+    <path
+      d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM8.5 14.5c.9 1.2 2.1 1.8 3.5 1.8s2.6-.6 3.5-1.8M9 9.5h.01M15 9.5h.01"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  ),
+  horseshoe: (
+    <path
+      d="M7 4.5C5.2 6.6 4.5 9.2 4.5 12a7.5 7.5 0 0 0 15 0c0-2.8-.7-5.4-2.5-7.5M10.5 5.5C9 7.2 8.5 9.4 8.5 12a3.5 3.5 0 0 0 7 0c0-2.6-.5-4.8-2-6.5M6.5 10h.01M17.5 10h.01M7 14.5h.01M17 14.5h.01"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  ),
+  clipboard: (
+    <path
+      d="M9 4.5h6v2.5H9zM9 5.5H6.5a1 1 0 0 0-1 1V20a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1V6.5a1 1 0 0 0-1-1H15M8.5 12.5l1.5 1.5 3-3M14.5 13h1.5M8.5 17.5h7"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  ),
+  home: (
+    <path
+      d="M3.5 11 12 4l8.5 7M5.5 9.5V20h13V9.5M10 20v-5.5h4V20"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  ),
+  handHeart: (
+    <path
+      d="M12 11s-3.5-2-3.5-4.6A2 2 0 0 1 12 5.2a2 2 0 0 1 3.5 1.2C15.5 9 12 11 12 11zM3 14.5h2.5l3.8-.1c1 0 1.7.7 1.7 1.6s-.8 1.5-1.7 1.5H7m3.8 0h4.4l3.6-3a1.5 1.5 0 0 1 2.1 2.1L17 21H7l-4-1.5"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  ),
+  laptop: (
+    <path
+      d="M5.5 5.5h13a1 1 0 0 1 1 1V15h-15V6.5a1 1 0 0 1 1-1zM2.5 18.5h19M9 9h6M9 12h4"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  ),
   sun: (
     <path
       d="M12 4v2M12 18v2M4 12H2M22 12h-2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M5.6 18.4 7 17M17 7l1.4-1.4M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"
