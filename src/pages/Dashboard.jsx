@@ -1,10 +1,9 @@
 import { useEffect } from 'react'
-import { useLocation, useNavigate } from 'react-router-dom'
-import { MODULE_STATUS, getCategoriesWithModules, modules, siteTexts } from '../data/modules'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
+import { MODULE_STATUS, getCategoriesWithModules, siteTexts } from '../data/modules'
 import { useProgress } from '../context/ProgressContext'
 import ProgressBar from '../components/ProgressBar'
-import ModuleTile from '../components/ModuleTile'
-import Button from '../components/Button'
+import ModuleIcon from '../components/ModuleIcon'
 import QuickLinks from '../components/QuickLinks'
 import './Dashboard.css'
 
@@ -27,60 +26,50 @@ function Dashboard() {
   const categoriesWithModules = getCategoriesWithModules()
   const focusModuleId = location.state?.focusModule ?? null
   const resumeModuleId = resumeInfo?.path?.split('/')[2] ?? null
-  const openCategoryId =
-    categoriesWithModules.find((category) =>
-      category.moduleIds.includes(focusModuleId ?? resumeModuleId),
-    )?.id ?? categoriesWithModules[0]?.id
 
-  // Terug uit een module: laat meteen de tegel zien van de module waar je was.
+  // Eén doorlopend stappenplan: alle modules op volgorde, per onderdeel gegroepeerd.
+  const groups = []
+  let stepNumber = 0
+  for (const category of categoriesWithModules) {
+    const steps = []
+    for (const module of category.modules) {
+      const status = getModuleStatus(module)
+      if (status === MODULE_STATUS.COMING_SOON) continue
+      stepNumber += 1
+      steps.push({
+        module,
+        number: stepNumber,
+        status,
+        completedCount: getCompletedLessonCount(module),
+      })
+    }
+    groups.push({ ...category, steps })
+  }
+  const allSteps = groups.flatMap((group) => group.steps)
+  const totalSteps = allSteps.length
+  const doneSteps = allSteps.filter((step) => step.status === MODULE_STATUS.COMPLETED).length
+  const currentStep =
+    allSteps.find(
+      (step) => step.module.id === resumeModuleId && step.status !== MODULE_STATUS.COMPLETED,
+    ) ?? allSteps.find((step) => step.status !== MODULE_STATUS.COMPLETED) ?? null
+  const allDone = totalSteps > 0 && !currentStep
+
+  // Terug uit een module: laat meteen de stap zien van de module waar je was.
   useEffect(() => {
     if (!focusModuleId) return
-    const tile = document.querySelector(`[data-module-id="${focusModuleId}"]`)
-    tile?.scrollIntoView({ block: 'center' })
+    const row = document.querySelector(`[data-module-id="${focusModuleId}"]`)
+    row?.scrollIntoView({ block: 'center' })
   }, [focusModuleId])
 
-  function renderTile(module) {
-    const status = getModuleStatus(module)
-    const completedCount = getCompletedLessonCount(module)
-    const totalSteps = module.lessons.length
-    const comingSoon = status === MODULE_STATUS.COMING_SOON
-
-    let statusLabel = status
-    if (status === MODULE_STATUS.IN_PROGRESS && totalSteps > 0) {
-      statusLabel = `Bezig · ${completedCount} van ${totalSteps} stappen`
-    } else if (status === MODULE_STATUS.COMPLETED) {
-      statusLabel = 'Afgerond'
-    } else if (status === MODULE_STATUS.NOT_STARTED && totalSteps > 0) {
-      statusLabel = `Nog niet gestart · ${totalSteps} stappen`
+  function stepPath(step) {
+    if (step === currentStep && resumeInfo?.path?.split('/')[2] === step.module.id) {
+      return resumeInfo.path
     }
-
-    return (
-      <ModuleTile
-        key={module.id}
-        module={module}
-        status={status}
-        statusLabel={statusLabel}
-        disabled={comingSoon}
-        completedCount={completedCount}
-        totalSteps={totalSteps}
-      />
-    )
+    return `/module/${step.module.id}`
   }
 
   function dismissCelebration() {
     navigate('.', { replace: true, state: {} })
-  }
-
-  function handlePrimaryAction() {
-    if (resumeInfo?.path) {
-      navigate(resumeInfo.path)
-      return
-    }
-
-    const first = modules.find((module) => module.lessons.length > 0)
-    if (first) {
-      navigate(`/module/${first.id}`)
-    }
   }
 
   function handleReset() {
@@ -129,56 +118,100 @@ function Dashboard() {
         </section>
       ) : null}
 
-      <div className="dashboard__categories" aria-label="Onboarding onderdelen">
-        {categoriesWithModules.map((category) => {
-          const available = category.modules.filter(
-            (module) => getModuleStatus(module) !== MODULE_STATUS.COMING_SOON,
-          )
-          const completed = available.filter(
-            (module) => getModuleStatus(module) === MODULE_STATUS.COMPLETED,
-          ).length
+      {currentStep ? (
+        <section className="dashboard__next" aria-label="Hier ben je">
+          <p className="dashboard__next-label">
+            {hasStarted ? '📍 Hier ben je' : '👣 Je eerste stap'} · stap {currentStep.number} van{' '}
+            {totalSteps}
+          </p>
+          <div className="dashboard__next-main">
+            <span className="dashboard__next-icon">
+              <ModuleIcon name={currentStep.module.icon} />
+            </span>
+            <div className="dashboard__next-text">
+              <h2>{currentStep.module.title}</h2>
+              <p>{currentStep.module.description}</p>
+            </div>
+          </div>
+          <Link to={stepPath(currentStep)} className="dashboard__next-button">
+            {currentStep.status === MODULE_STATUS.IN_PROGRESS ? 'Ga verder' : 'Begin'} met deze
+            stap →
+          </Link>
+        </section>
+      ) : null}
 
-          return (
-            <details
-              key={category.id}
-              className="dashboard__category"
-              open={category.id === openCategoryId}
-            >
-              <summary className="dashboard__category-header">
-                <span className="dashboard__category-text">
-                  <span className="dashboard__category-title">{category.title}</span>
-                  {category.description ? (
-                    <span className="dashboard__category-description">
-                      {category.description}
-                    </span>
-                  ) : null}
-                  <span className="dashboard__category-count">
-                    {completed} van {available.length} afgerond
-                  </span>
-                </span>
-              </summary>
+      {allDone ? (
+        <section className="dashboard__next dashboard__next--done" role="status">
+          <p className="dashboard__next-label">🎉 Alle stappen afgerond</p>
+          <h2>Je hebt het hele stappenplan doorlopen.</h2>
+          <p>Je kunt elke stap hieronder altijd nog eens teruglezen.</p>
+        </section>
+      ) : null}
 
-              <section className="dashboard__modules">
-                {category.modules.map((module) => renderTile(module))}
-                {category.image ? (
-                  <figure
-                    className={`dashboard__category-image${
-                      category.modules.length % 3 === 2 ? ' dashboard__category-image--narrow' : ''
-                    }`}
-                  >
-                    <img src={category.image.src} alt={category.image.alt} loading="lazy" />
-                  </figure>
-                ) : null}
-              </section>
-            </details>
-          )
-        })}
-      </div>
+      <section className="stepplan" aria-label="Jouw stappenplan">
+        <div className="stepplan__head">
+          <h2>Jouw stappenplan</h2>
+          <span className="stepplan__count">
+            {doneSteps} van {totalSteps} stappen klaar
+          </span>
+        </div>
+
+        {groups
+          .filter((group) => group.steps.length > 0)
+          .map((group) => (
+            <div key={group.id} className="stepplan__group">
+              <h3 className="stepplan__group-title">{group.title}</h3>
+              <ol className="stepplan__list">
+                {group.steps.map((step) => {
+                  const isDone = step.status === MODULE_STATUS.COMPLETED
+                  const isCurrent = step === currentStep
+                  const lessons = step.module.lessons.length
+                  const className = [
+                    'stepplan__step',
+                    isDone ? 'stepplan__step--done' : '',
+                    isCurrent ? 'stepplan__step--current' : '',
+                  ]
+                    .filter(Boolean)
+                    .join(' ')
+
+                  let meta = step.module.duration ?? ''
+                  if (isDone) meta = 'Klaar'
+                  else if (step.status === MODULE_STATUS.IN_PROGRESS && lessons > 1)
+                    meta = `Bezig · ${step.completedCount} van ${lessons} delen`
+
+                  return (
+                    <li key={step.module.id} className={className}>
+                      <Link
+                        to={stepPath(step)}
+                        className="stepplan__link"
+                        data-module-id={step.module.id}
+                        aria-current={isCurrent ? 'step' : undefined}
+                      >
+                        <span className="stepplan__marker" aria-hidden="true">
+                          {isDone ? '✓' : step.number}
+                        </span>
+                        <span className="stepplan__body">
+                          <span className="stepplan__title">{step.module.title}</span>
+                          <span className="stepplan__meta">
+                            {isCurrent ? (
+                              <span className="stepplan__here">Hier ben je</span>
+                            ) : null}
+                            {meta}
+                          </span>
+                        </span>
+                        <span className="stepplan__chevron" aria-hidden="true">
+                          ›
+                        </span>
+                      </Link>
+                    </li>
+                  )
+                })}
+              </ol>
+            </div>
+          ))}
+      </section>
 
       <footer className="dashboard__footer">
-        <Button onClick={handlePrimaryAction}>
-          {hasStarted ? 'Ga verder waar je gebleven was' : 'Zet de eerste stap'}
-        </Button>
         <button
           type="button"
           className="dashboard__secondary-link"
