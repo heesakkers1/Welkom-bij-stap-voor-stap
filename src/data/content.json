@@ -808,10 +808,9 @@
             },
             {
               "type": "image",
-              "src": "/fotos/gebarenplaat-pony.jpg",
-              "alt": "Een gebarenplaat met het gebaar voor pony aan het hek van de pony’s",
-              "size": "portrait",
-              "caption": "Een gebarenplaat aan het hek bij de pony’s."
+              "src": "/fotos/erf-konijnen.jpg",
+              "alt": "Konijnen bij hun voerbak in het konijnenhok",
+              "size": "portrait"
             },
             {
               "type": "cards",
@@ -819,28 +818,24 @@
               "items": [
                 {
                   "title": "'t Kot",
-                  "text": "Ruimte voor 1 op 1 begeleidingen + Kantoor ",
-                  "placeholder": true
+                  "text": "Ruimte voor 1 op 1 begeleidingen + Kantoor "
                 },
                 {
                   "title": "de Unit",
-                  "text": "Ruimte voor de Dagbesteding",
-                  "placeholder": true
+                  "text": "Ruimte voor de Dagbesteding"
                 },
                 {
                   "title": "Pipowagen",
                   "text": "Ruimte voor de Dagbesteding en Spreekkamer ",
-                  "placeholder": true
+                  "src": "/fotos/erf-pipowagen.jpg"
                 },
                 {
                   "title": "Mancave",
-                  "text": "Creatieve -en ontspanningsruimte ",
-                  "placeholder": true
+                  "text": "Creatieve -en ontspanningsruimte "
                 },
                 {
                   "title": "Paardenstallen",
-                  "text": "Hier komt later een foto.",
-                  "placeholder": true
+                  "text": ""
                 },
                 {
                   "title": "Moestuin",

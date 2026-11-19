@@ -153,3 +153,54 @@ export async function saveContent(token, branch, content, sha, message) {
   )
   return result.content.sha
 }
+
+/** Maakt een eenvoudige bestandsnaam van een titel, zoals "erf-t-kot". */
+function slugify(text) {
+  return (
+    text
+      .normalize('NFD')
+      .replace(/[̀-ͯ]/g, '')
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-+|-+$/g, '') || 'foto'
+  )
+}
+
+/** Verkleint een foto in de browser tot een JPEG van hooguit `maxSize` pixels breed of hoog. */
+export function shrinkImage(file, maxSize = 1400) {
+  return new Promise((resolve, reject) => {
+    const url = URL.createObjectURL(file)
+    const image = new Image()
+    image.onload = () => {
+      const scale = Math.min(1, maxSize / Math.max(image.width, image.height))
+      const canvas = document.createElement('canvas')
+      canvas.width = Math.round(image.width * scale)
+      canvas.height = Math.round(image.height * scale)
+      canvas.getContext('2d').drawImage(image, 0, 0, canvas.width, canvas.height)
+      URL.revokeObjectURL(url)
+      resolve(canvas.toDataURL('image/jpeg', 0.82))
+    }
+    image.onerror = () => {
+      URL.revokeObjectURL(url)
+      reject(new GitHubError('Deze foto kan niet worden geopend. Probeer een JPG- of PNG-foto.', 0))
+    }
+    image.src = url
+  })
+}
+
+/**
+ * Zet een foto in public/fotos/ op GitHub en geeft het pad terug dat de site
+ * gebruikt (bijv. "/fotos/erf-moestuin-1700000000000.jpg").
+ */
+export async function uploadImage(token, branch, dataUrl, nameHint) {
+  const fileName = `${slugify(nameHint)}-${Date.now()}.jpg`
+  await request(token, `/repos/${REPO_OWNER}/${REPO_NAME}/contents/public/fotos/${fileName}`, {
+    method: 'PUT',
+    body: JSON.stringify({
+      message: `Foto toegevoegd via de bewerkpagina: ${fileName}`,
+      content: dataUrl.split(',')[1],
+      branch,
+    }),
+  })
+  return `/fotos/${fileName}`
+}
