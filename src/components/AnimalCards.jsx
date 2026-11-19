@@ -4,9 +4,7 @@ import './AnimalCards.css'
 
 /**
  * De paardenkaarten komen live uit het Digibord (alleen lezen).
- * Het Digibord geeft alleen de vakjes over het paard zelf door: geen
- * bijzonderheden (aantekeningen) en geen foto's. Lukt ophalen niet, dan
- * tonen we de kaarten uit content.json.
+ * Lukt ophalen niet, dan tonen we de kaarten uit content.json.
  */
 const DIGIBORD_PAARDEN_URL = 'https://digibord.vercel.app/api/paardenkaarten'
 
@@ -28,6 +26,7 @@ function vanDigibord(paard) {
     geslacht: GESLACHT[paard.geslacht] ?? '',
     ras: tekst(paard.ras),
     karakter: tekst(paard.karakter),
+    bijzonderheden: tekst(paard.bijzonderheden),
     gezondheid: tekst(paard.gezondheidsklachten),
     gezondheidDatum: datumNl(paard.gezondheid_datum),
     gezondheidMag: tekst(paard.gezondheid_mag),
@@ -36,6 +35,8 @@ function vanDigibord(paard) {
     ditNiet: tekst(paard.dit_niet),
     metDeelnemers: tekst(paard.met_deelnemers),
     overig: tekst(paard.overige_opmerkingen),
+    src: typeof paard.foto === 'string' && paard.foto.startsWith('https://') ? paard.foto : undefined,
+    alt: paard.foto ? `Foto van ${tekst(paard.naam)}` : undefined,
   }
 }
 
@@ -94,12 +95,12 @@ function AnimalCard({ item }) {
     item.ras,
   ].filter(Boolean)
   const heeftGezondheid = item.gezondheid || item.gezondheidMag || item.gezondheidNiet
-  const leeg = !item.karakter && !heeftGezondheid && !item.ditMag && !item.ditNiet && !item.metDeelnemers && !item.overig
+  const leeg = !item.bijzonderheden && !item.karakter && !heeftGezondheid && !item.ditMag && !item.ditNiet && !item.metDeelnemers && !item.overig
 
   return (
     <article className="animal-card" aria-live="polite">
       <header className="animal-card__head">
-        {item.src ? <img className="animal-card__photo" src={item.src} alt={item.alt ?? ''} /> : null}
+        {item.src ? <img className="animal-card__photo" src={item.src} alt={item.alt ?? ''} onError={(e) => { e.currentTarget.style.display = 'none' }} /> : null}
         <div>
           <h3 className="animal-card__name">{item.naam}</h3>
           {feiten.length > 0 ? <p className="animal-card__sub">{feiten.join(' · ')}</p> : null}
@@ -108,6 +109,7 @@ function AnimalCard({ item }) {
       {leeg ? (
         <p className="animal-card__todo animal-card__empty">Over dit paard is nog niets ingevuld. Vraag het aan Anne S of Elske.</p>
       ) : null}
+      <Field label="Bijzonderheden" value={item.bijzonderheden} />
       <Field label="Karakter" value={item.karakter} />
       {heeftGezondheid ? (
         <Field label={item.gezondheidDatum ? `Gezondheid (sinds ${item.gezondheidDatum})` : 'Gezondheid'} value={item.gezondheid} className="animal-card__row--alarm">
