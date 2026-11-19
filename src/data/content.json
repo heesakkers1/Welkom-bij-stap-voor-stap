@@ -1077,6 +1077,10 @@
               "text": "Wat je op het Digibord zet, kunnen anderen meelezen. Zie je ergens een foutje of info dat niet meer van toepassing is? --> Pas het aan en wacht niet tot een ander het doet. "
             },
             {
+              "type": "highlight",
+              "text": "Loopt er iets niet lekker of handig in het Digibord, geef dit door aan Anne H!"
+            },
+            {
               "type": "assignment",
               "label": "Praktijkopdracht",
               "text": "Plan in het dagprogramma een taak in bij het tijdsblok of groepje waarin je hem gaat doen.",
