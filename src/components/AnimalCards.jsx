@@ -119,6 +119,9 @@ function AnimalCard({ item, nav }) {
         </Field>
       ) : null}
       {item.ditMag || item.ditNiet ? (
+        <p className="animal-card__section">In het algemeen geldt voor dit paard:</p>
+      ) : null}
+      {item.ditMag || item.ditNiet ? (
         <div className="animal-card__split">
           <Field label="✓ Dit mag" value={item.ditMag} className="animal-card__row--ok" />
           <Field label="✕ Dit niet" value={item.ditNiet} className="animal-card__row--no" />
