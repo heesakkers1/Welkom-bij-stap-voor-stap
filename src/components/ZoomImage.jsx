@@ -34,7 +34,7 @@ function ZoomImage({ src, alt = '', className = '' }) {
         aria-label={`${alt || 'Afbeelding'}: tik om groot te bekijken`}
       >
         <img src={url} alt={alt} loading="lazy" />
-        <span className="zoom-image__hint" aria-hidden="true">🔍 Vergroot</span>
+        <span className="zoom-image__hint" aria-hidden="true">🔍</span>
       </button>
       {open ? (
         <div

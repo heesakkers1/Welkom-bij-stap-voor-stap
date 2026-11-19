@@ -21,12 +21,15 @@
   position: absolute;
   right: 0.4rem;
   bottom: 0.4rem;
-  padding: 0.15rem 0.45rem;
+  display: grid;
+  place-items: center;
+  width: 1.9rem;
+  height: 1.9rem;
   border-radius: 999px;
-  background: rgba(31, 51, 36, 0.78);
-  color: #fff;
-  font-size: 0.7rem;
-  font-weight: 600;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid var(--tile-border);
+  font-size: 0.85rem;
+  line-height: 1;
 }
 
 .zoom-image__overlay {

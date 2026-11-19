@@ -24,6 +24,11 @@
   border: 1px solid rgba(79, 122, 85, 0.16);
 }
 
+.content-cards--plain .content-card {
+  background: var(--surface);
+  border: 1px solid var(--tile-border);
+}
+
 .content-card__media {
   width: 100%;
   min-height: 4.5rem;
