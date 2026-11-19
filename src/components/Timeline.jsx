@@ -22,7 +22,10 @@ function Timeline({ items = [] }) {
                 ? item.extra.map((extra, extraIndex) => (
                     <div key={extraIndex} className="timeline__extra">
                       {extra.text ? <p className="timeline__text"><RichText text={extra.text} /></p> : null}
-                      {extra.src ? <ZoomImage src={extra.src} alt={extra.alt || ''} /> : null}
+                      {extra.src && extra.zoom === false ? (
+                        <img className="timeline__img" src={extra.src} alt={extra.alt || ''} loading="lazy" />
+                      ) : null}
+                      {extra.src && extra.zoom !== false ? <ZoomImage src={extra.src} alt={extra.alt || ''} /> : null}
                     </div>
                   ))
                 : null}
