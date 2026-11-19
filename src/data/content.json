@@ -621,13 +621,6 @@
                   "tekst": "Ik ben Martine en woon in Heesch. Op de boerderij werk ik als begeleider op de dagbesteding en geef ik ook individuele begeleiding. In mijn vrije tijd ben ik graag creatief bezig, hou van muziek en gezelligheid met vrienden en familie.\n\nIk vind het erg leuk om met de deelnemers creatief bezig te zijn en buiten te zijn met de dieren, lekker wandelen met de deelnemers met de hond in de bossen. Je kunt mij altijd benaderen voor een gezellige babbel, een vertrouwd gesprek, een probleem en een luisterend oor!\n\nCollega’s omschrijven mij als chaotisch, enthousiast en makkelijk in contact. Mijn guilty pleasure is een bakkie pleur! Je maakt mij blij jou te leren kennen op deze geweldige plek waar iedereen zichzelf mag en kan zijn!"
                 },
                 {
-                  "naam": "Nathalie",
-                  "functie": "",
-                  "src": "/fotos/nathalie.webp",
-                  "alt": "Nathalie lacht naast een bruin paard",
-                  "tekst": ""
-                },
-                {
                   "naam": "Pia",
                   "functie": "Individueel begeleider / paardencoach",
                   "src": "/fotos/pia.webp",
@@ -667,6 +660,13 @@
                   "functie": "Stagiaire",
                   "src": "/fotos/kris.webp",
                   "alt": "Kris lacht naast een blond paard",
+                  "tekst": ""
+                },
+                {
+                  "naam": "Nathalie",
+                  "functie": "Stagiaire",
+                  "src": "/fotos/nathalie.webp",
+                  "alt": "Nathalie lacht naast een bruin paard",
                   "tekst": ""
                 }
               ]
