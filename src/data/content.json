@@ -619,6 +619,20 @@
                   "src": "/fotos/karin.webp",
                   "alt": "Karin lacht naast een blond paard",
                   "tekst": ""
+                },
+                {
+                  "naam": "Caitlin",
+                  "functie": "",
+                  "src": "/fotos/caitlin.webp",
+                  "alt": "Caitlin lacht naast een donker paard",
+                  "tekst": ""
+                },
+                {
+                  "naam": "Emily",
+                  "functie": "",
+                  "src": "/fotos/emily.webp",
+                  "alt": "Emily lacht naast een pony",
+                  "tekst": ""
                 }
               ]
             }
