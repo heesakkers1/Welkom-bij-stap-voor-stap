@@ -550,6 +550,25 @@
             },
             {
               "type": "image",
+              "src": "/fotos/anne-stottelaar.webp",
+              "alt": "Anne Stottelaar lacht met een kip in haar armen",
+              "size": "portrait",
+              "caption": "Anne Stottelaar, mede-eigenaresse."
+            },
+            {
+              "type": "paragraph",
+              "text": "Mijn naam is Anne Stottelaar en samen met Bente en Jaap ben ik eigenaar van de zorgboerderij. Ik woon in Sint Oedenrode op het terrein van Stap voor Stap en in mijn vrije tijd houd ik van sporten, paardrijden, winkelen en lekker in de natuur zijn met ons gezin. In mijn werk krijg ik energie van mensen verbinden. Ik vind het geweldig om iedereen in zijn/haar kracht te zetten en je kunt mij benaderen voor een luisterend oor, een goed gesprek en ik kan je helpen bij alles omtrent de paarden en de andere dieren."
+            },
+            {
+              "type": "paragraph",
+              "text": "Collega’s omschrijven mij als energiek, zorgzaam en een kartrekker. Mijn guilty pleasure is chocolade met een lekker bakkie thee of koffie en je maakt mij blij met de kleine dingen in het leven; een fijn gesprek in het zonnetje, een goede serie kijken, de paarden die lekker in het zonnetje liggen te luieren of een leuk uitje. Ook word ik nog steeds heel blij van ons bedrijf. Als ik op het terrein loop ben ik oprecht heel trots!"
+            },
+            {
+              "type": "highlight",
+              "text": "Wat leuk dat je deel gaat uitmaken van onze zorgboerderij. Voel je welkom en ik hoop dat je hier heel veel fijne momenten gaat beleven."
+            },
+            {
+              "type": "image",
               "src": "/fotos/eef-meurs.webp",
               "alt": "Eef Meurs lacht naast een witte ezel",
               "size": "portrait",
