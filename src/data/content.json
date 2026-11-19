@@ -1237,6 +1237,10 @@
               "text": "🔄 Onderling schuiven met klussen is geen probleem. De lijst is de basis waar we vanuit werken."
             },
             {
+              "type": "paragraph",
+              "text": "Voer zelf wijzigingen in de klusjeskaarten door, indien nodig. Is de wijziging structureel? Klik 'deze week en toekomstige weken' aan. "
+            },
+            {
               "type": "assignment",
               "label": "Praktijkopdracht",
               "text": "Open in het Digibord de pagina *Klusjes per dierengroep*. Koppel jezelf aan een taak naar keuze: sleep je foto naar een klusje, of tik op je foto en daarna op het klusje.\nGelukt? Haal jezelf er daarna weer af met het kruisje (×) bij je foto.",
