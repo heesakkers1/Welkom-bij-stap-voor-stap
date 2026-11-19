@@ -974,12 +974,9 @@
               "text": "Het Digibord is ons digitale overzicht van de dag. Bij de dagstart staat het op het scherm en lopen we het samen door."
             },
             {
-              "type": "highlight",
-              "text": "Wat je op het Digibord zet, kunnen anderen meelezen. Zie je ergens een foutje of info dat niet meer van toepassing is? --> Pas het aan en wacht niet tot een ander het doet. "
-            },
-            {
-              "type": "highlight",
-              "text": "Loopt er iets niet lekker of handig in het Digibord, geef dit door aan Anne H!"
+              "type": "tip",
+              "label": "💡 Goed om te weten",
+              "text": "Wat je op het Digibord zet, kunnen anderen meelezen. Zie je ergens een foutje of info die niet meer van toepassing is? Pas het aan en wacht niet tot een ander het doet. Loopt er iets niet lekker of handig in het Digibord? Geef het door aan Anne H!"
             },
             {
               "type": "paragraph",
@@ -1007,12 +1004,14 @@
                   "alt": "Het scherm Bijzonderheden met de onderwerpen",
                   "extra": [
                     {
-                      "text": "Alles in één lijst? Tik onderaan op *Alle bijzonderheden*. Je ziet dan alles van die dag bij elkaar, en je kunt erin zoeken.",
+                      "title": "Alles in één lijst",
+                      "text": "Tik onderaan op *Alle bijzonderheden*. Je ziet dan alles van die dag bij elkaar, en je kunt erin zoeken.",
                       "src": "/fotos/digibord/stap3-alle-bijzonderheden.webp",
                       "alt": "Het scherm Alle bijzonderheden"
                     },
                     {
-                      "text": "Meer nadruk geven? Zet een vinkje bij *Belangrijk*. De bijzonderheid wordt dan rood, staat bovenaan en komt bij *Belangrijk vandaag* op het Overzicht vandaag.",
+                      "title": "Een bijzonderheid belangrijk maken",
+                      "text": "Zet een vinkje bij *Belangrijk*. De bijzonderheid wordt dan rood, staat bovenaan en komt bij *Belangrijk vandaag* op het Overzicht vandaag.",
                       "src": "/fotos/digibord/stap3-belangrijk.webp",
                       "alt": "Een bijzonderheid met het vinkje Belangrijk aan"
                     }
@@ -1025,22 +1024,26 @@
                   "alt": "Het Dagprogramma met tijdsblokken en groepjes",
                   "extra": [
                     {
+                      "title": "Taken inplannen",
                       "text": "Rechts staat *Taken inplannen*. Dat zijn taken die je in de loop van de dag kunt inplannen, dus niet de vaste klusjes die de dierengroepjes ’s ochtends doen. De taken staan in categorieën, zoals 2 DO'S of Dieren.",
                       "src": "/fotos/digibord/taken-inplannen.webp",
                       "alt": "De lijst Taken inplannen met categorieën"
                     },
                     {
+                      "title": "De drie knopjes",
                       "text": "Achter elke taak staan drie knopjes. De vlag (1): de taak moet vandaag gebeuren en komt bovenaan bij *Vandaag doen*. Het mapje (2): zet de taak in een andere categorie. De pijltjes (3): zwart betekent dat de taak elke dag terugkomt, grijs dat hij maar één keer is. Tik erop om dat te wisselen.",
                       "src": "/fotos/digibord/taken-iconen.webp",
                       "alt": "Een taak met de knopjes vlag, mapje en pijltjes",
                       "zoom": false
                     },
                     {
-                      "text": "Een taak inplannen: ga met je vinger of muis over de taak en tik op het pijltje ➜. Tik daarna op *Zet hier* bij een groepje, of op *Hier plaatsen* bij een tijdsblok. Staat hij verkeerd? Tik op het kruisje bij de taak in het vak.",
+                      "title": "Een taak in het dagprogramma zetten",
+                      "text": "Ga met je vinger of muis over de taak en tik op het pijltje ➜. Tik daarna op *Zet hier* bij een groepje, of op *Hier plaatsen* bij een tijdsblok. Staat hij verkeerd? Tik op het kruisje bij de taak in het vak.",
                       "src": "/fotos/digibord/taak-plaatsen.webp",
                       "alt": "Het dagprogramma met knoppen Zet hier en Hier plaatsen"
                     },
                     {
+                      "title": "Nieuwe taak of categorie",
                       "text": "Met *Taak toevoegen* maak je een nieuwe taak, met *Categorie toevoegen* een nieuwe categorie."
                     }
                   ]
@@ -1057,7 +1060,8 @@
                   "src": "/fotos/digibord/stap6-overzicht-vandaag.webp",
                   "alt": "Het scherm Overzicht vandaag"
                 }
-              ]
+              ],
+              "variant": "steps"
             },
             {
               "type": "paragraph",
@@ -1078,7 +1082,8 @@
                   "src": "/fotos/digibord/deelnemerskaart.webp",
                   "alt": "De deelnemerskaart op het Digibord"
                 }
-              ]
+              ],
+              "variant": "plain"
             },
             {
               "type": "assignment",

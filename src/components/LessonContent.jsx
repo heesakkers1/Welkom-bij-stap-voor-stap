@@ -129,7 +129,7 @@ function LessonContentBlock({ block }) {
       return <ColleagueCards items={block.items} />
 
     case 'timeline':
-      return <Timeline items={block.items} />
+      return <Timeline items={block.items} variant={block.variant} />
 
     case 'expandableAnswer':
       return (
