@@ -101,6 +101,7 @@ function LessonContentBlock({ block }) {
           alt={block.alt}
           caption={block.text ?? block.caption}
           size={block.size ?? 'wide'}
+          zoom={Boolean(block.zoom)}
         />
       )
 

@@ -335,7 +335,7 @@ function Fields({ value, path, label, onChange, onRemove, onAdd, removeSelf, blo
         onRemove={onRemove}
         onAdd={onAdd}
         blockType={value.type}
-        withPhoto={key === 'items' && value.type === 'cards' && value.variant === 'places'}
+        withPhoto={key === 'items' && ((value.type === 'cards' && value.variant === 'places') || value.type === 'timeline')}
       />
     ))
     if (withPhoto) fields.unshift(<PhotoField key="__photo" item={value} path={path} onChange={onChange} />)
