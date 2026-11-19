@@ -6,11 +6,7 @@ import './ColleagueCards.css'
  * Tegeltjes met een foto en naam van elke collega. Tik je op een tegeltje,
  * dan zie je op dezelfde pagina de kennismakingskaart van die collega.
  */
-function ColleagueCards({ items: rawItems = [] }) {
-  // Altijd op alfabetische volgorde van voornaam.
-  const items = [...rawItems].sort((a, b) =>
-    (a.naam ?? '').localeCompare(b.naam ?? '', 'nl', { sensitivity: 'base' }),
-  )
+function ColleagueCards({ items = [] }) {
   const [open, setOpen] = useState(null)
   const cardRef = useRef(null)
   const item = open === null ? null : items[open]
