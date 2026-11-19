@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { getLessonById } from '../data/modules'
 import LessonContent from '../components/LessonContent'
 import '../components/LessonPage.css'
@@ -15,6 +16,7 @@ function DierenkaartPage() {
   return (
     <main className="lesson-page">
       <header className="app-header">
+        <Link to="/" className="dierenkaart__terug">← Naar de onboarding</Link>
         <p className="lesson-page__meta">Zorgboerderij Stap voor Stap</p>
         <h1 className="app-header__title">
           {result ? `🐴 ${result.lesson.title}` : 'Dierenkaart'}

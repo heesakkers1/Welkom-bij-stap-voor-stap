@@ -1,6 +1,7 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import RichText from './RichText'
 import './AnimalCards.css'
+import './ColleagueCards.css'
 
 /**
  * De paardenkaarten komen live uit het Digibord (alleen lezen).
@@ -87,7 +88,7 @@ function Field({ label, value, className = '', children }) {
   )
 }
 
-function AnimalCard({ item }) {
+function AnimalCard({ item, nav }) {
   const feiten = [
     item.geboortejaar && `Geboren in ${item.geboortejaar}`,
     item.leeftijd,
@@ -125,6 +126,7 @@ function AnimalCard({ item }) {
       ) : null}
       <Field label="Met deelnemers" value={item.metDeelnemers} />
       <Field label="Overige opmerkingen" value={item.overig} />
+      {nav}
     </article>
   )
 }
@@ -137,11 +139,39 @@ function AnimalCards({ items = [] }) {
   const live = useDigibordPaarden()
   const kaarten = live ?? items.map(vanContent)
   const [openNaam, setOpenNaam] = useState(null)
-  const item = kaarten.find((k) => k.naam === openNaam) ?? null
+  const index = kaarten.findIndex((k) => k.naam === openNaam)
+  const item = index >= 0 ? kaarten[index] : null
+  const cardRef = useRef(null)
+  const namesRef = useRef(null)
+
+  useEffect(() => {
+    if (openNaam !== null && cardRef.current) {
+      cardRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }, [openNaam])
+
+  const terugNaarAlle = () => {
+    setOpenNaam(null)
+    namesRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
+
+  const nav = item ? (
+    <nav className="colleague-card__nav" aria-label="Andere paarden">
+      <button type="button" className="colleague-card__navbtn" disabled={index === 0} onClick={() => setOpenNaam(kaarten[index - 1].naam)}>
+        ← Vorige
+      </button>
+      <button type="button" className="colleague-card__navbtn" disabled={index === kaarten.length - 1} onClick={() => setOpenNaam(kaarten[index + 1].naam)}>
+        Volgende →
+      </button>
+      <button type="button" className="colleague-card__navbtn colleague-card__navbtn--all" onClick={terugNaarAlle}>
+        ↑ Terug naar alle paarden
+      </button>
+    </nav>
+  ) : null
 
   return (
     <section className="lesson-block animal-cards">
-      <div className="animal-cards__names" role="group" aria-label="Kies een paard">
+      <div ref={namesRef} className="animal-cards__names" role="group" aria-label="Kies een paard">
         {kaarten.map((entry, index) => (
           <button
             key={`${entry.naam}-${index}`}
@@ -155,7 +185,7 @@ function AnimalCards({ items = [] }) {
         ))}
       </div>
 
-      {item ? <AnimalCard item={item} /> : <p className="animal-cards__hint">Tik op een naam om de kaart te zien.</p>}
+      {item ? <div ref={cardRef} className="animal-cards__card"><AnimalCard item={item} nav={nav} /></div> : <p className="animal-cards__hint">Tik op een naam om de kaart te zien.</p>}
     </section>
   )
 }
