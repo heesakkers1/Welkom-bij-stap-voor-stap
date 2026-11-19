@@ -36,12 +36,12 @@
     {
       "id": "organisatie",
       "title": "Onze organisatie",
-      "description": "Onze visie, de mensen, de zorgboerderij en onze handboeken.",
+      "description": "Onze visie, de mensen, onze handboeken en de zorgboerderij.",
       "moduleIds": [
         "onze-visie",
         "organisatie",
-        "zorgboerderij",
-        "handboeken"
+        "handboeken",
+        "zorgboerderij"
       ]
     },
     {
@@ -765,6 +765,44 @@
       ]
     },
     {
+      "id": "handboeken",
+      "title": "Onze handboeken",
+      "description": "De handboeken die je als nieuwe collega leest, direct te openen.",
+      "icon": "book",
+      "duration": "5 minuten",
+      "completionMessage": {
+        "title": "📚 Je weet de weg!",
+        "text": "Je weet nu welke handboeken er zijn en waar je ze kunt vinden."
+      },
+      "lessons": [
+        {
+          "id": "handboeken",
+          "title": "Onze handboeken",
+          "summary": "Open de handboeken direct.",
+          "content": [
+            {
+              "type": "document",
+              "title": "Handboek collega’s",
+              "meta": "Begin hier: onze organisatie, jouw rol en de belangrijkste afspraken. ",
+              "handboek": "collegas"
+            },
+            {
+              "type": "document",
+              "title": "Functiehandboek",
+              "meta": "Wat er van iedere functie wordt verwacht. Zoek je eigen functie op. ",
+              "handboek": "functies"
+            },
+            {
+              "type": "document",
+              "title": "Handboek deelnemers",
+              "meta": "Wat onze deelnemers krijgen als ze bij ons starten. ",
+              "handboek": "deelnemers"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "zorgboerderij",
       "title": "De zorgboerderij",
       "description": "Maak kennis met de omgeving, de werkzaamheden en het dagelijkse ritme.",
@@ -910,44 +948,6 @@
                 "16.00 Dagafsluiting collega's",
                 "16.30 Collega's naar huis "
               ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "handboeken",
-      "title": "Onze handboeken",
-      "description": "De handboeken die je als nieuwe collega leest, direct te openen.",
-      "icon": "book",
-      "duration": "5 minuten",
-      "completionMessage": {
-        "title": "📚 Je weet de weg!",
-        "text": "Je weet nu welke handboeken er zijn en waar je ze kunt vinden."
-      },
-      "lessons": [
-        {
-          "id": "handboeken",
-          "title": "Onze handboeken",
-          "summary": "Open de handboeken direct.",
-          "content": [
-            {
-              "type": "document",
-              "title": "Handboek collega’s",
-              "meta": "Begin hier: onze organisatie, jouw rol en de belangrijkste afspraken. ",
-              "handboek": "collegas"
-            },
-            {
-              "type": "document",
-              "title": "Functiehandboek",
-              "meta": "Wat er van iedere functie wordt verwacht. Zoek je eigen functie op. ",
-              "handboek": "functies"
-            },
-            {
-              "type": "document",
-              "title": "Handboek deelnemers",
-              "meta": "Wat onze deelnemers krijgen als ze bij ons starten. ",
-              "handboek": "deelnemers"
             }
           ]
         }
