@@ -38,6 +38,7 @@ export const FIELD_NAMES = {
   answer: 'Antwoord',
   answerLabel: 'Tekst op de knop voor het antwoord',
   caption: 'Onderschrift',
+  extra: 'Extra uitleg',
   alt: 'Omschrijving van de foto (voor wie niet kan zien)',
   note: 'Notitie',
   items: 'Punt',
