@@ -1298,7 +1298,14 @@
             },
             {
               "type": "highlight",
-              "text": "Gaat er iets mis met een paard, bijvoorbeeld een trap, beet of een paard dat losbreekt? Zorg eerst voor de veiligheid van jezelf en anderen. Schakel een paardencollega in.\n\nMeld het later bij je leidinggevende en leg het vast in ZilliZ met het incidentmeldingsformulier wanneer een deelnemer betrokken is geweest. "
+              "label": "⚠️ Gaat er iets mis met een paard?",
+              "text": "Bijvoorbeeld een trap, een beet of een paard dat losbreekt.",
+              "items": [
+                "Zorg eerst voor de veiligheid van jezelf en anderen.",
+                "Schakel een paardencollega in.",
+                "Meld het daarna bij je leidinggevende.",
+                "Was er een deelnemer bij betrokken? Leg het dan vast in ZilliZ met het incidentmeldingsformulier."
+              ]
             },
             {
               "type": "paragraph",
@@ -1308,134 +1315,43 @@
               "type": "animalCards",
               "items": [
                 {
-                  "naam": "Nillson",
-                  "leeftijd": "",
-                  "karakter": "",
-                  "bijzonderheden": "",
-                  "ditMag": "",
-                  "ditNiet": "",
-                  "metDeelnemers": "",
-                  "waarschuwen": ""
+                  "naam": "Nillson"
                 },
                 {
-                  "naam": "Jolly",
-                  "leeftijd": "",
-                  "karakter": "",
-                  "bijzonderheden": "",
-                  "ditMag": "",
-                  "ditNiet": "",
-                  "metDeelnemers": "",
-                  "waarschuwen": ""
+                  "naam": "Jolly"
                 },
                 {
-                  "naam": "Diego",
-                  "leeftijd": "",
-                  "karakter": "",
-                  "bijzonderheden": "",
-                  "ditMag": "",
-                  "ditNiet": "",
-                  "metDeelnemers": "",
-                  "waarschuwen": ""
+                  "naam": "Diego"
                 },
                 {
-                  "naam": "Marus",
-                  "leeftijd": "",
-                  "karakter": "",
-                  "bijzonderheden": "",
-                  "ditMag": "",
-                  "ditNiet": "",
-                  "metDeelnemers": "",
-                  "waarschuwen": ""
+                  "naam": "Marus"
                 },
                 {
-                  "naam": "Goof",
-                  "leeftijd": "",
-                  "karakter": "",
-                  "bijzonderheden": "",
-                  "ditMag": "",
-                  "ditNiet": "",
-                  "metDeelnemers": "",
-                  "waarschuwen": ""
+                  "naam": "Goof"
                 },
                 {
-                  "naam": "Naomi",
-                  "leeftijd": "",
-                  "karakter": "",
-                  "bijzonderheden": "",
-                  "ditMag": "",
-                  "ditNiet": "",
-                  "metDeelnemers": "",
-                  "waarschuwen": ""
+                  "naam": "Naomi"
                 },
                 {
-                  "naam": "Pallas",
-                  "leeftijd": "",
-                  "karakter": "",
-                  "bijzonderheden": "",
-                  "ditMag": "",
-                  "ditNiet": "",
-                  "metDeelnemers": "",
-                  "waarschuwen": ""
+                  "naam": "Pallas"
                 },
                 {
-                  "naam": "Bonito",
-                  "leeftijd": "",
-                  "karakter": "",
-                  "bijzonderheden": "",
-                  "ditMag": "",
-                  "ditNiet": "",
-                  "metDeelnemers": "",
-                  "waarschuwen": ""
+                  "naam": "Bonito"
                 },
                 {
-                  "naam": "Didi",
-                  "leeftijd": "",
-                  "karakter": "",
-                  "bijzonderheden": "",
-                  "ditMag": "",
-                  "ditNiet": "",
-                  "metDeelnemers": "",
-                  "waarschuwen": ""
+                  "naam": "Didi"
                 },
                 {
-                  "naam": "Lulu",
-                  "leeftijd": "",
-                  "karakter": "",
-                  "bijzonderheden": "",
-                  "ditMag": "",
-                  "ditNiet": "",
-                  "metDeelnemers": "",
-                  "waarschuwen": ""
+                  "naam": "Lulu"
                 },
                 {
-                  "naam": "Noa",
-                  "leeftijd": "",
-                  "karakter": "",
-                  "bijzonderheden": "",
-                  "ditMag": "",
-                  "ditNiet": "",
-                  "metDeelnemers": "",
-                  "waarschuwen": ""
+                  "naam": "Noa"
                 },
                 {
-                  "naam": "Starskie",
-                  "leeftijd": "",
-                  "karakter": "",
-                  "bijzonderheden": "",
-                  "ditMag": "",
-                  "ditNiet": "",
-                  "metDeelnemers": "",
-                  "waarschuwen": ""
+                  "naam": "Starskie"
                 },
                 {
-                  "naam": "Abby",
-                  "leeftijd": "",
-                  "karakter": "superchill",
-                  "bijzonderheden": "",
-                  "ditMag": "",
-                  "ditNiet": "",
-                  "metDeelnemers": "",
-                  "waarschuwen": ""
+                  "naam": "Abby"
                 }
               ]
             }

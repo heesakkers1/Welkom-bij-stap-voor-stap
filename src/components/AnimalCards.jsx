@@ -1,82 +1,159 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import RichText from './RichText'
 import './AnimalCards.css'
 
-/** Hulpvraag die je ziet zolang een vakje nog leeg is. */
-const HINTS = {
-  karakter: 'Hoe is dit dier? Rustig, nieuwsgierig, schrikachtig? Met wie staat het graag samen?',
-  bijzonderheden: 'Leeftijd, medische bijzonderheden, apart voeren, beperking bij gras?',
-  ditMag: 'Wat mogen collega’s zonder dierkennis doen?',
-  ditNiet: 'Wat is alleen voor ervaren collega’s, of mag nooit?',
-  metDeelnemers: 'Wat mogen deelnemers met dit dier doen? Geschikt voor coaching of groepsactiviteit?',
-  waarschuwen: 'Bij wie meld je bijzonderheden over dit dier?',
+/**
+ * De paardenkaarten komen live uit het Digibord (alleen lezen).
+ * Het Digibord geeft alleen de vakjes over het paard zelf door: geen
+ * bijzonderheden (aantekeningen) en geen foto's. Lukt ophalen niet, dan
+ * tonen we de kaarten uit content.json.
+ */
+const DIGIBORD_PAARDEN_URL = 'https://digibord.vercel.app/api/paardenkaarten'
+
+const GESLACHT = { merrie: 'Merrie', ruin: 'Ruin' }
+
+const tekst = (waarde) => String(waarde ?? '').trim()
+
+/** 2026-11-16 → 16-11-2026 */
+function datumNl(datum) {
+  const m = /^(\d{4})-(\d{2})-(\d{2})/.exec(tekst(datum))
+  return m ? `${m[3]}-${m[2]}-${m[1]}` : ''
 }
 
-function Field({ item, name, label, className = '' }) {
-  const value = item[name]?.trim()
+/** Een kaart uit het Digibord omzetten naar de vakjes van deze site. */
+function vanDigibord(paard) {
+  return {
+    naam: tekst(paard.naam),
+    geboortejaar: paard.geboortejaar ? String(paard.geboortejaar) : '',
+    geslacht: GESLACHT[paard.geslacht] ?? '',
+    ras: tekst(paard.ras),
+    karakter: tekst(paard.karakter),
+    gezondheid: tekst(paard.gezondheidsklachten),
+    gezondheidDatum: datumNl(paard.gezondheid_datum),
+    gezondheidMag: tekst(paard.gezondheid_mag),
+    gezondheidNiet: tekst(paard.gezondheid_niet),
+    ditMag: tekst(paard.dit_mag),
+    ditNiet: tekst(paard.dit_niet),
+    metDeelnemers: tekst(paard.met_deelnemers),
+    overig: tekst(paard.overige_opmerkingen),
+  }
+}
+
+/** Kaarten uit content.json (oude vakjes) in dezelfde vorm. */
+function vanContent(item) {
+  return {
+    naam: tekst(item.naam),
+    leeftijd: tekst(item.leeftijd),
+    karakter: tekst(item.karakter),
+    gezondheid: tekst(item.bijzonderheden),
+    ditMag: tekst(item.ditMag),
+    ditNiet: tekst(item.ditNiet),
+    metDeelnemers: tekst(item.metDeelnemers),
+    src: item.src,
+    alt: item.alt,
+  }
+}
+
+function useDigibordPaarden() {
+  const [paarden, setPaarden] = useState(null)
+  useEffect(() => {
+    let actief = true
+    fetch(DIGIBORD_PAARDEN_URL)
+      .then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))))
+      .then((data) => {
+        const lijst = Array.isArray(data?.paarden) ? data.paarden.map(vanDigibord).filter((p) => p.naam) : []
+        if (actief && lijst.length > 0) {
+          lijst.sort((a, b) => a.naam.localeCompare(b.naam, 'nl', { sensitivity: 'base' }))
+          setPaarden(lijst)
+        }
+      })
+      .catch(() => {})
+    return () => {
+      actief = false
+    }
+  }, [])
+  return paarden
+}
+
+function Field({ label, value, className = '', children }) {
+  if (!value && !children) return null
   return (
     <div className={`animal-card__row ${className}`}>
       <span className="animal-card__label">{label}</span>
-      {value ? (
-        <p className="animal-card__value"><RichText text={value} /></p>
-      ) : (
-        <p className="animal-card__todo">{HINTS[name]}</p>
-      )}
+      {value ? <p className="animal-card__value"><RichText text={value} /></p> : null}
+      {children}
     </div>
   )
 }
 
+function AnimalCard({ item }) {
+  const feiten = [
+    item.geboortejaar && `Geboren in ${item.geboortejaar}`,
+    item.leeftijd,
+    item.geslacht,
+    item.ras,
+  ].filter(Boolean)
+  const heeftGezondheid = item.gezondheid || item.gezondheidMag || item.gezondheidNiet
+  const leeg = !item.karakter && !heeftGezondheid && !item.ditMag && !item.ditNiet && !item.metDeelnemers && !item.overig
+
+  return (
+    <article className="animal-card" aria-live="polite">
+      <header className="animal-card__head">
+        {item.src ? <img className="animal-card__photo" src={item.src} alt={item.alt ?? ''} /> : null}
+        <div>
+          <h3 className="animal-card__name">{item.naam}</h3>
+          {feiten.length > 0 ? <p className="animal-card__sub">{feiten.join(' · ')}</p> : null}
+        </div>
+      </header>
+      {leeg ? (
+        <p className="animal-card__todo animal-card__empty">Over dit paard is nog niets ingevuld. Vraag het aan Anne S of Elske.</p>
+      ) : null}
+      <Field label="Karakter" value={item.karakter} />
+      {heeftGezondheid ? (
+        <Field label={item.gezondheidDatum ? `Gezondheid (sinds ${item.gezondheidDatum})` : 'Gezondheid'} value={item.gezondheid} className="animal-card__row--alarm">
+          {item.gezondheidMag ? <p className="animal-card__value"><strong>✓ Wel:</strong> <RichText text={item.gezondheidMag} /></p> : null}
+          {item.gezondheidNiet ? <p className="animal-card__value"><strong>✕ Niet:</strong> <RichText text={item.gezondheidNiet} /></p> : null}
+        </Field>
+      ) : null}
+      {item.ditMag || item.ditNiet ? (
+        <div className="animal-card__split">
+          <Field label="✓ Dit mag" value={item.ditMag} className="animal-card__row--ok" />
+          <Field label="✕ Dit niet" value={item.ditNiet} className="animal-card__row--no" />
+        </div>
+      ) : null}
+      <Field label="Met deelnemers" value={item.metDeelnemers} />
+      <Field label="Overige opmerkingen" value={item.overig} />
+    </article>
+  )
+}
+
 /**
- * Knoppen met de namen van de dieren. Tik je op een naam, dan zie je de
- * dierenkaart van dat dier. Lege vakjes tonen een hulpvraag.
+ * Knoppen met de namen van de paarden. Tik je op een naam, dan zie je de
+ * kaart van dat paard. Alleen ingevulde vakjes worden getoond.
  */
 function AnimalCards({ items = [] }) {
-  const [open, setOpen] = useState(null)
-  const item = open === null ? null : items[open]
+  const live = useDigibordPaarden()
+  const kaarten = live ?? items.map(vanContent)
+  const [openNaam, setOpenNaam] = useState(null)
+  const item = kaarten.find((k) => k.naam === openNaam) ?? null
 
   return (
     <section className="lesson-block animal-cards">
-      <div className="animal-cards__names" role="group" aria-label="Kies een dier">
-        {items.map((entry, index) => (
+      <div className="animal-cards__names" role="group" aria-label="Kies een paard">
+        {kaarten.map((entry, index) => (
           <button
-            key={index}
+            key={`${entry.naam}-${index}`}
             type="button"
-            className={`animal-cards__name${open === index ? ' is-active' : ''}`}
-            aria-pressed={open === index}
-            onClick={() => setOpen(open === index ? null : index)}
+            className={`animal-cards__name${openNaam === entry.naam ? ' is-active' : ''}`}
+            aria-pressed={openNaam === entry.naam}
+            onClick={() => setOpenNaam(openNaam === entry.naam ? null : entry.naam)}
           >
-            {entry.naam || `Dier ${index + 1}`}
+            {entry.naam || `Paard ${index + 1}`}
           </button>
         ))}
       </div>
 
-      {item ? (
-        <article className="animal-card" aria-live="polite">
-          <header className="animal-card__head">
-            {item.src ? (
-              <img className="animal-card__photo" src={item.src} alt={item.alt ?? ''} />
-            ) : (
-              <div className="animal-card__photo animal-card__photo--todo">foto<br />volgt</div>
-            )}
-            <div>
-              <h3 className="animal-card__name">{item.naam}</h3>
-              <p className="animal-card__sub">
-                {item.leeftijd?.trim() ? <RichText text={item.leeftijd} /> : 'Leeftijd: nog in te vullen'}
-              </p>
-            </div>
-          </header>
-          <Field item={item} name="karakter" label="Karakter" />
-          <Field item={item} name="bijzonderheden" label="Bijzonderheden en gezondheid" />
-          <div className="animal-card__split">
-            <Field item={item} name="ditMag" label="✓ Dit mag" className="animal-card__row--ok" />
-            <Field item={item} name="ditNiet" label="✕ Dit niet" className="animal-card__row--no" />
-          </div>
-          <Field item={item} name="metDeelnemers" label="Met deelnemers" />
-          <Field item={item} name="waarschuwen" label="Wie waarschuw je?" className="animal-card__row--alarm" />
-        </article>
-      ) : (
-        <p className="animal-cards__hint">Tik op een naam om de kaart te zien.</p>
-      )}
+      {item ? <AnimalCard item={item} /> : <p className="animal-cards__hint">Tik op een naam om de kaart te zien.</p>}
     </section>
   )
 }
