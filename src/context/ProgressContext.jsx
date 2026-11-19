@@ -105,6 +105,18 @@ export function ProgressProvider({ children }) {
     })
   }, [])
 
+  const uncompleteModule = useCallback((moduleId) => {
+    const module = modules.find((item) => item.id === moduleId)
+    if (!module) return
+
+    const keys = module.lessons.map((lesson) => lessonKey(moduleId, lesson.id))
+    setProgress((current) => ({
+      ...current,
+      completedLessons: current.completedLessons.filter((key) => !keys.includes(key)),
+      completedModules: current.completedModules.filter((id) => id !== moduleId),
+    }))
+  }, [])
+
   const resetProgress = useCallback(() => {
     setProgress(emptyProgress)
     clearChecklists()
@@ -245,6 +257,7 @@ export function ProgressProvider({ children }) {
       markLessonOpened,
       markLessonCompleted,
       completeModule,
+      uncompleteModule,
       resetProgress,
       isLessonOpened,
       isLessonCompleted,
@@ -262,6 +275,7 @@ export function ProgressProvider({ children }) {
       markLessonOpened,
       markLessonCompleted,
       completeModule,
+      uncompleteModule,
       resetProgress,
       isLessonOpened,
       isLessonCompleted,

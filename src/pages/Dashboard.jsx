@@ -17,6 +17,8 @@ function Dashboard() {
     resetProgress,
     hasStarted,
     getResumeInfo,
+    completeModule,
+    uncompleteModule,
   } = useProgress()
 
   const texts = siteTexts.dashboard
@@ -25,7 +27,6 @@ function Dashboard() {
 
   const categoriesWithModules = getCategoriesWithModules()
   const focusModuleId = location.state?.focusModule ?? null
-  const resumeModuleId = resumeInfo?.path?.split('/')[2] ?? null
 
   // Eén doorlopend stappenplan: alle modules op volgorde, per onderdeel gegroepeerd.
   const groups = []
@@ -48,10 +49,9 @@ function Dashboard() {
   const allSteps = groups.flatMap((group) => group.steps)
   const totalSteps = allSteps.length
   const doneSteps = allSteps.filter((step) => step.status === MODULE_STATUS.COMPLETED).length
-  const currentStep =
-    allSteps.find(
-      (step) => step.module.id === resumeModuleId && step.status !== MODULE_STATUS.COMPLETED,
-    ) ?? allSteps.find((step) => step.status !== MODULE_STATUS.COMPLETED) ?? null
+  // "Hier ben je" is altijd de eerste stap die nog niet is afgevinkt. Vooruit spieken
+  // verplaatst die dus niet.
+  const currentStep = allSteps.find((step) => step.status !== MODULE_STATUS.COMPLETED) ?? null
   const allDone = totalSteps > 0 && !currentStep
 
   // Terug uit een module: laat meteen de stap zien van de module waar je was.
@@ -155,6 +155,9 @@ function Dashboard() {
             {doneSteps} van {totalSteps} stappen klaar
           </span>
         </div>
+        <p className="stepplan__hint">
+          Tik op een rondje om een stap zelf af te vinken of het vinkje weer weg te halen.
+        </p>
 
         {groups
           .filter((group) => group.steps.length > 0)
@@ -181,15 +184,28 @@ function Dashboard() {
 
                   return (
                     <li key={step.module.id} className={className}>
+                      <button
+                        type="button"
+                        className="stepplan__marker"
+                        aria-pressed={isDone}
+                        aria-label={
+                          isDone
+                            ? `Vinkje weghalen bij ${step.module.title}`
+                            : `${step.module.title} afvinken`
+                        }
+                        title={isDone ? 'Vinkje weghalen' : 'Afvinken'}
+                        onClick={() =>
+                          isDone ? uncompleteModule(step.module.id) : completeModule(step.module.id)
+                        }
+                      >
+                        {isDone ? '✓' : step.number}
+                      </button>
                       <Link
                         to={stepPath(step)}
                         className="stepplan__link"
                         data-module-id={step.module.id}
                         aria-current={isCurrent ? 'step' : undefined}
                       >
-                        <span className="stepplan__marker" aria-hidden="true">
-                          {isDone ? '✓' : step.number}
-                        </span>
                         <span className="stepplan__icon" aria-hidden="true">
                           <ModuleIcon name={step.module.icon} />
                         </span>
