@@ -1077,6 +1077,10 @@
               "text": "Wat je op het Digibord zet, kunnen anderen meelezen. Zie je ergens een foutje of info dat niet meer van toepassing is? --> Pas het aan en wacht niet tot een ander het doet. "
             },
             {
+              "type": "highlight",
+              "text": "Loopt er iets niet lekker of handig in het Digibord, geef dit door aan Anne H!"
+            },
+            {
               "type": "assignment",
               "label": "Praktijkopdracht",
               "text": "Plan in het dagprogramma een taak in bij het tijdsblok of groepje waarin je hem gaat doen.",
@@ -1161,10 +1165,10 @@
             {
               "type": "bulletList",
               "items": [
+                "als deelnemers iets te vroeg zijn, kunnen ze in de kleine ruimte even wachten of buiten indien het weer oké is.",
                 "geen ouders binnen tijdens de dagstart;",
                 "collega’s gaan op tijd uit de ruimte;",
-                "deelnemers zo snel mogelijk laten zitten;",
-                "als deelnemers iets te vroeg zijn, kunnen ze in de kleine ruimte even wachten of buiten indien het weer oké is."
+                "deelnemers zo snel mogelijk laten zitten;"
               ]
             }
           ]
@@ -1220,11 +1224,11 @@
               "items": [
                 {
                   "title": "🕙 Van 10.00 tot 11.00 uur",
-                  "text": "Dan doet de dagbesteding de standaard klusjes van de lijst."
+                  "text": "Dan doet de dagbesteding de standaardklusjes van de lijst. \nAls je een klusje gedaan hebt, kun je deze evt. afvinken."
                 },
                 {
                   "title": "🙋 Vaste taken",
-                  "text": "Deelnemers hebben vaak hun eigen vaste taken."
+                  "text": "Deelnemers hebben vaak hun eigen vaste taken.\n\n🔄 Onderling schuiven met klussen is geen probleem. De lijst is de basis waar we vanuit werken."
                 },
                 {
                   "title": "🤒 Is er iemand ziek?",
@@ -1233,12 +1237,8 @@
               ]
             },
             {
-              "type": "highlight",
-              "text": "🔄 Onderling schuiven met klussen is geen probleem. De lijst is de basis waar we vanuit werken."
-            },
-            {
               "type": "paragraph",
-              "text": "Voer zelf wijzigingen in de klusjeskaarten door, indien nodig. Is de wijziging structureel? Klik 'deze week en toekomstige weken' aan. "
+              "text": "Voer zelf wijzigingen in de klusjeskaarten door, indien nodig. \nIs de wijziging een structurele aanpassing? Klik dan 'deze week en toekomstige weken' aan. "
             },
             {
               "type": "assignment",
@@ -1268,7 +1268,7 @@
             },
             {
               "type": "paragraph",
-              "text": "Eerst wat voor alle paarden geldt:"
+              "text": "Eerst de afspraken die voor alle paarden gelden:"
             },
             {
               "type": "cards",
