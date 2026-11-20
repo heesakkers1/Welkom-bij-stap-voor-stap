@@ -1592,26 +1592,98 @@
         {
           "id": "persoonlijk-begeleider",
           "title": "Persoonlijk begeleider en Zorgplan",
-          "summary": "Wie het vaste aanspreekpunt is en waar de afspraken staan.",
+          "summary": "Wat de PB1, PB2 en PB3 doen en waar de afspraken staan.",
           "content": [
             {
               "type": "paragraph",
-              "text": "Iedere deelnemer heeft een persoonlijk begeleider. Dat is het vaste aanspreekpunt voor de deelnemer en betrokkenen."
+              "text": "Iedere deelnemer heeft een persoonlijk begeleider (PB). Soms zijn dat er meer: een PB1, PB2 en eventueel een PB3."
             },
             {
-              "type": "paragraph",
-              "text": "De persoonlijk begeleider bewaakt het begeleidingsproces, stelt samen met het team het Zorgplan op en zorgt voor de uitvoering en evaluatie ervan. Ook onderhoudt hij of zij contact met collega’s, familie en externe betrokkenen."
+              "type": "hero",
+              "title": "Wie is PB1, PB2 of PB3?"
             },
             {
-              "type": "paragraph",
-              "text": "Voor iedere deelnemer werken we met een begeleidingsplan. Hierin staan doelen, afspraken en aandachtspunten die richting geven aan de begeleiding. De plannen staan in ZilliZ."
+              "type": "cards",
+              "items": [
+                {
+                  "title": "PB1",
+                  "text": "De collega die het meest of als enige bij de deelnemer betrokken is. Krijgt de deelnemer alleen individuele begeleiding? Dan is de individuele begeleider PB1."
+                },
+                {
+                  "title": "PB2",
+                  "text": "Krijgt de deelnemer naast individuele begeleiding ook dagbesteding? Dan is de meest betrokken dagbestedingscollega meestal PB2."
+                },
+                {
+                  "title": "PB3",
+                  "text": "Kan erbij komen als er meerdere zorgvormen of begeleiders betrokken zijn, of bij complexe problematiek."
+                }
+              ]
+            },
+            {
+              "type": "hero",
+              "title": "Wat doet de PB1?"
             },
             {
               "type": "bulletList",
               "items": [
-                "Begeleidingsplannen worden meestal twee keer per jaar geëvalueerd met alle betrokkenen.",
-                "Bij de eindevaluatie is er altijd een persoonlijk gesprek met de deelnemer en/of betrokkenen.",
-                "Bij jeugd is altijd een SKJ-geregistreerde professional eindverantwoordelijk voor het begeleidingsplan."
+                "Is in principe het eerste aanspreekpunt en bewaakt het geheel van de begeleiding.",
+                "Zorgt dat het zorgplan, de tussentijdse evaluatie en de eindevaluatie op tijd klaar zijn, en vraagt daarvoor input aan PB2 en PB3.",
+                "Bewaakt de voortgang van de doelen en afspraken.",
+                "Houdt de looptijd van de beschikking in de gaten en laat de deelnemer of ouders/verzorgers op tijd weten wanneer die afloopt.",
+                "Zorgt dat duidelijk is wie contact heeft met de deelnemer, ouders/verzorgers en andere betrokkenen."
+              ]
+            },
+            {
+              "type": "hero",
+              "title": "Wat doen de PB2 en PB3?"
+            },
+            {
+              "type": "bulletList",
+              "items": [
+                "Denken mee vanuit hun eigen begeleiding en zorgvorm.",
+                "Leveren op tijd informatie aan voor zorgplannen en evaluaties.",
+                "Signaleren veranderingen, aandachtspunten en risico’s en stemmen die af met de PB1.",
+                "Sluiten aan bij gesprekken en overleggen als dat past.",
+                "Nemen taken over bij afwezigheid, voor zover die binnen hun functie passen."
+              ]
+            },
+            {
+              "type": "highlight",
+              "text": "PB1, PB2 en PB3 spreken samen duidelijk af wie de communicatie met de deelnemer, ouders/verzorgers en andere betrokkenen doet."
+            },
+            {
+              "type": "hero",
+              "title": "PB is geen functie"
+            },
+            {
+              "type": "bulletList",
+              "items": [
+                "PB1, PB2 of PB3 zegt niets over je functie- of salarisniveau. Wat je zelfstandig mag doen en welke externe contacten je hebt, hangt af van je functie (zie het Functiehandboek).",
+                "Zelfstandig zorgplannen en evaluaties opstellen hoort bij Begeleider Zorgboerderij 2 of hoger. Heeft de PB1 een andere functie? Dan stem je af wie het plan schrijft en wie inhoudelijk verantwoordelijk is. De PB1 blijft dan wel de planning, de input en het proces bewaken.",
+                "Een overleg met de gemeente hoort niet automatisch bij de PB1. Dat hangt af van het doel en de complexiteit van het overleg, de functie van de collega en de afspraken tussen de PB’ers."
+              ]
+            },
+            {
+              "type": "hero",
+              "title": "Bij jeugd"
+            },
+            {
+              "type": "paragraph",
+              "text": "Bij jeugd is altijd een SKJ-geregistreerde professional eindverantwoordelijk voor het begeleidingsplan en de begeleiding. De PB1 kan dus het vaste aanspreekpunt zijn, terwijl een SKJ-collega de eindverantwoordelijkheid draagt. Zorgplannen en evaluaties bij jeugd worden daarom altijd gecontroleerd en ondertekend door Anne S., Sanne, Bente of een andere SKJ-geregistreerde collega."
+            },
+            {
+              "type": "hero",
+              "title": "Het Zorgplan"
+            },
+            {
+              "type": "paragraph",
+              "text": "Voor iedere deelnemer werken we met een Zorgplan (begeleidingsplan) met doelen, afspraken en aandachtspunten. De plannen staan in ZilliZ."
+            },
+            {
+              "type": "bulletList",
+              "items": [
+                "Zorgplannen worden meestal twee keer per jaar geëvalueerd met alle betrokkenen.",
+                "Bij de eindevaluatie is er altijd een persoonlijk gesprek met de deelnemer en/of betrokkenen."
               ]
             },
             {
