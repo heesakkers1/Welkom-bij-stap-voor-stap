@@ -160,6 +160,40 @@
   color: var(--text);
 }
 
+.lesson-block--highlight-labeled p:not(.lesson-block__label) {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text);
+}
+
+.lesson-block--highlight-labeled p + p:not(.lesson-block__label) {
+  margin-top: 0.6rem;
+}
+
+.lesson-block__points {
+  list-style: none;
+  margin: 0.85rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.lesson-block__points li {
+  display: grid;
+  gap: 0.1rem;
+  padding: 0.6rem 0.85rem;
+  border-left: 3px solid var(--accent);
+  border-radius: 0.6rem;
+  background: rgba(255, 255, 255, 0.7);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+.lesson-block__points strong {
+  color: var(--accent-strong);
+}
+
 .lesson-block__steps {
   list-style: none;
   counter-reset: stap;
