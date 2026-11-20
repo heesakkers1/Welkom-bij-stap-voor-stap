@@ -9,7 +9,7 @@ function ContentCards({ items = [], variant = 'default' }) {
   return (
     <ul className={`content-cards content-cards--${variant}`}>
       {items.map((item, index) => (
-        <li key={index} className="content-card">
+        <li key={index} className={`content-card${item.href ? ' content-card--link' : ''}`}>
           {withPhoto && item.src ? (
             <img
               className="content-card__photo"
@@ -22,8 +22,21 @@ function ContentCards({ items = [], variant = 'default' }) {
               {withPhoto ? <span>📷 Foto volgt</span> : null}
             </div>
           ) : null}
-          <p className="content-card__title"><RichText text={item.title} /></p>
+          <p className="content-card__title">
+            {item.href ? (
+              <a className="content-card__link" href={item.href} target="_blank" rel="noopener noreferrer">
+                <RichText text={item.title} /> <span aria-hidden="true">↗</span>
+              </a>
+            ) : (
+              <RichText text={item.title} />
+            )}
+          </p>
           {item.text ? <p className="content-card__text"><RichText text={item.text} /></p> : null}
+          {item.extraLink?.href ? (
+            <a className="content-card__extra" href={item.extraLink.href} target="_blank" rel="noopener noreferrer">
+              {item.extraLink.label || 'Meer info'} ↗
+            </a>
+          ) : null}
           {!withPhoto && item.src ? <ZoomImage src={item.src} alt={item.alt || item.title} /> : null}
         </li>
       ))}

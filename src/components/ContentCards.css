@@ -81,3 +81,37 @@
   padding-block: 0.8rem;
   text-align: center;
 }
+
+/* Kaartje dat doorlinkt (bijv. ZilliZ): het hele kaartje is klikbaar. */
+.content-card--link {
+  position: relative;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.content-card--link:hover,
+.content-card--link:focus-within {
+  border-color: rgba(79, 122, 85, 0.45);
+  box-shadow: 0 4px 14px rgba(79, 122, 85, 0.14);
+}
+
+.content-card__link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.content-card__link::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+
+/* Tweede link in een kaartje (bijv. "Download de app"), ligt boven de kaartlink. */
+.content-card__extra {
+  position: relative;
+  z-index: 1;
+  align-self: flex-start;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent, #4f7a55);
+}
