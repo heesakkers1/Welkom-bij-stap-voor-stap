@@ -1879,6 +1879,25 @@
               "text": "Let bij e-mail op zorgvuldig taalgebruik, de juiste ontvangers en het vermijden van onnodige of gevoelige informatie."
             },
             {
+              "type": "emailSignature",
+              "title": "Je e-mailhandtekening",
+              "text": "Vul in, kopieer en plak in Outlook. Klaar!",
+              "steps": [
+                "Tik op *Kopieer handtekening*.",
+                "Outlook: ⚙️ Instellingen → Account → Handtekeningen.",
+                "Nieuwe handtekening → plakken (Ctrl + V).",
+                "Kies hem voor nieuwe berichten én antwoorden → Opslaan."
+              ],
+              "photoTip": "Gebruik de ronde foto die Sanne voor je maakte. Staat hij al op SharePoint? Kijk in WERKNEMERS → 05 Foto's en media → Foto's → Personeel. Sla hem op en kies in Outlook onder je naam: Afbeelding invoegen.",
+              "photoHref": "https://zorgboerderijstapvoorstap1.sharepoint.com/sites/Zorgboerderijstapvoorstap/Shared%20Documents/WERKNEMERS/05%20Foto's%20en%20media/Foto's/Personeel",
+              "photoLinkLabel": "Bekijk de foto's op SharePoint",
+              "oldOutlookTip": "Handtekeningen vind je via Bestand → Opties → E-mail → Handtekeningen.",
+              "phoneTip": "In de Outlook-app kan alleen een simpele handtekening zonder opmaak. Stel hem daarom in op de computer.",
+              "email": "info@zorgboerderijstapvoorstap.nl",
+              "website": "www.zorgboerderijstapvoorstap.nl",
+              "telefoon": "06-28 53 06 13"
+            },
+            {
               "type": "hero",
               "title": "Protocollen en procedures"
             },

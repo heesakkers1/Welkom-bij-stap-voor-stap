@@ -15,6 +15,7 @@ export const BLOCK_NAMES = {
   cards: 'Kaartjes',
   animalCards: 'Dierenkaarten',
   colleagueCards: 'Kennismakingskaarten collega’s',
+  emailSignature: 'E-mailhandtekening',
   timeline: 'Tijdlijn',
   expandableAnswer: 'Vraag met uitklapbaar antwoord',
   signoff: 'Ondertekening',
@@ -70,6 +71,14 @@ export const FIELD_NAMES = {
   werkzaamSinds: 'Werkzaam sinds',
   tekst: 'Tekst (witregel = nieuwe alinea)',
   afsluiting: 'Afsluitende zin',
+  steps: 'Stap',
+  photoTip: 'Uitleg foto',
+  photoLinkLabel: 'Tekst op de knop naar de foto’s',
+  oldOutlookTip: 'Uitleg oud Outlook',
+  phoneTip: 'Uitleg telefoon',
+  email: 'E-mailadres in de handtekening',
+  website: 'Website in de handtekening',
+  telefoon: 'Telefoonnummer in de handtekening',
 }
 
 /** Velden die geen tekst zijn en dus niet in de bewerkpagina staan. */
@@ -87,6 +96,7 @@ export const HIDDEN_FIELDS = new Set([
   'lessons',
   'content',
   'href',
+  'photoHref',
   'extraLink',
   'handboek',
   'moduleId',

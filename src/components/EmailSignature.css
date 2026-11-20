@@ -1,0 +1,175 @@
+.email-signature {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.1rem 1.15rem;
+  border-radius: 1.25rem;
+  background: linear-gradient(180deg, #f8faf4, #eef5ea);
+  border: 1px solid rgba(79, 122, 85, 0.2);
+}
+
+.email-signature__title {
+  margin: 0;
+  font-size: 1.15rem;
+  color: var(--text-strong);
+}
+
+.email-signature__text {
+  margin: 0;
+  font-size: 1.02rem;
+  line-height: 1.55;
+  color: var(--text);
+}
+
+.email-signature__fields {
+  display: grid;
+  gap: 0.3rem;
+}
+
+.email-signature__fields label {
+  margin-top: 0.35rem;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text-strong);
+}
+
+.email-signature__fields input {
+  width: 100%;
+  min-height: 2.75rem;
+  padding: 0.55rem 0.8rem;
+  border: 1px solid rgba(79, 122, 85, 0.3);
+  border-radius: 0.8rem;
+  background: #fff;
+  font: inherit;
+  font-size: 1rem;
+  color: var(--text-strong);
+  box-sizing: border-box;
+}
+
+.email-signature__fields input:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.email-signature__label {
+  margin: 0.4rem 0 0;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--accent-strong);
+}
+
+.email-signature__preview {
+  padding: 1rem 1.1rem;
+  border-radius: 0.9rem;
+  background: #fff;
+  border: 1px solid var(--tile-border);
+  font-family: Aptos, Calibri, Arial, sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #222;
+  overflow-wrap: break-word;
+}
+
+.email-signature__preview p {
+  margin: 0;
+}
+
+.email-signature__preview a {
+  color: #0b6b5a;
+}
+
+
+
+.email-signature__logo {
+  display: block;
+  width: 120px;
+  height: 120px;
+}
+
+.email-signature__copy,
+.email-signature__photo-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  min-height: 2.75rem;
+  padding: 0.6rem 1.2rem;
+  border: 0;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  font: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.email-signature__copy:hover,
+.email-signature__copy:focus-visible,
+.email-signature__photo-button:hover,
+.email-signature__photo-button:focus-within {
+  background: var(--accent-strong);
+}
+
+.email-signature__status {
+  margin: -0.3rem 0 0;
+  min-height: 1.2em;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--accent-strong);
+}
+
+.email-signature__steps {
+  margin: 0;
+  padding-left: 1.4rem;
+  display: grid;
+  gap: 0.4rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+
+
+
+.email-signature__photo-button {
+  background: #fff;
+  color: var(--accent-strong);
+  border: 1px solid rgba(79, 122, 85, 0.35);
+}
+
+.email-signature__photo-button:hover,
+.email-signature__photo-button:focus-within {
+  background: #eef5ea;
+}
+
+.email-signature__note {
+  margin: 0;
+}
+
+.email-signature__more {
+  border-radius: 1rem;
+  background: #fff;
+  border: 1px solid var(--tile-border);
+}
+
+.email-signature__more summary {
+  padding: 0.8rem 1rem;
+  font-weight: 700;
+  color: var(--accent-strong);
+  cursor: pointer;
+}
+
+.email-signature__more-item {
+  display: grid;
+  gap: 0.35rem;
+  padding: 0 1rem 0.9rem;
+}
+
+.email-signature__more-item p {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.5;
+  color: var(--text);
+}
