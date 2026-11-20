@@ -2079,10 +2079,11 @@
               ]
             },
             {
-              "type": "assignment",
-              "label": "Praktijkopdracht",
-              "text": "Stel: een deelnemer wordt boos, scheldt en duwt een andere deelnemer. Welke protocollen van deze pagina helpen je hierbij? Wat doe je op dat moment, en wat regel je daarna?",
-              "reflective": true
+              "type": "expandableAnswer",
+              "situation": "Een deelnemer wordt boos, scheldt en duwt een andere deelnemer.",
+              "question": "Welke protocollen van deze pagina helpen je hierbij? Wat doe je op dat moment, en wat regel je daarna?",
+              "answerLabel": "Bekijk een mogelijk antwoord",
+              "answer": "Kijk in het protocol over agressie en in het protocol incidenten melden. Zorg eerst voor veiligheid: breng de andere deelnemer in veiligheid, probeer de boze deelnemer tot rust te brengen en haal er een collega bij als dat nodig is. Spreek de deelnemer daarna rustig aan op het gedrag. Meld het incident bij je leidinggevende en leg het zo snel mogelijk vast in ZilliZ via het incidentformulier. Daarna wordt samen gezocht naar de oorzaak en een oplossing, bijvoorbeeld een afsprakenlijst of een gesprek met ouders of begeleiders."
             }
           ]
         }
