@@ -1417,6 +1417,38 @@
               "text": "Door incidenten zorgvuldig te registreren kunnen we situaties evalueren, ervan leren en herhaling proberen te voorkomen."
             },
             {
+              "type": "hero",
+              "title": "Zo vul je het incidentformulier in"
+            },
+            {
+              "type": "paragraph",
+              "text": "Je vindt het formulier in ZilliZ via *Zorg* → *Rapportages* → *Incident melden*. Bij het beginscherm klik je de betreffende deelnemer aan."
+            },
+            {
+              "type": "image",
+              "src": "/fotos/zilliz/incident-melden.webp",
+              "alt": "Het formulier Incident melden in ZilliZ met de velden categorie, sjabloon, map, titel, bijlage, datum/tijd incident en een tekstvak",
+              "size": "wide",
+              "zoom": true
+            },
+            {
+              "type": "numberedList",
+              "items": [
+                "*Categorie* (verplicht): kies het soort incident.",
+                "*Sjabloon*: kies je eerst een categorie, dan kun je hier een sjabloon kiezen.",
+                "*Map*: laat deze op *Incidenten* staan.",
+                "*Titel* (verplicht): een paar woorden over wat er gebeurde.",
+                "*Datum/tijd incident* (verplicht): wanneer het gebeurde.",
+                "*Bijlage*: voeg eventueel een foto of bestand toe.",
+                "*Tekstvak*: beschrijf wat er is gebeurd. Schrijf op wat je zelf hebt gezien, gehoord of gedaan."
+              ]
+            },
+            {
+              "type": "tip",
+              "label": "✍️ Zo schrijf je het op",
+              "text": "Feitelijk, objectief en respectvol. Vermijd aannames, interpretaties en oordelen."
+            },
+            {
               "type": "tip",
               "label": "💡 Twijfel je?",
               "text": "Twijfel je of iets een incident is? Meld het dan altijd. Ook een bijna-incident is belangrijk om te melden."
@@ -1435,6 +1467,10 @@
             {
               "type": "paragraph",
               "text": "Onze opgeleide bedrijfshulpverleners (BHV’ers) zijn: \nJoost\nElske\nBente\nPia\n(Bert)\n\nZij weten hoe te handelen bij ongevallen, brand of een evacuatie. Je volgt hun aanwijzingen altijd op."
+            },
+            {
+              "type": "highlight",
+              "text": "Elske is onze *Coördinator Dierenwelzijn & Veiligheid*. Zij is het aanspreekpunt voor vragen over veiligheid en zorgt dat alle faciliteiten aanwezig zijn. Samen zorgen we ervoor dat de veiligheidsprotocollen goed uitgevoerd worden en kunnen worden."
             },
             {
               "type": "paragraph",
