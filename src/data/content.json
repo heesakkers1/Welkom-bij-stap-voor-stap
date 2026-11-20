@@ -1867,12 +1867,12 @@
               ]
             },
             {
-              "type": "highlight",
-              "text": "Privacygevoelige informatie over deelnemers stuur je niet per gewone e-mail. Moet het toch gedeeld worden? Dan gaat het via de Berichtenbox in ZilliZ."
+              "type": "paragraph",
+              "text": "Let bij e-mail op zorgvuldig taalgebruik, de juiste ontvangers en het vermijden van onnodige of gevoelige informatie.\nPrivacygevoelige informatie over deelnemers stuur je niet per gewone e-mail. Moet het toch gedeeld worden? Dan gaat het via de Berichtenbox in ZilliZ."
             },
             {
-              "type": "paragraph",
-              "text": "Let bij e-mail op zorgvuldig taalgebruik, de juiste ontvangers en het vermijden van onnodige of gevoelige informatie."
+              "type": "highlight",
+              "text": "Bij het versturen van e-mails gebruiken we graag een uniforme e-mailhandtekening, zodat onze communicatie een herkenbare en professionele uitstraling heeft."
             },
             {
               "type": "emailSignature",
