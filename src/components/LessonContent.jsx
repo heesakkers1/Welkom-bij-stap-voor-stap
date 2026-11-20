@@ -43,9 +43,27 @@ function LessonContentBlock({ block }) {
     case 'numberedList':
       return (
         <ol className="lesson-block lesson-block--numbered">
-          {(block.items ?? []).map((item, index) => (
-            <li key={index}><RichText text={item} /></li>
-          ))}
+          {(block.items ?? []).map((item, index) =>
+            typeof item === 'string' ? (
+              <li key={index}><RichText text={item} /></li>
+            ) : (
+              <li key={index} className="lesson-block__numbered-rich">
+                {(item?.text ?? '').split(/\n\s*\n/).filter((part) => part.trim()).map((part, partIndex) => (
+                  <p key={partIndex}><RichText text={part.trim()} /></p>
+                ))}
+                {item?.points?.length ? (
+                  <ul className="lesson-block__points">
+                    {item.points.map((point, pointIndex) => (
+                      <li key={pointIndex}>
+                        {point.title ? <strong><RichText text={point.title} /></strong> : null}
+                        {point.text ? <span><RichText text={point.text} /></span> : null}
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
+              </li>
+            ),
+          )}
         </ol>
       )
 

@@ -170,6 +170,30 @@
   margin-top: 0.6rem;
 }
 
+.lesson-block__numbered-rich::before {
+  top: 0.85rem !important;
+  transform: none !important;
+}
+
+.lesson-block__numbered-rich p {
+  margin: 0;
+}
+
+.lesson-block__numbered-rich p + p {
+  margin-top: 0.5rem;
+}
+
+.lesson-block--numbered .lesson-block__points li {
+  counter-increment: none;
+  padding: 0.6rem 0.85rem;
+  border: none;
+  border-left: 3px solid var(--accent);
+}
+
+.lesson-block--numbered .lesson-block__points li::before {
+  content: none;
+}
+
 .lesson-block__points {
   list-style: none;
   margin: 0.85rem 0 0;
