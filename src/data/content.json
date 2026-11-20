@@ -1874,6 +1874,23 @@
               "text": "Let bij e-mail op zorgvuldig taalgebruik, de juiste ontvangers en het vermijden van onnodige of gevoelige informatie."
             },
             {
+              "type": "emailSignature",
+              "title": "Je e-mailhandtekening",
+              "text": "We gebruiken allemaal dezelfde handtekening. Vul hieronder je gegevens in, kopieer hem en plak hem in Outlook.",
+              "steps": [
+                "Vul je naam, functie en dagen in en tik op *Kopieer handtekening*.",
+                "Open Outlook en ga naar Instellingen (het tandwieltje rechtsboven) → Account → Handtekeningen. In het oude Outlook: Bestand → Opties → E-mail → Handtekeningen.",
+                "Kies Nieuwe handtekening, geef hem een naam (bijv. Stap voor Stap) en plak je handtekening in het vak (Ctrl + V).",
+                "Kies bij Standaardhandtekeningen jouw handtekening, voor nieuwe berichten én voor antwoorden.",
+                "Klik op Opslaan. Klaar! 🎉"
+              ],
+              "photoTip": "Een ronde foto van jezelf erbij? Dat mag, het hoeft niet. Kies hieronder een foto, de site maakt hem rond. Bewaar de ronde foto, zet in Outlook je cursor op de lege regel onder je naam en kies Afbeelding invoegen.",
+              "phoneTip": "Werk je op je telefoon? In de Outlook-app kun je alleen een simpele handtekening zonder opmaak instellen. Stel deze handtekening daarom in op de computer.",
+              "email": "info@zorgboerderijstapvoorstap.nl",
+              "website": "www.zorgboerderijstapvoorstap.nl",
+              "telefoon": "06-28 53 06 13"
+            },
+            {
               "type": "hero",
               "title": "Protocollen en procedures"
             },

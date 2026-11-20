@@ -3,6 +3,7 @@ import VideoPlaceholder from './VideoPlaceholder'
 import ContentCards from './ContentCards'
 import AnimalCards from './AnimalCards'
 import ColleagueCards from './ColleagueCards'
+import EmailSignature from './EmailSignature'
 import Timeline from './Timeline'
 import ExpandableAnswer from './ExpandableAnswer'
 import QuizQuestion from './QuizQuestion'
@@ -167,6 +168,20 @@ function LessonContentBlock({ block }) {
 
     case 'colleagueCards':
       return <ColleagueCards items={block.items} />
+
+    case 'emailSignature':
+      return (
+        <EmailSignature
+          title={block.title}
+          text={block.text}
+          steps={block.steps}
+          photoTip={block.photoTip}
+          phoneTip={block.phoneTip}
+          email={block.email}
+          website={block.website}
+          telefoon={block.telefoon}
+        />
+      )
 
     case 'timeline':
       return <Timeline items={block.items} variant={block.variant} />
