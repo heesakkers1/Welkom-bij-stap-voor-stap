@@ -1749,27 +1749,23 @@
             {
               "type": "numberedList",
               "items": [
+                {
+                  "text": "Bij dagbesteding spreken we tijdens de dagstart ’s ochtends af wie verantwoordelijk is voor het rapporteren. Collega’s geven input over wat zij die dag bij de deelnemers hebben gezien.\n\nJe rapporteert op twee manieren:",
+                  "points": [
+                    {
+                      "title": "Als groep",
+                      "text": "Wat hebben we vandaag gedaan en hoe was de sfeer?"
+                    },
+                    {
+                      "title": "Per deelnemer",
+                      "text": "Hoe zat iemand erbij en waren er bijzonderheden?"
+                    }
+                  ]
+                },
                 "Rapporteer feitelijk, objectief, respectvol en op tijd.",
                 "Beschrijf wat je daadwerkelijk hebt gezien, gehoord of gedaan. Vermijd aannames, interpretaties en oordelen.",
-                "Rapporteer na iedere individuele begeleiding. Bij dagbesteding spreken we tijdens de dagstart ’s ochtends af wie verantwoordelijk is voor het rapporteren. Collega’s geven input over wat zij die dag bij de deelnemers hebben gezien.",
+                "Rapporteer na iedere individuele begeleiding.",
                 "Bijzonderheden, incidenten en belangrijke veranderingen horen ook in de rapportage."
-              ]
-            },
-            {
-              "type": "paragraph",
-              "text": "Bij dagbesteding rapporteren we op twee manieren:"
-            },
-            {
-              "type": "cards",
-              "items": [
-                {
-                  "title": "Als groep",
-                  "text": "Wat hebben we vandaag gedaan en hoe was de sfeer?"
-                },
-                {
-                  "title": "Per deelnemer",
-                  "text": "Hoe zat iemand erbij en waren er bijzonderheden?"
-                }
               ]
             },
             {
