@@ -42,6 +42,7 @@ export const FIELD_NAMES = {
   alt: 'Omschrijving van de foto (voor wie niet kan zien)',
   note: 'Notitie',
   items: 'Punt',
+  points: 'Punt',
   brand: 'Kleine tekst bovenaan',
   subtitle: 'Ondertitel',
   intro: 'Introductie',

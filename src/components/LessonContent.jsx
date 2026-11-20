@@ -61,9 +61,23 @@ function LessonContentBlock({ block }) {
 
     case 'highlight':
       return (
-        <aside className="lesson-block lesson-block--highlight">
+        <aside className={`lesson-block lesson-block--highlight${block.label ? ' lesson-block--highlight-labeled' : ''}`}>
           {block.label ? <p className="lesson-block__label lesson-block__label--highlight"><RichText text={block.label} /></p> : null}
-          {block.text ? <p><RichText text={block.text} /></p> : null}
+          {block.text
+            ? block.text.split(/\n\s*\n/).filter((part) => part.trim()).map((part, index) => (
+                <p key={index}><RichText text={part.trim()} /></p>
+              ))
+            : null}
+          {block.points?.length ? (
+            <ul className="lesson-block__points">
+              {block.points.map((point, index) => (
+                <li key={index}>
+                  {point.title ? <strong><RichText text={point.title} /></strong> : null}
+                  {point.text ? <span><RichText text={point.text} /></span> : null}
+                </li>
+              ))}
+            </ul>
+          ) : null}
           {block.items?.length ? (
             <ol className="lesson-block__steps">
               {block.items.map((item, index) => (
