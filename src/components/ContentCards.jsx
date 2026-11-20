@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import RichText from './RichText'
 import { previewSrc } from './imagePreview'
 import ZoomImage from './ZoomImage'
@@ -9,7 +10,7 @@ function ContentCards({ items = [], variant = 'default' }) {
   return (
     <ul className={`content-cards content-cards--${variant}`}>
       {items.map((item, index) => (
-        <li key={index} className={`content-card${item.href ? ' content-card--link' : ''}`}>
+        <li key={index} className={`content-card${item.href && !item.href.startsWith('/') ? ' content-card--link' : ''}`}>
           {withPhoto && item.src ? (
             <img
               className="content-card__photo"
@@ -23,7 +24,7 @@ function ContentCards({ items = [], variant = 'default' }) {
             </div>
           ) : null}
           <p className="content-card__title">
-            {item.href ? (
+            {item.href && !item.href.startsWith('/') ? (
               <a className="content-card__link" href={item.href} target="_blank" rel="noopener noreferrer">
                 <RichText text={item.title} /> <span aria-hidden="true">↗</span>
               </a>
@@ -32,9 +33,20 @@ function ContentCards({ items = [], variant = 'default' }) {
             )}
           </p>
           {item.text ? <p className="content-card__text"><RichText text={item.text} /></p> : null}
+          {item.href?.startsWith('/') ? (
+            // Link naar een andere les op deze site: zelfde tabblad.
+            <Link className="content-card__extra" to={item.href}>
+              {item.linkLabel || 'Lees opnieuw'} →
+            </Link>
+          ) : null}
           {item.extraLink?.href ? (
             <a className="content-card__extra" href={item.extraLink.href} target="_blank" rel="noopener noreferrer">
               {item.extraLink.label || 'Meer info'} ↗
+            </a>
+          ) : null}
+          {item.extraLink2?.href ? (
+            <a className="content-card__extra" href={item.extraLink2.href} target="_blank" rel="noopener noreferrer">
+              {item.extraLink2.label || 'Meer info'} ↗
             </a>
           ) : null}
           {!withPhoto && item.src ? <ZoomImage src={item.src} alt={item.alt || item.title} /> : null}
