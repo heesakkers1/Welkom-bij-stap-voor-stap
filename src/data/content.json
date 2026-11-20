@@ -2008,55 +2008,30 @@
             },
             {
               "type": "paragraph",
-              "text": "Deze kwamen eerder in de onboarding voorbij. Lees ze gerust nog eens."
+              "text": "Deze kwamen eerder in de onboarding voorbij. Tik op een titel om het protocol te openen."
             },
             {
               "type": "cards",
               "items": [
                 {
                   "title": "Incidenten melden",
-                  "href": "/module/veilig-werken/les/veiligheid-voorop",
-                  "linkLabel": "Lees de les opnieuw",
-                  "extraLink": {
-                    "label": "Open het protocol",
-                    "href": "https://zorgboerderijstapvoorstap1.sharepoint.com/sites/INTRANETStapvoorStap/Gedeelde%20documenten/Forms/AllItems.aspx?id=%2Fsites%2FINTRANETStapvoorStap%2FGedeelde%20documenten%2FProtocollen%2FMeldcode%20en%20calamiteiten%2FProtocol%20incidenten%20en%20calamiteiten%2Epdf&parent=%2Fsites%2FINTRANETStapvoorStap%2FGedeelde%20documenten%2FProtocollen%2FMeldcode%20en%20calamiteiten"
-                  }
+                  "href": "https://zorgboerderijstapvoorstap1.sharepoint.com/sites/INTRANETStapvoorStap/Gedeelde%20documenten/Forms/AllItems.aspx?id=%2Fsites%2FINTRANETStapvoorStap%2FGedeelde%20documenten%2FProtocollen%2FMeldcode%20en%20calamiteiten%2FProtocol%20incidenten%20en%20calamiteiten%2Epdf&parent=%2Fsites%2FINTRANETStapvoorStap%2FGedeelde%20documenten%2FProtocollen%2FMeldcode%20en%20calamiteiten"
                 },
                 {
                   "title": "BHV en noodplan",
-                  "href": "/module/veilig-werken/les/bhv-en-calamiteiten",
-                  "linkLabel": "Lees de les opnieuw",
-                  "extraLink": {
-                    "label": "Open het noodplan",
-                    "href": "https://zorgboerderijstapvoorstap1.sharepoint.com/sites/Zorgboerderijstapvoorstap/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FZorgboerderijstapvoorstap%2FShared%20Documents%2FWERKNEMERS%2F02%20Werkwijze%20en%20protocollen%2FProtocollen%20en%20beleid%2FVeiligheid%20en%20BHV%2FNoodplan%20versie%2013%2D%2010%2Edocx&parent=%2Fsites%2FZorgboerderijstapvoorstap%2FShared%20Documents%2FWERKNEMERS%2F02%20Werkwijze%20en%20protocollen%2FProtocollen%20en%20beleid%2FVeiligheid%20en%20BHV"
-                  }
+                  "href": "https://zorgboerderijstapvoorstap1.sharepoint.com/sites/Zorgboerderijstapvoorstap/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FZorgboerderijstapvoorstap%2FShared%20Documents%2FWERKNEMERS%2F02%20Werkwijze%20en%20protocollen%2FProtocollen%20en%20beleid%2FVeiligheid%20en%20BHV%2FNoodplan%20versie%2013%2D%2010%2Edocx&parent=%2Fsites%2FZorgboerderijstapvoorstap%2FShared%20Documents%2FWERKNEMERS%2F02%20Werkwijze%20en%20protocollen%2FProtocollen%20en%20beleid%2FVeiligheid%20en%20BHV"
                 },
                 {
                   "title": "Privacy en AVG",
-                  "href": "/module/veilig-werken/les/privacy-avg",
-                  "linkLabel": "Lees de les opnieuw",
-                  "extraLink": {
-                    "label": "Open het privacybeleid",
-                    "href": "https://zorgboerderijstapvoorstap1.sharepoint.com/sites/INTRANETStapvoorStap/Gedeelde%20documenten/Forms/AllItems.aspx?id=%2Fsites%2FINTRANETStapvoorStap%2FGedeelde%20documenten%2FProtocollen%2FPrivacy%20en%20AVG%2FAVG%20%26%20Privacybeleid%20Zorgboerderij%20Stap%20voor%20Stap%202023%20%2Epdf&parent=%2Fsites%2FINTRANETStapvoorStap%2FGedeelde%20documenten%2FProtocollen%2FPrivacy%20en%20AVG"
-                  }
+                  "href": "https://zorgboerderijstapvoorstap1.sharepoint.com/sites/INTRANETStapvoorStap/Gedeelde%20documenten/Forms/AllItems.aspx?id=%2Fsites%2FINTRANETStapvoorStap%2FGedeelde%20documenten%2FProtocollen%2FPrivacy%20en%20AVG%2FAVG%20%26%20Privacybeleid%20Zorgboerderij%20Stap%20voor%20Stap%202023%20%2Epdf&parent=%2Fsites%2FINTRANETStapvoorStap%2FGedeelde%20documenten%2FProtocollen%2FPrivacy%20en%20AVG"
                 },
                 {
                   "title": "Meldcode huiselijk geweld en kindermishandeling",
-                  "href": "/module/veilig-werken/les/privacy-avg",
-                  "linkLabel": "Lees de les opnieuw",
-                  "extraLink": {
-                    "label": "Open de meldcode",
-                    "href": "https://zorgboerderijstapvoorstap1.sharepoint.com/sites/INTRANETStapvoorStap/Gedeelde%20documenten/Forms/AllItems.aspx?id=%2Fsites%2FINTRANETStapvoorStap%2FGedeelde%20documenten%2FProtocollen%2FMeldcode%20en%20calamiteiten%2FMeldcode%20huiselijk%20geweld%20en%20kindermishandeling%202023%20PDF%2Epdf&parent=%2Fsites%2FINTRANETStapvoorStap%2FGedeelde%20documenten%2FProtocollen%2FMeldcode%20en%20calamiteiten"
-                  }
+                  "href": "https://zorgboerderijstapvoorstap1.sharepoint.com/sites/INTRANETStapvoorStap/Gedeelde%20documenten/Forms/AllItems.aspx?id=%2Fsites%2FINTRANETStapvoorStap%2FGedeelde%20documenten%2FProtocollen%2FMeldcode%20en%20calamiteiten%2FMeldcode%20huiselijk%20geweld%20en%20kindermishandeling%202023%20PDF%2Epdf&parent=%2Fsites%2FINTRANETStapvoorStap%2FGedeelde%20documenten%2FProtocollen%2FMeldcode%20en%20calamiteiten"
                 },
                 {
                   "title": "Ziekmelden en verzuim",
-                  "href": "/module/procedures/les/rooster-ziek-verlof",
-                  "linkLabel": "Lees de les opnieuw",
-                  "extraLink": {
-                    "label": "Open het verzuimbeleid",
-                    "href": "https://zorgboerderijstapvoorstap1.sharepoint.com/sites/INTRANETStapvoorStap/Gedeelde%20documenten/Forms/AllItems.aspx?id=%2Fsites%2FINTRANETStapvoorStap%2FGedeelde%20documenten%2FProtocollen%2FVerzuimbeleid%20personeel%2FVerzuimbeleid%20Zorgboerderij%20Stap%20voor%20Stap%20november%202026%2Epdf&parent=%2Fsites%2FINTRANETStapvoorStap%2FGedeelde%20documenten%2FProtocollen%2FVerzuimbeleid%20personeel"
-                  }
+                  "href": "https://zorgboerderijstapvoorstap1.sharepoint.com/sites/INTRANETStapvoorStap/Gedeelde%20documenten/Forms/AllItems.aspx?id=%2Fsites%2FINTRANETStapvoorStap%2FGedeelde%20documenten%2FProtocollen%2FVerzuimbeleid%20personeel%2FVerzuimbeleid%20Zorgboerderij%20Stap%20voor%20Stap%20november%202026%2Epdf&parent=%2Fsites%2FINTRANETStapvoorStap%2FGedeelde%20documenten%2FProtocollen%2FVerzuimbeleid%20personeel"
                 }
               ]
             },
@@ -2070,38 +2045,26 @@
                 {
                   "title": "Gedragscode en huisregels",
                   "text": "Gelden voor alle activiteiten en begeleiding op de boerderij, zodat iedereen zich veilig voelt.",
-                  "extraLink": {
-                    "label": "Open het protocol",
-                    "href": "https://zorgboerderijstapvoorstap1.sharepoint.com/sites/INTRANETStapvoorStap/Gedeelde%20documenten/Forms/AllItems.aspx?id=%2Fsites%2FINTRANETStapvoorStap%2FGedeelde%20documenten%2FProtocollen%2FGedrag%2C%20agressie%20en%20seksualiteit%2FGedragscode%20en%20huisregels%20Zorgboerderij%20Stap%20voor%20Stap%20november%202026%2Epdf&parent=%2Fsites%2FINTRANETStapvoorStap%2FGedeelde%20documenten%2FProtocollen%2FGedrag%2C%20agressie%20en%20seksualiteit"
-                  }
+                  "href": "https://zorgboerderijstapvoorstap1.sharepoint.com/sites/INTRANETStapvoorStap/Gedeelde%20documenten/Forms/AllItems.aspx?id=%2Fsites%2FINTRANETStapvoorStap%2FGedeelde%20documenten%2FProtocollen%2FGedrag%2C%20agressie%20en%20seksualiteit%2FGedragscode%20en%20huisregels%20Zorgboerderij%20Stap%20voor%20Stap%20november%202026%2Epdf&parent=%2Fsites%2FINTRANETStapvoorStap%2FGedeelde%20documenten%2FProtocollen%2FGedrag%2C%20agressie%20en%20seksualiteit"
                 },
                 {
                   "title": "Agressie en ongewenste intimiteiten",
                   "text": "Hoe je handelt bij agressie, ongewenste intimiteiten of strafbare handelingen.",
+                  "href": "https://zorgboerderijstapvoorstap1.sharepoint.com/sites/INTRANETStapvoorStap/Gedeelde%20documenten/Forms/AllItems.aspx?id=%2Fsites%2FINTRANETStapvoorStap%2FGedeelde%20documenten%2FProtocollen%2FGedrag%2C%20agressie%20en%20seksualiteit%2FProcedure%20omtrent%20agressie%2C%20ongewenste%20intimiteiten%20voor%20medewerkers%202023%20PDF%2Epdf&parent=%2Fsites%2FINTRANETStapvoorStap%2FGedeelde%20documenten%2FProtocollen%2FGedrag%2C%20agressie%20en%20seksualiteit",
                   "extraLink": {
-                    "label": "Voor medewerkers",
-                    "href": "https://zorgboerderijstapvoorstap1.sharepoint.com/sites/INTRANETStapvoorStap/Gedeelde%20documenten/Forms/AllItems.aspx?id=%2Fsites%2FINTRANETStapvoorStap%2FGedeelde%20documenten%2FProtocollen%2FGedrag%2C%20agressie%20en%20seksualiteit%2FProcedure%20omtrent%20agressie%2C%20ongewenste%20intimiteiten%20voor%20medewerkers%202023%20PDF%2Epdf&parent=%2Fsites%2FINTRANETStapvoorStap%2FGedeelde%20documenten%2FProtocollen%2FGedrag%2C%20agressie%20en%20seksualiteit"
-                  },
-                  "extraLink2": {
-                    "label": "Voor deelnemers",
+                    "label": "Versie voor deelnemers",
                     "href": "https://zorgboerderijstapvoorstap1.sharepoint.com/sites/INTRANETStapvoorStap/Gedeelde%20documenten/Forms/AllItems.aspx?id=%2Fsites%2FINTRANETStapvoorStap%2FGedeelde%20documenten%2FProtocollen%2FGedrag%2C%20agressie%20en%20seksualiteit%2FProcedure%20omtrent%20agressie%2C%20ongewenste%20intimiteiten%20en%20agressie%20voor%20deelnemers%202023%20PDF%2Epdf&parent=%2Fsites%2FINTRANETStapvoorStap%2FGedeelde%20documenten%2FProtocollen%2FGedrag%2C%20agressie%20en%20seksualiteit"
                   }
                 },
                 {
                   "title": "Klachtenreglement",
                   "text": "Hoe iemand een klacht indient en wat er daarna gebeurt.",
-                  "extraLink": {
-                    "label": "Open het reglement",
-                    "href": "https://zorgboerderijstapvoorstap1.sharepoint.com/sites/INTRANETStapvoorStap/Gedeelde%20documenten/Forms/AllItems.aspx?id=%2Fsites%2FINTRANETStapvoorStap%2FGedeelde%20documenten%2FProtocollen%2FKlachten%2FKlachtenreglement%20voor%20medewerkers%20november%202026%2Epdf&parent=%2Fsites%2FINTRANETStapvoorStap%2FGedeelde%20documenten%2FProtocollen%2FKlachten"
-                  }
+                  "href": "https://zorgboerderijstapvoorstap1.sharepoint.com/sites/INTRANETStapvoorStap/Gedeelde%20documenten/Forms/AllItems.aspx?id=%2Fsites%2FINTRANETStapvoorStap%2FGedeelde%20documenten%2FProtocollen%2FKlachten%2FKlachtenreglement%20voor%20medewerkers%20november%202026%2Epdf&parent=%2Fsites%2FINTRANETStapvoorStap%2FGedeelde%20documenten%2FProtocollen%2FKlachten"
                 },
                 {
                   "title": "Hygiëneprotocol",
                   "text": "Ons eigen protocol om risico’s, ook voor voedselveiligheid, te voorkomen of te verkleinen.",
-                  "extraLink": {
-                    "label": "Open het protocol",
-                    "href": "https://zorgboerderijstapvoorstap1.sharepoint.com/sites/Zorgboerderijstapvoorstap/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FZorgboerderijstapvoorstap%2FShared%20Documents%2FWERKNEMERS%2F99%20Archief%2FDocumenten%20Dante%20%28nog%20uitzoeken%29%2FDocumenten%20KLJZ%20werkbeschrijving%2FHygi%C3%ABneprotocol%20SVS%20versie%201%2Epdf&parent=%2Fsites%2FZorgboerderijstapvoorstap%2FShared%20Documents%2FWERKNEMERS%2F99%20Archief%2FDocumenten%20Dante%20%28nog%20uitzoeken%29%2FDocumenten%20KLJZ%20werkbeschrijving"
-                  }
+                  "href": "https://zorgboerderijstapvoorstap1.sharepoint.com/sites/Zorgboerderijstapvoorstap/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FZorgboerderijstapvoorstap%2FShared%20Documents%2FWERKNEMERS%2F99%20Archief%2FDocumenten%20Dante%20%28nog%20uitzoeken%29%2FDocumenten%20KLJZ%20werkbeschrijving%2FHygi%C3%ABneprotocol%20SVS%20versie%201%2Epdf&parent=%2Fsites%2FZorgboerderijstapvoorstap%2FShared%20Documents%2FWERKNEMERS%2F99%20Archief%2FDocumenten%20Dante%20%28nog%20uitzoeken%29%2FDocumenten%20KLJZ%20werkbeschrijving"
                 }
               ]
             },
