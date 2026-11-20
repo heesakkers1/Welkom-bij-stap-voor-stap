@@ -1996,54 +1996,122 @@
         {
           "id": "protocollen",
           "title": "Protocollen",
-          "summary": "Waar je de protocollen vindt en welke er nog meer zijn.",
+          "summary": "Welke protocollen je al kent, welke nieuw zijn, en waar je ze terugvindt.",
           "content": [
             {
+              "type": "paragraph",
+              "text": "Protocollen helpen je om veilig en eenduidig te werken. Je bent zelf verantwoordelijk dat je de protocollen voor jouw werk kent. Twijfel je? Kijk in het protocol en overleg met je leidinggevende of een collega."
+            },
+            {
               "type": "hero",
-              "title": "Protocollen en procedures"
+              "title": "✓ Deze ken je al"
             },
             {
               "type": "paragraph",
-              "text": "Protocollen en procedures helpen je om veilig, professioneel en eenduidig te werken."
+              "text": "Deze kwamen eerder in de onboarding voorbij. Lees ze gerust nog eens."
             },
             {
-              "type": "paragraph",
-              "text": "Je vindt ze in ZilliZ → Intranet. Als medewerker ben je zelf verantwoordelijk voor het kennen en volgen van de protocollen die voor jouw werk gelden."
-            },
-            {
-              "type": "numberedList",
+              "type": "cards",
               "items": [
-                "Lees de protocollen die voor jouw functie en werkzaamheden relevant zijn goed door.",
-                "Twijfel je wat je moet doen? Kijk eerst in het protocol.",
-                "Overleg daarna met je leidinggevende of een collega."
+                {
+                  "title": "Incidenten melden",
+                  "href": "/module/veilig-werken/les/veiligheid-voorop",
+                  "linkLabel": "Lees de les opnieuw",
+                  "extraLink": {
+                    "label": "Open het protocol",
+                    "href": "https://zorgboerderijstapvoorstap1.sharepoint.com/sites/Zorgboerderijstapvoorstap/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FZorgboerderijstapvoorstap%2FShared%20Documents%2FWERKNEMERS%2F02%20Werkwijze%20en%20protocollen%2FProtocollen%20en%20beleid%2FMeldcode%20en%20calamiteiten%2FProtocol%20incidenten%20en%20calamiteiten%2Epdf&parent=%2Fsites%2FZorgboerderijstapvoorstap%2FShared%20Documents%2FWERKNEMERS%2F02%20Werkwijze%20en%20protocollen%2FProtocollen%20en%20beleid%2FMeldcode%20en%20calamiteiten"
+                  }
+                },
+                {
+                  "title": "BHV en noodplan",
+                  "href": "/module/veilig-werken/les/bhv-en-calamiteiten",
+                  "linkLabel": "Lees de les opnieuw",
+                  "extraLink": {
+                    "label": "Open het noodplan",
+                    "href": "https://zorgboerderijstapvoorstap1.sharepoint.com/sites/Zorgboerderijstapvoorstap/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FZorgboerderijstapvoorstap%2FShared%20Documents%2FWERKNEMERS%2F02%20Werkwijze%20en%20protocollen%2FProtocollen%20en%20beleid%2FVeiligheid%20en%20BHV%2FNoodplan%20versie%2013%2D%2010%2Edocx&parent=%2Fsites%2FZorgboerderijstapvoorstap%2FShared%20Documents%2FWERKNEMERS%2F02%20Werkwijze%20en%20protocollen%2FProtocollen%20en%20beleid%2FVeiligheid%20en%20BHV"
+                  }
+                },
+                {
+                  "title": "Privacy en AVG",
+                  "href": "/module/veilig-werken/les/privacy-avg",
+                  "linkLabel": "Lees de les opnieuw",
+                  "extraLink": {
+                    "label": "Open het privacybeleid",
+                    "href": "https://zorgboerderijstapvoorstap1.sharepoint.com/sites/Zorgboerderijstapvoorstap/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FZorgboerderijstapvoorstap%2FShared%20Documents%2FWERKNEMERS%2F02%20Werkwijze%20en%20protocollen%2FProtocollen%20en%20beleid%2FPrivacy%20en%20AVG%2FAVG%20%26%20Privacybeleid%20Zorgboerderij%20Stap%20voor%20Stap%202023%20%2Epdf&parent=%2Fsites%2FZorgboerderijstapvoorstap%2FShared%20Documents%2FWERKNEMERS%2F02%20Werkwijze%20en%20protocollen%2FProtocollen%20en%20beleid%2FPrivacy%20en%20AVG"
+                  }
+                },
+                {
+                  "title": "Meldcode huiselijk geweld en kindermishandeling",
+                  "href": "/module/veilig-werken/les/privacy-avg",
+                  "linkLabel": "Lees de les opnieuw",
+                  "extraLink": {
+                    "label": "Open de meldcode",
+                    "href": "https://zorgboerderijstapvoorstap1.sharepoint.com/sites/Zorgboerderijstapvoorstap/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FZorgboerderijstapvoorstap%2FShared%20Documents%2FWERKNEMERS%2F02%20Werkwijze%20en%20protocollen%2FProtocollen%20en%20beleid%2FMeldcode%20en%20calamiteiten%2FMeldcode%20huiselijk%20geweld%20en%20kindermishandeling%202023%20PDF%2Epdf&parent=%2Fsites%2FZorgboerderijstapvoorstap%2FShared%20Documents%2FWERKNEMERS%2F02%20Werkwijze%20en%20protocollen%2FProtocollen%20en%20beleid%2FMeldcode%20en%20calamiteiten"
+                  }
+                },
+                {
+                  "title": "Ziekmelden en verzuim",
+                  "href": "/module/procedures/les/rooster-ziek-verlof",
+                  "linkLabel": "Lees de les opnieuw",
+                  "extraLink": {
+                    "label": "Open het verzuimbeleid",
+                    "href": "https://zorgboerderijstapvoorstap1.sharepoint.com/sites/Zorgboerderijstapvoorstap/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FZorgboerderijstapvoorstap%2FShared%20Documents%2FWERKNEMERS%2F02%20Werkwijze%20en%20protocollen%2FProtocollen%20en%20beleid%2FPersoneel%2FVerzuimbeleid%20Zorgboerderij%20Stap%20voor%20Stap%202023%2Epdf&parent=%2Fsites%2FZorgboerderijstapvoorstap%2FShared%20Documents%2FWERKNEMERS%2F02%20Werkwijze%20en%20protocollen%2FProtocollen%20en%20beleid%2FPersoneel"
+                  }
+                }
               ]
             },
             {
               "type": "hero",
-              "title": "Welke protocollen zijn er nog meer?"
-            },
-            {
-              "type": "paragraph",
-              "text": "Veiligheid, BHV, privacy, meldcodes en ziekmelden heb je al eerder gezien. Deze protocollen horen er ook bij. Je vindt ze allemaal in ZilliZ → Intranet."
+              "title": "✨ Nieuw: lees deze ook"
             },
             {
               "type": "cards",
               "items": [
                 {
                   "title": "Gedragscode en huisregels",
-                  "text": "De huisregels gelden voor alle activiteiten en begeleiding op de boerderij. Zo voelt iedere deelnemer en collega zich veilig en blijft de sfeer goed."
+                  "text": "Gelden voor alle activiteiten en begeleiding op de boerderij, zodat iedereen zich veilig voelt.",
+                  "extraLink": {
+                    "label": "Open het protocol",
+                    "href": "https://zorgboerderijstapvoorstap1.sharepoint.com/sites/Zorgboerderijstapvoorstap/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FZorgboerderijstapvoorstap%2FShared%20Documents%2FWERKNEMERS%2F02%20Werkwijze%20en%20protocollen%2FProtocollen%20en%20beleid%2FGedrag%2C%20agressie%20en%20seksualiteit%2FGedragscode%20en%20Huisregels%20Zorgboerderij%20Stap%20voor%20Stap%20%2Epdf&parent=%2Fsites%2FZorgboerderijstapvoorstap%2FShared%20Documents%2FWERKNEMERS%2F02%20Werkwijze%20en%20protocollen%2FProtocollen%20en%20beleid%2FGedrag%2C%20agressie%20en%20seksualiteit"
+                  }
                 },
                 {
-                  "title": "Agressie, ongewenste intimiteiten en strafbare handelingen",
-                  "text": "Hierin staat hoe je handelt bij agressie, ongewenste intimiteiten of strafbare handelingen. Er is een procedure voor medewerkers en een voor deelnemers."
+                  "title": "Agressie en ongewenste intimiteiten",
+                  "text": "Hoe je handelt bij agressie, ongewenste intimiteiten of strafbare handelingen.",
+                  "extraLink": {
+                    "label": "Voor medewerkers",
+                    "href": "https://zorgboerderijstapvoorstap1.sharepoint.com/sites/Zorgboerderijstapvoorstap/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FZorgboerderijstapvoorstap%2FShared%20Documents%2FWERKNEMERS%2F02%20Werkwijze%20en%20protocollen%2FProtocollen%20en%20beleid%2FGedrag%2C%20agressie%20en%20seksualiteit%2FProcedure%20omtrent%20agressie%2C%20ongewenste%20intimiteiten%20voor%20medewerkers%202023%20PDF%2Epdf&parent=%2Fsites%2FZorgboerderijstapvoorstap%2FShared%20Documents%2FWERKNEMERS%2F02%20Werkwijze%20en%20protocollen%2FProtocollen%20en%20beleid%2FGedrag%2C%20agressie%20en%20seksualiteit"
+                  },
+                  "extraLink2": {
+                    "label": "Voor deelnemers",
+                    "href": "https://zorgboerderijstapvoorstap1.sharepoint.com/sites/Zorgboerderijstapvoorstap/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FZorgboerderijstapvoorstap%2FShared%20Documents%2FWERKNEMERS%2F02%20Werkwijze%20en%20protocollen%2FProtocollen%20en%20beleid%2FGedrag%2C%20agressie%20en%20seksualiteit%2FProcedure%20omtrent%20agressie%2C%20ongewenste%20intimiteiten%20en%20agressie%20voor%20deelnemers%202023%20PDF%2Epdf&parent=%2Fsites%2FZorgboerderijstapvoorstap%2FShared%20Documents%2FWERKNEMERS%2F02%20Werkwijze%20en%20protocollen%2FProtocollen%20en%20beleid%2FGedrag%2C%20agressie%20en%20seksualiteit"
+                  }
                 },
                 {
                   "title": "Klachtenreglement",
-                  "text": "Hoe iemand een klacht indient, staat in het klacht- en incidentmeldingsbeleid. Het MT bekijkt klachten en maakt zo nodig een plan om het te verbeteren."
+                  "text": "Hoe iemand een klacht indient en wat er daarna gebeurt.",
+                  "extraLink": {
+                    "label": "Open het reglement",
+                    "href": "https://zorgboerderijstapvoorstap1.sharepoint.com/sites/Zorgboerderijstapvoorstap/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FZorgboerderijstapvoorstap%2FShared%20Documents%2FWERKNEMERS%2F02%20Werkwijze%20en%20protocollen%2FProtocollen%20en%20beleid%2FKlachten%2FKlachtenregelement%20voor%20medewerkers%20september%202024%20PDF%2Epdf&parent=%2Fsites%2FZorgboerderijstapvoorstap%2FShared%20Documents%2FWERKNEMERS%2F02%20Werkwijze%20en%20protocollen%2FProtocollen%20en%20beleid%2FKlachten"
+                  }
                 },
                 {
-                  "title": "Hygiënecode (HACCP)",
-                  "text": "Benoemt de risico’s voor voedselveiligheid en helpt je die te voorkomen of te verkleinen."
+                  "title": "Hygiënecode",
+                  "text": "Helpt je om risico’s, ook voor voedselveiligheid, te voorkomen of te verkleinen.",
+                  "extraLink": {
+                    "label": "Open de hygiënecode",
+                    "href": "https://zorgboerderijstapvoorstap1.sharepoint.com/sites/Zorgboerderijstapvoorstap/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FZorgboerderijstapvoorstap%2FShared%20Documents%2FWERKNEMERS%2F02%20Werkwijze%20en%20protocollen%2FProtocollen%20en%20beleid%2FVeiligheid%20en%20BHV%2FHygienecode%20woonvormen%20editie%202016%2Epdf&parent=%2Fsites%2FZorgboerderijstapvoorstap%2FShared%20Documents%2FWERKNEMERS%2F02%20Werkwijze%20en%20protocollen%2FProtocollen%20en%20beleid%2FVeiligheid%20en%20BHV"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "cards",
+              "items": [
+                {
+                  "title": "Alle protocollen bij elkaar",
+                  "href": "https://zorgboerderijstapvoorstap1.sharepoint.com/sites/Zorgboerderijstapvoorstap/Shared%20Documents/WERKNEMERS/02%20Werkwijze%20en%20protocollen/Protocollen%20en%20beleid",
+                  "text": "Op SharePoint in WERKNEMERS → 02 Werkwijze en protocollen → Protocollen en beleid. Ook in ZilliZ → Intranet."
                 }
               ]
             },
