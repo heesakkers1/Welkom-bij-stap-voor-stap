@@ -1751,8 +1751,25 @@
               "items": [
                 "Rapporteer feitelijk, objectief, respectvol en op tijd.",
                 "Beschrijf wat je daadwerkelijk hebt gezien, gehoord of gedaan. Vermijd aannames, interpretaties en oordelen.",
-                "Rapporteer na iedere individuele begeleiding, of bij dagbesteding aan het einde van de dag.",
+                "Rapporteer na iedere individuele begeleiding. Bij dagbesteding spreken we tijdens de dagstart ’s ochtends af wie verantwoordelijk is voor het rapporteren. Collega’s geven input over wat zij die dag bij de deelnemers hebben gezien.",
                 "Bijzonderheden, incidenten en belangrijke veranderingen horen ook in de rapportage."
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "Bij dagbesteding rapporteren we op twee manieren:"
+            },
+            {
+              "type": "cards",
+              "items": [
+                {
+                  "title": "Als groep",
+                  "text": "Wat hebben we vandaag gedaan en hoe was de sfeer?"
+                },
+                {
+                  "title": "Per deelnemer",
+                  "text": "Hoe zat iemand erbij en waren er bijzonderheden?"
+                }
               ]
             },
             {
@@ -2150,14 +2167,14 @@
             },
             {
               "type": "quiz",
-              "question": "Wanneer rapporteer je bij dagbesteding?",
+              "question": "Wie rapporteert er bij dagbesteding?",
               "options": [
-                "Eén keer per week",
-                "Aan het einde van de dag",
-                "Alleen als er iets bijzonders is gebeurd"
+                "Iedereen schrijft voor zichzelf een eigen rapportage",
+                "Degene die tijdens de dagstart is afgesproken, met input van collega’s",
+                "Alleen de persoonlijk begeleider"
               ],
               "correct": 1,
-              "explanation": "Bij dagbesteding rapporteer je aan het einde van de dag, en na iedere individuele begeleiding."
+              "explanation": "Tijdens de dagstart spreken we af wie verantwoordelijk is voor het rapporteren. Collega’s geven input over wat zij bij de deelnemers hebben gezien."
             },
             {
               "type": "quiz",
