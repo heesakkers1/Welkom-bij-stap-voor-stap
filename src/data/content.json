@@ -1897,8 +1897,8 @@
         },
         {
           "id": "rooster-ziek-verlof",
-          "title": "Rooster, ziek, kleding en telefoon",
-          "summary": "Werktijden, ziekmelden, verlof, werkkleding en je telefoon.",
+          "title": "Rooster, ziek, kleding, telefoon en vertrouwenspersoon",
+          "summary": "Werktijden, ziekmelden, verlof, werkkleding, je telefoon en de vertrouwenspersoon.",
           "content": [
             {
               "type": "hero",
@@ -1961,13 +1961,42 @@
                 "Je hoeft buiten je werktijd niet bereikbaar te zijn.",
                 "Tijdens de begeleiding gebruik je je telefoon alleen als het nodig of passend is."
               ]
+            },
+            {
+              "type": "hero",
+              "title": "De vertrouwenspersoon"
+            },
+            {
+              "type": "paragraph",
+              "text": "Zit je met iets wat je liever niet op de werkvloer bespreekt? Dan kun je terecht bij een vertrouwenspersoon. Wat je vertelt, wordt vertrouwelijk behandeld en niet zonder jouw toestemming gedeeld."
+            },
+            {
+              "type": "cards",
+              "items": [
+                {
+                  "title": "Intern: Josee Hoogenboom",
+                  "text": "Voor medewerkers, vrijwilligers en stagiaires.",
+                  "extraLink": {
+                    "label": "Mail Josee",
+                    "href": "mailto:Josee.hoogenboom@kpnplanet.nl"
+                  }
+                },
+                {
+                  "title": "Extern: via de Federatie Landbouw en Zorg",
+                  "text": "Onafhankelijk, buiten onze eigen organisatie. Bereikbaar via de ZLTO informatielijn: 073 – 2173333 of info@zlto.nl.",
+                  "extraLink": {
+                    "label": "Bel de ZLTO informatielijn",
+                    "href": "tel:0732173333"
+                  }
+                }
+              ]
             }
           ]
         },
         {
           "id": "protocollen",
           "title": "Protocollen",
-          "summary": "Waar je de protocollen vindt, welke er nog meer zijn en bij wie je terechtkunt.",
+          "summary": "Waar je de protocollen vindt en welke er nog meer zijn.",
           "content": [
             {
               "type": "hero",
@@ -2015,35 +2044,6 @@
                 {
                   "title": "Hygiënecode (HACCP)",
                   "text": "Benoemt de risico’s voor voedselveiligheid en helpt je die te voorkomen of te verkleinen."
-                }
-              ]
-            },
-            {
-              "type": "hero",
-              "title": "De vertrouwenspersoon"
-            },
-            {
-              "type": "paragraph",
-              "text": "Zit je met iets wat je liever niet op de werkvloer bespreekt? Dan kun je terecht bij een vertrouwenspersoon. Wat je vertelt, wordt vertrouwelijk behandeld en niet zonder jouw toestemming gedeeld."
-            },
-            {
-              "type": "cards",
-              "items": [
-                {
-                  "title": "Intern: Josee Hoogenboom",
-                  "text": "Voor medewerkers, vrijwilligers en stagiaires.",
-                  "extraLink": {
-                    "label": "Mail Josee",
-                    "href": "mailto:Josee.hoogenboom@kpnplanet.nl"
-                  }
-                },
-                {
-                  "title": "Extern: via de Federatie Landbouw en Zorg",
-                  "text": "Onafhankelijk, buiten onze eigen organisatie. Bereikbaar via de ZLTO informatielijn: 073 – 2173333 of info@zlto.nl.",
-                  "extraLink": {
-                    "label": "Bel de ZLTO informatielijn",
-                    "href": "tel:0732173333"
-                  }
                 }
               ]
             },
