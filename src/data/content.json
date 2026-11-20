@@ -1392,6 +1392,13 @@
               "text": "De organisatie werkt met een actuele Risico-Inventarisatie en Evaluatie (RI&E). Daarin staan de belangrijkste risico’s op de zorgboerderij en de maatregelen die we nemen."
             },
             {
+              "type": "document",
+              "title": "Onze RI&E",
+              "meta": "Het nieuwste rapport (oktober 2024) op SharePoint.",
+              "handboek": "rie",
+              "linkLabel": "Open de RI&E"
+            },
+            {
               "type": "paragraph",
               "text": "We verwachten dat je op de hoogte bent van de risico’s binnen jouw werkzaamheden en daar zorgvuldig mee omgaat."
             },
