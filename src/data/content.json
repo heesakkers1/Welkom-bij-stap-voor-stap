@@ -1821,18 +1821,18 @@
     {
       "id": "procedures",
       "title": "Systemen en afspraken",
-      "description": "ZilliZ, protocollen, ziekmelden, verlof, kleding en telefoongebruik.",
+      "description": "ZilliZ, e-mail, ziekmelden, verlof, kleding, telefoon en protocollen.",
       "icon": "laptop",
-      "duration": "10 minuten",
+      "duration": "15 minuten",
       "completionMessage": {
         "title": "🗂️ Helemaal wegwijs!",
-        "text": "Je weet nu welke systemen we gebruiken en welke praktische afspraken er zijn."
+        "text": "Je weet nu welke systemen we gebruiken, welke praktische afspraken er zijn en welke protocollen er gelden."
       },
       "lessons": [
         {
           "id": "systemen",
-          "title": "Systemen en protocollen",
-          "summary": "ZilliZ, e-mail, D-connect en waar je de protocollen vindt.",
+          "title": "Systemen en e-mail",
+          "summary": "ZilliZ, SharePoint, D-connect, je Microsoft-account en je e-mailhandtekening.",
           "content": [
             {
               "type": "hero",
@@ -1892,32 +1892,6 @@
               "email": "info@zorgboerderijstapvoorstap.nl",
               "website": "www.zorgboerderijstapvoorstap.nl",
               "telefoon": "06-28 53 06 13"
-            },
-            {
-              "type": "hero",
-              "title": "Protocollen en procedures"
-            },
-            {
-              "type": "paragraph",
-              "text": "Protocollen en procedures helpen je om veilig, professioneel en eenduidig te werken."
-            },
-            {
-              "type": "paragraph",
-              "text": "Je vindt ze in ZilliZ → Intranet. Als medewerker ben je zelf verantwoordelijk voor het kennen en volgen van de protocollen die voor jouw werk gelden."
-            },
-            {
-              "type": "numberedList",
-              "items": [
-                "Lees de protocollen die voor jouw functie en werkzaamheden relevant zijn goed door.",
-                "Twijfel je wat je moet doen? Kijk eerst in het protocol.",
-                "Overleg daarna met je leidinggevende of een collega."
-              ]
-            },
-            {
-              "type": "assignment",
-              "label": "Praktijkopdracht",
-              "text": "Log in op ZilliZ en zoek het onderdeel Intranet op. Welke protocollen zijn voor jouw werk belangrijk?",
-              "reflective": true
             }
           ]
         },
@@ -1987,6 +1961,97 @@
                 "Je hoeft buiten je werktijd niet bereikbaar te zijn.",
                 "Tijdens de begeleiding gebruik je je telefoon alleen als het nodig of passend is."
               ]
+            }
+          ]
+        },
+        {
+          "id": "protocollen",
+          "title": "Protocollen",
+          "summary": "Waar je de protocollen vindt, welke er nog meer zijn en bij wie je terechtkunt.",
+          "content": [
+            {
+              "type": "hero",
+              "title": "Protocollen en procedures"
+            },
+            {
+              "type": "paragraph",
+              "text": "Protocollen en procedures helpen je om veilig, professioneel en eenduidig te werken."
+            },
+            {
+              "type": "paragraph",
+              "text": "Je vindt ze in ZilliZ → Intranet. Als medewerker ben je zelf verantwoordelijk voor het kennen en volgen van de protocollen die voor jouw werk gelden."
+            },
+            {
+              "type": "numberedList",
+              "items": [
+                "Lees de protocollen die voor jouw functie en werkzaamheden relevant zijn goed door.",
+                "Twijfel je wat je moet doen? Kijk eerst in het protocol.",
+                "Overleg daarna met je leidinggevende of een collega."
+              ]
+            },
+            {
+              "type": "hero",
+              "title": "Welke protocollen zijn er nog meer?"
+            },
+            {
+              "type": "paragraph",
+              "text": "Veiligheid, BHV, privacy, meldcodes en ziekmelden heb je al eerder gezien. Deze protocollen horen er ook bij. Je vindt ze allemaal in ZilliZ → Intranet."
+            },
+            {
+              "type": "cards",
+              "items": [
+                {
+                  "title": "Gedragscode en huisregels",
+                  "text": "De huisregels gelden voor alle activiteiten en begeleiding op de boerderij. Zo voelt iedere deelnemer en collega zich veilig en blijft de sfeer goed."
+                },
+                {
+                  "title": "Agressie, ongewenste intimiteiten en strafbare handelingen",
+                  "text": "Hierin staat hoe je handelt bij agressie, ongewenste intimiteiten of strafbare handelingen. Er is een procedure voor medewerkers en een voor deelnemers."
+                },
+                {
+                  "title": "Klachtenreglement",
+                  "text": "Hoe iemand een klacht indient, staat in het klacht- en incidentmeldingsbeleid. Het MT bekijkt klachten en maakt zo nodig een plan om het te verbeteren."
+                },
+                {
+                  "title": "Hygiënecode (HACCP)",
+                  "text": "Benoemt de risico’s voor voedselveiligheid en helpt je die te voorkomen of te verkleinen."
+                }
+              ]
+            },
+            {
+              "type": "hero",
+              "title": "De vertrouwenspersoon"
+            },
+            {
+              "type": "paragraph",
+              "text": "Zit je met iets wat je liever niet op de werkvloer bespreekt? Dan kun je terecht bij een vertrouwenspersoon. Wat je vertelt, wordt vertrouwelijk behandeld en niet zonder jouw toestemming gedeeld."
+            },
+            {
+              "type": "cards",
+              "items": [
+                {
+                  "title": "Intern: Josee Hoogenboom",
+                  "text": "Voor medewerkers, vrijwilligers en stagiaires.",
+                  "extraLink": {
+                    "label": "Mail Josee",
+                    "href": "mailto:Josee.hoogenboom@kpnplanet.nl"
+                  }
+                },
+                {
+                  "title": "Extern: via de Federatie Landbouw en Zorg",
+                  "text": "Onafhankelijk, buiten onze eigen organisatie. Bereikbaar via de ZLTO informatielijn: 073 – 2173333 of info@zlto.nl.",
+                  "extraLink": {
+                    "label": "Bel de ZLTO informatielijn",
+                    "href": "tel:0732173333"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "assignment",
+              "label": "Praktijkopdracht",
+              "text": "Log in op ZilliZ en zoek het onderdeel Intranet op. Welke protocollen zijn voor jouw werk belangrijk?",
+              "reflective": true
             }
           ]
         }
