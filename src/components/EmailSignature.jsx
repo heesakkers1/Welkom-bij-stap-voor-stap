@@ -67,48 +67,13 @@ function copyBySelecting(element) {
   return ok
 }
 
-/** Snijdt een foto rond bij (vierkant midden) en geeft hem terug als PNG. */
-function makeRoundPhoto(file) {
-  return new Promise((resolve, reject) => {
-    const url = URL.createObjectURL(file)
-    const img = new Image()
-    img.onload = () => {
-      const size = 400
-      const side = Math.min(img.naturalWidth, img.naturalHeight)
-      const canvas = document.createElement('canvas')
-      canvas.width = size
-      canvas.height = size
-      const ctx = canvas.getContext('2d')
-      ctx.beginPath()
-      ctx.arc(size / 2, size / 2, size / 2, 0, Math.PI * 2)
-      ctx.clip()
-      ctx.drawImage(
-        img,
-        (img.naturalWidth - side) / 2,
-        (img.naturalHeight - side) / 2,
-        side,
-        side,
-        0,
-        0,
-        size,
-        size,
-      )
-      URL.revokeObjectURL(url)
-      canvas.toBlob((blob) => (blob ? resolve(blob) : reject(new Error('Geen foto'))), 'image/png')
-    }
-    img.onerror = () => {
-      URL.revokeObjectURL(url)
-      reject(new Error('Foto kon niet worden geladen'))
-    }
-    img.src = url
-  })
-}
-
 function EmailSignature({
   title,
   text,
   steps = [],
   photoTip,
+  photoHref,
+  photoLinkLabel = 'Open de map op SharePoint',
   phoneTip,
   email = 'info@zorgboerderijstapvoorstap.nl',
   website = 'www.zorgboerderijstapvoorstap.nl',
@@ -120,7 +85,6 @@ function EmailSignature({
   const [functie, setFunctie] = useState('')
   const [dagen, setDagen] = useState('')
   const [status, setStatus] = useState(null)
-  const [photo, setPhoto] = useState(null)
 
   const values = {
     groet: 'Hartelijke groet,',
@@ -152,21 +116,7 @@ function EmailSignature({
     }
   }
 
-  async function choosePhoto(event) {
-    const file = event.target.files?.[0]
-    event.target.value = ''
-    if (!file) return
-    try {
-      const blob = await makeRoundPhoto(file)
-      if (photo) URL.revokeObjectURL(photo)
-      setPhoto(URL.createObjectURL(blob))
-    } catch {
-      setPhoto(null)
-    }
-  }
-
   const site = withoutProtocol(website)
-  const fileName = `ronde-foto-${(naam.trim() || 'handtekening').toLowerCase().replace(/[^a-z0-9]+/g, '-')}.png`
 
   return (
     <section className="lesson-block email-signature">
@@ -205,13 +155,7 @@ function EmailSignature({
       <div className="email-signature__preview" ref={previewRef}>
         <p>{values.groet}</p>
         <p>{values.naam}</p>
-        {photo ? (
-          <p className="email-signature__photo-row">
-            <img src={photo} alt="" className="email-signature__photo" />
-          </p>
-        ) : (
-          <p>&nbsp;</p>
-        )}
+        <p>&nbsp;</p>
         <p><i>{values.functie}</i></p>
         <p>Zorgboerderij Stap voor Stap</p>
         <p>Aanwezig op boerderij: {values.dagen}</p>
@@ -252,17 +196,16 @@ function EmailSignature({
       {photoTip ? (
         <div className="email-signature__tip">
           <p><RichText text={photoTip} /></p>
-          <div className="email-signature__photo-actions">
-            <label className="email-signature__photo-button">
-              📷 Kies een foto
-              <input type="file" accept="image/*" onChange={choosePhoto} hidden />
-            </label>
-            {photo ? (
-              <a className="email-signature__photo-button" href={photo} download={fileName}>
-                ⬇️ Bewaar ronde foto
-              </a>
-            ) : null}
-          </div>
+          {photoHref ? (
+            <a
+              className="email-signature__photo-button"
+              href={photoHref}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              📷 {photoLinkLabel}
+            </a>
+          ) : null}
         </div>
       ) : null}
 

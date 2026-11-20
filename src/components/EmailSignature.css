@@ -78,15 +78,7 @@
   color: #0b6b5a;
 }
 
-.email-signature__photo-row {
-  padding: 0.5rem 0;
-}
 
-.email-signature__photo {
-  display: block;
-  width: 96px;
-  height: 96px;
-}
 
 .email-signature__logo {
   display: block;
@@ -155,11 +147,6 @@
   color: var(--text);
 }
 
-.email-signature__photo-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
 
 .email-signature__photo-button {
   background: #fff;
