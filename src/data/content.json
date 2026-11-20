@@ -100,7 +100,7 @@
       "title": "ZilliZ",
       "text": "Dossiers, rapportages, planning, uren en verlof.",
       "icon": "file",
-      "href": "https://zilliz.app/zilliz/"
+      "href": "https://zilliz.app/zilliz/?fuseaction=inloggen.uitloggen_verwerken"
     },
     {
       "id": "zorg-chat",
@@ -1843,6 +1843,7 @@
               "items": [
                 {
                   "title": "ZilliZ",
+                  "href": "https://zilliz.app/zilliz/?fuseaction=inloggen.uitloggen_verwerken",
                   "text": "Ons cliëntenvolgsysteem: dossiers, rapportages, planning, je uren, verlof en via Intranet de protocollen."
                 },
                 {
