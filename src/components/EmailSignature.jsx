@@ -74,6 +74,7 @@ function EmailSignature({
   photoTip,
   photoHref,
   photoLinkLabel = 'Open de map op SharePoint',
+  oldOutlookTip,
   phoneTip,
   email = 'info@zorgboerderijstapvoorstap.nl',
   website = 'www.zorgboerderijstapvoorstap.nl',
@@ -193,23 +194,39 @@ function EmailSignature({
         </>
       ) : null}
 
-      {photoTip ? (
-        <div className="email-signature__tip">
-          <p><RichText text={photoTip} /></p>
-          {photoHref ? (
-            <a
-              className="email-signature__photo-button"
-              href={photoHref}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              📷 {photoLinkLabel}
-            </a>
+      {photoTip || oldOutlookTip || phoneTip ? (
+        <details className="email-signature__more">
+          <summary>Meer uitleg</summary>
+          {photoTip ? (
+            <div className="email-signature__more-item">
+              <p><strong>📷 Foto erbij</strong></p>
+              <p><RichText text={photoTip} /></p>
+              {photoHref ? (
+                <a
+                  className="email-signature__photo-button"
+                  href={photoHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {photoLinkLabel}
+                </a>
+              ) : null}
+            </div>
           ) : null}
-        </div>
+          {oldOutlookTip ? (
+            <div className="email-signature__more-item">
+              <p><strong>💻 Oud Outlook</strong></p>
+              <p><RichText text={oldOutlookTip} /></p>
+            </div>
+          ) : null}
+          {phoneTip ? (
+            <div className="email-signature__more-item">
+              <p><strong>📱 Telefoon</strong></p>
+              <p><RichText text={phoneTip} /></p>
+            </div>
+          ) : null}
+        </details>
       ) : null}
-
-      {phoneTip ? <p className="email-signature__note"><RichText text={phoneTip} /></p> : null}
     </section>
   )
 }

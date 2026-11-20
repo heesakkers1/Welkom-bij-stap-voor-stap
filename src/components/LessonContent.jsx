@@ -178,6 +178,7 @@ function LessonContentBlock({ block }) {
           photoTip={block.photoTip}
           photoHref={block.photoHref}
           photoLinkLabel={block.photoLinkLabel}
+          oldOutlookTip={block.oldOutlookTip}
           phoneTip={block.phoneTip}
           email={block.email}
           website={block.website}

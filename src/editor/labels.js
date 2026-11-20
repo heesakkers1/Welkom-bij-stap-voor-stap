@@ -74,6 +74,7 @@ export const FIELD_NAMES = {
   steps: 'Stap',
   photoTip: 'Uitleg foto',
   photoLinkLabel: 'Tekst op de knop naar de foto’s',
+  oldOutlookTip: 'Uitleg oud Outlook',
   phoneTip: 'Uitleg telefoon',
   email: 'E-mailadres in de handtekening',
   website: 'Website in de handtekening',

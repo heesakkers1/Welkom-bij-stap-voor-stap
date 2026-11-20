@@ -130,22 +130,7 @@
   color: var(--text);
 }
 
-.email-signature__tip {
-  display: grid;
-  gap: 0.7rem;
-  padding: 0.9rem 1rem;
-  border-radius: 1rem;
-  background: #fff;
-  border: 1px dashed rgba(79, 122, 85, 0.35);
-}
 
-.email-signature__tip p,
-.email-signature__note {
-  margin: 0;
-  font-size: 0.98rem;
-  line-height: 1.5;
-  color: var(--text);
-}
 
 
 .email-signature__photo-button {
@@ -157,4 +142,34 @@
 .email-signature__photo-button:hover,
 .email-signature__photo-button:focus-within {
   background: #eef5ea;
+}
+
+.email-signature__note {
+  margin: 0;
+}
+
+.email-signature__more {
+  border-radius: 1rem;
+  background: #fff;
+  border: 1px solid var(--tile-border);
+}
+
+.email-signature__more summary {
+  padding: 0.8rem 1rem;
+  font-weight: 700;
+  color: var(--accent-strong);
+  cursor: pointer;
+}
+
+.email-signature__more-item {
+  display: grid;
+  gap: 0.35rem;
+  padding: 0 1rem 0.9rem;
+}
+
+.email-signature__more-item p {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.5;
+  color: var(--text);
 }

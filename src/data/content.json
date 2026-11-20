@@ -1876,18 +1876,18 @@
             {
               "type": "emailSignature",
               "title": "Je e-mailhandtekening",
-              "text": "We gebruiken allemaal dezelfde handtekening. Vul hieronder je gegevens in, kopieer hem en plak hem in Outlook.",
+              "text": "Vul in, kopieer en plak in Outlook. Klaar!",
               "steps": [
-                "Vul je naam, functie en dagen in en tik op *Kopieer handtekening*.",
-                "Open Outlook en ga naar Instellingen (het tandwieltje rechtsboven) → Account → Handtekeningen. In het oude Outlook: Bestand → Opties → E-mail → Handtekeningen.",
-                "Kies Nieuwe handtekening, geef hem een naam (bijv. Stap voor Stap) en plak je handtekening in het vak (Ctrl + V).",
-                "Kies bij Standaardhandtekeningen jouw handtekening, voor nieuwe berichten én voor antwoorden.",
-                "Klik op Opslaan. Klaar! 🎉"
+                "Tik op *Kopieer handtekening*.",
+                "Outlook: ⚙️ Instellingen → Account → Handtekeningen.",
+                "Nieuwe handtekening → plakken (Ctrl + V).",
+                "Kies hem voor nieuwe berichten én antwoorden → Opslaan."
               ],
-              "photoTip": "Je foto erbij, net als in het voorbeeld? Gebruik de ronde foto die Sanne voor de handtekening heeft gemaakt. Kijk op SharePoint of jouw foto er al staat: WERKNEMERS → 05 Foto's en media → Foto's → Personeel (niet elk bestand heeft een naam, dus kijk even naar de foto's). Sla hem op, zet in Outlook je cursor op de lege regel onder je naam en kies Afbeelding invoegen.",
+              "photoTip": "Gebruik de ronde foto die Sanne voor je maakte. Staat hij al op SharePoint? Kijk in WERKNEMERS → 05 Foto's en media → Foto's → Personeel. Sla hem op en kies in Outlook onder je naam: Afbeelding invoegen.",
               "photoHref": "https://zorgboerderijstapvoorstap1.sharepoint.com/sites/Zorgboerderijstapvoorstap/Shared%20Documents/WERKNEMERS/05%20Foto's%20en%20media/Foto's/Personeel",
               "photoLinkLabel": "Bekijk de foto's op SharePoint",
-              "phoneTip": "Werk je op je telefoon? In de Outlook-app kun je alleen een simpele handtekening zonder opmaak instellen. Stel deze handtekening daarom in op de computer.",
+              "oldOutlookTip": "Handtekeningen vind je via Bestand → Opties → E-mail → Handtekeningen.",
+              "phoneTip": "In de Outlook-app kan alleen een simpele handtekening zonder opmaak. Stel hem daarom in op de computer.",
               "email": "info@zorgboerderijstapvoorstap.nl",
               "website": "www.zorgboerderijstapvoorstap.nl",
               "telefoon": "06-28 53 06 13"
