@@ -32,6 +32,11 @@ function ContentCards({ items = [], variant = 'default' }) {
             )}
           </p>
           {item.text ? <p className="content-card__text"><RichText text={item.text} /></p> : null}
+          {item.extraLink?.href ? (
+            <a className="content-card__extra" href={item.extraLink.href} target="_blank" rel="noopener noreferrer">
+              {item.extraLink.label || 'Meer info'} ↗
+            </a>
+          ) : null}
           {!withPhoto && item.src ? <ZoomImage src={item.src} alt={item.alt || item.title} /> : null}
         </li>
       ))}

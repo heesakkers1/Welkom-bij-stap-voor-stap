@@ -87,6 +87,7 @@ export const HIDDEN_FIELDS = new Set([
   'lessons',
   'content',
   'href',
+  'extraLink',
   'handboek',
   'moduleId',
   'lessonId',

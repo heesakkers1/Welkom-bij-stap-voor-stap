@@ -105,3 +105,13 @@
   inset: 0;
   border-radius: inherit;
 }
+
+/* Tweede link in een kaartje (bijv. "Download de app"), ligt boven de kaartlink. */
+.content-card__extra {
+  position: relative;
+  z-index: 1;
+  align-self: flex-start;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent, #4f7a55);
+}

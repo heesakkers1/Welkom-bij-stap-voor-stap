@@ -1852,6 +1852,11 @@
                 },
                 {
                   "title": "D-connect (Siilo)",
+                  "href": "https://connect-web.doctolib.com/signin;r=0",
+                  "extraLink": {
+                    "label": "Download de app",
+                    "href": "https://connect.doctolib.com/nl/"
+                  },
                   "text": "Voor professionele, veilige communicatie tussen collega’s over deelnemers."
                 },
                 {
