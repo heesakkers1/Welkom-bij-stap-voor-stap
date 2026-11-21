@@ -1,10 +1,10 @@
 {
   "welcome": {
-    "brand": "Team Stap voor Stap",
+    "brand": "Onboarding voor nieuwe collega’s",
     "title": "🌿 Welkom bij Stap voor Stap",
-    "subtitle": "Leuk dat je er bent!",
+    "subtitle": "",
     "intro": [
-      "We gaan je stap voor stap wegwijs maken op onze zorgboerderij.\nJe hoeft niet alles vandaag te leren. Neem rustig de tijd.\nDeze leeromgeving blijft altijd beschikbaar zodat je later onderdelen opnieuw kunt bekijken."
+      "Hier maken we je wegwijs op onze zorgboerderij.\nDeze leeromgeving blijft altijd beschikbaar zodat je later onderdelen opnieuw kunt bekijken."
     ],
     "photoAlt": "Twee geiten liggen naast elkaar op de boerderij",
     "durationLabel": "⏱ Totale duur",
@@ -12,11 +12,11 @@
     "modulesLabel": "📚 Modules",
     "goalLabel": "🎯 Doel",
     "goalValue": "Na afloop weet je hoe wij werken en kun je met vertrouwen aan de slag.",
-    "button": "🌱 Zet de eerste stap"
+    "button": "Aan de slag →"
   },
   "dashboard": {
-    "eyebrow": "Welkom!",
-    "title": "Fijn dat je er bent.",
+    "eyebrow": "Jouw onboarding",
+    "title": "Fijn dat je er bent!",
     "intro": "",
     "photoAlt": "Twee varkens van de boerderij kijken nieuwsgierig in de camera"
   },
@@ -113,13 +113,13 @@
   "modules": [
     {
       "id": "welkom",
-      "title": "Welkom bij Stap voor Stap",
-      "description": "Maak kennis met ons bedrijf!",
+      "title": "Voor je begint",
+      "description": "Maak kennis met ons bedrijf.",
       "icon": "smile",
       "duration": "5 minuten",
       "completionMessage": {
-        "title": "🌱 De eerste stap is gezet!",
-        "text": "Je hebt kennisgemaakt met de onboarding. Tijd voor de volgende stap."
+        "title": "🌱 Je bent begonnen!",
+        "text": "Je hebt kennisgemaakt met de onboarding. Op naar het volgende onderdeel."
       },
       "lessons": [
         {
@@ -135,7 +135,7 @@
             },
             {
               "type": "paragraph",
-              "text": "Leuk dat je ons team komt versterken! De eerste dagen komt er veel op je af. Deze onboarding helpt je stap voor stap op weg. Je hoeft echt niet alles direct te weten of te onthouden. "
+              "text": "De eerste dagen komt er veel op je af. Deze onboarding helpt je op weg."
             },
             {
               "type": "tip",
@@ -153,7 +153,7 @@
     {
       "id": "inwerktraject",
       "title": "Jouw eerste 100 dagen",
-      "description": "Hoe je in 100 dagen stap voor stap wordt ingewerkt, wie je daarbij helpt en wat je per fase doet.",
+      "description": "Hoe je in 100 dagen wordt ingewerkt, wie je daarbij helpt en wat je per fase doet.",
       "icon": "route",
       "duration": "10 minuten",
       "completionMessage": {
@@ -169,8 +169,8 @@
             {
               "type": "hero",
               "eyebrow": "Jouw eerste 100 dagen",
-              "title": "Stap voor stap ingewerkt",
-              "text": "Van een warm welkom naar zelfstandig en met vertrouwen werken, in je eerste 100 dagen."
+              "title": "Ingewerkt in vijf fasen",
+              "text": "Van je eerste kennismaking tot zelfstandig en met vertrouwen werken."
             },
             {
               "type": "timeline",
@@ -215,7 +215,7 @@
           "content": [
             {
               "type": "paragraph",
-              "text": "Inwerken is bij Stap voor Stap meer dan protocollen doornemen. We willen dat je je welkom voelt, begrijpt hoe we werken en veilig en verantwoord leert omgaan met deelnemers, dieren en collega’s."
+              "text": "Inwerken is bij Stap voor Stap meer dan protocollen doornemen. We willen dat je je snel thuis voelt, begrijpt hoe we werken en veilig en verantwoord leert omgaan met deelnemers, dieren en collega’s."
             },
             {
               "type": "paragraph",
@@ -242,7 +242,7 @@
                 },
                 {
                   "title": "Zelfstandigheid en ontwikkeling",
-                  "text": "Je groeit stap voor stap in verantwoordelijkheid en weet waar je nog ondersteuning nodig hebt."
+                  "text": "Je groeit geleidelijk in verantwoordelijkheid en weet waar je nog ondersteuning nodig hebt."
                 }
               ]
             },
@@ -403,7 +403,7 @@
             },
             {
               "type": "hero",
-              "title": "Samen stap voor stap"
+              "title": "Samenwerken"
             },
             {
               "type": "image",

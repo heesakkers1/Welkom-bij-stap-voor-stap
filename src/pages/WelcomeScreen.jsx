@@ -22,7 +22,7 @@ function WelcomeScreen() {
         <header className="welcome-screen__header">
           <p className="welcome-screen__brand">{texts.brand}</p>
           <h1>{texts.title}</h1>
-          <p className="welcome-screen__subtitle">{texts.subtitle}</p>
+          {texts.subtitle && <p className="welcome-screen__subtitle">{texts.subtitle}</p>}
         </header>
 
         <section className="welcome-screen__intro">
