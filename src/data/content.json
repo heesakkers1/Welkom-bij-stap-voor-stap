@@ -2463,12 +2463,13 @@
                 },
                 {
                   "title": "Klussenlijst",
-                  "text": "Geplastificeerd in de unit en in SharePoint"
+                  "href": "https://digibord.vercel.app/",
+                  "text": "Het Digibord → Dagstart → Klusjes per dierengroep"
                 },
                 {
                   "title": "Klussen van vandaag",
                   "href": "https://digibord.vercel.app/",
-                  "text": "Het Digibord"
+                  "text": "Het Digibord → Overzicht vandaag"
                 }
               ]
             },
