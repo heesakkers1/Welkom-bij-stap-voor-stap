@@ -72,10 +72,11 @@
     {
       "id": "afronden",
       "title": "Jij bij Stap voor Stap",
-      "description": "Jouw functie, de kennistoets en de afronding.",
+      "description": "Jouw functie, de kennistoets, waar je alles vindt en de afronding.",
       "moduleIds": [
         "jouw-functie",
         "kennistoets",
+        "waar-vind-je-wat",
         "afronding"
       ]
     }
@@ -2419,9 +2420,69 @@
       ]
     },
     {
+      "id": "waar-vind-je-wat",
+      "title": "Waar vind je wat?",
+      "description": "Waar je protocollen, handboeken en de klussenlijst terugvindt.",
+      "icon": "folder",
+      "duration": "2 minuten",
+      "completionMessage": {
+        "title": "📁 Je weet de weg!",
+        "text": "Kwijt waar iets staat? Hier vind je het altijd terug."
+      },
+      "lessons": [
+        {
+          "id": "waar-vind-je-wat",
+          "title": "Waar vind je wat?",
+          "summary": "Intranet, ZilliZ en het Digibord.",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Je hoeft niet alles te onthouden. Weet vooral waar je het kunt vinden. Kijk eerst op het Intranet in SharePoint. Niet gevonden? Kijk dan in ZilliZ. Tik op een titel om het te openen."
+            },
+            {
+              "type": "cards",
+              "items": [
+                {
+                  "title": "Protocollen en meldcodes",
+                  "href": "https://zorgboerderijstapvoorstap1.sharepoint.com/sites/INTRANETStapvoorStap/Gedeelde%20documenten/Forms/AllItems.aspx?id=%2Fsites%2FINTRANETStapvoorStap%2FGedeelde%20documenten%2FProtocollen",
+                  "text": "Intranet → Documenten → Protocollen\nZilliZ → Intranet → Protocollen"
+                },
+                {
+                  "title": "Handboek collega’s (alle afspraken)",
+                  "href": "https://zorgboerderijstapvoorstap1.sharepoint.com/sites/INTRANETStapvoorStap/Gedeelde%20documenten/Forms/AllItems.aspx?id=%2Fsites%2FINTRANETStapvoorStap%2FGedeelde%20documenten%2FHandboeken%2FHandboek%20collega%27s%20Zorgboerderij%20Stap%20voor%20Stap%20November%2Epdf&parent=%2Fsites%2FINTRANETStapvoorStap%2FGedeelde%20documenten%2FHandboeken",
+                  "text": "Intranet → Documenten → Handboeken"
+                },
+                {
+                  "title": "Functiehandboek",
+                  "href": "https://zorgboerderijstapvoorstap1.sharepoint.com/sites/INTRANETStapvoorStap/Gedeelde%20documenten/Forms/AllItems.aspx?id=%2Fsites%2FINTRANETStapvoorStap%2FGedeelde%20documenten%2FHandboeken%2FFunctiehandboek%20Zorgboerderij%20Stap%20voor%20Stap%20versie%20november%202026%2E%20pdf%2Epdf&parent=%2Fsites%2FINTRANETStapvoorStap%2FGedeelde%20documenten%2FHandboeken",
+                  "text": "Intranet → Documenten → Handboeken\nZilliZ → Intranet"
+                },
+                {
+                  "title": "Rapportages, uren en verlof",
+                  "href": "https://zilliz.app/zilliz/?fuseaction=inloggen.uitloggen_verwerken",
+                  "text": "ZilliZ"
+                },
+                {
+                  "title": "Klussenlijst",
+                  "href": "https://digibord.vercel.app/",
+                  "text": "Digibord → Dagstart → Klusjes per dierengroep"
+                },
+                {
+                  "title": "Klussen van vandaag",
+                  "href": "https://digibord.vercel.app/",
+                  "text": "Digibord → Overzicht vandaag"
+                }
+              ],
+              "variant": "where"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "afronding",
       "title": "Afronding",
-      "description": "Kijk terug op je onboarding en weet waar je alles terugvindt.",
+      "description": "Kijk terug op je onboarding.",
       "icon": "check",
       "duration": "3 minuten",
       "completionMessage": {
@@ -2430,43 +2491,10 @@
       },
       "lessons": [
         {
-          "id": "waar-vind-je-wat",
+          "id": "tot-slot",
           "title": "Afronding",
-          "summary": "Waar je alles terugvindt, en tot slot.",
+          "summary": "Terugblik, en tot slot.",
           "content": [
-            {
-              "type": "paragraph",
-              "text": "Je hoeft niet alles te onthouden. Weet vooral waar je het kunt vinden:"
-            },
-            {
-              "type": "cards",
-              "items": [
-                {
-                  "title": "Protocollen en meldcodes",
-                  "text": "ZilliZ → Intranet → Protocollen"
-                },
-                {
-                  "title": "Functiehandboek",
-                  "text": "ZilliZ → Intranet"
-                },
-                {
-                  "title": "Rapportages, uren en verlof",
-                  "text": "ZilliZ"
-                },
-                {
-                  "title": "Klussenlijst",
-                  "text": "Geplastificeerd in de unit en in SharePoint"
-                },
-                {
-                  "title": "Klussen van vandaag",
-                  "text": "Het digibord"
-                },
-                {
-                  "title": "Alle afspraken",
-                  "text": "Het Handboek collega’s"
-                }
-              ]
-            },
             {
               "type": "assignment",
               "label": "Terugblik",
