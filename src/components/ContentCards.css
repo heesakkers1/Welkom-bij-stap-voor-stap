@@ -115,3 +115,28 @@
   font-weight: 600;
   color: var(--accent, #4f7a55);
 }
+
+/* Waar vind je wat: plek en pad in twee kolommen, zodat regels netjes onder elkaar staan. */
+.content-card__where {
+  display: grid;
+  grid-template-columns: 4.6rem 1fr;
+  column-gap: 0.75rem;
+  row-gap: 0.3rem;
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  color: var(--text-muted);
+}
+
+.content-card__where-row {
+  display: contents;
+}
+
+.content-card__where dt {
+  font-weight: 600;
+  color: var(--text-strong);
+}
+
+.content-card__where dd {
+  margin: 0;
+}

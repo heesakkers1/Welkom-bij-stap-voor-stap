@@ -2444,7 +2444,7 @@
                 {
                   "title": "Protocollen en meldcodes",
                   "href": "https://zorgboerderijstapvoorstap1.sharepoint.com/sites/INTRANETStapvoorStap/Gedeelde%20documenten/Forms/AllItems.aspx?id=%2Fsites%2FINTRANETStapvoorStap%2FGedeelde%20documenten%2FProtocollen",
-                  "text": "Intranet → Documenten → Protocollen\nOok in ZilliZ → Intranet → Protocollen"
+                  "text": "Intranet → Documenten → Protocollen\nZilliZ → Intranet → Protocollen"
                 },
                 {
                   "title": "Handboek collega’s (alle afspraken)",
@@ -2454,7 +2454,7 @@
                 {
                   "title": "Functiehandboek",
                   "href": "https://zorgboerderijstapvoorstap1.sharepoint.com/sites/INTRANETStapvoorStap/Gedeelde%20documenten/Forms/AllItems.aspx?id=%2Fsites%2FINTRANETStapvoorStap%2FGedeelde%20documenten%2FHandboeken%2FFunctiehandboek%20Zorgboerderij%20Stap%20voor%20Stap%20versie%20november%202026%2E%20pdf%2Epdf&parent=%2Fsites%2FINTRANETStapvoorStap%2FGedeelde%20documenten%2FHandboeken",
-                  "text": "Intranet → Documenten → Handboeken\nOok in ZilliZ → Intranet"
+                  "text": "Intranet → Documenten → Handboeken\nZilliZ → Intranet"
                 },
                 {
                   "title": "Rapportages, uren en verlof",
@@ -2464,14 +2464,15 @@
                 {
                   "title": "Klussenlijst",
                   "href": "https://digibord.vercel.app/",
-                  "text": "Het Digibord → Dagstart → Klusjes per dierengroep"
+                  "text": "Digibord → Dagstart → Klusjes per dierengroep"
                 },
                 {
                   "title": "Klussen van vandaag",
                   "href": "https://digibord.vercel.app/",
-                  "text": "Het Digibord → Overzicht vandaag"
+                  "text": "Digibord → Overzicht vandaag"
                 }
-              ]
+              ],
+              "variant": "where"
             },
             {
               "type": "assignment",

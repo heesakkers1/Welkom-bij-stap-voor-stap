@@ -32,7 +32,20 @@ function ContentCards({ items = [], variant = 'default' }) {
               <RichText text={item.title} />
             )}
           </p>
-          {item.text ? <p className="content-card__text"><RichText text={item.text} /></p> : null}
+          {item.text && variant === 'where' ? (
+            // Waar vind je wat: per regel een plek (vet) met het pad ernaast, netjes onder elkaar.
+            <dl className="content-card__where">
+              {item.text.split('\n').filter((line) => line.trim()).map((line, i) => {
+                const [place, ...path] = line.split(' → ')
+                return (
+                  <div key={i} className="content-card__where-row">
+                    <dt>{place.trim()}</dt>
+                    <dd>{path.join(' → ')}</dd>
+                  </div>
+                )
+              })}
+            </dl>
+          ) : item.text ? <p className="content-card__text"><RichText text={item.text} /></p> : null}
           {item.href?.startsWith('/') ? (
             // Link naar een andere les op deze site: zelfde tabblad.
             <Link className="content-card__extra" to={item.href}>
