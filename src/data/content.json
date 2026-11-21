@@ -2151,17 +2151,8 @@
               "text": "Assistent Zorgboerderij 2 is een eigen functie van Stap voor Stap. Het is een ontwikkelstap tussen Assistent Welzijn en Sociaal Werker 1."
             },
             {
-              "type": "paragraph",
-              "text": "Daarnaast werken er vrijwilligers en stagiaires mee."
-            },
-            {
               "type": "highlight",
               "text": "Een functie wordt niet alleen beoordeeld op opleidingsniveau, maar op de inhoud, zelfstandigheid en verantwoordelijkheden in de praktijk."
-            },
-            {
-              "type": "tip",
-              "label": "💡 Meer lezen?",
-              "text": "In het Functiehandboek staat per functie precies wat er van je verwacht wordt. Je vindt het in ZilliZ onder Intranet."
             },
             {
               "type": "hero",
@@ -2207,6 +2198,11 @@
                 "Voor vrijwilligers en stagiaires is een geldige VOG verplicht. Zonder VOG kan iemand niet starten.",
                 "Ook vrijwilligers en stagiaires hebben geheimhoudingsplicht, tijdens en na hun periode op de zorgboerderij."
               ]
+            },
+            {
+              "type": "tip",
+              "label": "💡 Meer lezen?",
+              "text": "In het Functiehandboek staat per functie precies wat er van je verwacht wordt. Je vindt het in ZilliZ onder Intranet."
             }
           ]
         },
