@@ -1,5 +1,33 @@
 import { useState } from 'react'
+import RichText from './RichText'
 import './ExpandableAnswer.css'
+
+// Het antwoord mag eenvoudige opmaak hebben: een lege regel begint een nieuw stukje,
+// regels die met "- " beginnen worden een opsomming, **vet** werkt als kopje.
+function AnswerText({ text = '' }) {
+  return text
+    .split(/\n\s*\n/)
+    .filter((part) => part.trim())
+    .map((part, index) => {
+      const lines = part.split('\n').map((line) => line.trim()).filter(Boolean)
+      const intro = lines.filter((line) => !line.startsWith('- '))
+      const bullets = lines.filter((line) => line.startsWith('- '))
+      return (
+        <div className="expandable-answer__part" key={index}>
+          {intro.map((line, lineIndex) => (
+            <p key={lineIndex}><RichText text={line} /></p>
+          ))}
+          {bullets.length ? (
+            <ul>
+              {bullets.map((line, lineIndex) => (
+                <li key={lineIndex}><RichText text={line.slice(2)} /></li>
+              ))}
+            </ul>
+          ) : null}
+        </div>
+      )
+    })
+}
 
 function ExpandableAnswer({
   situation,
@@ -36,7 +64,7 @@ function ExpandableAnswer({
 
       {open ? (
         <div className="expandable-answer__panel">
-          <p>{answer}</p>
+          <AnswerText text={answer} />
         </div>
       ) : null}
     </section>

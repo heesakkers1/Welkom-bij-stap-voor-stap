@@ -52,3 +52,20 @@
   background: rgba(255, 252, 247, 0.9);
   border: 1px solid rgba(79, 122, 85, 0.14);
 }
+
+.expandable-answer__panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.expandable-answer__panel ul {
+  margin: 0.3rem 0 0;
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 1.02rem;
+  line-height: 1.5;
+  color: var(--text);
+}
