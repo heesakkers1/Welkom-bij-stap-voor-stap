@@ -1095,9 +1095,10 @@
               "type": "quiz",
               "question": "Waar begin je bij de dagstart op het Digibord?",
               "options": [
-                "Bij Overzicht vandaag",
-                "Afmelden",
-                "Waar je zelf wilt"
+                "Bij Aanwezigheid",
+                "Bij Afmelden",
+                "Bij Bijzonderheden",
+                "Bij Overzicht vandaag"
               ],
               "correct": 1,
               "explanation": "De dagstart heeft een vaste volgorde. Je begint bij stap 1 en klikt steeds op Volgende stap."
@@ -2287,7 +2288,7 @@
         {
           "id": "toets-deel-1",
           "title": "Kennistoets",
-          "summary": "Acht vragen over de belangrijkste afspraken.",
+          "summary": "Tien vragen over de belangrijkste afspraken.",
           "content": [
             {
               "type": "paragraph",
@@ -2295,91 +2296,123 @@
             },
             {
               "type": "quiz",
-              "question": "Wie rapporteert er bij dagbesteding?",
+              "question": "Hoe is het rapporteren bij dagbesteding geregeld?",
               "options": [
-                "Iedereen schrijft voor zichzelf een eigen rapportage",
-                "Degene die tijdens de dagstart is afgesproken, met input van collega’s",
-                "Alleen de persoonlijk begeleider"
-              ],
-              "correct": 1,
-              "explanation": "Tijdens de dagstart spreken we af wie verantwoordelijk is voor het rapporteren. Collega’s geven input over wat zij bij de deelnemers hebben gezien."
-            },
-            {
-              "type": "quiz",
-              "question": "Je twijfelt of iets een incident was. Wat doe je?",
-              "options": [
-                "Je meldt het altijd",
-                "Je wacht af of het nog een keer gebeurt",
-                "Je meldt het alleen als er iemand gewond is"
-              ],
-              "correct": 0,
-              "explanation": "Twijfel je? Meld het dan altijd. Ook een bijna-incident meld je, in ZilliZ via het incidentmeldingsformulier."
-            },
-            {
-              "type": "quiz",
-              "question": "Een deelnemer krijgt een epileptische aanval. Wat doe je als eerste?",
-              "options": [
-                "De ouders bellen",
-                "De tijd checken",
-                "De deelnemer naar binnen brengen"
-              ],
-              "correct": 1,
-              "explanation": "Je checkt als eerste de tijd. Daarna breng je andere deelnemers naar een veilige plek en bel je direct een collega."
-            },
-            {
-              "type": "quiz",
-              "question": "Je maakt je zorgen over het welzijn van een deelnemer. Wat is de eerste stap?",
-              "options": [
-                "Zelf uitzoeken wat er aan de hand is",
-                "Het voor je houden tot je het zeker weet",
-                "Je zorgen bespreken met je leidinggevende of een collega"
+                "Aan het einde van de dag schrijft de dagverantwoordelijke een rapportage over de hele groep",
+                "Iedere begeleider rapporteert na afloop over de deelnemers uit zijn of haar eigen groepje",
+                "Bij de dagstart spreken we af wie rapporteert; collega’s geven input, over de groep én per deelnemer",
+                "De persoonlijk begeleider rapporteert over zijn of haar eigen deelnemers"
               ],
               "correct": 2,
-              "explanation": "Je hoeft niet zelf te bepalen wat er aan de hand is. Bespreek je zorgen en volg de stappen uit de meldcode."
+              "explanation": "Tijdens de dagstart spreken we af wie verantwoordelijk is voor het rapporteren. Collega’s geven input. Je rapporteert als groep (wat hebben we gedaan, hoe was de sfeer) én per deelnemer (hoe zat iemand erbij, waren er bijzonderheden)."
             },
             {
               "type": "quiz",
-              "question": "Je hebt een dagelijkse klus op het digibord gedaan. Wat doe je?",
+              "question": "Een deelnemer struikelt bijna over een hooivork die op het pad ligt. Er gebeurt verder niets. Wat doe je?",
               "options": [
-                "De klus verwijderen van het bord",
-                "Een vinkje zetten",
-                "Niets, het bord past zich vanzelf aan"
+                "Je ruimt de hooivork op. Er is niemand gewond, dus melden is niet nodig",
+                "Je ruimt de hooivork op en zet het bij Bijzonderheden op het Digibord",
+                "Je ruimt de hooivork op en vertelt het morgen bij de dagstart, zodat iedereen extra oplet",
+                "Je ruimt de hooivork op en meldt het als bijna-incident bij je leidinggevende en in ZilliZ"
+              ],
+              "correct": 3,
+              "explanation": "Ook een bijna-incident meld je: bij je leidinggevende en zo snel mogelijk in ZilliZ via het incidentmeldingsformulier. Zo kunnen we ervan leren en herhaling voorkomen. Twijfel je of iets een incident is? Meld het dan altijd."
+            },
+            {
+              "type": "quiz",
+              "question": "Een deelnemer krijgt een epileptische aanval. Welke volgorde klopt?",
+              "options": [
+                "Collega bellen → tijd checken → andere deelnemers naar een veilige plek",
+                "Tijd checken → andere deelnemers naar een veilige plek → collega bellen",
+                "Andere deelnemers naar een veilige plek → collega bellen → tijd checken",
+                "Tijd checken → collega bellen → zelf het protocol van de deelnemer opzoeken"
               ],
               "correct": 1,
-              "explanation": "Bij een dagelijkse klus zet je een vinkje; die verwijder je niet. Een incidentele klus verwijder je wel als hij klaar is."
+              "explanation": "Je checkt als eerste de tijd. Daarna breng je de andere deelnemers naar een veilige plek en bel je direct een collega. Samen met die collega volg je daarna het protocol van de deelnemer."
             },
             {
               "type": "quiz",
-              "question": "Er speelt iets groots rond een deelnemer. Waar bespreken we dat?",
+              "question": "Tijdens die aanval bel je een collega, maar niemand neemt op. Wat doe je?",
               "options": [
-                "Uitgebreid tijdens de dagstart",
-                "In het maandelijkse DB-overleg",
-                "Tijdens de pauze"
+                "Je stuurt een bericht in D-connect (Siilo) naar alle collega’s",
+                "Je loopt snel zelf naar de unit om een collega te halen",
+                "Je gebruikt de noodtoeter uit de BHV-tas in de unit of boven de kachel in de mancave",
+                "Je wacht tot de aanval voorbij is en belt dan opnieuw"
+              ],
+              "correct": 2,
+              "explanation": "Geen gehoor? Gebruik de noodtoeter. Die ligt in de BHV-tas in de unit en boven de kachel in de mancave. Je mag ook een deelnemer een collega laten halen, zodat jij bij de deelnemer kunt blijven."
+            },
+            {
+              "type": "quiz",
+              "question": "Je ziet een paar keer blauwe plekken bij een deelnemer en de deelnemer is stiller dan anders. Wat is je eerste stap?",
+              "options": [
+                "Je vraagt de ouders bij het ophalen wat er aan de hand is",
+                "Je bespreekt je zorgen met je leidinggevende of een collega en kijkt de meldcode na",
+                "Je schrijft het in de rapportage en houdt in de gaten of het vaker gebeurt",
+                "Je vraagt de deelnemer door tot je weet hoe het komt"
               ],
               "correct": 1,
-              "explanation": "Tijdens de dagstart weiden we niet lang uit. Grote dingen gaan op de agenda van het maandelijkse DB-overleg."
+              "explanation": "Blijf niet met je zorgen rondlopen en ga niet zelf op onderzoek uit. Bespreek ze met je leidinggevende of een collega en volg de stappen uit de meldcode. Je hoeft niet zelf te bepalen wat er aan de hand is."
             },
             {
               "type": "quiz",
-              "question": "Mag je privacygevoelige informatie over een deelnemer per gewone e-mail sturen?",
+              "question": "Een deelnemer krijgt individuele begeleiding én dagbesteding. Wie zorgt ervoor dat het zorgplan en de evaluaties op tijd klaar zijn?",
               "options": [
-                "Ja, als het naar een collega gaat",
-                "Nee, dat gaat via ZilliZ",
-                "Ja, als je het onderwerp duidelijk aangeeft"
-              ],
-              "correct": 1,
-              "explanation": "Privacygevoelige informatie stuur je niet per gewone e-mail. Als het gedeeld moet worden, gaat het via ZilliZ."
-            },
-            {
-              "type": "quiz",
-              "question": "Je bent ziek. Wanneer meld je je?",
-              "options": [
-                "Zo snel mogelijk en vóór de start van je dienst",
-                "Aan het einde van de dag",
-                "De volgende werkdag"
+                "De PB1, die daarvoor input vraagt aan de PB2 en PB3",
+                "De PB2 vanuit de dagbesteding, omdat die de deelnemer het vaakst ziet",
+                "De leidinggevende, die de planning van alle zorgplannen bijhoudt",
+                "Degene van de PB’ers met de hoogste functie"
               ],
               "correct": 0,
-              "explanation": "Je meldt je zo snel mogelijk en vóór de start van je dienst bij je leidinggevende."
+              "explanation": "De PB1 bewaakt het geheel en zorgt dat het zorgplan, de tussentijdse evaluatie en de eindevaluatie op tijd klaar zijn. De PB2 en PB3 leveren op tijd informatie aan. Het PB-schap zegt niets over je functieniveau."
+            },
+            {
+              "type": "quiz",
+              "question": "In het Digibord staan bij een taak onder Taken inplannen grijze pijltjes. Wat betekent dat?",
+              "options": [
+                "De taak moet vandaag nog gebeuren",
+                "De taak komt maar één keer voor",
+                "De taak is al door iemand gedaan",
+                "De taak komt elke dag terug"
+              ],
+              "correct": 1,
+              "explanation": "Grijze pijltjes betekenen dat een taak maar één keer voorkomt, zwarte dat hij elke dag terugkomt. Een taak die vandaag moet gebeuren herken je aan de vlag."
+            },
+            {
+              "type": "quiz",
+              "question": "Er speelt iets groots rond een deelnemer. Hoe pak je dat aan rond de dagstart?",
+              "options": [
+                "Je bespreekt het uitgebreid in de dagstart, zodat iedereen goed op de hoogte is",
+                "Je bewaart het helemaal voor de dagafsluiting, zodat de dagstart niet uitloopt",
+                "Je zet het bij Bijzonderheden op het Digibord, zodat iedereen het later rustig kan nalezen",
+                "Je noemt kort de belangrijkste punten in de dagstart; de rest bij de dagafsluiting en via D-connect (Siilo)"
+              ],
+              "correct": 3,
+              "explanation": "Tijdens de dagstart weiden we niet lang uit. Bespreek de belangrijkste punten zo bondig mogelijk, geef overige informatie bij de dagafsluiting en breng collega’s op de hoogte met een bericht in D-connect (Siilo)."
+            },
+            {
+              "type": "quiz",
+              "question": "Je moet een verslag met privacygevoelige informatie over een deelnemer delen. Hoe doe je dat?",
+              "options": [
+                "Via je werkmail in Outlook, met ‘vertrouwelijk’ in de onderwerpregel",
+                "Als bijlage met een wachtwoord via je werkmail",
+                "Via een gedeelde map op SharePoint",
+                "Via de Berichtenbox in ZilliZ"
+              ],
+              "correct": 3,
+              "explanation": "Privacygevoelige informatie over deelnemers stuur je niet per gewone e-mail, ook niet met een wachtwoord of een duidelijke onderwerpregel. Moet het gedeeld worden? Dan gaat het via de Berichtenbox in ZilliZ."
+            },
+            {
+              "type": "quiz",
+              "question": "Je wordt ’s ochtends ziek wakker. Je dienst begint om 9.00 uur. Wat doe je?",
+              "options": [
+                "Je meldt je vóór 9.00 uur bij je leidinggevende",
+                "Je zet vóór 9.00 uur een bericht in D-connect (Siilo), zodat je collega’s het weten",
+                "Je vraagt een collega om je bij de dagstart af te melden op het Digibord",
+                "Je meldt je ziek in ZilliZ, waar ook je uren en verlof staan"
+              ],
+              "correct": 0,
+              "explanation": "Je meldt je zo snel mogelijk en vóór de start van je dienst bij je leidinggevende. Je vertelt hoe het met je gaat, hoe lang je verwacht afwezig te zijn en hoe je bereikbaar bent. Medische details hoef je niet te delen."
             }
           ]
         }
