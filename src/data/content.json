@@ -72,10 +72,11 @@
     {
       "id": "afronden",
       "title": "Jij bij Stap voor Stap",
-      "description": "Jouw functie, de kennistoets en de afronding.",
+      "description": "Jouw functie, de kennistoets, waar je alles vindt en de afronding.",
       "moduleIds": [
         "jouw-functie",
         "kennistoets",
+        "waar-vind-je-wat",
         "afronding"
       ]
     }
@@ -2419,20 +2420,20 @@
       ]
     },
     {
-      "id": "afronding",
-      "title": "Afronding",
-      "description": "Kijk terug op je onboarding en weet waar je alles terugvindt.",
-      "icon": "check",
-      "duration": "3 minuten",
+      "id": "waar-vind-je-wat",
+      "title": "Waar vind je wat?",
+      "description": "Waar je protocollen, handboeken en de klussenlijst terugvindt.",
+      "icon": "folder",
+      "duration": "2 minuten",
       "completionMessage": {
-        "title": "🎉 Onboarding afgerond!",
-        "text": "Zorgboerderij Stap voor Stap wenst jou super veel succes en plezier op onze boerderij!"
+        "title": "📁 Je weet de weg!",
+        "text": "Kwijt waar iets staat? Hier vind je het altijd terug."
       },
       "lessons": [
         {
           "id": "waar-vind-je-wat",
-          "title": "Afronding",
-          "summary": "Waar je alles terugvindt, en tot slot.",
+          "title": "Waar vind je wat?",
+          "summary": "Intranet, ZilliZ en het Digibord.",
           "content": [
             {
               "type": "paragraph",
@@ -2473,7 +2474,27 @@
                 }
               ],
               "variant": "where"
-            },
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "afronding",
+      "title": "Afronding",
+      "description": "Kijk terug op je onboarding.",
+      "icon": "check",
+      "duration": "3 minuten",
+      "completionMessage": {
+        "title": "🎉 Onboarding afgerond!",
+        "text": "Zorgboerderij Stap voor Stap wenst jou super veel succes en plezier op onze boerderij!"
+      },
+      "lessons": [
+        {
+          "id": "tot-slot",
+          "title": "Afronding",
+          "summary": "Terugblik, en tot slot.",
+          "content": [
             {
               "type": "assignment",
               "label": "Terugblik",
