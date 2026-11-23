@@ -2493,22 +2493,20 @@
         {
           "id": "tot-slot",
           "title": "Afronding",
-          "summary": "Terugblik, en tot slot.",
+          "summary": "Tot slot.",
           "content": [
-            {
-              "type": "assignment",
-              "label": "Terugblik",
-              "text": "Wat neem je mee uit deze onboarding? En waar wil je nog meer over weten?",
-              "reflective": true
-            },
             {
               "type": "hero",
               "title": "Tot slot"
             },
             {
+              "type": "paragraph",
+              "text": "Hopelijk heb je met plezier deze stappen doorlopen en heeft dit voor een boei in het water gezorgd."
+            },
+            {
               "type": "image",
-              "src": "/fotos/Imara-geitjes.jpeg",
-              "alt": "Imara met geitjes",
+              "src": "/fotos/samen-harken.jpg",
+              "alt": "Collega’s en deelnemers harken samen op het erf",
               "size": "wide"
             },
             {
