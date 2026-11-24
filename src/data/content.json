@@ -25,7 +25,6 @@
       "id": "start",
       "title": "Welkom",
       "moduleIds": [
-        "welkom",
         "inwerktraject"
       ],
       "image": {
@@ -112,45 +111,6 @@
     }
   ],
   "modules": [
-    {
-      "id": "welkom",
-      "title": "Voor je begint",
-      "description": "Maak kennis met ons bedrijf.",
-      "icon": "smile",
-      "duration": "5 minuten",
-      "completionMessage": {
-        "title": "🌱 Je bent begonnen!",
-        "text": "Je hebt kennisgemaakt met de onboarding. Op naar het volgende onderdeel."
-      },
-      "lessons": [
-        {
-          "id": "fijn-dat-je-er-bent",
-          "title": "Fijn dat je er bent!",
-          "summary": "",
-          "content": [
-            {
-              "type": "image",
-              "src": "/fotos/Imara-geitjes.jpeg",
-              "alt": "Imara met geitjes",
-              "size": "wide"
-            },
-            {
-              "type": "paragraph",
-              "text": "De eerste dagen komt er veel op je af. Deze onboarding helpt je op weg."
-            },
-            {
-              "type": "tip",
-              "label": "💡 Tip voor je eerste week",
-              "text": "Stel gerust vragen!"
-            },
-            {
-              "type": "signoff",
-              "text": "Team Stap voor Stap"
-            }
-          ]
-        }
-      ]
-    },
     {
       "id": "inwerktraject",
       "title": "Jouw eerste 100 dagen",
