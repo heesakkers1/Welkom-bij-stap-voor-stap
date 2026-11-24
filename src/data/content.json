@@ -781,28 +781,6 @@
           "content": [
             {
               "type": "hero",
-              "title": "Een plek om mee te doen"
-            },
-            {
-              "type": "image",
-              "src": "/fotos/boerderij-erf-kruiwagen.jpg",
-              "alt": "Een kruiwagen op het erf, met de dierenweide op de achtergrond",
-              "size": "wide"
-            },
-            {
-              "type": "paragraph",
-              "text": "De zorgboerderij is een plek waar begeleiding, activiteiten, dieren en buiten zijn samenkomen."
-            },
-            {
-              "type": "paragraph",
-              "text": "Deelnemers krijgen de mogelijkheid om mee te doen op een manier die aansluit bij hun mogelijkheden en doelen."
-            },
-            {
-              "type": "paragraph",
-              "text": "Werkzaamheden zijn geen doel op zichzelf. Ze kunnen helpen bij structuur, zelfvertrouwen, samenwerking, ontspanning en ontwikkeling."
-            },
-            {
-              "type": "hero",
               "title": "Verschillende plekken op het erf"
             },
             {
