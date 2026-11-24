@@ -1306,9 +1306,9 @@
     {
       "id": "veilig-werken",
       "title": "Veilig werken",
-      "description": "Veiligheid, incidenten melden, BHV, privacy en meldcodes.",
+      "description": "Veiligheid, incidenten, BHV, privacy en wat je doet als er iets gebeurt.",
       "icon": "shield",
-      "duration": "12 minuten",
+      "duration": "15 minuten",
       "completionMessage": {
         "title": "🛡️ Veilig op weg!",
         "text": "Je weet nu wat je doet bij onveilige situaties, incidenten en zorgen."
@@ -1398,7 +1398,7 @@
         {
           "id": "bhv-en-calamiteiten",
           "title": "BHV en noodsituaties",
-          "summary": "De BHV’ers, calamiteiten en wat je doet bij een aanval.",
+          "summary": "De BHV’ers en wat je doet bij een calamiteit.",
           "content": [
             {
               "type": "hero",
@@ -1433,28 +1433,6 @@
               "type": "assignment",
               "label": "Praktijkopdracht",
               "text": "Loop een rondje over het erf. Zoek de nooduitgangen, de blusmiddelen en de BHV-tas op, en vraag wie er vandaag BHV’er is."
-            },
-            {
-              "type": "hero",
-              "title": "Als een deelnemer een aanval krijgt"
-            },
-            {
-              "type": "paragraph",
-              "text": "Krijgt een deelnemer een epileptische aanval (insult)? Dan volg je deze stappen:"
-            },
-            {
-              "type": "numberedList",
-              "items": [
-                "Check als eerste de tijd.",
-                "Verplaats andere deelnemers naar een veilige plek.",
-                "Bel direct een collega. Je mag ook een deelnemer een collega laten halen.",
-                "Geen gehoor? Gebruik de noodtoeter. Die ligt in de BHV-tas in de unit en boven de kachel in de mancave.",
-                "Volg daarna samen met je collega het protocol van de deelnemer."
-              ]
-            },
-            {
-              "type": "paragraph",
-              "text": "Voor een aantal deelnemers is er een eigen protocol, soms met noodmedicatie die zij bij zich dragen. Vraag je collega’s voor welke deelnemers dit geldt en waar het protocol te vinden is."
             }
           ]
         },
@@ -1513,6 +1491,94 @@
             {
               "type": "highlight",
               "text": "Je hoeft niet zelf te bepalen wat er precies aan de hand is. Je hoeft een zorg niet alleen op te lossen."
+            }
+          ]
+        },
+        {
+          "id": "wat-als",
+          "title": "Wat als ...",
+          "summary": "Wat je doet bij een aanval, allergie, weglopen, agressie of een beet van een dier.",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Soms gebeurt er iets onverwachts. Hier lees je per situatie wat je doet. Twijfel je? Haal er altijd een collega bij."
+            },
+            {
+              "type": "highlight",
+              "label": "⚡ Wat als een deelnemer een epileptische aanval krijgt?",
+              "items": [
+                "Check als eerste de tijd.",
+                "Verplaats andere deelnemers naar een veilige plek.",
+                "Bel direct een collega. Je mag ook een deelnemer een collega laten halen.",
+                "Geen gehoor? Gebruik de noodtoeter. Die ligt in de BHV-tas in de unit en boven de kachel in de mancave.",
+                "Volg daarna samen met je collega het protocol van de deelnemer."
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "Voor een aantal deelnemers is er een eigen protocol, soms met noodmedicatie die zij bij zich dragen. Vraag je collega’s voor welke deelnemers dit geldt en waar het protocol te vinden is."
+            },
+            {
+              "type": "highlight",
+              "label": "🤧 Wat als iemand een allergische reactie krijgt?",
+              "text": "Allergieën van deelnemers vragen we uit bij de aanmelding. Ze staan in het dossier in ZilliZ en op het allergieoverzicht. Dat hangt in de ruimte van de collega’s aan het prikbord.",
+              "items": [
+                "Haal direct een collega erbij.",
+                "Kijk op het allergieoverzicht wat je bij deze deelnemer doet. Sommige deelnemers hebben hun eigen medicatie bij zich.",
+                "Wordt iemand benauwd, of zwelt het gezicht of de keel op? Waarschuw een BHV’er en bel 112.",
+                "Meld het daarna bij je leidinggevende en leg het vast in ZilliZ."
+              ]
+            },
+            {
+              "type": "highlight",
+              "label": "🚶 Wat als een deelnemer van het terrein afloopt?",
+              "items": [
+                "Laat de andere deelnemers niet alleen en bel direct een collega.",
+                "Meld het meteen bij je leidinggevende. Die bepaalt de volgende stappen, zoals zoeken en ouders of verzorgers bellen.",
+                "De contactgegevens van ouders en verzorgers staan op de ICE-lijst in de dagmap.",
+                "Leg het daarna vast in ZilliZ met het incidentformulier."
+              ]
+            },
+            {
+              "type": "highlight",
+              "label": "😠 Wat als een deelnemer agressief wordt?",
+              "items": [
+                "Zorg eerst voor veiligheid. Breng de andere deelnemers in veiligheid.",
+                "Haal er een collega bij en breng de deelnemer samen tot rust.",
+                "Spreek de deelnemer daarna rustig aan op het gedrag.",
+                "Meld het bij je leidinggevende en vul het incidentformulier in ZilliZ in.",
+                "Daarna zoeken we samen naar de oorzaak en een oplossing, bijvoorbeeld een afsprakenlijst of een gesprek met ouders of begeleiders."
+              ]
+            },
+            {
+              "type": "highlight",
+              "label": "🐾 Wat als iemand wordt gebeten of gekrabd door een dier?",
+              "text": "Onze dieren zijn lief, maar het blijven dieren. Ze kunnen soms onvoorspelbaar zijn.",
+              "points": [
+                {
+                  "title": "Huid niet kapot?",
+                  "text": "Was de plek en ontsmet die."
+                },
+                {
+                  "title": "Een schram of schaafwond?",
+                  "text": "Maak de wond schoon, ontsmet en verzorg hem. Geef het advies om de huisarts te bellen en te vertellen welk dier het was."
+                },
+                {
+                  "title": "Een diepere wond?",
+                  "text": "Geef eerste hulp en verwijs altijd door naar de huisarts."
+                }
+              ],
+              "items": [
+                "Meld het bij je leidinggevende.",
+                "Vul altijd het registratieformulier krab- en bijtincident in. Dat zit in het protocol hieronder.",
+                "Was er een deelnemer bij betrokken? Leg het dan ook vast in ZilliZ met het incidentformulier."
+              ]
+            },
+            {
+              "type": "document",
+              "title": "Protocol krab- en bijtincident",
+              "href": "https://zorgboerderijstapvoorstap1.sharepoint.com/sites/INTRANETStapvoorStap/Gedeelde%20documenten/Protocollen/Meldcode%20en%20calamiteiten/Protocol%20bijt%20en%20krab%20incident.docx?web=1",
+              "linkLabel": "Open het protocol"
             }
           ]
         }
