@@ -2111,20 +2111,20 @@
               "type": "cards",
               "items": [
                 {
-                  "title": "Coördinator Dagbesteding",
-                  "text": "Myranda"
-                },
-                {
-                  "title": "Coördinator Planning & Ontwikkeling",
-                  "text": "Sanne · stagiaires, vakantieaanvragen en rooster/vakantieplanning"
+                  "title": "Coördinator Organisatie & Processen",
+                  "text": "Anne H · processen, communicatie en digitale oplossingen"
                 },
                 {
                   "title": "Coördinator Dierenwelzijn & Veiligheid",
                   "text": "Elske · aanspreekpunt voor vragen over veiligheid en alles omtrent de dieren"
                 },
                 {
-                  "title": "Coördinator Organisatie & Processen",
-                  "text": "Anne H · processen, communicatie en digitale oplossingen"
+                  "title": "Coördinator Zorg & Dagbesteding",
+                  "text": "Myranda"
+                },
+                {
+                  "title": "Coördinator Planning & Ontwikkeling",
+                  "text": "Sanne · stagiaires, vakantieaanvragen en rooster/vakantieplanning"
                 }
               ]
             },
