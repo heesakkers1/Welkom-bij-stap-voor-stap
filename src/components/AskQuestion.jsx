@@ -2,6 +2,7 @@ import { useEffect, useId, useRef, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import ModuleIcon from './ModuleIcon'
 import AskQuestionForm from './AskQuestionForm'
+import { OPEN_ASK_QUESTION_EVENT } from './askQuestionEvents'
 import './AskQuestion.css'
 
 function AskQuestion() {
@@ -12,6 +13,13 @@ function AskQuestion() {
   const setOpen = (value) => setOpenOn(value ? pathname : null)
   const panelId = useId()
   const toggleRef = useRef(null)
+
+  // Andere onderdelen (zoals het vak op het overzicht) kunnen het formulier openen.
+  useEffect(() => {
+    const onOpen = () => setOpenOn(pathname)
+    window.addEventListener(OPEN_ASK_QUESTION_EVENT, onOpen)
+    return () => window.removeEventListener(OPEN_ASK_QUESTION_EVENT, onOpen)
+  }, [pathname])
 
   useEffect(() => {
     if (!open) return undefined

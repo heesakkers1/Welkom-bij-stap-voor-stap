@@ -5,6 +5,8 @@ import { useProgress } from '../context/ProgressContext'
 import ProgressBar from '../components/ProgressBar'
 import ModuleIcon from '../components/ModuleIcon'
 import QuickLinks from '../components/QuickLinks'
+import RichText from '../components/RichText'
+import { openAskQuestion } from '../components/askQuestionEvents'
 import './Dashboard.css'
 
 function Dashboard() {
@@ -115,6 +117,27 @@ function Dashboard() {
           >
             Sluiten
           </button>
+        </section>
+      ) : null}
+
+      {texts.askTitle || texts.askText ? (
+        <section className="dashboard__ask" aria-label="Vraag stellen">
+          <span className="dashboard__ask-icon" aria-hidden="true">
+            <ModuleIcon name="chat" />
+          </span>
+          <div className="dashboard__ask-text">
+            {texts.askTitle ? <h2>{texts.askTitle}</h2> : null}
+            {texts.askText ? (
+              <p>
+                <RichText text={texts.askText} />
+              </p>
+            ) : null}
+            {texts.askButton ? (
+              <button type="button" className="dashboard__ask-button" onClick={openAskQuestion}>
+                {texts.askButton}
+              </button>
+            ) : null}
+          </div>
         </section>
       ) : null}
 
