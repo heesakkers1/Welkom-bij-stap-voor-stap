@@ -244,7 +244,7 @@ function LessonContentBlock({ block }) {
     case 'signoff':
       return (
         <p className="lesson-block lesson-block--signoff">
-          {block.text ?? 'Team Stap voor Stap'}
+          {block.text}
         </p>
       )
 
