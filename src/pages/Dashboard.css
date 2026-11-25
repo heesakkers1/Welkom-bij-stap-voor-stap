@@ -456,6 +456,19 @@
   font-weight: 700;
 }
 
+.stepplan__subtitles {
+  display: flex;
+  flex-direction: column;
+  gap: 0.05rem;
+  margin: 0.1rem 0 0.15rem;
+}
+
+.stepplan__subtitle {
+  font-size: 0.88rem;
+  line-height: 1.35;
+  color: var(--text-muted);
+}
+
 .stepplan__meta {
   display: flex;
   flex-wrap: wrap;
