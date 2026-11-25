@@ -762,6 +762,12 @@
               "title": "Handboek deelnemers",
               "meta": "Wat onze deelnemers krijgen als ze bij ons starten. ",
               "handboek": "deelnemers"
+            },
+            {
+              "type": "document",
+              "title": "Steunstructuur",
+              "meta": "Hoe we je groei stimuleren: deskundigheidsbevordering, intervisie, casuïstiek, teambuilding en het beoordelingsgesprek.",
+              "handboek": "steunstructuur"
             }
           ]
         }
