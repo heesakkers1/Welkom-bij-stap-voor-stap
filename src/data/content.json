@@ -74,9 +74,10 @@
     {
       "id": "afronden",
       "title": "Jij bij Stap voor Stap",
-      "description": "Jouw functie, de kennistoets, waar je alles vindt en de afronding.",
+      "description": "Jouw functie, je rooster, de kennistoets, waar je alles vindt en de afronding.",
       "moduleIds": [
         "jouw-functie",
+        "jouw-rooster",
         "kennistoets",
         "waar-vind-je-wat",
         "afronding"
@@ -2203,6 +2204,49 @@
             {
               "type": "paragraph",
               "text": "Omdat we met jeugd werken, zijn er SKJ-geregistreerde Jeugd- en Gezinsprofessionals in dienst. Zij blijven zelf verantwoordelijk voor voldoende scholing voor hun herregistratie."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "jouw-rooster",
+      "title": "Jouw rooster",
+      "description": "Je eigen rooster op het Digibord, direct te openen.",
+      "icon": "calendar",
+      "duration": "2 minuten",
+      "completionMessage": {
+        "title": "📅 Je weet waar je rooster staat!",
+        "text": "Kijk er regelmatig even in, dan weet je altijd wat je te wachten staat."
+      },
+      "lessons": [
+        {
+          "id": "jouw-rooster",
+          "title": "Jouw rooster",
+          "summary": "Open je eigen rooster op het Digibord.",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Je eigen rooster staat op het Digibord. Log in met je Microsoft-werkaccount, dan zie je meteen jouw rooster."
+            },
+            {
+              "type": "document",
+              "title": "Mijn rooster",
+              "meta": "Deze week, volgende week en je vaste rooster.",
+              "href": "https://digibord.vercel.app/mijn-rooster",
+              "linkLabel": "Open mijn rooster"
+            },
+            {
+              "type": "bulletList",
+              "items": [
+                "**Deze week en volgende week:** per dag je programma's, je individuele begeleidingen (met de deelnemer en de tijden) en je kantoortijd.",
+                "**Je vaste rooster:** per weekdag je werktijden en dagdelen."
+              ]
+            },
+            {
+              "type": "tip",
+              "label": "💡 Goed om te weten",
+              "text": "Houd je rooster goed in de gaten en geef bijzonderheden op tijd aan. Zie je je rooster niet? Dan staat je e-mailadres nog niet goed in het Digibord. Vraag Anne H om het aan te vullen."
             }
           ]
         }
