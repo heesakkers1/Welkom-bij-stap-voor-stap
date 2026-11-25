@@ -200,7 +200,13 @@ function Dashboard() {
                     .filter(Boolean)
                     .join(' ')
 
-                  let meta = step.module.duration ?? ''
+                  // De titels van de delen (lessen) dienen als ondertitels. Een losse les met
+                  // dezelfde naam als de stap laten we weg.
+                  const subtitles = step.module.lessons
+                    .map((lesson) => lesson.title)
+                    .filter((title) => title && title !== step.module.title)
+
+                  let meta = ''
                   if (isDone) meta = 'Klaar'
                   else if (step.status === MODULE_STATUS.IN_PROGRESS && lessons > 1)
                     meta = `Bezig · ${step.completedCount} van ${lessons} delen`
@@ -234,12 +240,23 @@ function Dashboard() {
                         </span>
                         <span className="stepplan__body">
                           <span className="stepplan__title">{step.module.title}</span>
-                          <span className="stepplan__meta">
-                            {isCurrent ? (
-                              <span className="stepplan__here">Hier ben je</span>
-                            ) : null}
-                            {meta}
-                          </span>
+                          {subtitles.length > 0 ? (
+                            <span className="stepplan__subtitles">
+                              {subtitles.map((title) => (
+                                <span key={title} className="stepplan__subtitle">
+                                  {title}
+                                </span>
+                              ))}
+                            </span>
+                          ) : null}
+                          {isCurrent || meta ? (
+                            <span className="stepplan__meta">
+                              {isCurrent ? (
+                                <span className="stepplan__here">Hier ben je</span>
+                              ) : null}
+                              {meta}
+                            </span>
+                          ) : null}
                         </span>
                         <span className="stepplan__chevron" aria-hidden="true">
                           ›
