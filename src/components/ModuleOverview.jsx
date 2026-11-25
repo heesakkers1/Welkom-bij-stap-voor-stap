@@ -33,9 +33,6 @@ function ModuleOverview() {
 
       <section className="module-overview__intro">
         <p>{module.description}</p>
-        {module.duration ? (
-          <p className="module-overview__duration">⏱ {module.duration}</p>
-        ) : null}
         <ProgressBar value={progress} label="Voortgang in deze module" />
       </section>
 

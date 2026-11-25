@@ -17,7 +17,6 @@ export const modules = [
     description:
       'Een rustige eerste kennismaking met Stap voor Stap en deze onboarding.',
     icon: 'sun',
-    duration: '5 minuten',
     completionMessage: {
       title: '🌱 De eerste stap is gezet!',
       text: 'Je hebt kennisgemaakt met de onboarding. Tijd voor de volgende stap.',
@@ -131,7 +130,6 @@ export const modules = [
     description:
       'Leer onze missie en visie kennen en ontdek hoe die zichtbaar worden in de begeleiding.',
     icon: 'heart',
-    duration: '12 minuten',
     completionMessage: {
       title: '🌿 Goed gedaan!',
       text: 'Je kent nu onze missie, visie en de belangrijkste uitgangspunten van onze begeleiding.',
@@ -310,7 +308,6 @@ export const modules = [
     description:
       'Maak kennis met de omgeving, de werkzaamheden en het dagelijkse ritme.',
     icon: 'barn',
-    duration: '8 minuten',
     completionMessage: {
       title: '🏡 Mooi!',
       text: 'Je hebt een eerste beeld van de zorgboerderij en jouw plek binnen de dag.',
@@ -451,7 +448,6 @@ export const modules = [
     title: 'Veilig werken',
     description: 'Belangrijke afspraken voor een veilige werkdag.',
     icon: 'shield',
-    duration: 'Binnenkort',
     comingSoon: true,
     lessons: [],
   },
@@ -460,7 +456,6 @@ export const modules = [
     title: 'Deelnemers begeleiden',
     description: 'Tips en inzichten voor het begeleiden van deelnemers.',
     icon: 'people',
-    duration: 'Binnenkort',
     comingSoon: true,
     lessons: [],
   },
@@ -469,7 +464,6 @@ export const modules = [
     title: 'Dagstart en digibord',
     description: 'Hoe je de dagstart doet en het digibord gebruikt.',
     icon: 'board',
-    duration: 'Binnenkort',
     comingSoon: true,
     lessons: [],
   },
@@ -478,7 +472,6 @@ export const modules = [
     title: 'Paarden en dieren',
     description: 'Omgaan met paarden en andere dieren op de boerderij.',
     icon: 'horse',
-    duration: 'Binnenkort',
     comingSoon: true,
     lessons: [],
   },
@@ -487,7 +480,6 @@ export const modules = [
     title: 'Klusjes en dagprogramma',
     description: 'Het dagprogramma en de vaste klusjes op een rij.',
     icon: 'tasks',
-    duration: 'Binnenkort',
     comingSoon: true,
     lessons: [],
   },
@@ -496,7 +488,6 @@ export const modules = [
     title: 'Procedures',
     description: 'Belangrijke procedures die je moet kennen en volgen.',
     icon: 'list',
-    duration: 'Binnenkort',
     comingSoon: true,
     lessons: [],
   },
@@ -505,7 +496,6 @@ export const modules = [
     title: 'Kennistoets',
     description: 'Test je kennis voordat je verder gaat.',
     icon: 'quiz',
-    duration: 'Binnenkort',
     comingSoon: true,
     lessons: [],
   },
@@ -514,7 +504,6 @@ export const modules = [
     title: 'Afronding',
     description: 'Rond je onboarding af en bekijk wat je hebt geleerd.',
     icon: 'check',
-    duration: 'Binnenkort',
     comingSoon: true,
     lessons: [],
   },

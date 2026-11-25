@@ -42,18 +42,24 @@ function ModuleTile({
       <span className="module-tile__body">
         <span className="module-tile__title">{module.title}</span>
         <span className="module-tile__description">{module.description}</span>
+        {module.lessons?.length > 0 ? (
+          <ul className="module-tile__topics" aria-label="Onderwerpen">
+            {module.lessons.map((lesson) => (
+              <li key={lesson.id} className="module-tile__topic">
+                {lesson.title}
+              </li>
+            ))}
+          </ul>
+        ) : null}
       </span>
 
-      <span className="module-tile__meta">
-        {module.duration ? (
-          <span className="module-tile__duration">⏱ {module.duration}</span>
-        ) : null}
-        {!isComingSoon && totalSteps > 0 ? (
+      {!isComingSoon && totalSteps > 0 ? (
+        <span className="module-tile__meta">
           <span className="module-tile__steps">
             {completedCount} / {totalSteps} stappen
           </span>
-        ) : null}
-      </span>
+        </span>
+      ) : null}
 
       <span className="module-tile__status">{label}</span>
     </>
