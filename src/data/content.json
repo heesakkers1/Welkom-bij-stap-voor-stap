@@ -116,13 +116,13 @@
   "modules": [
     {
       "id": "inwerktraject",
-      "title": "Jouw eerste 90 dagen",
-      "description": "Hoe je in 90 dagen wordt ingewerkt, wie je daarbij helpt en wat je per fase doet.",
+      "title": "Jouw eerste 100 dagen",
+      "description": "Hoe je in 100 dagen wordt ingewerkt, wie je daarbij helpt en wat je per fase doet.",
       "icon": "route",
       "duration": "10 minuten",
       "completionMessage": {
         "title": "🧭 Je weet waar je naartoe werkt!",
-        "text": "Je kent nu de fasen van je eerste 90 dagen, je doelen en wie je daarbij helpt."
+        "text": "Je kent nu de fasen van je eerste 100 dagen, je doelen en wie je daarbij helpt."
       },
       "lessons": [
         {
