@@ -18,7 +18,10 @@
     "eyebrow": "Jouw onboarding",
     "title": "Fijn dat je er bent!",
     "intro": "",
-    "photoAlt": "Twee varkens van de boerderij kijken nieuwsgierig in de camera"
+    "photoAlt": "Twee varkens van de boerderij kijken nieuwsgierig in de camera",
+    "askTitle": "Heb je een vraag?",
+    "askText": "Stel hem gerust! Rechtsonder op elke pagina zit de knop **Vraag stellen**. Je vraag komt terecht bij de leidinggevende en de coördinatoren.",
+    "askButton": "Stel een vraag"
   },
   "categories": [
     {
@@ -125,12 +128,12 @@
         {
           "id": "inwerktraject-in-fasen",
           "title": "Jouw onboarding",
-          "summary": "De vijf fasen van je eerste 100 dagen, kort uitgelegd.",
+          "summary": "De vier fasen van je eerste 100 dagen, kort uitgelegd.",
           "content": [
             {
               "type": "hero",
               "eyebrow": "Jouw eerste 100 dagen",
-              "title": "Ingewerkt in vijf fasen",
+              "title": "Ingewerkt in vier fasen",
               "text": "Van je eerste kennismaking tot zelfstandig en met vertrouwen werken."
             },
             {
@@ -149,12 +152,16 @@
                   "text": "Je voert taken steeds meer zelf uit, begeleidt deelnemers met passende ondersteuning en leert rapporteren en afstemmen met collega’s. Rond dag 60 heb je je evaluatie met Bente."
                 },
                 {
-                  "title": "Fase 4: vertrouwen en zelfstandigheid (dag 61 tot 90)",
-                  "text": "Je werkt zelfstandiger binnen je eigen rol, neemt verantwoordelijkheid en bespreekt de hobbels waar je tegenaan loopt met Sanne of Anne H. Rond dag 90 heb je je evaluatie met Bente."
+                  "title": "Fase 4: vertrouwen en zelfstandigheid (dag 61 tot 100)",
+                  "text": "Je werkt zelfstandiger binnen je eigen rol, neemt verantwoordelijkheid en bespreekt de hobbels waar je tegenaan loopt met Sanne of Anne H. \nRond dag 100 heb je je evaluatie met Bente. Daarin kijken jullie samen terug, staan stil bij wat goed ging en maken afspraken over je verdere ontwikkeling. "
                 },
                 {
-                  "title": "Fase 5: afronden en vooruitkijken (dag 91 tot 100)",
-                  "text": "We kijken samen terug, staan stil bij wat goed ging en maken afspraken over je verdere ontwikkeling. Rond dag 100 heb je je evaluatie met Bente."
+                  "title": "Je bent ingewerkt! 🥳",
+                  "text": "Vanaf dit punt vindt begeleiding plaats conform de steunstructuur. ",
+                  "extraLink": {
+                    "label": "Lees de steunstructuur",
+                    "href": "https://zorgboerderijstapvoorstap1.sharepoint.com/sites/INTRANETStapvoorStap/Gedeelde%20documenten/Handboeken/Steunstructuur%20nieuw%202026.pdf"
+                  }
                 }
               ]
             },
@@ -209,7 +216,7 @@
             },
             {
               "type": "highlight",
-              "text": "Het gaat er niet om dat je na 100 dagen alle vakjes hebt afgevinkt. Het gaat erom dat je je verbonden voelt met Stap voor Stap, de afspraken kent en je functie verantwoord kunt uitvoeren."
+              "text": "Het gaat er niet om dat je na 90 dagen alle vakjes hebt afgevinkt. Het gaat erom dat je je verbonden voelt met Stap voor Stap, de afspraken kent en je functie verantwoord kunt uitvoeren."
             },
             {
               "type": "assignment",
@@ -328,7 +335,7 @@
             },
             {
               "type": "paragraph",
-              "text": "Bij Stap voor Stap kijken we naar de persoon achter het gedrag. Iedere deelnemer heeft eigen talenten, behoeften, mogelijkheden en grenzen. We sluiten zoveel mogelijk aan bij wat iemand nodig heeft om zich veilig te voelen en mee te kunnen doen.\nNiet iedereen hoeft hetzelfde te doen om erbij te horen."
+              "text": "Bij Stap voor Stap kijken we naar de persoon achter het gedrag. Iedere deelnemer heeft eigen talenten, behoeften, mogelijkheden en grenzen. We sluiten zoveel mogelijk aan bij wat iemand nodig heeft om zich veilig te voelen en mee te kunnen doen. Niet iedereen hoeft hetzelfde te doen om erbij te horen."
             },
             {
               "type": "hero",
@@ -665,11 +672,11 @@
                 },
                 {
                   "title": "Rooster",
-                  "text": "Bente of Sanne"
+                  "text": "Sanne"
                 },
                 {
                   "title": "Verlof",
-                  "text": "Sanne"
+                  "text": "Sanne en Jaap"
                 },
                 {
                   "title": "Ziekte en verzuim",
@@ -777,28 +784,6 @@
           "content": [
             {
               "type": "hero",
-              "title": "Een plek om mee te doen"
-            },
-            {
-              "type": "image",
-              "src": "/fotos/boerderij-erf-kruiwagen.jpg",
-              "alt": "Een kruiwagen op het erf, met de dierenweide op de achtergrond",
-              "size": "wide"
-            },
-            {
-              "type": "paragraph",
-              "text": "De zorgboerderij is een plek waar begeleiding, activiteiten, dieren en buiten zijn samenkomen."
-            },
-            {
-              "type": "paragraph",
-              "text": "Deelnemers krijgen de mogelijkheid om mee te doen op een manier die aansluit bij hun mogelijkheden en doelen."
-            },
-            {
-              "type": "paragraph",
-              "text": "Werkzaamheden zijn geen doel op zichzelf. Ze kunnen helpen bij structuur, zelfvertrouwen, samenwerking, ontspanning en ontwikkeling."
-            },
-            {
-              "type": "hero",
               "title": "Verschillende plekken op het erf"
             },
             {
@@ -874,7 +859,7 @@
         },
         {
           "id": "ritme-van-de-dag",
-          "title": "Het ritme van de dag",
+          "title": "Een dag op de dagbesteding",
           "summary": "Voorspelbaarheid geeft rust.",
           "content": [
             {
@@ -1115,7 +1100,7 @@
             },
             {
               "type": "paragraph",
-              "text": "Speelt er iets groots rond een deelnemer? Bespreek de belangrijkste punten in de Dagstart zo bondig mogelijk en geef overige informatie tijdens de dagafsluiting. Breng andere collega's op de hoogte door een bericht in D-connect (Siilo) te plaatsen. \nZo zorgen we dat we tijdens de dagstart niet in tijdnood komen. "
+              "text": "Speelt er iets groots rond een deelnemer? Bespreek de belangrijkste punten in de Dagstart zo bondig mogelijk en geef overige informatie tijdens de dagafsluiting. Breng andere collega's op de hoogte door een bericht in D-connect (Siilo) te plaatsen. Zo zorgen we dat we tijdens de dagstart niet in tijdnood komen. "
             },
             {
               "type": "hero",
@@ -1424,7 +1409,7 @@
             },
             {
               "type": "paragraph",
-              "text": "Onze opgeleide bedrijfshulpverleners (BHV’ers) zijn: \nJoost\nElske\nBente\nPia\n(Bert)\n\nZij weten hoe te handelen bij ongevallen, brand of een evacuatie. Je volgt hun aanwijzingen altijd op."
+              "text": "Onze opgeleide bedrijfshulpverleners (BHV’ers) zijn: \nBente\nBert\nElske\nJoost\nPia\n\nZij weten hoe te handelen bij ongevallen, brand of een evacuatie. Je volgt hun aanwijzingen altijd op."
             },
             {
               "type": "highlight",
@@ -1826,7 +1811,7 @@
             },
             {
               "type": "paragraph",
-              "text": "Let bij e-mail op zorgvuldig taalgebruik, de juiste ontvangers en het vermijden van onnodige of gevoelige informatie.\nPrivacygevoelige informatie over deelnemers stuur je niet per gewone e-mail. Moet het toch gedeeld worden? Dan gaat het via de Berichtenbox in ZilliZ."
+              "text": "Let bij e-mail op zorgvuldig taalgebruik, de juiste ontvangers en het vermijden van onnodige of gevoelige informatie. Privacygevoelige informatie over deelnemers stuur je niet per gewone e-mail. Moet het toch gedeeld worden? Dan gaat het via de Berichtenbox in ZilliZ."
             },
             {
               "type": "highlight",
@@ -2129,20 +2114,20 @@
               "type": "cards",
               "items": [
                 {
-                  "title": "Coördinator Dagbesteding",
-                  "text": "Myranda"
-                },
-                {
-                  "title": "Coördinator Planning & Ontwikkeling",
-                  "text": "Sanne · stagiaires, vakantieaanvragen en rooster/vakantieplanning"
+                  "title": "Coördinator Organisatie & Processen",
+                  "text": "Anne H · processen, communicatie en digitale oplossingen"
                 },
                 {
                   "title": "Coördinator Dierenwelzijn & Veiligheid",
                   "text": "Elske · aanspreekpunt voor vragen over veiligheid en alles omtrent de dieren"
                 },
                 {
-                  "title": "Coördinator Organisatie & Processen",
-                  "text": "Anne H · processen, communicatie en digitale oplossingen"
+                  "title": "Coördinator Zorg & Dagbesteding",
+                  "text": "Myranda"
+                },
+                {
+                  "title": "Coördinator Planning & Ontwikkeling",
+                  "text": "Sanne · stagiaires, vakantieaanvragen en rooster/vakantieplanning"
                 }
               ]
             },
