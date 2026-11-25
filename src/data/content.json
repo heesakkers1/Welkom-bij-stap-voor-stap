@@ -157,7 +157,11 @@
                 },
                 {
                   "title": "Je bent ingewerkt! 🥳",
-                  "text": "Vanaf dit punt vindt begeleiding plaats conform de steunstructuur. "
+                  "text": "Vanaf dit punt vindt begeleiding plaats conform de steunstructuur. ",
+                  "extraLink": {
+                    "label": "Lees de steunstructuur",
+                    "href": "https://zorgboerderijstapvoorstap1.sharepoint.com/sites/INTRANETStapvoorStap/Gedeelde%20documenten/Handboeken/Steunstructuur%20nieuw%202026.pdf"
+                  }
                 }
               ]
             },

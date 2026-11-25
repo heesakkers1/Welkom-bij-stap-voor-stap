@@ -62,6 +62,16 @@ function Timeline({ items = [], variant }) {
               {stepMatch ? <p className="timeline__step">{stepMatch[1]}</p> : null}
               <p className="timeline__title"><RichText text={stepMatch ? stepMatch[2] : label} /></p>
               {text ? <p className="timeline__text"><RichText text={text} /></p> : null}
+              {typeof item === 'object' && item.extraLink?.href ? (
+                <a
+                  className="timeline__link"
+                  href={item.extraLink.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {item.extraLink.label || 'Meer info'} ↗
+                </a>
+              ) : null}
               {typeof item === 'object' && item.src ? (
                 <ZoomImage src={item.src} alt={item.alt || label} />
               ) : null}

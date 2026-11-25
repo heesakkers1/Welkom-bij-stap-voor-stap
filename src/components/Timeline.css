@@ -155,3 +155,11 @@
   margin-top: 0.7rem;
   border-radius: 0.6rem;
 }
+
+/* Optionele link onder een stap, bv. naar een document op SharePoint */
+.timeline__link {
+  display: inline-block;
+  margin-top: 0.4rem;
+  font-weight: 600;
+  color: var(--accent-strong);
+}
