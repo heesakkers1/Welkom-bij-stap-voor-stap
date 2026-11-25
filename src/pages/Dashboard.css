@@ -518,3 +518,56 @@
   inset: -7px;
   border-radius: 50%;
 }
+
+/* Vak dat wijst op de knop "Vraag stellen" */
+.dashboard__ask {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.25rem 1.4rem;
+  border-radius: 1.75rem;
+  background: var(--surface);
+  border: 1px solid var(--tile-border);
+  box-shadow: var(--tile-shadow);
+}
+
+.dashboard__ask-icon {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 1rem;
+  background: var(--icon-bg);
+  color: var(--accent-strong);
+}
+
+.dashboard__ask-text h2 {
+  margin: 0 0 0.3rem;
+  font-size: 1.2rem;
+  line-height: 1.25;
+  color: var(--text-strong);
+}
+
+.dashboard__ask-text p {
+  margin: 0;
+  color: var(--text);
+}
+
+.dashboard__ask-button {
+  margin-top: 0.85rem;
+  padding: 0.6rem 1.1rem;
+  border: 2px solid var(--accent);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--accent-strong);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.dashboard__ask-button:hover,
+.dashboard__ask-button:focus-visible {
+  background: var(--icon-bg);
+}

@@ -18,7 +18,10 @@
     "eyebrow": "Jouw onboarding",
     "title": "Fijn dat je er bent!",
     "intro": "",
-    "photoAlt": "Twee varkens van de boerderij kijken nieuwsgierig in de camera"
+    "photoAlt": "Twee varkens van de boerderij kijken nieuwsgierig in de camera",
+    "askTitle": "Heb je een vraag?",
+    "askText": "Stel hem gerust! Rechtsonder op elke pagina zit de knop **Vraag stellen**. Je vraag komt terecht bij de leidinggevende en de coördinatoren.",
+    "askButton": "Stel een vraag"
   },
   "categories": [
     {
@@ -154,7 +157,11 @@
                 },
                 {
                   "title": "Je bent ingewerkt! 🥳",
-                  "text": "Vanaf dit punt vindt begeleiding plaats conform de steunstructuur. "
+                  "text": "Vanaf dit punt vindt begeleiding plaats conform de steunstructuur. ",
+                  "extraLink": {
+                    "label": "Lees de steunstructuur",
+                    "href": "https://zorgboerderijstapvoorstap1.sharepoint.com/sites/INTRANETStapvoorStap/Gedeelde%20documenten/Handboeken/Steunstructuur%20nieuw%202026.pdf"
+                  }
                 }
               ]
             },
