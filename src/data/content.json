@@ -125,12 +125,12 @@
         {
           "id": "inwerktraject-in-fasen",
           "title": "Jouw onboarding",
-          "summary": "De vijf fasen van je eerste 100 dagen, kort uitgelegd.",
+          "summary": "De vier fasen van je eerste 90 dagen, kort uitgelegd.",
           "content": [
             {
               "type": "hero",
-              "eyebrow": "Jouw eerste 100 dagen",
-              "title": "Ingewerkt in vijf fasen",
+              "eyebrow": "Jouw eerste 90 dagen",
+              "title": "Ingewerkt in vier fasen",
               "text": "Van je eerste kennismaking tot zelfstandig en met vertrouwen werken."
             },
             {
@@ -150,11 +150,11 @@
                 },
                 {
                   "title": "Fase 4: vertrouwen en zelfstandigheid (dag 61 tot 90)",
-                  "text": "Je werkt zelfstandiger binnen je eigen rol, neemt verantwoordelijkheid en bespreekt de hobbels waar je tegenaan loopt met Sanne of Anne H. Rond dag 90 heb je je evaluatie met Bente."
+                  "text": "Je werkt zelfstandiger binnen je eigen rol, neemt verantwoordelijkheid en bespreekt de hobbels waar je tegenaan loopt met Sanne of Anne H. \nRond dag 90 heb je je evaluatie met Bente. Daarin kijken jullie samen terug, staan stil bij wat goed ging en maken afspraken over je verdere ontwikkeling. "
                 },
                 {
-                  "title": "Fase 5: afronden en vooruitkijken (dag 91 tot 100)",
-                  "text": "We kijken samen terug, staan stil bij wat goed ging en maken afspraken over je verdere ontwikkeling. Rond dag 100 heb je je evaluatie met Bente."
+                  "title": "Je bent ingewerkt! 🥳",
+                  "text": "Vanaf dit punt vindt begeleiding plaats conform de steunstructuur. "
                 }
               ]
             },
