@@ -805,11 +805,13 @@
               "items": [
                 {
                   "title": "'t Kot",
-                  "text": "Ruimte voor 1 op 1 begeleidingen + Kantoor "
+                  "text": "Ruimte voor 1 op 1 begeleidingen + Kantoor ",
+                  "src": "/fotos/erf-t-kot-1795777663077.jpg"
                 },
                 {
                   "title": "de Unit",
-                  "text": "Ruimte voor de Dagbesteding"
+                  "text": "Ruimte voor de Dagbesteding",
+                  "src": "/fotos/erf-de-unit-1795777672044.jpg"
                 },
                 {
                   "title": "Pipowagen",
@@ -822,43 +824,53 @@
                 },
                 {
                   "title": "Paardenstallen",
-                  "text": ""
+                  "text": "",
+                  "src": "/fotos/erf-paardenstallen-1795777684163.jpg"
                 },
                 {
                   "title": "Moestuin",
-                  "text": ""
+                  "text": "",
+                  "src": "/fotos/erf-moestuin-1795777715530.jpg"
                 },
                 {
                   "title": "Kleinvee",
-                  "text": ""
+                  "text": "",
+                  "src": "/fotos/erf-kleinvee-1795777744979.jpg"
                 },
                 {
                   "title": "Ezels",
-                  "text": ""
+                  "text": "",
+                  "src": "/fotos/erf-ezels-1795777762750.jpg"
                 },
                 {
                   "title": "Hondenwei",
-                  "text": ""
+                  "text": "",
+                  "src": "/fotos/erf-hondenwei-1795777782894.jpg"
                 },
                 {
                   "title": "Roundpen",
-                  "text": ""
+                  "text": "",
+                  "src": "/fotos/erf-roundpen-1795777792726.jpg"
                 },
                 {
                   "title": "Paardenbak",
-                  "text": ""
+                  "text": "",
+                  "src": "/fotos/erf-paardenbak-1795777800368.jpg"
                 },
                 {
                   "title": "Schuur",
-                  "text": ""
+                  "text": "",
+                  "src": "/fotos/erf-schuur-1795777812254.jpg"
                 },
                 {
                   "title": "Koffiekar & Kraam ",
-                  "text": ""
+                  "text": "",
+                  "src": "/fotos/erf-koffiekar-kraam-1795777823993.jpg"
                 },
                 {
                   "title": "Rookplek",
-                  "text": ""
+                  "text": "",
+                  "src": "/fotos/erf-rookplek-1795777843450.jpg"
                 }
               ]
             }
